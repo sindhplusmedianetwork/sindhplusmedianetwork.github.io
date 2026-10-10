@@ -1,0 +1,13 @@
+# Sindh Plus Media Network — crawlers welcome
+User-agent: Baiduspider
+Allow: /
+
+User-agent: SogouSpider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: *
+Allow: /
+Sitemap: https://sindhplusmedianetwork.github.io/sitemap.xml
