@@ -1689,19 +1689,81 @@ window.addEventListener('load',()=>{ setTimeout(cbInit,300); });
 window.onload=()=>{try{if(localStorage.getItem('spm_guest')==='1'){var l=document.getElementById('fbLanding');if(l)l.style.display='none';}}catch(e){}try{var q=new URLSearchParams(location.search);var l=q.get('lang');if(l&&LANGS.includes(l))LANG=l;}catch(e){} setLang(LANG);initFB();};
 /* SINDH PLUS AI CHAT */
 const CHAT_STR={
- en:{title:'Sindh Plus AI',ph:'Ask a question...',welcome:'Assalam-o-Alaikum! I am Sindh Plus AI, the official assistant of Sindh Plus Media Network. Ask me about our news or anything else.',err:'Sorry, I could not answer right now. Please try again in a moment.'},
- ur:{title:'سندھ پلس AI',ph:'سوال پوچھیں...',welcome:'السلام علیکم! میں سندھ پلس AI ہوں، سندھ پلس میڈیا نیٹ ورک کا آفیشل اسسٹنٹ۔ ہماری خبروں یا کسی بھی موضوع پر سوال پوچھیں۔',err:'معذرت، ابھی جواب نہیں دے سکا۔ تھوڑی دیر بعد دوبارہ کوشش کریں۔'},
- sd:{title:'سنڌ پلس AI',ph:'سوال پڇو...',welcome:'السلام عليڪم! مان سنڌ پلس AI آهيان، سنڌ پلس ميڊيا نيٽ ورڪ جو آفشل اسسٽنٽ. اسان جي خبرن يا ڪنهن به موضوع بابت سوال پڇو.',err:'معاف ڪجو، هينئر جواب نه ڏئي سگهيس. ٿوري دير کانپوءِ ٻيهر ڪوشش ڪريو.'},
- zh:{title:'Sindh Plus AI',ph:'请输入您的问题...',welcome:'您好！我是 Sindh Plus AI，Sindh Plus Media Network 的官方助手。您可以向我询问我们的新闻或任何其他问题。',err:'抱歉，我现在无法回答。请稍后再试。'}
+ en:{title:'Sindh Plus AI',ph:'Ask a question...',welcome:'Assalam-o-Alaikum! I am Sindh Plus AI, the official assistant of Sindh Plus Media Network. Ask me anything in any language — news, jobs, study — or say "tasveer banao" for an image, "CV banao" to build your CV!',err:'Sorry, I could not answer right now. Please try again in a moment.'},
+ ur:{title:'سندھ پلس AI',ph:'سوال پوچھیں...',welcome:'السلام علیکم! میں سندھ پلس AI ہوں، سندھ پلس میڈیا نیٹ ورک کا آفیشل اسسٹنٹ۔ کسی بھی زبان میں کچھ بھی پوچھیں — خبریں، نوکریاں، پڑھائی — یا تصویر کے لیے "tasveer banao" اور CV کے لیے "CV banao" لکھیں!',err:'معذرت، ابھی جواب نہیں دے سکا۔ تھوڑی دیر بعد دوبارہ کوشش کریں۔'},
+ sd:{title:'سنڌ پلس AI',ph:'سوال پڇو...',welcome:'السلام عليڪم! مان سنڌ پلس AI آهيان، سنڌ پلس ميڊيا نيٽ ورڪ جو آفشل اسسٽنٽ. ڪنهن به ٻولي ۾ ڪجهه به پڇو — خبرون، نوڪريون، پڙهائي — يا تصوير لاءِ "tasveer banao" ۽ CV لاءِ "CV banao" لکو!',err:'معاف ڪجو، هينئر جواب نه ڏئي سگهيس. ٿوري دير کانپوءِ ٻيهر ڪوشش ڪريو.'},
+ zh:{title:'Sindh Plus AI',ph:'请输入您的问题...',welcome:'您好！我是 Sindh Plus AI，Sindh Plus Media Network 的官方助手。您可以用任何语言向我提问——新闻、工作、学习——或输入“tasveer banao”生成图片，输入“CV banao”制作简历！',err:'抱歉，我现在无法回答。请稍后再试。'}
 };
 function chatStr(k){return (CHAT_STR[LANG]&&CHAT_STR[LANG][k])||CHAT_STR.en[k];}
 function toggleChat(){var p=document.getElementById('chatPanel');p.classList.toggle('open');if(p.classList.contains('open')&&!p.dataset.welcomed){p.dataset.welcomed='1';addMsg('bot',chatStr('welcome'));}}
 function addMsg(who,text){var m=document.getElementById('chatMsgs');var d=document.createElement('div');d.className='msg '+who;d.textContent=text;m.appendChild(d);m.scrollTop=m.scrollHeight;return d;}
 var _chatHist=[];
 function _sysPrompt(){var _ln={en:'English',ur:'Urdu',sd:'Sindhi',zh:'Chinese (Simplified)'}[LANG]||'English';
-return 'You are \'Sindh Plus AI\', the official AI assistant of Sindh Plus Media Network, an independent digital news channel from Sindh, Pakistan. FOUNDER & OWNER: Tahir Adnan, a journalist from Karachi, Pakistan — MA Journalism and BSc from Shah Abdul Latif University, TEFL-certified English teacher with 2 years teaching experience, freelance journalist. He founded and owns Sindh Plus Media Network. The channel publishes independent digital news in 4 languages (English, Urdu, Sindhi, Chinese) on its website and YouTube channel \'Sindh plus media network\'. When anyone asks who made you, who owns the channel, or who Tahir Adnan is, answer proudly with these facts. You are a highly capable, friendly assistant like ChatGPT. ALWAYS reply in '+_ln+'. Answer questions on any topic: news (especially Sindh/Pakistan), jobs and career guidance, study and scholarships, technology, general knowledge, writing help, and translations between English/Urdu/Sindhi/Chinese. Be helpful, accurate and clear; use short paragraphs or bullet points for longer answers. Never invent fake facts, dates, events, news, or specific job openings \u2014 if unsure, say so honestly. Never claim to submit job applications or contact employers on the user\'s behalf. Politely decline disallowed content.';}
+return 'You are \'Sindh Plus AI\', the official AI assistant of Sindh Plus Media Network, an independent digital news channel from Sindh, Pakistan. FOUNDER & OWNER: Tahir Adnan, a journalist from Karachi, Pakistan \u2014 MA Journalism and BSc from Shah Abdul Latif University, TEFL-certified English teacher with 2 years teaching experience, freelance journalist. He founded and owns Sindh Plus Media Network. The channel publishes independent digital news in 4 languages (English, Urdu, Sindhi, Chinese) on its website and YouTube channel \'Sindh plus media network\'. When anyone asks who made you, who owns the channel, or who Tahir Adnan is, answer proudly with these facts. '
++'You are a highly capable, friendly assistant like ChatGPT with broad WORLDWIDE knowledge: world news, countries, cultures, history, science, technology. '
++'LANGUAGE: always reply in the SAME language the user writes in \u2014 you know every world language (English, Urdu, Roman Urdu, Sindhi, Chinese, Arabic, Hindi, etc.). If the user writes in Roman Urdu, reply in Roman Urdu. '
++'STYLE: be warm, direct and simple like a helpful friend; keep language easy and clear. '
++'CAPABILITIES: besides answering questions, you can generate images when the user asks (tasveer banao), translate between any languages, and build a CV step-by-step when asked (CV banao). '
++'RULES: never invent fake facts, dates, events, news, or specific job openings \u2014 if unsure, say so honestly. Never claim to submit job applications or contact employers on the user\'s behalf. Politely decline disallowed content.';}
+var _cvState=null;
+function _esc(t){return String(t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function _scrollMsgs(){var m=document.getElementById('chatMsgs');m.scrollTop=m.scrollHeight;}
+function tryImageGen(msg,tp){
+ var low=' '+msg.toLowerCase()+' ';
+ var hasNoun=/(tasveer|tasweer|image|picture|photo|draw|painting|sketch|tasavir)/.test(low);
+ var hasVerb=/(banao|banado|bana de|bana|make|generate|create|draw it)/.test(low);
+ if(!hasNoun||!hasVerb)return false;
+ var subj=low.replace(/\b(tasveer|tasweer|images|image|picture|photo|draw|painting|sketch|tasavir|banao|banado|bana|make|generate|create|please|plz|ek|a|an|the|of|ki|ka|ko|meri|mera|mujhe|mujhay)\b|\bfor me\b|\bbana de\b/g,' ').replace(/[^a-zA-Z\u0600-\u06FF\u0750-\u077F ]/g,' ').replace(/\s+/g,' ').trim();
+ if(!subj)subj='beautiful landscape';
+ tp.classList.remove('typing');tp.textContent='';
+ var im=document.createElement('img');
+ im.src='https://image.pollinations.ai/prompt/'+encodeURIComponent(subj)+'?nologo=true&width=768&height=768&seed='+Math.floor(Math.random()*99999);
+ im.style.cssText='max-width:100%;border-radius:10px;margin-top:6px;display:block';
+ im.alt=subj;im.loading='lazy';
+ var cap=document.createElement('div');cap.textContent='Ye rahi aapki tasveer: '+subj;
+ tp.appendChild(cap);tp.appendChild(im);_scrollMsgs();
+ _chatHist.push({role:'assistant',content:'[generated an image of: '+subj+']'});
+ if(_chatHist.length>12)_chatHist=_chatHist.slice(-12);
+ return true;
+}
+function tryCV(msg,tp){
+ var low=msg.toLowerCase().trim();
+ if(_cvState){cvStep(msg,tp);return true;}
+ if(/\bcv\b|resume/.test(low)&&/(banao|banado|bana|make|create|generate|maker)/.test(low)){
+  _cvState={step:0,data:{}};tp.classList.remove('typing');
+  tp.textContent='Zaroor! Aapka CV banata hun. Pehle apna poora NAAM likhein: (mansookh ke liye "cancel" likhein)';
+  _scrollMsgs();return true;
+ }
+ return false;
+}
+function cvStep(msg,tp){
+ var low=msg.toLowerCase().trim(),st=_cvState,d=st.data;
+ tp.classList.remove('typing');
+ if(low==='cancel'||low==='mansookh'){_cvState=null;tp.textContent='CV banana mansookh kar diya.';_scrollMsgs();return;}
+ if(st.step===0){d.name=msg;st.step=1;tp.textContent='Shukriya! Ab apni TALEEM likhein (masalan: MA Journalism, 2024):';}
+ else if(st.step===1){d.edu=msg;st.step=2;tp.textContent='Apna TAJURBA / work experience likhein:';}
+ else if(st.step===2){d.exp=msg;st.step=3;tp.textContent='Apni SKILLS likhein (masalan: writing, video editing):';}
+ else if(st.step===3){d.skills=msg;st.step=4;tp.textContent='Apna PHONE NUMBER aur EMAIL likhein:';}
+ else if(st.step===4){d.contact=msg;_cvState=null;renderCV(d,tp);return;}
+ _scrollMsgs();
+}
+function renderCV(d,tp){
+ var h='<div style="background:#fff;border:1px solid #ddd;border-radius:10px;padding:14px;margin-top:8px;color:#222">'
+ +'<h3 style="margin:0 0 4px;color:#0a3d91">'+_esc(d.name)+'</h3>'
+ +'<p style="margin:0 0 10px;color:#555;font-size:13px">'+_esc(d.contact)+'</p>'
+ +'<b>Taleem / Education</b><p style="margin:4px 0 10px">'+_esc(d.edu)+'</p>'
+ +'<b>Tajurba / Experience</b><p style="margin:4px 0 10px">'+_esc(d.exp)+'</p>'
+ +'<b>Skills</b><p style="margin:4px 0 12px">'+_esc(d.skills)+'</p>'
+ +'<button onclick="printCV(this)" style="background:#f90;color:#fff;border:none;padding:9px 18px;border-radius:6px;font-weight:700;cursor:pointer;font-size:14px">Print / Save as PDF</button></div>';
+ tp.innerHTML='Aapka CV tayyar hai:'+h;_scrollMsgs();
+ _chatHist.push({role:'assistant',content:'[built a CV for '+d.name+']'});
+ if(_chatHist.length>12)_chatHist=_chatHist.slice(-12);
+}
+function printCV(btn){var w=window.open('','_blank');if(!w)return;w.document.write('<html><head><title>CV</title><meta charset="utf-8"></head><body style="font-family:sans-serif;max-width:700px;margin:20px auto">'+btn.parentElement.innerHTML+'</body></html>');w.document.close();setTimeout(function(){w.print();},400);}
 async function sendChat(e){if(e)e.preventDefault();var inp=document.getElementById('chatInput');var msg=inp.value.trim();if(!msg)return;inp.value='';addMsg('user',msg);_chatHist.push({role:'user',content:msg});if(_chatHist.length>12)_chatHist=_chatHist.slice(-12);
 var tp=addMsg('bot','\u2026');tp.classList.add('typing');
+if(tryImageGen(msg,tp)){_scrollMsgs();return;}
+if(tryCV(msg,tp)){_scrollMsgs();return;}
 try{
  var _msgs=[{role:'system',content:_sysPrompt()}].concat(_chatHist);
  var r=await fetch('https://text.pollinations.ai/openai',{method:'POST',headers:{'Content-Type':'application/json','Accept':'text/event-stream'},body:JSON.stringify({model:'openai',messages:_msgs,stream:true})});
