@@ -1947,14 +1947,25 @@ function jbRenderCur(){
     if(c && (d.country||'')!==c) return;
     if(q && ((d.title||'')+' '+(d.org||'')).toLowerCase().indexOf(q)<0) return;
     n++;
-    h+='<div class="job-card"><h4>'+escH(d.title)+'</h4>'
+    var _ji=jbDocs.indexOf(d);
+    h+='<div class="job-card" id="jbcard-'+_ji+'"><h4>'+escH(d.title)+'</h4>'
       +'<div class="job-meta">🏢 '+escH(d.org||'')+' &nbsp; 🌍 '+escH(d.country||'')+'</div>'
       +(d.deadline?'<div class="job-meta">⏰ '+escH(nt('deadline'))+': '+escH(d.deadline)+'</div>':'')
-      +'<a class="cb-btn" target="_blank" rel="noopener" href="'+escH(d.applyUrl)+'">'+escH(nt('applyNow'))+'</a></div>';
+      +'<a class="cb-btn" target="_blank" rel="noopener" href="'+escH(d.applyUrl)+'">'+escH(nt('applyNow'))+'</a>'
+      +' <button class="cb-btn" onclick="shareJb('+_ji+')">🔗 '+escH(nt('share'))+'</button></div>';
   });
   if(!n) h+='<p class="cb-muted">'+escH(nt('noJobs'))+'</p>';
   document.getElementById('jbGrid').innerHTML=h;
 }
+function shareJb(i){
+  var d=jbDocs[i]; if(!d)return;
+  var pfx=jbMode==='jobs'?'job':'sch';
+  var url=location.origin+location.pathname+'#'+pfx+'-'+i;
+  var t=(d.title||'')+(d.org?' — '+d.org:'');
+  if(navigator.share){navigator.share({title:t,text:'Sindh Plus Media Network',url:url}).catch(()=>{});}
+  else{try{navigator.clipboard.writeText(t+' '+url);alert(nt('linkCopied'));}catch(e){prompt('Copy:',url);}}
+}
+try{var _jm=(location.hash||'').match(/^#(job|sch)-(\d+)$/);if(_jm){var _jmode=_jm[1]==='job'?'jobs':'scholar',_jidx=parseInt(_jm[2],10);[1500,4000,7000].forEach(function(ms){setTimeout(function(){try{showTab('jobs');if(jbMode!==_jmode)jbModeSet(_jmode);var el=document.getElementById('jbcard-'+_jidx);if(el){el.scrollIntoView({block:'center'});el.style.outline='3px solid #0aa';setTimeout(function(){el.style.outline='';},3500);}}catch(e){}},ms);});}}catch(e){}
 
 
 </script><script>
