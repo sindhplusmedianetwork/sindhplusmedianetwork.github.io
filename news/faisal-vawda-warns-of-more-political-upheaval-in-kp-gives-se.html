@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "فیصل واوڈا کی خیبر پختونخوا میں مزید سیاسی تبدیلیوں کی پیشگوئی، سیٹ اپ کو 180 دن کی مہلت", "ex_ur": "سینیٹر فیصل واوڈا نے خبردار کیا ہے کہ خیبر پختونخوا میں سیاسی صورتحال ابھی ختم نہیں ہوئی اور مزید اقدامات ہو سکتے ہیں۔ ان کا کہنا تھا کہ 'پارٹ ون آ گیا، پارٹ ٹو اور پارٹ تھری بھی آئیں گے' اور نئے سیٹ اپ کو 180 دن میں عوام کو ریلیف دینا ہوگا۔ انہوں نے گورنر راج کے نفاذ کو پی ٹی آئی کے دہشت گردوں سے مبینہ روابط کا نتیجہ قرار دیا، یہ دعوے ان کے اپنے ہیں جن کی آزادانہ تصدیق نہیں ہوئی۔", "title_en": "Faisal Vawda Warns of More Political Upheaval in KP, Gives Setup 180 Days", "ex_en": "Senator Faisal Vawda has warned of further political developments in Khyber Pakhtunkhwa, declaring that “part one has come” and parts two and three would follow. He gave the new KP setup 180 days to deliver relief to the people, cautioning that the governor could be replaced if he failed. Vawda also alleged PTI's links with terrorists led to the imposition of governor's rule, claims presented as his own and not independently verified."}</script>
+<script id="artLang" type="application/json">{"title_ur": "فیصل واوڈا کی خیبر پختونخوا میں مزید سیاسی تبدیلیوں کی پیشگوئی، سیٹ اپ کو 180 دن کی مہلت", "ex_ur": "سینیٹر فیصل واوڈا نے خبردار کیا ہے کہ خیبر پختونخوا میں سیاسی صورتحال ابھی ختم نہیں ہوئی اور مزید اقدامات ہو سکتے ہیں۔ ان کا کہنا تھا کہ 'پارٹ ون آ گیا، پارٹ ٹو اور پارٹ تھری بھی آئیں گے' اور نئے سیٹ اپ کو 180 دن میں عوام کو ریلیف دینا ہوگا۔ انہوں نے گورنر راج کے نفاذ کو پی ٹی آئی کے دہشت گردوں سے مبینہ روابط کا نتیجہ قرار دیا، یہ دعوے ان کے اپنے ہیں جن کی آزادانہ تصدیق نہیں ہوئی۔", "title_sd": "فيصل واوڊا پاران خيبرپختونخوا ۾ وڌيڪ سياسي تبديلين جي اڳڪٿي، سيٽ اپ کي 180 ڏينهن جي مهلت", "ex_sd": "سينيٽر فيصل واوڊا خبردار ڪيو آهي ته خيبرپختونخوا ۾ سياسي صورتحال اڃا ختم نه ٿي آهي ۽ وڌيڪ قدم ٿي سگهن ٿا. هن چيو ته 'پارٽ ون اچي ويو، پارٽ ٽو ۽ پارٽ ٿري به ايندا' ۽ نئين سيٽ اپ کي 180 ڏينهن ۾ عوام کي رليف ڏيڻو پوندو. هن گورنر راڄ جي نفاذ کي پي ٽي آءِ جي دهشتگردن سان مبينه لاڳاپن جو نتيجو قرار ڏنو، هي دعوائون هن جون پنهنجون آهن جن جي آزاداڻي تصديق نه ٿي آهي.", "title_en": "Faisal Vawda Warns of More Political Upheaval in KP, Gives Setup 180 Days", "ex_en": "Senator Faisal Vawda has warned of further political developments in Khyber Pakhtunkhwa, declaring that “part one has come” and parts two and three would follow. He gave the new KP setup 180 days to deliver relief to the people, cautioning that the governor could be replaced if he failed. Vawda also alleged PTI's links with terrorists led to the imposition of governor's rule, claims presented as his own and not independently verified."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

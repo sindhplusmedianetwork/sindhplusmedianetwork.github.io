@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "ایف سی سی نے بشریٰ بی بی کی سات سالہ سزا معطلی کی درخواست مسترد کر دی", "ex_ur": "فیڈرل کانسٹیٹیوشنل کورٹ نے القادر ٹرسٹ کیس میں بشریٰ بی بی کی سات سالہ سزا معطل کرنے کی درخواست مسترد کر دی ہے۔ چیف جسٹس امین الدین خان کی سربراہی میں دو رکنی بینچ نے اسلام آباد ہائی کورٹ کے حکم میں مداخلت کی کوئی ٹھوس وجہ نہ پائی۔ عدالت نے اس کے بجائے مرکزی اپیل کا جلد فیصلہ کرنے پر زور دیا۔", "title_en": "FCC Rejects Bushra Bibi's Plea to Suspend 7-Year Al-Qadir Sentence", "ex_en": "The Federal Constitutional Court has rejected Bushra Bibi's plea to suspend her seven-year sentence in the £190 million Al-Qadir Trust case. A two-member bench headed by Chief Justice Aminuddin Khan found no sufficient ground to interfere with the Islamabad High Court's order. The court instead urged expeditious disposal of the main appeal."}</script>
+<script id="artLang" type="application/json">{"title_ur": "ایف سی سی نے بشریٰ بی بی کی سات سالہ سزا معطلی کی درخواست مسترد کر دی", "ex_ur": "فیڈرل کانسٹیٹیوشنل کورٹ نے القادر ٹرسٹ کیس میں بشریٰ بی بی کی سات سالہ سزا معطل کرنے کی درخواست مسترد کر دی ہے۔ چیف جسٹس امین الدین خان کی سربراہی میں دو رکنی بینچ نے اسلام آباد ہائی کورٹ کے حکم میں مداخلت کی کوئی ٹھوس وجہ نہ پائی۔ عدالت نے اس کے بجائے مرکزی اپیل کا جلد فیصلہ کرنے پر زور دیا۔", "title_sd": "ايف سي سي پاران بشريٰ بي بي جي ست سالن جي سزا معطلي جي درخواست رد", "ex_sd": "فيڊرل ڪانسٽيٽيوشنل ڪورٽ القادر ٽرسٽ ڪيس ۾ بشريٰ بي بي جي ست سالن جي سزا معطل ڪرڻ جي درخواست رد ڪري ڇڏي آهي. چيف جسٽس امين الدين خان جي سربراهي ۾ ٻن رڪني بئنچ اسلام آباد هاءِ ڪورٽ جي حڪم ۾ مداخلت جو ڪو مضبوط سبب نه لڌو. عدالت ان بدران مرڪزي اپيل جو جلد فيصلو ڪرڻ تي زور ڏنو.", "title_en": "FCC Rejects Bushra Bibi's Plea to Suspend 7-Year Al-Qadir Sentence", "ex_en": "The Federal Constitutional Court has rejected Bushra Bibi's plea to suspend her seven-year sentence in the £190 million Al-Qadir Trust case. A two-member bench headed by Chief Justice Aminuddin Khan found no sufficient ground to interfere with the Islamabad High Court's order. The court instead urged expeditious disposal of the main appeal."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

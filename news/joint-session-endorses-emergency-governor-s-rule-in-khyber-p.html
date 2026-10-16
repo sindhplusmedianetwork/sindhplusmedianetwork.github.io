@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "مشترکہ اجلاس کی خیبر پختونخوا میں ایمرجنسی اور گورنر راج کی توثیق", "ex_ur": "پارلیمنٹ کے مشترکہ اجلاس نے جمعرات کو خیبر پختونخوا میں 11 اکتوبر کو نافذ کی گئی ایمرجنسی اور گورنر راج کی توثیق کر دی — حکومتی تحریک 214 کے مقابلے میں 56 ووٹوں سے منظور ہوئی، جبکہ اپوزیشن ارکان نے قراردادوں کی نقلیں پھاڑ دیں۔ حکومت نے ان اقدامات کا جواز انسداد دہشت گردی قرار دیا؛ یہ ابتدائی طور پر دو ماہ کے لیے ہوں گے اور چھ ماہ تک بڑھائے جا سکتے ہیں۔", "title_en": "Joint Session Endorses Emergency, Governor's Rule in Khyber Pakhtunkhwa", "ex_en": "A joint sitting of parliament on Thursday ratified the emergency and governor's rule imposed in Khyber Pakhtunkhwa on October 11, with the government's procedural motion passing 214 to 56 amid loud opposition protests. Opposition members tore up copies of the two resolutions as they were adopted. The government defended the measures on counterterrorism grounds; they will initially run for two months and can be extended to six."}</script>
+<script id="artLang" type="application/json">{"title_ur": "مشترکہ اجلاس کی خیبر پختونخوا میں ایمرجنسی اور گورنر راج کی توثیق", "ex_ur": "پارلیمنٹ کے مشترکہ اجلاس نے جمعرات کو خیبر پختونخوا میں 11 اکتوبر کو نافذ کی گئی ایمرجنسی اور گورنر راج کی توثیق کر دی — حکومتی تحریک 214 کے مقابلے میں 56 ووٹوں سے منظور ہوئی، جبکہ اپوزیشن ارکان نے قراردادوں کی نقلیں پھاڑ دیں۔ حکومت نے ان اقدامات کا جواز انسداد دہشت گردی قرار دیا؛ یہ ابتدائی طور پر دو ماہ کے لیے ہوں گے اور چھ ماہ تک بڑھائے جا سکتے ہیں۔", "title_sd": "گڏيل اجلاس جي خيبرپختونخوا ۾ ايمرجنسي ۽ گورنر راڄ جي توثيق", "ex_sd": "پارليامينٽ جي گڏيل اجلاس خميس تي خيبرپختونخوا ۾ 11 آڪٽوبر تي لاڳو ڪيل ايمرجنسي ۽ گورنر راڄ جي توثيق ڪري ڇڏي — حڪومتي رٿ 214 جي مقابلي ۾ 56 ووٽن سان منظور ٿي، جڏهن ته اپوزيشن ميمبرن قراردادن جون ڪاپيون ڦاڙي ڇڏيون. حڪومت انهن قدمن جو جواز دهشتگردي خلاف جنگ قرار ڏنو؛ هي شروع ۾ ٻن مهينن لاءِ هوندا ۽ ڇهن مهينن تائين وڌائي سگهجن ٿا.", "title_en": "Joint Session Endorses Emergency, Governor's Rule in Khyber Pakhtunkhwa", "ex_en": "A joint sitting of parliament on Thursday ratified the emergency and governor's rule imposed in Khyber Pakhtunkhwa on October 11, with the government's procedural motion passing 214 to 56 amid loud opposition protests. Opposition members tore up copies of the two resolutions as they were adopted. The government defended the measures on counterterrorism grounds; they will initially run for two months and can be extended to six."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

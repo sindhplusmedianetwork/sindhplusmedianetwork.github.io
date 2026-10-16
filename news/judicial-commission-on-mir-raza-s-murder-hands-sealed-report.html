@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "میر رضا کے قتل کی عدالتی کمیشن نے سیل شدہ رپورٹ سندھ حکومت کے حوالے کر دی", "ex_ur": "سندھ ہائی کورٹ کے جسٹس عمر سیال کی سربراہی میں جوڈیشل کمیشن نے 15 سماعتوں میں 49 گواہوں کے بیانات قلمبند کر کے گزشتہ ہفتے تحقیقات مکمل کر لیں، اور جمعرات کو سیل بند رپورٹ سندھ حکومت کے فوکل پرسن جاوید احمد ابرو کے حوالے کر دی۔ رپورٹ کو عام کیا جائے گا یا نہیں، یہ اب صوبائی حکومت کا اختیار ہے۔ 25 سالہ میر رضا علی 28 جولائی کو پی ای چ ایچ ایس کے گھر سے نکلنے کے بعد لاپتہ ہوئے تھے، اور اگلے روز گلستانِ جوہر میں گولیوں سے چھلنی لاش ملی تھی۔", "title_en": "Judicial Commission on Mir Raza's Murder Hands Sealed Report to Sindh Govt", "ex_en": "A judicial commission headed by Sindh High Court Justice Omar Sial wrapped up its probe last week after recording statements of 49 witnesses across 15 hearings,"}</script>
+<script id="artLang" type="application/json">{"title_ur": "میر رضا کے قتل کی عدالتی کمیشن نے سیل شدہ رپورٹ سندھ حکومت کے حوالے کر دی", "ex_ur": "سندھ ہائی کورٹ کے جسٹس عمر سیال کی سربراہی میں جوڈیشل کمیشن نے 15 سماعتوں میں 49 گواہوں کے بیانات قلمبند کر کے گزشتہ ہفتے تحقیقات مکمل کر لیں، اور جمعرات کو سیل بند رپورٹ سندھ حکومت کے فوکل پرسن جاوید احمد ابرو کے حوالے کر دی۔ رپورٹ کو عام کیا جائے گا یا نہیں، یہ اب صوبائی حکومت کا اختیار ہے۔ 25 سالہ میر رضا علی 28 جولائی کو پی ای چ ایچ ایس کے گھر سے نکلنے کے بعد لاپتہ ہوئے تھے، اور اگلے روز گلستانِ جوہر میں گولیوں سے چھلنی لاش ملی تھی۔", "title_sd": "مير رضا جي قتل تي جوڊيشل ڪميشن سيل ٿيل رپورٽ سنڌ حڪومت حوالي ڪري ڇڏي", "ex_sd": "سنڌ هاءِ ڪورٽ جي جسٽس عمر سيال جي سربراهي ۾ جوڊيشل ڪميشن 15 ٻڌڻين ۾ 49 شاهدن جا بيان قلمبند ڪري گذريل هفتي جاچ مڪمل ڪري ورتي، ۽ خميس ڏينهن سيل بند رپورٽ سنڌ حڪومت جي فوڪل پرسن جاويد احمد ابڙي حوالي ڪري ڇڏي. رپورٽ عام ڪئي ويندي يا نه، اهو هاڻي صوبائي حڪومت جو اختيار آهي.", "title_en": "Judicial Commission on Mir Raza's Murder Hands Sealed Report to Sindh Govt", "ex_en": "A judicial commission headed by Sindh High Court Justice Omar Sial wrapped up its probe last week after recording statements of 49 witnesses across 15 hearings,"}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

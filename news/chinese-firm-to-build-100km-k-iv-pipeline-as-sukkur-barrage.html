@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "چینی کمپنی کراچی کے لیے 100 کلومیٹر کے فور پائپ لائن بچھائے گی، سکھر بیراج کے دروازے مکمل ہونے کے قریب", "ex_ur": "وزیراعلیٰ سندھ مراد علی شاہ کے دورہ چین کے دوران چینی کمپنی ایچ بی ایس زیڈ نے کراچی کے لیے 100 کلومیٹر طویل کے فور پائپ لائن بنانے پر آمادگی ظاہر کی۔ سکھر بیراج کے 54 میں سے 44 دروازے تبدیل کر کے فعال کر دیے گئے ہیں۔", "title_en": "Chinese Firm to Build 100km K-IV Pipeline as Sukkur Barrage Gates Near Completion", "ex_en": "Sindh Chief Minister Murad Ali Shah met HBSZ Company in Wuhan, where the Chinese firm agreed to build the 100-kilometre K-IV pipeline for Karachi. He also reviewed the Sukkur Barrage project, where 44 of 54 river gates have been replaced and made functional."}</script>
+<script id="artLang" type="application/json">{"title_ur": "چینی کمپنی کراچی کے لیے 100 کلومیٹر کے فور پائپ لائن بچھائے گی، سکھر بیراج کے دروازے مکمل ہونے کے قریب", "ex_ur": "وزیراعلیٰ سندھ مراد علی شاہ کے دورہ چین کے دوران چینی کمپنی ایچ بی ایس زیڈ نے کراچی کے لیے 100 کلومیٹر طویل کے فور پائپ لائن بنانے پر آمادگی ظاہر کی۔ سکھر بیراج کے 54 میں سے 44 دروازے تبدیل کر کے فعال کر دیے گئے ہیں۔", "title_sd": "چيني ڪمپني ڪراچي لاءِ 100 ڪلوميٽر ڪي فور پائپ لائن وڇائيندي، سکر بيراج جا دروازا مڪمل ٿيڻ ويجهو", "ex_sd": "وڏي وزير سنڌ مراد علي شاهه جي دوري چين دوران چيني ڪمپني ايڇ بي ايس زيڊ ڪراچي لاءِ 100 ڪلوميٽر ڊگهي ڪي فور پائپ لائن ٺاهڻ تي آمادگي ظاهر ڪئي. سکر بيراج جا 54 مان 44 دروازا تبديل ڪري فعال ڪيا ويا آهن.", "title_en": "Chinese Firm to Build 100km K-IV Pipeline as Sukkur Barrage Gates Near Completion", "ex_en": "Sindh Chief Minister Murad Ali Shah met HBSZ Company in Wuhan, where the Chinese firm agreed to build the 100-kilometre K-IV pipeline for Karachi. He also reviewed the Sukkur Barrage project, where 44 of 54 river gates have been replaced and made functional."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

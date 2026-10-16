@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "اقوام متحدہ کی سلامتی کونسل میں پاکستان نے سعودی عرب پر حوثی حملوں کی مذمت کی", "ex_ur": "اقوام متحدہ میں پاکستان کے قائم مقام مندوب عثمان جدون نے سلامتی کونسل کے مباحثے میں سعودی عرب کی شہری اور معاشی تنصیبات پر حوثی حملوں کی سخت مذمت کرتے ہوئے کہا کہ یہ حملے 'فوری طور پر بند ہونے چاہئیں' اور مملکت کی سلامتی اور حقِ دفاعِ خود کی حمایت کا اعادہ کیا۔ انہوں نے یمن میں مذاکرات کی بحالی کے لیے اقوام متحدہ کے نمائندے کی کوششوں کی تائید کی اور 1967 سے پہلے کی سرحدوں پر فلسطینی ریاست کے لیے 'قابلِ اعتبار، وقت کی پابند اور ناقابلِ واپسی' سیاسی عمل کا مطالبہ کیا۔", "title_en": "At UNSC, Pakistan Condemns Houthi Attacks on Saudi Arabia, Backs Kingdom's Security", "ex_en": "Pakistan's acting UN envoy Usman Jadoon told a Security Council debate that Houthi attacks on Saudi Arabia's civilian and economic infrastructure 'must cease im"}</script>
+<script id="artLang" type="application/json">{"title_ur": "اقوام متحدہ کی سلامتی کونسل میں پاکستان نے سعودی عرب پر حوثی حملوں کی مذمت کی", "ex_ur": "اقوام متحدہ میں پاکستان کے قائم مقام مندوب عثمان جدون نے سلامتی کونسل کے مباحثے میں سعودی عرب کی شہری اور معاشی تنصیبات پر حوثی حملوں کی سخت مذمت کرتے ہوئے کہا کہ یہ حملے 'فوری طور پر بند ہونے چاہئیں' اور مملکت کی سلامتی اور حقِ دفاعِ خود کی حمایت کا اعادہ کیا۔ انہوں نے یمن میں مذاکرات کی بحالی کے لیے اقوام متحدہ کے نمائندے کی کوششوں کی تائید کی اور 1967 سے پہلے کی سرحدوں پر فلسطینی ریاست کے لیے 'قابلِ اعتبار، وقت کی پابند اور ناقابلِ واپسی' سیاسی عمل کا مطالبہ کیا۔", "title_sd": "سلامتي ڪائونسل ۾ پاڪستان پاران سعودي عرب تي حوثي حملن جي مذمت", "ex_sd": "گڏيل قومن ۾ پاڪستان جي قائم مقام نمائندي عثمان جدون سلامتي ڪائونسل جي بحث ۾ سعودي عرب جي شهري ۽ معاشي تنصيبن تي حوثي حملن جي سخت مذمت ڪندي چيو ته اهي حملا 'فوري طور تي بند ٿيڻ گهرجن' ۽ بادشاهت جي سلامتي ۽ حق دفاع جي حمايت جو ورجاءُ ڪيو.", "title_en": "At UNSC, Pakistan Condemns Houthi Attacks on Saudi Arabia, Backs Kingdom's Security", "ex_en": "Pakistan's acting UN envoy Usman Jadoon told a Security Council debate that Houthi attacks on Saudi Arabia's civilian and economic infrastructure 'must cease im"}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

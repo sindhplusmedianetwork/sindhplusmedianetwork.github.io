@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "آزاد کشمیر اسمبلی سپیکر کی مہاجر نشستوں کے مستقبل پر اتفاق رائے کی اپیل", "ex_ur": "آزاد کشمیر قانون ساز اسمبلی کے سپیکر چوہدری طارق فاروق نے جمعرات کو مظفرآباد میں صحافیوں سے گفتگو میں کہا کہ سیاسی رہنماؤں کو مذاکرات اور اصلاحات کے ذریعے مہاجر نشستوں کے مستقبل پر وسیع اتفاق رائے قائم کرنا چاہیے۔ انہوں نے کہا کہ بجلی اور آٹے کی سبسڈی ختم نہیں کی جائے گی، پیپلز پارٹی پر پونچھ صورتحال کا سیاسی فائدہ اٹھانے کا الزام لگایا، اور کہا کہ کابینہ میں توسیع نواز شریف کی واپسی سے مشروط ہے۔", "title_en": "AJK Assembly Speaker Calls for Consensus on Future of Refugee Seats", "ex_en": "AJK Legislative Assembly Speaker Chaudhry Tariq Farooq told reporters in Muzaffarabad on Thursday that political leaders should settle the future of refugee seats through dialogue, reforms and broad-based consensus. He said electricity and flour subsidies would not be withdrawn, accused the PPP of exploiting the Poonch situation for political gain, and noted cabinet expansion was pending Nawaz Sharif's return."}</script>
+<script id="artLang" type="application/json">{"title_ur": "آزاد کشمیر اسمبلی سپیکر کی مہاجر نشستوں کے مستقبل پر اتفاق رائے کی اپیل", "ex_ur": "آزاد کشمیر قانون ساز اسمبلی کے سپیکر چوہدری طارق فاروق نے جمعرات کو مظفرآباد میں صحافیوں سے گفتگو میں کہا کہ سیاسی رہنماؤں کو مذاکرات اور اصلاحات کے ذریعے مہاجر نشستوں کے مستقبل پر وسیع اتفاق رائے قائم کرنا چاہیے۔ انہوں نے کہا کہ بجلی اور آٹے کی سبسڈی ختم نہیں کی جائے گی، پیپلز پارٹی پر پونچھ صورتحال کا سیاسی فائدہ اٹھانے کا الزام لگایا، اور کہا کہ کابینہ میں توسیع نواز شریف کی واپسی سے مشروط ہے۔", "title_sd": "آزاد ڪشمير اسيمبلي اسپيڪر پاران مهاجر سيٽن جي مستقبل تي اتفاق راءِ جي اپيل", "ex_sd": "آزاد ڪشمير قانون ساز اسيمبلي جي اسپيڪر چوڌري طارق فاروق خميس ڏينهن مظفرآباد ۾ صحافين سان ڳالهائيندي چيو ته سياسي اڳواڻن کي ڳالهين ۽ سڌارن ذريعي مهاجر سيٽن جي مستقبل تي وسيع اتفاق راءِ قائم ڪرڻ گهرجي. هن چيو ته بجلي ۽ اٽي جي سبسڊي ختم نه ڪئي ويندي، پيپلز پارٽي تي پونڇ صورتحال جو سياسي فائدو وٺڻ جو الزام لڳايو، ۽ چيو ته ڪابينا ۾ واڌ نواز شريف جي واپسي سان مشروط آهي.", "title_en": "AJK Assembly Speaker Calls for Consensus on Future of Refugee Seats", "ex_en": "AJK Legislative Assembly Speaker Chaudhry Tariq Farooq told reporters in Muzaffarabad on Thursday that political leaders should settle the future of refugee seats through dialogue, reforms and broad-based consensus. He said electricity and flour subsidies would not be withdrawn, accused the PPP of exploiting the Poonch situation for political gain, and noted cabinet expansion was pending Nawaz Sharif's return."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

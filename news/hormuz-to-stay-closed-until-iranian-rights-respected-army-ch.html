@@ -82,20 +82,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "ایرانی حقوق تسلیم ہونے تک آبنائے ہرمز بند رہے گی، آرمی چیف کا اعلان", "ex_ur": "ایرانی آرمی چیف میجر جنرل امیر حاتمی نے کہا ہے کہ ایرانی عوام کے حقوق تسلیم ہونے تک آبنائے ہرمز بند رہے گی — تہران کی امام علی ملٹری یونیورسٹی میں خطاب کے دوران، جس کی خبر ارنا نے دی۔ انہوں نے ایران کے حریفوں پر فوجی صلاحیتوں کو کم سمجھنے اور ناقص حکمت عملی پر جنگ شروع کرنے کا الزام لگایا، اور دعویٰ کیا کہ ایرانی افواج نے جنگ کے ابتدائی گھنٹوں میں سیکڑوں حملوں سے جواب دیا — جس سے علاقائی جہاز رانی اور عالمی توانائی سپلائی پر نئی تشویش پیدا ہو گئی ہے۔", "title_en": "Hormuz to Stay Closed Until Iranian Rights Respected, Army Chief Declares", "ex_en": "Iran's army chief Maj Gen Amir Hatami has said the Strait of Hormuz will remain closed until the Iranian people's rights are respected, speaking at Tehran's Imam Ali Military University in remarks carried by IRNA. He accused Iran's adversaries of underestimating its military capabilities and launching the war on a flawed strategy, and claimed Iranian forces responded with hundreds of strikes in the early hours of the conflict — raising fresh concerns for regional shipping and global energy supplies."}</script>
+<script id="artLang" type="application/json">{"title_ur": "ایرانی حقوق تسلیم ہونے تک آبنائے ہرمز بند رہے گی، آرمی چیف کا اعلان", "ex_ur": "ایرانی آرمی چیف میجر جنرل امیر حاتمی نے کہا ہے کہ ایرانی عوام کے حقوق تسلیم ہونے تک آبنائے ہرمز بند رہے گی — تہران کی امام علی ملٹری یونیورسٹی میں خطاب کے دوران، جس کی خبر ارنا نے دی۔ انہوں نے ایران کے حریفوں پر فوجی صلاحیتوں کو کم سمجھنے اور ناقص حکمت عملی پر جنگ شروع کرنے کا الزام لگایا، اور دعویٰ کیا کہ ایرانی افواج نے جنگ کے ابتدائی گھنٹوں میں سیکڑوں حملوں سے جواب دیا — جس سے علاقائی جہاز رانی اور عالمی توانائی سپلائی پر نئی تشویش پیدا ہو گئی ہے۔", "title_sd": "ايراني حق تسليم ٿيڻ تائين آبنائي هرمز بند رهندي، آرمي چيف جو اعلان", "ex_sd": "ايراني آرمي چيف ميجر جنرل امير حاتمي چيو آهي ته ايراني عوام جا حق تسليم ٿيڻ تائين آبنائي هرمز بند رهندي — تهران جي امام علي ملٽري يونيورسٽي ۾ خطاب دوران، جنهن جي خبر ارنا ڏني. هن ايران جي مخالفن تي فوجي صلاحيتن کي گهٽ سمجهڻ ۽ ناقص حڪمت عملي تي جنگ شروع ڪرڻ جو الزام لڳايو، ۽ دعويٰ ڪئي ته ايراني فوجن جنگ جي شروعاتي ڪلاڪن ۾ سوين حملن سان جواب ڏنو — جنهن سان علائقائي جهازن ۽ عالمي توانائي سپلاءِ تي نئين ڳڻتي پيدا ٿي وئي آهي.", "title_en": "Hormuz to Stay Closed Until Iranian Rights Respected, Army Chief Declares", "ex_en": "Iran's army chief Maj Gen Amir Hatami has said the Strait of Hormuz will remain closed until the Iranian people's rights are respected, speaking at Tehran's Imam Ali Military University in remarks carried by IRNA. He accused Iran's adversaries of underestimating its military capabilities and launching the war on a flawed strategy, and claimed Iranian forces responded with hundreds of strikes in the early hours of the conflict — raising fresh concerns for regional shipping and global energy supplies."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

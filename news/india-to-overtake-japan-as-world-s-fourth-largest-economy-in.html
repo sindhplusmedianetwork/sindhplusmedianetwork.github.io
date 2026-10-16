@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "آئی ایم ایف: 2027 میں بھارت جاپان کو پیچھے چھوڑ کر دنیا کی چوتھی بڑی معیشت بن جائے گا", "ex_ur": "بین الاقوامی مالیاتی فنڈ کا اندازہ ہے کہ بھارت 2027 میں 4.52 ٹریلین ڈالر جی ڈی پی کے ساتھ دنیا کی چوتھی بڑی معیشت بن جائے گا اور جاپان چھٹی پوزیشن پر چلا جائے گا۔ آئی ایم ایف نے 2026 کے لیے بھارت کی ترقی کا تخمینہ 7 فیصد تک بڑھا دیا ہے جبکہ توانائی کی بڑھتی قیمتوں اور بڑھتی ہوئی عمر رسیدہ آبادی کے باعث جاپان کی ترقی 0.7 فیصد تک سست ہونے کا امکان ہے۔", "title_en": "India to Overtake Japan as World's Fourth-Largest Economy in 2027: IMF", "ex_en": "The International Monetary Fund projects India will become the world's fourth-largest economy in 2027 with a GDP of $4.52 trillion, pushing Japan down to sixth place. The IMF raised India's 2026 growth forecast to 7 percent, while Japan's growth is expected to slow to 0.7 percent amid high energy prices and an ageing population."}</script>
+<script id="artLang" type="application/json">{"title_ur": "آئی ایم ایف: 2027 میں بھارت جاپان کو پیچھے چھوڑ کر دنیا کی چوتھی بڑی معیشت بن جائے گا", "ex_ur": "بین الاقوامی مالیاتی فنڈ کا اندازہ ہے کہ بھارت 2027 میں 4.52 ٹریلین ڈالر جی ڈی پی کے ساتھ دنیا کی چوتھی بڑی معیشت بن جائے گا اور جاپان چھٹی پوزیشن پر چلا جائے گا۔ آئی ایم ایف نے 2026 کے لیے بھارت کی ترقی کا تخمینہ 7 فیصد تک بڑھا دیا ہے جبکہ توانائی کی بڑھتی قیمتوں اور بڑھتی ہوئی عمر رسیدہ آبادی کے باعث جاپان کی ترقی 0.7 فیصد تک سست ہونے کا امکان ہے۔", "title_sd": "آءِ ايم ايف: 2027ع ۾ ڀارت جاپان کي پوئتي ڇڏي دنيا جي چوٿين وڏي معيشت بڻجي ويندو", "ex_sd": "بين الاقوامي مالياتي فنڊ جو اندازو آهي ته ڀارت 2027ع ۾ 4.52 ٽريلين ڊالر جي ڊي پي سان دنيا جي چوٿين وڏي معيشت بڻجي ويندو ۽ جاپان ڇهين نمبر تي هليو ويندو. آءِ ايم ايف 2026ع لاءِ ڀارت جي واڌ جو تخمينو وڌائي 7 سيڪڙو ڪري ڇڏيو آهي، جڏهن ته توانائي جي وڌندڙ قيمتن ۽ وڌندڙ عمر رسيده آبادي سبب جاپان جي واڌ 0.7 سيڪڙو تائين سست ٿيڻ جو امڪان آهي.", "title_en": "India to Overtake Japan as World's Fourth-Largest Economy in 2027: IMF", "ex_en": "The International Monetary Fund projects India will become the world's fourth-largest economy in 2027 with a GDP of $4.52 trillion, pushing Japan down to sixth place. The IMF raised India's 2026 growth forecast to 7 percent, while Japan's growth is expected to slow to 0.7 percent amid high energy prices and an ageing population."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

@@ -82,20 +82,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "گلگت بلتستان کے وزیر اعلیٰ کا اسلام آباد سے عبوری صوبائی حیثیت اور این ایف سی میں حصے کا مطالبہ", "ex_ur": "گلگت بلتستان کے وزیر اعلیٰ امجد حسین ایڈووکیٹ نے وفاقی حکومت سے خطے کے لیے عبوری صوبائی حیثیت اور این ایف سی ایوارڈ میں حصے کا مطالبہ کیا ہے۔ گلگت بلتستان اسمبلی نے متفقہ طور پر آئینی حقوق اور پارلیمنٹ میں نمائندگی کا مطالبہ کیا ہے۔", "title_en": "GB CM Presses Islamabad for Interim Provincial Status and NFC Share", "ex_en": "Gilgit-Baltistan Chief Minister Amjad Hussain Advocate is pressing the federal government for interim provincial status and a share in the NFC Award for the region. The GB Assembly has unanimously demanded constitutional rights and representation in Parliament and federal institutions."}</script>
+<script id="artLang" type="application/json">{"title_ur": "گلگت بلتستان کے وزیر اعلیٰ کا اسلام آباد سے عبوری صوبائی حیثیت اور این ایف سی میں حصے کا مطالبہ", "ex_ur": "گلگت بلتستان کے وزیر اعلیٰ امجد حسین ایڈووکیٹ نے وفاقی حکومت سے خطے کے لیے عبوری صوبائی حیثیت اور این ایف سی ایوارڈ میں حصے کا مطالبہ کیا ہے۔ گلگت بلتستان اسمبلی نے متفقہ طور پر آئینی حقوق اور پارلیمنٹ میں نمائندگی کا مطالبہ کیا ہے۔", "title_sd": "گلگت بلتستان جي وڏي وزير طرفان اسلام آباد کان عبوري صوبائي حيثيت ۽ اين ايف سي ۾ حصي جو مطالبو", "ex_sd": "گلگت بلتستان جو وڏو وزير امجد حسين ايڊووڪيٽ وفاقي حڪومت تي زور ڏئي رهيو آهي ته علائقي لاءِ عبوري صوبائي حيثيت ۽ اين ايف سي ايوارڊ ۾ حصو ڏنو وڃي. جي بي اسيمبلي متفق طور آئيني حقن ۽ پارليامينٽ ۽ وفاقي ادارن ۾ نمائندگي جو مطالبو ڪيو آهي.", "title_en": "GB CM Presses Islamabad for Interim Provincial Status and NFC Share", "ex_en": "Gilgit-Baltistan Chief Minister Amjad Hussain Advocate is pressing the federal government for interim provincial status and a share in the NFC Award for the region. The GB Assembly has unanimously demanded constitutional rights and representation in Parliament and federal institutions."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

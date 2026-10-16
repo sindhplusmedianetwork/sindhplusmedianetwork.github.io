@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "'کاکروچ' تحریک کی ریلی سے قبل نئی دہلی میں پارک بند", "ex_ur": "نئی دہلی میں حکام نے ووٹر لسٹوں کی نظرثانی پر چیف الیکشن کمشنر گیانیش کمار کی برطرفی کا مطالبہ کرنے والی 'کاکروچ جنتا پارٹی' کے احتجاج سے قبل وسطی دہلی کا ایک پارک بند کر دیا اور کناٹ پلیس کے گرد عوامی اجتماعات پر پابندی لگا دی۔ اہم چوراہوں پر ہزاروں سکیورٹی اہلکار اور پیلے رکاوٹیں تعینات کی گئیں، جبکہ پارٹی کے بانی ابھیجیت ڈپکے نے گرفتاری کے امکان کے باوجود حامیوں سے ریلی نکالنے کی اپیل کی۔ وزیر دفاع راج ناتھ سنگھ نے الزامات مسترد کرتے ہوئے اپوزیشن پر انتشار پھیلانے کی سازش کا الزام لگایا۔", "title_en": "India Shuts New Delhi Park Ahead of 'Cockroach' Movement Rally", "ex_en": "Authorities closed a central New Delhi park and barred public gatherings around Connaught Place ahead of a protest by the Cockroach Janta Party demanding the removal of chief election commissioner Gyanesh Kumar over a voter-roll revision. Thousands of security personnel were deployed with yellow barricades at key intersections, while party founder Abhijeet Dipke urged supporters to rally despite possible arrest. Defence Minister Rajnath Singh dismissed the allegations, accusing the opposition of plotting to create anarchy."}</script>
+<script id="artLang" type="application/json">{"title_ur": "'کاکروچ' تحریک کی ریلی سے قبل نئی دہلی میں پارک بند", "ex_ur": "نئی دہلی میں حکام نے ووٹر لسٹوں کی نظرثانی پر چیف الیکشن کمشنر گیانیش کمار کی برطرفی کا مطالبہ کرنے والی 'کاکروچ جنتا پارٹی' کے احتجاج سے قبل وسطی دہلی کا ایک پارک بند کر دیا اور کناٹ پلیس کے گرد عوامی اجتماعات پر پابندی لگا دی۔ اہم چوراہوں پر ہزاروں سکیورٹی اہلکار اور پیلے رکاوٹیں تعینات کی گئیں، جبکہ پارٹی کے بانی ابھیجیت ڈپکے نے گرفتاری کے امکان کے باوجود حامیوں سے ریلی نکالنے کی اپیل کی۔ وزیر دفاع راج ناتھ سنگھ نے الزامات مسترد کرتے ہوئے اپوزیشن پر انتشار پھیلانے کی سازش کا الزام لگایا۔", "title_sd": "'ڪاڪروچ' تحريڪ جي ريلي کان اڳ نئين دهلي ۾ پارڪ بند", "ex_sd": "نئين دهلي ۾ عملدارن ووٽر لسٽن جي نظرثاني تي چيف اليڪشن ڪمشنر گيانيش ڪمار جي برطرفي جو مطالبو ڪندڙ 'ڪاڪروچ جنتا پارٽي' جي احتجاج کان اڳ وچين دهلي جو هڪ پارڪ بند ڪري ڇڏيو ۽ ڪناٽ پليس جي چوڌاري عوامي گڏجاڻين تي پابندي لڳائي ڇڏي. اهم چوراهن تي هزارين سيڪيورٽي اهلڪار ۽ پيلا رڪاوٽون مقرر ڪيون ويون، جڏهن ته پارٽي جي باني ابهيجيت ڊپڪي گرفتاري جي امڪان باوجود حامين کان ريلي ڪڍڻ جي اپيل ڪئي. وزير دفاع راج ناٿ سنگهه الزام رد ڪندي اپوزيشن تي انتشار ڦهلائڻ جي سازش جو الزام لڳايو.", "title_en": "India Shuts New Delhi Park Ahead of 'Cockroach' Movement Rally", "ex_en": "Authorities closed a central New Delhi park and barred public gatherings around Connaught Place ahead of a protest by the Cockroach Janta Party demanding the removal of chief election commissioner Gyanesh Kumar over a voter-roll revision. Thousands of security personnel were deployed with yellow barricades at key intersections, while party founder Abhijeet Dipke urged supporters to rally despite possible arrest. Defence Minister Rajnath Singh dismissed the allegations, accusing the opposition of plotting to create anarchy."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

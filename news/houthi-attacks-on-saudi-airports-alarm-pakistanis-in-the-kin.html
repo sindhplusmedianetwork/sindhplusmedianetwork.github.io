@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "سعودی ایئرپورٹس پر حوثی حملوں کے بعد مملکت میں پاکستانیوں میں تشویش", "ex_ur": "سعودی ایئرپورٹس پر حوثی میزائل اور ڈرون حملوں، جن میں 10 اکتوبر کو ریاض ایئرپورٹ پر 12 افراد کی ہلاکت بھی شامل ہے، نے مملکت میں مقیم پاکستانیوں کو تشویش میں مبتلا کر دیا ہے۔ 6 اور 7 اکتوبر کو ابھا اور ریاض ایئرپورٹس پر حملوں میں تین افراد ہلاک اور 36 زخمی ہوئے جن میں ایک پاکستانی شہری بھی شامل تھا۔ پاکستان نے حملوں کی مذمت کرتے ہوئے سعودی عرب سے یکجہتی کا اعادہ کیا۔", "title_en": "Houthi Attacks on Saudi Airports Alarm Pakistanis in the Kingdom", "ex_en": "Houthi missile and drone attacks on Saudi airports, including the deadly October 10 strike on Riyadh airport that killed 12, have alarmed Pakistanis living in the kingdom. Attacks on October 6-7 at Abha and Riyadh airports killed three and injured 36, among them a Pakistani national. Pakistan condemned the strikes and reaffirmed its solidarity with Saudi Arabia."}</script>
+<script id="artLang" type="application/json">{"title_ur": "سعودی ایئرپورٹس پر حوثی حملوں کے بعد مملکت میں پاکستانیوں میں تشویش", "ex_ur": "سعودی ایئرپورٹس پر حوثی میزائل اور ڈرون حملوں، جن میں 10 اکتوبر کو ریاض ایئرپورٹ پر 12 افراد کی ہلاکت بھی شامل ہے، نے مملکت میں مقیم پاکستانیوں کو تشویش میں مبتلا کر دیا ہے۔ 6 اور 7 اکتوبر کو ابھا اور ریاض ایئرپورٹس پر حملوں میں تین افراد ہلاک اور 36 زخمی ہوئے جن میں ایک پاکستانی شہری بھی شامل تھا۔ پاکستان نے حملوں کی مذمت کرتے ہوئے سعودی عرب سے یکجہتی کا اعادہ کیا۔", "title_sd": "سعودي ايئرپورٽن تي حوثي حملن کانپوءِ مملڪت ۾ پاڪستانين ۾ ڳڻتي", "ex_sd": "سعودي ايئرپورٽن تي حوثي ميزائل ۽ ڊرون حملن، جن ۾ 10 آڪٽوبر تي رياض ايئرپورٽ تي 12 ڄڻن جي موت به شامل آهي، مملڪت ۾ رهندڙ پاڪستانين کي فڪرمند ڪري ڇڏيو آهي. 6 ۽ 7 آڪٽوبر تي ابها ۽ رياض ايئرپورٽن تي حملن ۾ ٽي ڄڻا مارجي ويا ۽ 36 زخمي ٿيا جن ۾ هڪ پاڪستاني شهري به شامل هو. پاڪستان حملن جي مذمت ڪندي سعودي عرب سان يڪجهتي جو ورجاءُ ڪيو.", "title_en": "Houthi Attacks on Saudi Airports Alarm Pakistanis in the Kingdom", "ex_en": "Houthi missile and drone attacks on Saudi airports, including the deadly October 10 strike on Riyadh airport that killed 12, have alarmed Pakistanis living in the kingdom. Attacks on October 6-7 at Abha and Riyadh airports killed three and injured 36, among them a Pakistani national. Pakistan condemned the strikes and reaffirmed its solidarity with Saudi Arabia."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "گوگل اے آئی سرچ میں نیوز اور ویب سائٹ لنکس زیادہ نمایاں دکھائے گا", "ex_ur": "گوگل نے اعلان کیا ہے کہ وہ اے آئی سے تیار کردہ تلاش کے نتائج میں سیاق و سباق کے لنکس زیادہ نمایاں اور اوپر دکھائے گا، اور اے آئی اوور ویوز کے نیچے مضامین کے کارڈز کا عالمی لنک 'کیروسل' بھی بڑھائے گا۔ الگورتھم ان ذرائع کے مضامین کو بھی ترجیح دے گا جنہیں صارفین پسندیدہ قرار دیں گے، اور سوشل میڈیا پوسٹس اور فورمز سے مواد بھی لے گا۔ یہ قدم پبلشرز کی ٹریفک میں شدید کمی کی شکایات کے بعد آیا ہے، جن میں جولائی 2025 سے جولائی 2026 کے درمیان گوگل سے آنے والی نیوز ٹریفک میں 40 فیصد کمی کی رپورٹ بھی شامل ہے۔", "title_en": "Google to Show News and Website Links More Prominently in AI Search", "ex_en": "Google announced it will display contextual links more frequently and higher up in AI-generated search results, and expand its worldwide link 'carousel' of article cards below AI Overviews. The algorithm will also prioritise articles from sources users mark as preferred and pull content from social media posts and forums. The move follows publisher complaints of steep traffic declines, including a reported 40 per cent drop in Google-driven news traffic between July 2025 and July 2026."}</script>
+<script id="artLang" type="application/json">{"title_ur": "گوگل اے آئی سرچ میں نیوز اور ویب سائٹ لنکس زیادہ نمایاں دکھائے گا", "ex_ur": "گوگل نے اعلان کیا ہے کہ وہ اے آئی سے تیار کردہ تلاش کے نتائج میں سیاق و سباق کے لنکس زیادہ نمایاں اور اوپر دکھائے گا، اور اے آئی اوور ویوز کے نیچے مضامین کے کارڈز کا عالمی لنک 'کیروسل' بھی بڑھائے گا۔ الگورتھم ان ذرائع کے مضامین کو بھی ترجیح دے گا جنہیں صارفین پسندیدہ قرار دیں گے، اور سوشل میڈیا پوسٹس اور فورمز سے مواد بھی لے گا۔ یہ قدم پبلشرز کی ٹریفک میں شدید کمی کی شکایات کے بعد آیا ہے، جن میں جولائی 2025 سے جولائی 2026 کے درمیان گوگل سے آنے والی نیوز ٹریفک میں 40 فیصد کمی کی رپورٹ بھی شامل ہے۔", "title_sd": "گوگل اي آءِ سرچ ۾ نيوز ۽ ويب سائيٽ لنڪ وڌيڪ نمايان ڏيکاريندو", "ex_sd": "گوگل اعلان ڪيو آهي ته هو اي آءِ سان تيار ڪيل ڳولا جي نتيجن ۾ حوالي وارا لنڪ وڌيڪ نمايان ۽ مٿي ڏيکاريندو، ۽ اي آءِ اوور ويوز جي هيٺان مضمونن جي ڪارڊن جو عالمي لنڪ 'ڪيروسيل' به وڌائيندو. الگورٿم انهن ذريعن جي مضمونن کي به ترجيح ڏيندو جن کي استعمال ڪندڙ پسنديدا قرار ڏيندا، ۽ سوشل ميڊيا پوسٽن ۽ فورمن کان مواد به وٺندو. هي قدم پبلشرن جي ٽريفڪ ۾ سخت گهٽتائي جي شڪايتن کانپوءِ آيو آهي، جن ۾ جولاءِ 2025ع کان جولاءِ 2026ع وچ ۾ گوگل کان ايندڙ نيوز ٽريفڪ ۾ 40 سيڪڙو گهٽتائي جي رپورٽ به شامل آهي.", "title_en": "Google to Show News and Website Links More Prominently in AI Search", "ex_en": "Google announced it will display contextual links more frequently and higher up in AI-generated search results, and expand its worldwide link 'carousel' of article cards below AI Overviews. The algorithm will also prioritise articles from sources users mark as preferred and pull content from social media posts and forums. The move follows publisher complaints of steep traffic declines, including a reported 40 per cent drop in Google-driven news traffic between July 2025 and July 2026."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

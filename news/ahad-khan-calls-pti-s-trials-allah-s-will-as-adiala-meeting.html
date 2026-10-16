@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "احد خان: پی ٹی آئی کے امتحان اللہ کی مرضی، اڈیالہ جیل میں ملاقات نہ ہو سکی", "ex_ur": "عمران خان کے بہنوئی احد خان اڈیالہ جیل کے باہر ڈھگل چیک پوسٹ پہنچے مگر ملاقات کا وقت ختم ہونے پر اندر نہ جا سکے۔ انہوں نے کہا کہ پی ٹی آئی پر آنے والے امتحان اللہ کی مرضی ہیں اور خیبرپختونخوا میں گورنر راج حکمرانوں کے تابوت میں آخری کیل ہوگا۔", "title_en": "Ahad Khan Calls PTI's Trials Allah's Will as Adiala Meeting Fails", "ex_en": "Imran Khan's brother-in-law Ahad Khan reached the Dahgal checkpoint outside Adiala jail on the scheduled meeting day but could not go inside after the meeting time expired. He said the trials facing the PTI were Allah's will and that governor's rule in Khyber Pakhtunkhwa would be the final nail in the rulers' coffin."}</script>
+<script id="artLang" type="application/json">{"title_ur": "احد خان: پی ٹی آئی کے امتحان اللہ کی مرضی، اڈیالہ جیل میں ملاقات نہ ہو سکی", "ex_ur": "عمران خان کے بہنوئی احد خان اڈیالہ جیل کے باہر ڈھگل چیک پوسٹ پہنچے مگر ملاقات کا وقت ختم ہونے پر اندر نہ جا سکے۔ انہوں نے کہا کہ پی ٹی آئی پر آنے والے امتحان اللہ کی مرضی ہیں اور خیبرپختونخوا میں گورنر راج حکمرانوں کے تابوت میں آخری کیل ہوگا۔", "title_sd": "احد خان: پي ٽي آءِ جا امتحان الله جي مرضي، اڊياله جيل ۾ ملاقات نه ٿي سگهي", "ex_sd": "عمران خان جو ڀيڻويو احد خان اڊياله جيل ٻاهر ڍڳل چيڪ پوسٽ پهتو پر ملاقات جو وقت ختم ٿيڻ تي اندر نه وڃي سگهيو. هن چيو ته پي ٽي آءِ تي ايندڙ امتحان الله جي مرضي آهن ۽ خيبرپختونخوا ۾ گورنر راڄ حڪمرانن جي تابوت ۾ آخري ڪوڪو هوندو.", "title_en": "Ahad Khan Calls PTI's Trials Allah's Will as Adiala Meeting Fails", "ex_en": "Imran Khan's brother-in-law Ahad Khan reached the Dahgal checkpoint outside Adiala jail on the scheduled meeting day but could not go inside after the meeting time expired. He said the trials facing the PTI were Allah's will and that governor's rule in Khyber Pakhtunkhwa would be the final nail in the rulers' coffin."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

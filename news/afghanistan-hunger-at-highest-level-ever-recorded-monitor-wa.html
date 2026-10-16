@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "افغانستان میں بھوک تاریخی بلند ترین سطح پر پہنچ گئی، مانیٹرنگ ادارے کی رپورٹ", "ex_ur": "بھوک کے عالمی نگران ادارے کے مطابق افغانستان میں 1.59 کروڑ افراد شدید غذائی عدم تحفظ کا شکار ہیں — اب تک کی بدترین صورتحال — جن میں 32 فیصد سے زائد آبادی بحران کی سطح پر اور 34 لاکھ افراد ایمرجنسی کی حالت میں ہیں؛ سردیوں میں یہ تعداد 1.92 کروڑ تک پہنچ سکتی ہے۔ ڈبلیو ایف پی اور ایف اے او نے جمعرات کو ہنگامی فنڈنگ کی مشترکہ اپیل کی اور خبردار کیا کہ 'عمل کا موقع اب بھی موجود ہے لیکن تیزی سے ختم ہو رہا ہے'۔", "title_en": "Afghanistan Hunger at Highest Level Ever Recorded, Monitor Warns", "ex_en": "A global hunger monitor says 15.9 million Afghans face acute food insecurity — the worst ever recorded — with over 32% of the population at crisis level and 3.4"}</script>
+<script id="artLang" type="application/json">{"title_ur": "افغانستان میں بھوک تاریخی بلند ترین سطح پر پہنچ گئی، مانیٹرنگ ادارے کی رپورٹ", "ex_ur": "بھوک کے عالمی نگران ادارے کے مطابق افغانستان میں 1.59 کروڑ افراد شدید غذائی عدم تحفظ کا شکار ہیں — اب تک کی بدترین صورتحال — جن میں 32 فیصد سے زائد آبادی بحران کی سطح پر اور 34 لاکھ افراد ایمرجنسی کی حالت میں ہیں؛ سردیوں میں یہ تعداد 1.92 کروڑ تک پہنچ سکتی ہے۔ ڈبلیو ایف پی اور ایف اے او نے جمعرات کو ہنگامی فنڈنگ کی مشترکہ اپیل کی اور خبردار کیا کہ 'عمل کا موقع اب بھی موجود ہے لیکن تیزی سے ختم ہو رہا ہے'۔", "title_sd": "افغانستان ۾ بک تاريخ جي بلند ترين سطح تي پهچي وئي، نگران اداري جي خبرداري", "ex_sd": "بک جي عالمي نگران اداري موجب افغانستان ۾ 1.59 ڪروڙ ماڻهو شديد غذائي عدم تحفظ جو شڪار آهن — هيل تائين جي بدترين صورتحال — جن ۾ 32 سيڪڙو کان وڌيڪ آبادي بحران جي سطح تي ۽ 34 لک ماڻهو ايمرجنسي حالت ۾ آهن؛ سياري ۾ اهو انگ 1.92 ڪروڙ تائين پهچي سگهي ٿو.", "title_en": "Afghanistan Hunger at Highest Level Ever Recorded, Monitor Warns", "ex_en": "A global hunger monitor says 15.9 million Afghans face acute food insecurity — the worst ever recorded — with over 32% of the population at crisis level and 3.4"}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

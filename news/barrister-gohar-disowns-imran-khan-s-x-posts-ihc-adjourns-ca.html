@@ -82,20 +82,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "بیرسٹر گوہر کا عمران خان کے ایکس اکاؤنٹ سے لاتعلقی کا اعلان، سماعت 23 نومبر تک ملتوی", "ex_ur": "پی ٹی آئی چیئرمین بیرسٹر گوہر علی خان نے اسلام آباد ہائی کورٹ میں کہا کہ پارٹی عمران خان کے ایکس اکاؤنٹ کی ملکیت کا دعویٰ نہیں کرتی۔ جسٹس ارباب محمد طاہر نے 23 نومبر تک سماعت ملتوی کرتے ہوئے تحریری جواب جمع کرانے کا حکم دیا۔", "title_en": "Barrister Gohar Disowns Imran Khan's X Posts, IHC Adjourns Case to Nov 23", "ex_en": "PTI Chairman Barrister Gohar Ali Khan told the Islamabad High Court that the party does not claim ownership of the X account in Imran Khan's name, distancing PTI from its posts. Justice Arbab Muhammad Tahir adjourned the hearing to November 23, directing Gohar to submit a written response."}</script>
+<script id="artLang" type="application/json">{"title_ur": "بیرسٹر گوہر کا عمران خان کے ایکس اکاؤنٹ سے لاتعلقی کا اعلان، سماعت 23 نومبر تک ملتوی", "ex_ur": "پی ٹی آئی چیئرمین بیرسٹر گوہر علی خان نے اسلام آباد ہائی کورٹ میں کہا کہ پارٹی عمران خان کے ایکس اکاؤنٹ کی ملکیت کا دعویٰ نہیں کرتی۔ جسٹس ارباب محمد طاہر نے 23 نومبر تک سماعت ملتوی کرتے ہوئے تحریری جواب جمع کرانے کا حکم دیا۔", "title_sd": "بيرسٽر گوهر جو عمران خان جي ايڪس اڪائونٽ کان لاتعلقي جو اعلان، ڪيس 23 نومبر تائين ملتوي", "ex_sd": "پي ٽي آئي چيئرمين بيرسٽر گوهر علي خان اسلام آباد هاءِ ڪورٽ ۾ چيو ته پارٽي عمران خان جي نالي واري ايڪس اڪائونٽ جي ملڪيت جي دعويٰ نٿي ڪري. جسٽس ارباب محمد طاهر ٻڌڻي 23 نومبر تائين ملتوي ڪندي لکت ۾ جواب داخل ڪرڻ جو حڪم ڏنو.", "title_en": "Barrister Gohar Disowns Imran Khan's X Posts, IHC Adjourns Case to Nov 23", "ex_en": "PTI Chairman Barrister Gohar Ali Khan told the Islamabad High Court that the party does not claim ownership of the X account in Imran Khan's name, distancing PTI from its posts. Justice Arbab Muhammad Tahir adjourned the hearing to November 23, directing Gohar to submit a written response."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "اسلام آباد ہائی کورٹ کا عمران خان کے ایکس اکاؤنٹ کیس میں پی ٹی آئی کو مزید وقت", "ex_ur": "اسلام آباد ہائی کورٹ نے جمعرات کو پی ٹی آئی کے عبوری چیئرمین بیرسٹر گوہر علی خان کو بانی پی ٹی آئی عمران خان کے آفیشل ایکس اکاؤنٹ پر پابندی کی درخواست کے جواب میں تحریری جواب داخل کرنے کے لیے مزید وقت دے دیا، اور سماعت 23 نومبر تک ملتوی کر دی۔ گوہر نے جسٹس ارباب محمد طاہر کو بتایا کہ پی ٹی آئی اکاؤنٹ کی ملکیت کا دعویٰ نہیں کرتی، مگر بدلتے حالات کے پیشِ نظر مزید وقت درکار ہے۔ الگ سے، جوڈیشل مجسٹریٹ شائستہ کنڈی نے پی ٹی آئی بانی اور دیگر کے خلاف 2014 کے دھرنا مقدمات میں مفروروں کے وارنٹ گرفتاری جاری کر دیے۔", "title_en": "IHC Gives PTI More Time to Respond in Imran Khan's X Account Case", "ex_en": "The Islamabad High Court on Thursday granted PTI interim chairman Barrister Gohar Ali Khan more time to file a written reply to a petition seeking a ban on party founder Imran Khan's official X account, adjourning the hearing to November 23. Gohar told Justice Arbab Muhammad Tahir that PTI did not claim ownership of the account but needed more time in light of changed circumstances. Separately, Judicial Magistrate Shaista Kundi issued arrest warrants for absconders in the 2014 sit-in cases against the PTI founder and others."}</script>
+<script id="artLang" type="application/json">{"title_ur": "اسلام آباد ہائی کورٹ کا عمران خان کے ایکس اکاؤنٹ کیس میں پی ٹی آئی کو مزید وقت", "ex_ur": "اسلام آباد ہائی کورٹ نے جمعرات کو پی ٹی آئی کے عبوری چیئرمین بیرسٹر گوہر علی خان کو بانی پی ٹی آئی عمران خان کے آفیشل ایکس اکاؤنٹ پر پابندی کی درخواست کے جواب میں تحریری جواب داخل کرنے کے لیے مزید وقت دے دیا، اور سماعت 23 نومبر تک ملتوی کر دی۔ گوہر نے جسٹس ارباب محمد طاہر کو بتایا کہ پی ٹی آئی اکاؤنٹ کی ملکیت کا دعویٰ نہیں کرتی، مگر بدلتے حالات کے پیشِ نظر مزید وقت درکار ہے۔ الگ سے، جوڈیشل مجسٹریٹ شائستہ کنڈی نے پی ٹی آئی بانی اور دیگر کے خلاف 2014 کے دھرنا مقدمات میں مفروروں کے وارنٹ گرفتاری جاری کر دیے۔", "title_sd": "اسلام آباد هاءِ ڪورٽ جو عمران خان جي ايڪس اڪائونٽ ڪيس ۾ پي ٽي آءِ کي وڌيڪ وقت", "ex_sd": "اسلام آباد هاءِ ڪورٽ خميس تي پي ٽي آءِ جي عبوري چيئرمين بئريسٽر گوهر علي خان کي باني پي ٽي آءِ عمران خان جي آفشل ايڪس اڪائونٽ تي پابندي جي درخواست جي جواب ۾ تحريري جواب داخل ڪرڻ لاءِ وڌيڪ وقت ڏئي ڇڏيو، ۽ ٻڌڻي 23 نومبر تائين ملتوي ڪري ڇڏي. گوهر جسٽس ارباب محمد طاهر کي ٻڌايو ته پي ٽي آءِ اڪائونٽ جي ملڪيت جو دعويٰ نه ٿي ڪري، پر بدلجندڙ حالتن جي پيشِ نظر وڌيڪ وقت گهربل آهي. الڳ سان، جوڊيشل مجسٽريٽ شائسته ڪنڊي پي ٽي آءِ باني ۽ ٻين خلاف 2014ع جي ڌرڻا ڪيسن ۾ مفرورن جا وارنٽ گرفتاري جاري ڪري ڇڏيا.", "title_en": "IHC Gives PTI More Time to Respond in Imran Khan's X Account Case", "ex_en": "The Islamabad High Court on Thursday granted PTI interim chairman Barrister Gohar Ali Khan more time to file a written reply to a petition seeking a ban on party founder Imran Khan's official X account, adjourning the hearing to November 23. Gohar told Justice Arbab Muhammad Tahir that PTI did not claim ownership of the account but needed more time in light of changed circumstances. Separately, Judicial Magistrate Shaista Kundi issued arrest warrants for absconders in the 2014 sit-in cases against the PTI founder and others."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>
