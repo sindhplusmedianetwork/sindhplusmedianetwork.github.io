@@ -1,0 +1,245 @@
+ntById('cbPostImg');
+  if(pi) pi.addEventListener('change',async()=>{ const f=pi.files[0]; if(!f)return; try{ cbPostImgData=await cbCompress(f,800,0.7); const pv=document.getElementById('cbPostPrev'); pv.src=cbPostImgData; pv.style.display='block'; }catch(e){} });
+  // verification file inputs
+  const wire=(id,prev,step,key,md)=>{const el=document.getElementById(id); if(el) el.addEventListener('change',()=>cbVerifFile(id,prev,step,key,md));};
+  wire('cbIdFront','cbIdFrontPrev','cbVs1','idFront',800);
+  wire('cbIdBack','cbIdBackPrev','cbVs2','idBack',800);
+  wire('cbHolding','cbHoldingPrev','cbVs3','holding',600);
+  // admin hook on news auth
+  try{ if(typeof auth!=='undefined'&&auth) auth.onAuthStateChanged(()=>{ cbAdminLoad(); }); }catch(e){}
+  document.querySelectorAll('.modal-bg').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');}));
+}
+window.addEventListener('load',()=>{ setTimeout(cbInit,300); });
+
+window.onload=()=>{try{if(localStorage.getItem('spm_guest')==='1'){var l=document.getElementById('fbLanding');if(l)l.style.display='none';}}catch(e){}try{var q=new URLSearchParams(location.search);var l=q.get('lang');if(l&&LANGS.includes(l))LANG=l;}catch(e){} setLang(LANG);initFB();};
+/* SINDH PLUS AI CHAT */
+const CHAT_STR={
+ en:{title:'Sindh Plus AI',ph:'Ask a question...',welcome:'Assalam-o-Alaikum! I am Sindh Plus AI, the official assistant of Sindh Plus Media Network. Ask me anything in any language — news, jobs, study — or say "tasveer banao" for an image, "CV banao" to build your CV!',err:'Sorry, I could not answer right now. Please try again in a moment.'},
+ ur:{title:'سندھ پلس AI',ph:'سوال پوچھیں...',welcome:'السلام علیکم! میں سندھ پلس AI ہوں، سندھ پلس میڈیا نیٹ ورک کا آفیشل اسسٹنٹ۔ کسی بھی زبان میں کچھ بھی پوچھیں — خبریں، نوکریاں، پڑھائی — یا تصویر کے لیے "tasveer banao" اور CV کے لیے "CV banao" لکھیں!',err:'معذرت، ابھی جواب نہیں دے سکا۔ تھوڑی دیر بعد دوبارہ کوشش کریں۔'},
+ sd:{title:'سنڌ پلس AI',ph:'سوال پڇو...',welcome:'السلام عليڪم! مان سنڌ پلس AI آهيان، سنڌ پلس ميڊيا نيٽ ورڪ جو آفشل اسسٽنٽ. ڪنهن به ٻولي ۾ ڪجهه به پڇو — خبرون، نوڪريون، پڙهائي — يا تصوير لاءِ "tasveer banao" ۽ CV لاءِ "CV banao" لکو!',err:'معاف ڪجو، هينئر جواب نه ڏئي سگهيس. ٿوري دير کانپوءِ ٻيهر ڪوشش ڪريو.'},
+ zh:{title:'Sindh Plus AI',ph:'请输入您的问题...',welcome:'您好！我是 Sindh Plus AI，Sindh Plus Media Network 的官方助手。您可以用任何语言向我提问——新闻、工作、学习——或输入“tasveer banao”生成图片，输入“CV banao”制作简历！',err:'抱歉，我现在无法回答。请稍后再试。'}
+};
+function chatStr(k){return (CHAT_STR[LANG]&&CHAT_STR[LANG][k])||CHAT_STR.en[k];}
+function toggleChat(){var p=document.getElementById('chatPanel');p.classList.toggle('open');if(p.classList.contains('open')&&!p.dataset.welcomed){p.dataset.welcomed='1';addMsg('bot',chatStr('welcome'));}}
+function addMsg(who,text){var m=document.getElementById('chatMsgs');var d=document.createElement('div');d.className='msg '+who;d.textContent=text;m.appendChild(d);m.scrollTop=m.scrollHeight;return d;}
+var _chatHist=[];
+function _sysPrompt(){var _ln={en:'English',ur:'Urdu',sd:'Sindhi',zh:'Chinese (Simplified)'}[LANG]||'English';
+return 'You are \'Sindh Plus AI\', the official AI assistant of Sindh Plus Media Network, an independent digital news channel from Sindh, Pakistan. FOUNDER & OWNER: Tahir Adnan, a journalist from Karachi, Pakistan \u2014 MA Journalism and BSc from Shah Abdul Latif University, TEFL-certified English teacher with 2 years teaching experience, freelance journalist. He founded and owns Sindh Plus Media Network. The channel publishes independent digital news in 4 languages (English, Urdu, Sindhi, Chinese) on its website and YouTube channel \'Sindh plus media network\'. When anyone asks who made you, who owns the channel, or who Tahir Adnan is, answer proudly with these facts. '
++'You are a highly capable, friendly assistant like ChatGPT with broad WORLDWIDE knowledge: world news, countries, cultures, history, science, technology. '
++'LANGUAGE: always reply in the SAME language the user writes in \u2014 you know every world language (English, Urdu, Roman Urdu, Sindhi, Chinese, Arabic, Hindi, etc.). If the user writes in Roman Urdu, reply in Roman Urdu. '
++'STYLE: be warm, direct and simple like a helpful friend; keep language easy and clear. '
++'CAPABILITIES: besides answering questions, you can generate images when the user asks (tasveer banao), translate between any languages, and build a CV step-by-step when asked (CV banao). '
++'RULES: never invent fake facts, dates, events, news, or specific job openings \u2014 if unsure, say so honestly. Never claim to submit job applications or contact employers on the user\'s behalf. Politely decline disallowed content.';}
+var _cvState=null;
+function _esc(t){return String(t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function _scrollMsgs(){var m=document.getElementById('chatMsgs');m.scrollTop=m.scrollHeight;}
+function tryImageGen(msg,tp){
+ var low=' '+msg.toLowerCase()+' ';
+ var hasNoun=/(tasveer|tasweer|image|picture|photo|draw|painting|sketch|tasavir)/.test(low);
+ var hasVerb=/(banao|banado|bana de|bana|make|generate|create|draw it)/.test(low);
+ if(!hasNoun||!hasVerb)return false;
+ var subj=low.replace(/\b(tasveer|tasweer|images|image|picture|photo|draw|painting|sketch|tasavir|banao|banado|bana|make|generate|create|please|plz|ek|a|an|the|of|ki|ka|ko|meri|mera|mujhe|mujhay)\b|\bfor me\b|\bbana de\b/g,' ').replace(/[^a-zA-Z\u0600-\u06FF\u0750-\u077F ]/g,' ').replace(/\s+/g,' ').trim();
+ if(!subj)subj='beautiful landscape';
+ tp.classList.remove('typing');tp.textContent='';
+ var im=document.createElement('img');
+ im.src='https://image.pollinations.ai/prompt/'+encodeURIComponent(subj)+'?nologo=true&width=768&height=768&seed='+Math.floor(Math.random()*99999);
+ im.style.cssText='max-width:100%;border-radius:10px;margin-top:6px;display:block';
+ im.alt=subj;im.loading='lazy';
+ var cap=document.createElement('div');cap.textContent='Ye rahi aapki tasveer: '+subj;
+ tp.appendChild(cap);tp.appendChild(im);_scrollMsgs();
+ _chatHist.push({role:'assistant',content:'[generated an image of: '+subj+']'});
+ if(_chatHist.length>12)_chatHist=_chatHist.slice(-12);
+ return true;
+}
+function tryCV(msg,tp){
+ var low=msg.toLowerCase().trim();
+ if(_cvState){cvStep(msg,tp);return true;}
+ if(/\bcv\b|resume/.test(low)&&/(banao|banado|bana|make|create|generate|maker)/.test(low)){
+  _cvState={step:0,data:{}};tp.classList.remove('typing');
+  tp.textContent='Zaroor! Aapka CV banata hun. Pehle apna poora NAAM likhein: (mansookh ke liye "cancel" likhein)';
+  _scrollMsgs();return true;
+ }
+ return false;
+}
+function cvStep(msg,tp){
+ var low=msg.toLowerCase().trim(),st=_cvState,d=st.data;
+ tp.classList.remove('typing');
+ if(low==='cancel'||low==='mansookh'){_cvState=null;tp.textContent='CV banana mansookh kar diya.';_scrollMsgs();return;}
+ if(st.step===0){d.name=msg;st.step=1;tp.textContent='Shukriya! Ab apni TALEEM likhein (masalan: MA Journalism, 2024):';}
+ else if(st.step===1){d.edu=msg;st.step=2;tp.textContent='Apna TAJURBA / work experience likhein:';}
+ else if(st.step===2){d.exp=msg;st.step=3;tp.textContent='Apni SKILLS likhein (masalan: writing, video editing):';}
+ else if(st.step===3){d.skills=msg;st.step=4;tp.textContent='Apna PHONE NUMBER aur EMAIL likhein:';}
+ else if(st.step===4){d.contact=msg;_cvState=null;renderCV(d,tp);return;}
+ _scrollMsgs();
+}
+function renderCV(d,tp){
+ var h='<div style="background:#fff;border:1px solid #ddd;border-radius:10px;padding:14px;margin-top:8px;color:#222">'
+ +'<h3 style="margin:0 0 4px;color:#0a3d91">'+_esc(d.name)+'</h3>'
+ +'<p style="margin:0 0 10px;color:#555;font-size:13px">'+_esc(d.contact)+'</p>'
+ +'<b>Taleem / Education</b><p style="margin:4px 0 10px">'+_esc(d.edu)+'</p>'
+ +'<b>Tajurba / Experience</b><p style="margin:4px 0 10px">'+_esc(d.exp)+'</p>'
+ +'<b>Skills</b><p style="margin:4px 0 12px">'+_esc(d.skills)+'</p>'
+ +'<button onclick="printCV(this)" style="background:#f90;color:#fff;border:none;padding:9px 18px;border-radius:6px;font-weight:700;cursor:pointer;font-size:14px">Print / Save as PDF</button></div>';
+ tp.innerHTML='Aapka CV tayyar hai:'+h;_scrollMsgs();
+ _chatHist.push({role:'assistant',content:'[built a CV for '+d.name+']'});
+ if(_chatHist.length>12)_chatHist=_chatHist.slice(-12);
+}
+function printCV(btn){var w=window.open('','_blank');if(!w)return;w.document.write('<html><head><title>CV</title><meta charset="utf-8"></head><body style="font-family:sans-serif;max-width:700px;margin:20px auto">'+btn.parentElement.innerHTML+'</body></html>');w.document.close();setTimeout(function(){w.print();},400);}
+async function sendChat(e){if(e)e.preventDefault();var inp=document.getElementById('chatInput');var msg=inp.value.trim();if(!msg)return;inp.value='';addMsg('user',msg);_chatHist.push({role:'user',content:msg});if(_chatHist.length>12)_chatHist=_chatHist.slice(-12);
+var tp=addMsg('bot','\u2026');tp.classList.add('typing');
+if(tryImageGen(msg,tp)){_scrollMsgs();return;}
+if(tryCV(msg,tp)){_scrollMsgs();return;}
+try{
+ var _msgs=[{role:'system',content:_sysPrompt()}].concat(_chatHist);
+ var r=await fetch('https://text.pollinations.ai/openai',{method:'POST',headers:{'Content-Type':'application/json','Accept':'text/event-stream'},body:JSON.stringify({model:'openai',messages:_msgs,stream:true})});
+ if(!r.ok||!r.body)throw new Error('bad');
+ tp.classList.remove('typing');tp.textContent='';
+ var _rd=r.body.getReader(),_dc=new TextDecoder(),_buf='',_full='',_dn=false;
+ while(!_dn){var _ch=await _rd.read();_dn=_ch.done;_buf+=_dc.decode(_ch.value||new Uint8Array(),{stream:!_dn});
+  var _ls=_buf.split('\n');_buf=_ls.pop();
+  for(var _k=0;_k<_ls.length;_k++){var _L=_ls[_k].trim();if(_L.indexOf('data:')!==0)continue;var _D=_L.slice(5).trim();if(_D==='[DONE]'){_dn=true;break;}
+   try{var _J=JSON.parse(_D);var _C=(_J.choices&&_J.choices[0]&&_J.choices[0].delta&&_J.choices[0].delta.content)||'';if(_C){_full+=_C;tp.textContent=_full;var _mm=document.getElementById('chatMsgs');_mm.scrollTop=_mm.scrollHeight;}}catch(_e){}}}
+ _full=_full.trim().slice(0,4000);tp.textContent=_full||chatStr('err');_chatHist.push({role:'assistant',content:_full});if(_chatHist.length>12)_chatHist=_chatHist.slice(-12);
+}catch(_er){try{tp.classList.remove('typing');}catch(_x){}
+ try{var _pr=_sysPrompt()+'\n\nUser: '+msg;var r2=await fetch('https://text.pollinations.ai/'+encodeURIComponent(_pr),{headers:{'Accept':'text/plain'}});var _t=(await r2.text()).trim().slice(0,4000);tp.textContent=_t||chatStr('err');_chatHist.push({role:'assistant',content:_t});}catch(_e2){tp.textContent=chatStr('err');}}
+var m=document.getElementById('chatMsgs');m.scrollTop=m.scrollHeight;}
+// PWA: service worker + install prompt
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
+let _deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();_deferredPrompt=e;document.getElementById('installBtn').style.display='';});
+function installApp(){if(_deferredPrompt){_deferredPrompt.prompt();_deferredPrompt.userChoice.then(()=>{_deferredPrompt=null;document.getElementById('installBtn').style.display='none';});}else{alert('App install karne ke liye:\n\nAndroid (Chrome): Menu (⋮) → "Add to Home screen"\n\niPhone (Safari): Share → "Add to Home Screen"\n\nPhir app aapki home screen par aa jayegi!');}}
+/* ================= V2: DAILY TOOLS ================= */
+var TL_WX={0:'Clear ☀️',1:'Mainly clear 🌤️',2:'Partly cloudy ⛅',3:'Overcast ☁️',45:'Foggy 🌫️',48:'Foggy 🌫️',51:'Drizzle 🌦️',53:'Drizzle 🌦️',55:'Drizzle 🌦️',61:'Rain 🌧️',63:'Rain 🌧️',65:'Heavy rain ⛈️',71:'Snow 🌨️',73:'Snow 🌨️',75:'Snow 🌨️',80:'Showers 🌧️',81:'Showers 🌧️',82:'Showers 🌧️',95:'Thunderstorm ⛈️'};
+function tlShow(which){
+  var p=document.getElementById('tlPane'); if(!p) return;
+  var h='';
+  if(which==='prayer'){
+    h='<div class="tool-pane"><h3 style="margin:0 0 8px">🕌 <span>'+nt('prayer')+'</span></h3>'
+      +'<div class="tl-row"><input class="cb-input" id="tlCity" value="Karachi" placeholder="'+nt('prayerCity')+'">'
+      +'<button class="cb-btn" onclick="tlPrayer()">'+nt('getPrayer')+'</button></div>'
+      +'<div id="tlPrayerOut"></div></div>';
+  }else if(which==='weather'){
+    h='<div class="tool-pane"><h3 style="margin:0 0 8px">🌤️ <span>'+nt('weather')+'</span></h3>'
+      +'<div class="tl-row"><input class="cb-input" id="tlWxCity" value="Karachi" placeholder="'+nt('wxCityPh')+'">'
+      +'<button class="cb-btn" onclick="tlWeather()">'+nt('getWx')+'</button></div>'
+      +'<div id="tlWxOut"></div></div>';
+  }else if(which==='currency'){
+    var cur=['USD','PKR','EUR','GBP','AED','SAR','CNY','INR','JPY','AUD','CAD'];
+    var opts=function(sel){var o='';cur.forEach(function(c){o+='<option'+(c===sel?' selected':'')+'>'+c+'</option>';});return o;};
+    h='<div class="tool-pane"><h3 style="margin:0 0 8px">💱 <span>'+nt('currency')+'</span></h3>'
+      +'<div class="tl-row"><input class="cb-input" id="tlAmt" type="number" value="100" placeholder="'+nt('amount')+'">'
+      +'<select class="cb-select" id="tlFrom">'+opts('USD')+'</select>'
+      +'<select class="cb-select" id="tlTo">'+opts('PKR')+'</select></div>'
+      +'<button class="cb-btn" onclick="tlConvert()">'+nt('convert')+'</button>'
+      +'<div id="tlCurOut" style="margin-top:8px"></div></div>';
+  }else if(which==='units'){
+    h='<div class="tool-pane"><h3 style="margin:0 0 8px">📏 <span>'+nt('units')+'</span></h3>'
+      +'<div class="tl-row"><select class="cb-select" id="tlUType" onchange="tlUnitOpts()">'
+      +'<option value="len">'+nt('length')+'</option><option value="wt">'+nt('weight')+'</option><option value="tp">'+nt('temp')+'</option></select>'
+      +'<input class="cb-input" id="tlUVal" type="number" value="1" placeholder="'+nt('unitVal')+'"></div>'
+      +'<div class="tl-row"><select class="cb-select" id="tlUFrom"></select><select class="cb-select" id="tlUTo"></select></div>'
+      +'<button class="cb-btn" onclick="tlUnitGo()">'+nt('convert')+'</button>'
+      +'<div id="tlUOut" style="margin-top:8px"></div></div>';
+  }else if(which==='zakat'){
+    h='<div class="tool-pane"><h3 style="margin:0 0 8px">🤲 Zakat Calculator</h3>'
+      +'<div class="tl-row"><input class="cb-input" id="tlZCash" type="number" placeholder="Cash in hand (Rs)"></div>'
+      +'<div class="tl-row"><input class="cb-input" id="tlZGold" type="number" placeholder="Gold value (Rs)"><input class="cb-input" id="tlZSilver" type="number" placeholder="Silver value (Rs)"></div>'
+      +'<div class="tl-row"><input class="cb-input" id="tlZStock" type="number" placeholder="Business stock (Rs)"><input class="cb-input" id="tlZDebt" type="number" placeholder="Debts you owe (Rs)"></div>'
+      +'<button class="cb-btn" onclick="tlZakatGo()">Calculate Zakat (2.5%)</button>'
+      +'<div id="tlZOut" style="margin-top:8px"></div></div>';
+  }else if(which==='age'){
+    h='<div class="tool-pane"><h3 style="margin:0 0 8px">🎂 Age Calculator</h3>'
+      +'<div class="tl-row"><input class="cb-input" id="tlAgeD" type="date" max="2026-10-10"></div>'
+      +'<button class="cb-btn" onclick="tlAgeGo()">Calculate Age</button>'
+      +'<div id="tlAgeOut" style="margin-top:8px"></div></div>';
+  }else if(which==='bmi'){
+    h='<div class="tool-pane"><h3 style="margin:0 0 8px">⚖️ BMI Calculator</h3>'
+      +'<div class="tl-row"><input class="cb-input" id="tlBmiH" type="number" placeholder="Height (cm)"><input class="cb-input" id="tlBmiW" type="number" placeholder="Weight (kg)"></div>'
+      +'<button class="cb-btn" onclick="tlBmiGo()">Calculate BMI</button>'
+      +'<div id="tlBmiOut" style="margin-top:8px"></div></div>';
+  }else if(which==='qr'){
+    h='<div class="tool-pane"><h3 style="margin:0 0 8px">📱 QR Code Generator</h3>'
+      +'<div class="tl-row"><input class="cb-input" id="tlQrT" placeholder="Text or link"></div>'
+      +'<button class="cb-btn" onclick="tlQrGo()">Generate QR</button>'
+      +'<div id="tlQrOut" style="margin-top:8px;text-align:center"></div></div>';
+  }else if(which==='pass'){
+    h='<div class="tool-pane"><h3 style="margin:0 0 8px">🔐 Password Generator</h3>'
+      +'<div class="tl-row"><select class="cb-select" id="tlPLen"><option value="8">8 chars</option><option value="12" selected>12 chars</option><option value="16">16 chars</option><option value="20">20 chars</option></select></div>'
+      +'<button class="cb-btn" onclick="tlPassGo()">Generate</button>'
+      +'<div id="tlPOut" style="margin-top:8px"></div></div>';
+  }
+  p.innerHTML=h;
+  if(which==='units') tlUnitOpts();
+  if(which==='prayer') tlPrayer();
+  if(which==='weather') tlWeather();
+}
+function tlNum(id){ var v=parseFloat((document.getElementById(id)||{}).value||0); return isNaN(v)?0:v; }
+function tlZakatGo(){ var tot=tlNum('tlZCash')+tlNum('tlZGold')+tlNum('tlZSilver')+tlNum('tlZStock')-tlNum('tlZDebt'); var z=tot>0?tot*0.025:0; document.getElementById('tlZOut').innerHTML='<b>Zakat payable: Rs '+Math.round(z).toLocaleString('en-PK')+'</b><br><span class="cb-muted">On net assets of Rs '+Math.round(Math.max(tot,0)).toLocaleString('en-PK')+'</span>'; }
+function tlAgeGo(){ var d=document.getElementById('tlAgeD').value; if(!d) return; var b=new Date(d), n=new Date(); var y=n.getFullYear()-b.getFullYear(), m=n.getMonth()-b.getMonth(), dd=n.getDate()-b.getDate(); if(dd<0){m--; dd+=30;} if(m<0){y--; m+=12;} var days=Math.floor((n-b)/86400000); document.getElementById('tlAgeOut').innerHTML='<b>'+y+' years, '+m+' months, '+dd+' days</b><br><span class="cb-muted">Total '+days.toLocaleString()+' days</span>'; }
+function tlBmiGo(){ var h=tlNum('tlBmiH')/100, w=tlNum('tlBmiW'); if(!h||!w) return; var bmi=w/(h*h); var cat=bmi<18.5?'Underweight':bmi<25?'Normal':bmi<30?'Overweight':'Obese'; document.getElementById('tlBmiOut').innerHTML='<b>BMI: '+bmi.toFixed(1)+' — '+cat+'</b>'; }
+function tlQrGo(){ var t=(document.getElementById('tlQrT').value||'').trim(); if(!t) return; document.getElementById('tlQrOut').innerHTML='<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data='+encodeURIComponent(t)+'" alt="QR code" style="max-width:220px;border:1px solid #ddd;border-radius:8px">'; }
+function tlPassGo(){ var n=parseInt(document.getElementById('tlPLen').value||'12'); var cs='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*'; var p=''; for(var i=0;i<n;i++) p+=cs[Math.floor(Math.random()*cs.length)]; document.getElementById('tlPOut').innerHTML='<b style="font-family:monospace;font-size:16px;user-select:all">'+p+'</b>'; }
+async function tlPrayer(){
+  var city=(document.getElementById('tlCity').value||'Karachi').trim();
+  var box=document.getElementById('tlPrayerOut'); box.innerHTML='⏳...';
+  try{
+    var r=await fetch('https://api.aladhan.com/v1/timingsByCity?city='+encodeURIComponent(city)+'&country=Pakistan&method=2');
+    var j=await r.json(); var t=j.data.timings;
+    var names={Fajr:'Fajr / فجر',Sunrise:'Sunrise / طلوع آفتاب',Dhuhr:'Dhuhr / ظہر',Asr:'Asr / عصر',Maghrib:'Maghrib / مغرب',Isha:'Isha / عشاء'};
+    var h='<div>';
+    ['Fajr','Sunrise','Dhuhr','Asr','Maghrib','Isha'].forEach(function(k){ h+='<div class="prayer-row"><span>'+names[k]+'</span><b>'+t[k]+'</b></div>'; });
+    box.innerHTML=h+'</div><div class="cb-muted" style="font-size:11px;margin-top:6px">'+escH(city)+' — '+nt('cityLbl')+'</div>';
+  }catch(e){ box.innerHTML='<p class="cb-err">⚠️ Could not load prayer times. Check connection and try again.</p>'; }
+}
+async function tlWeather(){
+  var city=(document.getElementById('tlWxCity').value||'Karachi').trim();
+  var box=document.getElementById('tlWxOut'); box.innerHTML='⏳...';
+  try{
+    var g=await (await fetch('https://geocoding-api.open-meteo.com/v1/search?name='+encodeURIComponent(city)+'&count=1')).json();
+    if(!g.results||!g.results.length) throw new Error('nocity');
+    var p=g.results[0];
+    var w=await (await fetch('https://api.open-meteo.com/v1/forecast?latitude='+p.latitude+'&longitude='+p.longitude+'&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=auto&forecast_days=3')).json();
+    var h='<div><b>📍 '+escH(p.name)+(p.country?', '+escH(p.country):'')+'</b>'
+      +'<div style="font-size:30px;margin:8px 0">'+Math.round(w.current.temperature_2m)+'°C '+(TL_WX[w.current.weather_code]||'')+'</div>';
+    for(var i=0;i<w.daily.time.length;i++){
+      h+='<div class="prayer-row"><span>'+w.daily.time[i]+'</span><span>'+Math.round(w.daily.temperature_2m_max[i])+'° / '+Math.round(w.daily.temperature_2m_min[i])+'° '+(TL_WX[w.daily.weather_code[i]]||'')+'</span></div>';
+    }
+    box.innerHTML=h+'</div>';
+  }catch(e){ box.innerHTML='<p class="cb-err">⚠️ Could not load weather. Check connection and try again.</p>'; }
+}
+async function tlConvert(){
+  var amt=parseFloat(document.getElementById('tlAmt').value)||1;
+  var from=document.getElementById('tlFrom').value, to=document.getElementById('tlTo').value;
+  var box=document.getElementById('tlCurOut'); box.innerHTML='⏳...';
+  try{
+    var j=await (await fetch('https://open.er-api.com/v6/latest/'+from)).json();
+    var rate=j.rates[to];
+    if(!rate) throw new Error('nocur');
+    box.innerHTML='<div style="font-size:18px"><b>'+amt+' '+from+' = '+(amt*rate).toLocaleString(undefined,{maximumFractionDigits:2})+' '+to+'</b></div>'
+      +'<div class="cb-muted" style="font-size:11px">1 '+from+' = '+rate+' '+to+'</div>';
+  }catch(e){ box.innerHTML='<p class="cb-err">⚠️ Could not convert. Check connection and try again.</p>'; }
+}
+var TL_UNITS={len:{m:1,km:1000,cm:0.01,mi:1609.34,ft:0.3048,'in':0.0254},wt:{kg:1,g:0.001,lb:0.453592,oz:0.0283495,t:1000}};
+function tlUnitOpts(){
+  var t=document.getElementById('tlUType').value;
+  var f=document.getElementById('tlUFrom'), o=document.getElementById('tlUTo');
+  f.innerHTML=''; o.innerHTML='';
+  if(t==='tp'){ ['C','F','K'].forEach(function(u){ f.add(new Option(u,u)); o.add(new Option(u,u)); }); o.value='F'; }
+  else{ Object.keys(TL_UNITS[t]).forEach(function(u){ f.add(new Option(u,u)); o.add(new Option(u,u)); }); }
+}
+function tlUnitGo(){
+  var t=document.getElementById('tlUType').value, v=parseFloat(document.getElementById('tlUVal').value)||0;
+  var from=document.getElementById('tlUFrom').value, to=document.getElementById('tlUTo').value, out;
+  if(t==='tp'){
+    var c = from==='C'?v : from==='F'?(v-32)*5/9 : v-273.15;
+    out = to==='C'?c : to==='F'?c*9/5+32 : c+273.15;
+  }else{ out = v*TL_UNITS[t][from]/TL_UNITS[t][to]; }
+  document.getElementById('tlUOut').innerHTML='<div style="font-size:18px"><b>'+v+' '+from+' = '+(Math.round(out*1000)/1000)+' '+to+'</b></div>';
+}
+
+/* ================= V2: JOBS & SCHOLARSHIPS =================
+   SAMPLE LISTINGS (clearly marked): shown ONLY when the Firestore
+   collections site_jobs / site_scholarships are empty. Tahir adds real
+   daily listings as Firestore docs: {title, org, country, applyUrl,
+   deadline, source}. Each Apply button opens the OFFICIAL applyUrl. */
+/* REAL_JOBS: researched 2026-10-10 with verified official apply links. Shown when Firestore site_jobs is empty; daily cron adds more. */ var SAMPLE_JOBS=[{"title": "Medical Officer (Male) (BPS-17)", "org": "Sindh Public Service Commission (SPSC)", "country": "Pakistan", "location": "Sindh, Pakistan", "qualification": "MBBS + PMDC registration + 1-year house job", "posts": "32", "description": "Home Department, Government of Sindh — 32 Medical Officer posts via SPSC Consolidated Advertisement 05/2026. Apply online only on the SPSC portal (Rs 500 fee per post).", "applyUrl": "https://www.spsc.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-09-25", "deadline": "2026-10-23", "source": "SPSC Consolidated Advt. 05/2026"}, {"title": "Lady Medical Officer (BPS-17)", "org": "Sindh Public Service Commission (SPSC)", "country": "Pakistan", "location": "Sindh, Pakistan", "qualification": "MBBS + PMDC registration + 1-year house job", "posts": "4", "description": "Home Department, Government of Sindh — 4 Lady Medical Officer posts via SPSC Consolidated Advertisement 05/2026. Apply online only on the SPSC portal.", "applyUrl": "https://www.spsc.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-09-25", "deadline": "2026-10-23", "source": "SPSC Consolidated Advt. 05/2026"}, {"title": "Information Officer (BPS-17)", "org": "Sindh Public Service Commission (SPSC)", "country": "Pakistan", "location": "Sindh, Pakistan", "qualification": "Master's in Mass Communication / Journalism", "posts": "4", "description": "Information Department, Government of Sindh — 4 Information Officer posts via SPSC Consolidated Advertisement 05/2026. Apply online only on the SPSC portal.", "applyUrl": "https://www.spsc.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-09-25", "deadline": "2026-10-23", "source": "SPSC Consolidated Advt. 05/2026"}, {"title": "Dispatch Rider / Driver / Daftari / Chowkidar / Naib Qasid / Sanitary Worker (BPS-01 to BPS-04)", "org": "Criminal Prosecution Services Department, Government of Sindh", "country": "Pakistan", "location": "Karachi & districts, Sindh", "qualification": "Primary/Matric + driving skill for driver posts", "posts": "571", "description": "571 support-staff vacancies: 232 at the Prosecutor General Sindh head office Karachi and 339 in district offices. Recruitment through walk-in interviews, 19–31 October 2026.", "applyUrl": "https://bloompakistan.com/sindh-571-govt-jobs-2026-walk-in-interviews/", "category": "government", "type": "Government", "postedDate": "2026-10-05", "deadline": "2026-10-31", "source": "bloompakistan.com (Ad ref INF-KRY 4363-26)"}, {"title": "Police Constable & others — Legal Heirs / Shaheed / Deceased Quota (3,283 vacancies)", "org": "Sindh Police Department, Government of Sindh", "country": "Pakistan", "location": "Sindh, Pakistan", "qualification": "Per quota criteria + Sindh domicile of concerned range", "posts": "3283", "description": "3,283 posts under the legal-heirs, shaheed and deceased/invalidated-employee quotas. Download the application form from the Sindh Police website and send it by registered post to the Central Police Office, Karachi.", "applyUrl": "https://www.sindhpolice.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-08-31", "deadline": "2026-10-15", "source": "sindhpolice.gov.pk"}, {"title": "Assistant Director (Finance & Accounts)", "org": "NADRA Technologies Limited", "country": "Pakistan", "location": "Islamabad, Pakistan", "qualification": "Finance & Accounts professional, per ad criteria", "posts": "1", "description": "Federal government technology company hiring an Assistant Director (Finance & Accounts). Apply online only through the NADRA careers portal; original documents required at interview.", "applyUrl": "https://careers.nadra.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-10-08", "deadline": "2026-10-21", "source": "jobsalert.pk (Dawn ad, 8 Oct 2026)"}, {"title": "CEO, Directors & Officers (13 positions)", "org": "Centre of Excellence for Autism Spectrum Disorder Company (CEASDC), Ministry of Federal Education & Professional Training", "country": "Pakistan", "location": "Islamabad, Pakistan", "qualification": "Master's (16 years education) + experience per post", "posts": "13", "description": "Chief Executive Officer (MP-I), five Director posts, Admin, Procurement, ICT/MIS, Clinical Coordinator and Education & Inclusion posts on contract. Apply online through the ETC-HEC portal.", "applyUrl": "http://etc.hec.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-10-09", "deadline": "2026-10-24", "source": "careerjoin.com (Dawn ad, 9 Oct 2026)"}, {"title": "Assistant (BPS-16)", "org": "Sindh Public Service Commission (SPSC)", "country": "Pakistan", "location": "Sindh, Pakistan", "qualification": "Graduate (2nd division) + Sindh domicile & PRC", "posts": "10", "description": "Law, Parliamentary Affairs & Criminal Prosecution Department — 10 Assistant posts via SPSC Consolidated Advertisement 05/2026. Apply online only on the SPSC portal.", "applyUrl": "https://www.spsc.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-09-25", "deadline": "2026-10-23", "source": "SPSC Consolidated Advt. 05/2026"}, {"title": "Deputy Director IT / Senior Manager IT (BPS-18)", "org": "Sindh Public Service Commission (SPSC)", "country": "Pakistan", "location": "Sindh, Pakistan", "qualification": "IT / Computer Science degree per ad criteria", "posts": "1", "description": "Services, General Administration & Coordination Department — Deputy Director IT post via SPSC Consolidated Advertisement 05/2026. Apply online only on the SPSC portal.", "applyUrl": "https://www.spsc.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-09-25", "deadline": "2026-10-23", "source": "SPSC Consolidated Advt. 05/2026"}, {"title": "Assistant Director IT / System Analyst (BPS-17)", "org": "Sindh Public Service Commission (SPSC)", "country": "Pakistan", "location": "Sindh, Pakistan", "qualification": "Bachelor in IT/CS (16 years education), 2nd division", "posts": "1", "description": "Services, General Administration & Coordination Department — Assistant Director IT / System Analyst post via SPSC Consolidated Advertisement 05/2026. Apply online only on the SPSC portal.", "applyUrl": "https://www.spsc.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-09-25", "deadline": "2026-10-23", "source": "SPSC Consolidated Advt. 05/2026"}, {"title": "Assistant Director (BPS-17)", "org": "Sindh Public Service Commission (SPSC)", "country": "Pakistan", "location": "Sindh, Pakistan", "qualification": "Master's in Public Administration / HRM / Economics / Public Policy", "posts": "1", "description": "Planning & Development Department — Assistant Director post via SPSC Consolidated Advertisement 05/2026. Apply online only on the SPSC portal.", "applyUrl": "https://www.spsc.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-09-25", "deadline": "2026-10-23", "source": "SPSC Consolidated Advt. 05/2026"}, {"title": "Programme Officer (BPS-17)", "org": "Sindh Public Service Commission (SPSC)", "country": "Pakistan", "location": "Sindh, Pakistan", "qualification": "Graduation (16 years) in CS / IT / Software Engineering", "posts": "1", "description": "Planning & Development Department — Programme Officer post via SPSC Consolidated Advertisement 05/2026. Apply online only on the SPSC portal.", "applyUrl": "https://www.spsc.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-09-25", "deadline": "2026-10-23", "source": "SPSC Consolidated Advt. 05/2026"}, {"title": "Project, Health & Admin Positions (17 posts)", "org": "PPHI Sindh (People's Primary Healthcare Initiative)", "country": "Pakistan", "location": "Karachi & districts, Sindh", "qualification": "Primary to MBBS / MPhil / ACCA / ICMA, per post", "posts": "17", "description": "Project Coordinator, Project Director (PILL), Public Health Specialist, Manager MNCH, Finance & Accounts, Procurement, Internal Auditor, Pharmacist, technicians and attendants. Apply online through the PPHI careers portal.", "applyUrl": "https://pphisindh.org/careers/current_jobs.php", "category": "government", "type": "Government", "postedDate": "2026-10-08", "deadline": "2026-10-22", "source": "pakistanjobsmarket.com"}, {"title": "Stenographer, Steno Typist, Photographer, Junior Clerk & others (53 posts)", "org": "Information Department, Government of Sindh", "country": "Pakistan", "location": "Sindh, Pakistan", "qualification": "Graduation/Intermediate/Matric + SBTE shorthand, MS Office, photography or electrician certificates per post; age 18-28", "posts": "53", "description": "53 vacancies: Stenographer BPS-14 (4), Steno Typist BPS-14 (17), Photographer BPS-13 (10), Junior Clerk BPS-11 (15), Calligraphist BPS-08 (1), Assistant Cameraman BPS-08 (1), Dark Room Attendant BPS-05 (3), Telephone Operator BPS-05 (1), Electrician BPS-05 (1). Apply on the Sindh Job Portal within 15 days of publication; Sukkur IBA STS screening-test certificate (40%) required.", "applyUrl": "https://sjp.gos.pk", "category": "government", "type": "Government", "postedDate": "2026-10-11", "deadline": "2026-10-26", "source": "careerjoin.com (Dawn ad, 11 Oct 2026)"}, {"title": "Data Processing Assistant (BPS-12)", "org": "Irrigation Department, Government of Sindh (Chief Engineer, Sukkur Barrage Left Bank Region)", "country": "Pakistan", "location": "Hyderabad, Hala/Matiari, Sukkur, SBA, Naushahro Feroze, Sindh", "qualification": "BCS/IT degree or DIT + 1 year experience as Data Processing Assistant; STS graduation-category screening test (40%); age 18-28", "posts": "11", "description": "11 Data Processing Assistant posts across the Sukkur Barrage Left Bank Region divisions (Sukkur, Shaheed Benazirabad, Naushahro Feroze, Hyderabad, Matiari). District domicile required. Apply on the Sindh Job Portal within 15 days of publication. (11 posts across Hyderabad, Hala/Matiari, Sukkur, SBA and Naushahro Feroze stations).", "applyUrl": "https://sjp.gos.pk", "category": "government", "type": "Government", "postedDate": "2026-10-10", "deadline": "2026-10-25", "source": "careerjoin.com (Dawn ad, 10 Oct 2026)"}, {"title": "Research Officers, Research Internees, Office Manager & support staff (contract)", "org": "Public Sector Organization, Sindh (PO Box 06, GPO Hyderabad)", "country": "Pakistan", "location": "Hyderabad, Sindh", "qualification": "Varies by post: research/IT/accounts graduates; Middle pass + licence for driver", "posts": "multiple", "description": "Contract appointments: Research Officers, Research Internees (male/female), Office Manager, Project Assistant, Assistant Accounts Officer, Receptionist/Secretary, Editor (Photographer/Videographer), Soil Sampling Man, Driver, Messenger/Guard, Chowkidar/Guard. Send application with attested educational certificates to PO Box 06, GPO Hyderabad. No TA/DA.", "applyUrl": "https://jobsalert.pk/public-sector-organization-karachi-jobs-2017-advertisement-latest/67954", "category": "government", "type": "Government", "postedDate": "2026-10-07", "deadline": "2026-10-22", "source": "jobsalert.pk"}, {"title": "Driver, Cook, Daftri, Despatch Rider, Naib Qasid, Sanitary Worker, Chowkidar", "org": "Deputy Commissioner Office South, Karachi (Government of Sindh)", "country": "Pakistan", "location": "Karachi, Sindh", "qualification": "Relevant skills per post; age 18-28", "posts": "multiple", "description": "Support-staff vacancies: Driver (BPS-4), Cook, Daftri, Despatch Rider, Naib Qasid (BPS-2), Sanitary Worker and Chowkidar (BPS-1). Applications with attested documents to the Deputy Commissioner Office South, DC Complex South, M.A. Jinnah Road, Karachi; mention the post on the envelope.", "applyUrl": "https://jobsalert.pk/deputy-commissioner-office-karachi-jobs-test-roll-no-slips/80174", "category": "government", "type": "Government", "postedDate": "2026-10-07", "deadline": "2026-10-22", "source": "jobsalert.pk"}, {"title": "Lecturers (8 subjects), RMO, Psychologist, Security Supervisor", "org": "Pakistan Steel Cadet College, Karachi", "country": "Pakistan", "location": "Steel Town, Bin Qasim, Karachi, Sindh", "qualification": "MA/MSc/BS in subject (lecturers); MBBS + 1-3 yrs exp (RMO); MA/MSc Psychology + 2-3 yrs exp; FA/FSc (Security Supervisor); age up to 45/50", "posts": "multiple", "description": "Lecturers in Mathematics, English, Physics, Computer Science, Zoology, Chemistry, Urdu and Sindhi; Resident Medical Officer; Psychologist; Security Supervisor. Send CV with attested documents and 3 passport-size photos to the Principal, Pakistan Steel Cadet College, Steel Town, Bin Qasim, Karachi (021-34721935, 021-34157884).", "applyUrl": "https://jobsalert.pk/pakistan-steel-cadet-college-jobs/879", "category": "government", "type": "Government", "postedDate": "2026-10-13", "deadline": "2026-10-26", "source": "jobsalert.pk"}, {"title": "Team Lead, Specialists, Research Associates & support (23 contract posts)", "org": "Planning & Development Department, Government of Sindh (Climate & Equity Development Project)", "country": "Pakistan", "location": "Karachi, Sindh", "qualification": "Master's + 7-12 yrs experience (senior specialists); Bachelor's degree (research associates & support); Sindh domicile/PRC", "posts": "23", "description": "23 contract posts (2 years, extendable): Team Lead (Lead Technical Specialist - Environment, MP-I), Project Development & Private Sector Engagement Specialists, Climate Finance Specialist, Data Automation Expert, Budget & Finance Officer, Data Entry Operators, 10 Research Associate posts for fresh graduates (age 21-25) and support staff. Send CV, photo, CNIC, domicile and documents by surface mail to the Section Officer (Admn-I).", "applyUrl": "https://pakistanjobsmarket.com/jobs/sindh-pd-department-jobs-2026-23-contract-vacancies-in-climate-equity-development-ced-project", "category": "government", "type": "Government", "postedDate": "2026-09-23", "deadline": "2026-10-16", "source": "pakistanjobsmarket.com"}, {"title": "Assistant Director (Database Security), Deputy Director (GRC), Audit officers & Driver", "org": "National Database & Registration Authority (NADRA), Islamabad", "country": "Pakistan", "location": "Islamabad / Lahore, Pakistan", "qualification": "4-year Bachelor's in CS/IT/Cyber Security + 2 yrs experience (officers); Middle + valid LTV/HTV licence + 3 yrs experience, max 40 (driver)", "posts": "multiple", "description": "New NADRA headquarters ad: Assistant Director (Database Security), Deputy Director (Governance, Risk & Compliance - Lahore), internal audit officers and Driver (Islamabad HQ). Females, minorities, transgender and differently-abled candidates encouraged. Online applications only on the NADRA careers portal.", "applyUrl": "https://careers.nadra.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-10-12", "deadline": "2026-10-25", "source": "careerjoin.com / millanonline.com"}, {"title": "DAD Software Developer (Flutter) - 2 posts; Office Attendant", "org": "NADRA Technologies Limited", "country": "Pakistan", "location": "Islamabad / Karachi, Pakistan", "qualification": "16 years HEC-verified CS/IT/SE education, 0-1 yr Flutter experience (developer); Matric/Middle + 1 yr experience (attendant)", "posts": "3", "description": "NADRA Technologies Limited: DAD Software Developer (Flutter) - 2 posts, Islamabad (3-year contract, 6-month probation); Office Attendant posts at area offices. Online applications only on the NADRA careers portal.", "applyUrl": "https://careers.nadra.gov.pk", "category": "government", "type": "Government", "postedDate": "2026-10-09", "deadline": "2026-10-21", "source": "pakistanjobscity.com / jobsalert.pk (Dawn ad, 8 Oct 2026)"}, {"title": "Field Reporter (Sindh Districts)", "org": "Sindh Plus Media Network", "country": "Pakistan", "location": "Ghotki / Sukkur / Khairpur / Larkana, Sindh", "salary": "Discussed in interview", "description": "Field reporting for an independent digital news network (English, Urdu, Sindhi). Cover local news, citizen stories, and events in your district. Passion for journalism required; fresh graduates welcome.", "applyUrl": "https://wa.me/923302080250?text=Assalam-o-Alaikum!%20I%20want%20to%20apply%20as%20Field%20Reporter.", "category": "media", "postedDate": "2026-10-10", "deadline": "not stated", "source": "sindh-plus-media-network"}, {"title": "News Writer (Urdu / English / Sindhi)", "org": "Sindh Plus Media Network", "country": "Pakistan", "location": "Remote / Karachi, Sindh", "salary": "Discussed in interview", "description": "Write original news articles and features in Urdu, English or Sindhi for our digital platforms. Strong writing skills and news sense required.", "applyUrl": "https://wa.me/923302080250?text=Assalam-o-Alaikum!%20I%20want%20to%20apply%20as%20News%20Writer.", "category": "media", "postedDate": "2026-10-10", "deadline": "not stated", "source": "sindh-plus-media-network"}, {"title": "Video Editor", "org": "Sindh Plus Media Network", "country": "Pakistan", "location": "Remote / Karachi, Sindh", "salary": "Discussed in interview", "description": "Edit news packages, mini-documentaries and social clips. Experience with CapCut/Premiere or similar required; portfolio preferred.", "applyUrl": "https://wa.me/923302080250?text=Assalam-o-Alaikum!%20I%20want%20to%20apply%20as%20Video%20Editor.", "category": "media", "postedDate": "2026-10-10", "deadline": "not stated", "source": "sindh-plus-media-network"}, {"title": "Social Media Executive", "org": "Sindh Plus Media Network", "country": "Pakistan", "location": "Remote / Karachi, Sindh", "salary": "Discussed in interview", "description": "Grow our presence on YouTube, TikTok, Instagram, Facebook and X. Content scheduling, community engagement and trend spotting.", "applyUrl": "https://wa.me/923302080250?text=Assalam-o-Alaikum!%20I%20want%20to%20apply%20as%20Social%20Media%20Executive.", "category": "media", "postedDate": "2026-10-10", "deadline": "not stated", "source": "sindh-plus-media-network"}, {"title": "Kindergarten English Teacher", "org": "Shanghai Meiji Culture Communications Co.", "country": "China", "location": "Anqing / Shenzhen / Guangzhou, China", "salary": "¥8,000/month + housing allowance", "description": "Full-time kindergarten/training center teacher for ages 1.5-6. Employer-sponsored work visa, visa costs covered, medical insurance, paid holidays. TEFL preferred.", "applyUrl": "https://careerservices.fas.harvard.edu/jobs/shanghai-meiji-culture-communications-co-ltd-kindergarten-teacher-position-and-training-center/", "category": "teaching", "postedDate": "2026-09-22", "deadline": "not stated", "source": "web"}, {"title": "ESL Homeroom Teacher", "org": "International School (via ESL Teaching Job in Asia)", "country": "China", "location": "Huizhou, Guangdong, China", "salary": "¥18,000-18,500/month", "description": "Full-time ESL homeroom teacher, 2 vacancies. Free flight reimbursement, visa fee coverage, housing assistance, full medical insurance, 1 month paid vacation.", "applyUrl": "https://eslteachingjobinasia.com/job/esl-homeroom-teacher-positions/", "category": "teaching", "postedDate": "2026-10-08", "deadline": "not stated", "source": "web"}, {"title": "ESL English Teacher (Primary)", "org": "Elevate Education (K12 school, Fengtai)", "country": "China", "location": "Beijing, China", "salary": "¥23,000-28,000/month + ¥5,000 housing", "description": "Primary school ESL teacher, ~25 periods/week. Work and residence permit sponsorship, paid summer/winter holidays, health insurance, free workday meals.", "applyUrl": "https://beijing.cn.expertini.com/job/esl-english-teacher-beijing-elevate-623327498389431182/", "category": "teaching", "postedDate": "2026-10-01", "deadline": "not stated", "source": "web"}, {"title": "Foreign English Teach
