@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "پاکستان 2027 میں آئی ایم ایف اور ورلڈ بینک بورڈز کی صدارت کرے گا — 1953 کے بعد پہلی بار", "ex_ur": "پاکستان 2027 میں آئی ایم ایف اور ورلڈ بینک گروپ کے بورڈز آف گورنرز کی صدارت کرے گا — 1953 کے بعد پہلی بار — بینکاک میں سالانہ اجلاسوں میں اعلان کے مطابق وفاقی وزیر اقتصادی امور احد چیمہ دونوں بورڈز کی قیادت کے لیے نامزد ہوئے ہیں۔ چیمہ نے کہا کہ پاکستان ترقی پذیر ممالک کی آواز بلند کرے گا اور متوقع ترقیاتی مالیات پر زور دے گا۔ وزیر خزانہ اورنگزیب نے الگ سے ورلڈ بینک کے سربراہ اجے بنگا سے ملاقات کی اور 22 سال کی کم ترین مالیاتی خسارے کا حوالہ دیا۔", "title_en": "Pakistan to Chair IMF, World Bank Boards in 2027 — First Time Since 1953", "ex_en": "Pakistan will chair the boards of governors of the IMF and the World Bank Group in 2027 — the first time since 1953 — with Economic Affairs Minister Ahad Cheema nominated to lead both boards, announced at the annual meetings in Bangkok. Cheema said Pakistan would amplify the voice of developing countries and push for predictable development finance. Finance Minister Aurangzeb separately met World Bank chief Ajay Banga and cited a 22-year low fiscal deficit."}</script>
+<script id="artLang" type="application/json">{"title_ur": "پاکستان 2027 میں آئی ایم ایف اور ورلڈ بینک بورڈز کی صدارت کرے گا — 1953 کے بعد پہلی بار", "ex_ur": "پاکستان 2027 میں آئی ایم ایف اور ورلڈ بینک گروپ کے بورڈز آف گورنرز کی صدارت کرے گا — 1953 کے بعد پہلی بار — بینکاک میں سالانہ اجلاسوں میں اعلان کے مطابق وفاقی وزیر اقتصادی امور احد چیمہ دونوں بورڈز کی قیادت کے لیے نامزد ہوئے ہیں۔ چیمہ نے کہا کہ پاکستان ترقی پذیر ممالک کی آواز بلند کرے گا اور متوقع ترقیاتی مالیات پر زور دے گا۔ وزیر خزانہ اورنگزیب نے الگ سے ورلڈ بینک کے سربراہ اجے بنگا سے ملاقات کی اور 22 سال کی کم ترین مالیاتی خسارے کا حوالہ دیا۔", "title_sd": "پاڪستان 2027ع ۾ آءِ ايم ايف ۽ ورلڊ بينڪ بورڊن جي صدارت ڪندو — 1953ع کانپوءِ پهريون ڀيرو", "ex_sd": "پاڪستان 2027ع ۾ آءِ ايم ايف ۽ ورلڊ بينڪ گروپ جي بورڊز آف گورنرز جي صدارت ڪندو — 1953ع کانپوءِ پهريون ڀيرو — بئنڪاڪ ۾ سالياني اجلاسن ۾ اعلان موجب وفاقي وزير اقتصادي معاملا احد چيما ٻنهي بورڊن جي قيادت لاءِ نامزد ٿيا آهن. چيما چيو ته پاڪستان ترقي پذير ملڪن جو آواز بلند ڪندو ۽ متوقع ترقياتي ماليات تي زور ڏيندو. وزير خزانا اورنگزيب الڳ سان ورلڊ بينڪ جي سربراهه اجي بنگا سان ملاقات ڪئي ۽ 22 سالن جي گهٽ ترين مالي خساري جو حوالو ڏنو.", "title_en": "Pakistan to Chair IMF, World Bank Boards in 2027 — First Time Since 1953", "ex_en": "Pakistan will chair the boards of governors of the IMF and the World Bank Group in 2027 — the first time since 1953 — with Economic Affairs Minister Ahad Cheema nominated to lead both boards, announced at the annual meetings in Bangkok. Cheema said Pakistan would amplify the voice of developing countries and push for predictable development finance. Finance Minister Aurangzeb separately met World Bank chief Ajay Banga and cited a 22-year low fiscal deficit."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

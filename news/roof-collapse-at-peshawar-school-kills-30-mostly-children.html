@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "پشاور: اسکول کی چھت گرنے سے 30 افراد جاں بحق، بیشتر بچے", "ex_ur": "پشاور کی دیر کالونی میں جمعرات کی صبح الخیر اسکول کی چھت گر گئی، جس سے 28 بچوں اور ایک خاتون ٹیچر سمیت تقریباً 30 افراد جاں بحق اور 50 سے زائد زخمی ہوئے۔ پولیس نے اسکول کے مالک خان محمد کو گرفتار کر کے ناقص میٹریل کے استعمال کے الزام پر مقدمہ درج کر لیا ہے۔", "title_en": "Roof Collapse at Peshawar School Kills 30, Mostly Children", "ex_en": "The roof of a private school in Peshawar's Dir Colony collapsed during morning classes on Thursday, killing 29 to 30 people, including 28 children and at least one female teacher. More than 50 others were injured."}</script>
+<script id="artLang" type="application/json">{"title_ur": "پشاور: اسکول کی چھت گرنے سے 30 افراد جاں بحق، بیشتر بچے", "ex_ur": "پشاور کی دیر کالونی میں جمعرات کی صبح الخیر اسکول کی چھت گر گئی، جس سے 28 بچوں اور ایک خاتون ٹیچر سمیت تقریباً 30 افراد جاں بحق اور 50 سے زائد زخمی ہوئے۔ پولیس نے اسکول کے مالک خان محمد کو گرفتار کر کے ناقص میٹریل کے استعمال کے الزام پر مقدمہ درج کر لیا ہے۔", "title_sd": "پشاور: اسڪول جي ڇت ڪرڻ سبب 30 ڄڻا فوت، اڪثر ٻار", "ex_sd": "پشاور جي دير ڪالوني ۾ خميس ڏينهن صبح جو خانگي اسڪول جي ڇت ڪلاس دوران ڪري پئي، جنهن سبب 28 ٻارن ۽ هڪ استاني سميت 30 ڄڻا فوت ۽ 50 کان وڌيڪ زخمي ٿي پيا. پوليس اسڪول جي مالڪ خان محمد کي گرفتار ڪري ناقص مٽيريل استعمال ڪرڻ جي الزام هيٺ ڪيس داخل ڪري ورتو آهي.", "title_en": "Roof Collapse at Peshawar School Kills 30, Mostly Children", "ex_en": "The roof of a private school in Peshawar's Dir Colony collapsed during morning classes on Thursday, killing 29 to 30 people, including 28 children and at least one female teacher. More than 50 others were injured."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

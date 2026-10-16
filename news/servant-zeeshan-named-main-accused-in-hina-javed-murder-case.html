@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "حنا جاوید قتل کیس میں ملازم ذیشان مرکزی ملزم نامزد", "ex_ur": "راولپنڈی میں اعلیٰ سطحی تحقیقاتی کمیٹی نے حنا جاوید قتل کیس کی تفتیش مکمل کر کے گھریلو ملازم ذیشان کو مرکزی ملزم قرار دے دیا ہے؛ مقتولہ کے ناخنوں کے نیچے ذیشان کی جلد کے ذرات ملے تھے۔ ذرائع کے مطابق دیگر سنگین مقدمات میں ریکارڈ یافتہ ذیشان نے زیادتی اور بیڈ شیٹ سے گلا گھونٹنے کا اعتراف کیا ہے؛ مقتولہ کے ورثا نے کمیٹی پر عدم اعتماد کا اظہار کیا اور شواہد میں چھیڑ چھاڑ کا الزام لگایا، جبکہ شوہر اور ذیشان دونوں اڈیالہ جیل میں جوڈیشل ریمانڈ پر ہیں۔", "title_en": "Servant Zeeshan Named Main Accused in Hina Javed Murder Case", "ex_en": "A high-level investigation committee in Rawalpindi has completed its probe and named domestic servant Zeeshan as the main accused in the Hina Javed murder case,"}</script>
+<script id="artLang" type="application/json">{"title_ur": "حنا جاوید قتل کیس میں ملازم ذیشان مرکزی ملزم نامزد", "ex_ur": "راولپنڈی میں اعلیٰ سطحی تحقیقاتی کمیٹی نے حنا جاوید قتل کیس کی تفتیش مکمل کر کے گھریلو ملازم ذیشان کو مرکزی ملزم قرار دے دیا ہے؛ مقتولہ کے ناخنوں کے نیچے ذیشان کی جلد کے ذرات ملے تھے۔ ذرائع کے مطابق دیگر سنگین مقدمات میں ریکارڈ یافتہ ذیشان نے زیادتی اور بیڈ شیٹ سے گلا گھونٹنے کا اعتراف کیا ہے؛ مقتولہ کے ورثا نے کمیٹی پر عدم اعتماد کا اظہار کیا اور شواہد میں چھیڑ چھاڑ کا الزام لگایا، جبکہ شوہر اور ذیشان دونوں اڈیالہ جیل میں جوڈیشل ریمانڈ پر ہیں۔", "title_sd": "حنا جاويد قتل ڪيس ۾ نوڪر ذيشان مک ملزم قرار", "ex_sd": "راولپنڊي ۾ اعليٰ سطحي جاچ ڪميٽي حنا جاويد قتل ڪيس جي تفتیش مڪمل ڪري گهريلو نوڪر ذيشان کي مک ملزم قرار ڏئي ڇڏيو آهي؛ مقتوله جي ناخنن هيٺان ذيشان جي چمڙي جا ذرڙا مليا هئا. ذريعن موجب ٻين سنگين ڪيسن ۾ رڪارڊ يافته ذيشان زيادتي ۽ بيڊ شيٽ سان گهٽو گهوتڻ جو اعتراف ڪيو آهي.", "title_en": "Servant Zeeshan Named Main Accused in Hina Javed Murder Case", "ex_en": "A high-level investigation committee in Rawalpindi has completed its probe and named domestic servant Zeeshan as the main accused in the Hina Javed murder case,"}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

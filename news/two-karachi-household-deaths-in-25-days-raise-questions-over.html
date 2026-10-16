@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "کراچی میں 25 دنوں میں دو گھروں میں 10 اموات، سماجی بہبود کے نظام پر سوالات", "ex_ur": "کراچی میں 25 دنوں کے دوران دو الگ گھروں میں 10 افراد کی اموات، جن میں پانچ بچے بھی شامل ہیں، نے مالی دباؤ کے شکار خاندانوں کو دستیاب امداد پر سنجیدہ سوالات اٹھا دیے ہیں۔ پولیس نے تحقیقات جاری رہنے تک کسی واقعے کو بھی اجتماعی خودکشی قرار نہیں دیا ہے۔", "title_en": "Two Karachi Household Deaths in 25 Days Raise Questions Over Welfare Gaps", "ex_en": "The deaths of 10 people, including five children, in two separate Karachi households within 25 days have raised serious questions about the support available to families under severe financial strain. Police have not conclusively classified either incident as collective suicide while investigations continue."}</script>
+<script id="artLang" type="application/json">{"title_ur": "کراچی میں 25 دنوں میں دو گھروں میں 10 اموات، سماجی بہبود کے نظام پر سوالات", "ex_ur": "کراچی میں 25 دنوں کے دوران دو الگ گھروں میں 10 افراد کی اموات، جن میں پانچ بچے بھی شامل ہیں، نے مالی دباؤ کے شکار خاندانوں کو دستیاب امداد پر سنجیدہ سوالات اٹھا دیے ہیں۔ پولیس نے تحقیقات جاری رہنے تک کسی واقعے کو بھی اجتماعی خودکشی قرار نہیں دیا ہے۔", "title_sd": "ڪراچي ۾ 25 ڏينهن ۾ ٻن گهرن ۾ 10 موت، سماجي ڀلائي جي نظام تي سوال", "ex_sd": "ڪراچي ۾ 25 ڏينهن اندر ٻن الڳ گهرن ۾ 10 ڄڻن جا موت، جن ۾ پنج ٻار شامل آهن، سخت مالي دٻاءُ هيٺ خاندانن لاءِ موجود سهولت تي سنجيده سوال اٿاريا آهن. پوليس جاچ جاري رهڻ تائين ڪنهن به واقعي کي اجتماعي خودڪشي قرار نه ڏنو آهي.", "title_en": "Two Karachi Household Deaths in 25 Days Raise Questions Over Welfare Gaps", "ex_en": "The deaths of 10 people, including five children, in two separate Karachi households within 25 days have raised serious questions about the support available to families under severe financial strain. Police have not conclusively classified either incident as collective suicide while investigations continue."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

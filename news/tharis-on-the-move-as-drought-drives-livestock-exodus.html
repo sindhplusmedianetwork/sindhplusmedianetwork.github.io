@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "تھر میں خشک سالی، مال مویشیوں سمیت نقل مکانی پر مجبور تھاری", "ex_ur": "تھرپارکر میں بارشیں نہ ہونے کے باعث خشک سالی سے متاثرہ خاندان فصلوں کی تباہی اور چارے کی قلت پر مویشیوں سمیت بیراج کے علاقوں کی طرف نقل مکانی کر رہے ہیں، جس سے بھوک اور بچوں کی غذائی قلت بڑھ رہی ہے۔ ضلعی انتظامیہ نے ابھی تک تھرپارکر کو آفت زدہ قرار نہیں دیا، جس پر کارکن وکیل قربان سمیجو نے سندھ ہائی کورٹ کے میرپورخاص سرکٹ سے رجوع کیا، جس نے این ڈی ایم اے اور سندھ کے محکموں سے رپورٹس طلب کیں۔ ایک مطالعے کے مطابق مارچ تا جون 2024 کے دوران مٹھی سول اسپتال میں زیر علاج 129 شدید غذائی قلت کے شکار بچوں میں سے 117 میں خون کی کمی پائی گئی۔", "title_en": "Tharis on the Move as Drought Drives Livestock Exodus", "ex_en": "With rains failing in Tharparkar, drought-hit families are migrating with their livestock toward barrage areas as crops wither and fodder runs out, deepening hunger and child malnutrition. The district administration has yet to declare Tharparkar calamity-hit, prompting activist-lawyer Qurban Samejo to petition the Sindh High Court's Mirpurkhas circuit, which summoned NDMA and Sindh departments for reports. A study found 117 of 129 severely malnourished children treated at Mithi Civil Hospital between March and June 2024 suffered from anaemia."}</script>
+<script id="artLang" type="application/json">{"title_ur": "تھر میں خشک سالی، مال مویشیوں سمیت نقل مکانی پر مجبور تھاری", "ex_ur": "تھرپارکر میں بارشیں نہ ہونے کے باعث خشک سالی سے متاثرہ خاندان فصلوں کی تباہی اور چارے کی قلت پر مویشیوں سمیت بیراج کے علاقوں کی طرف نقل مکانی کر رہے ہیں، جس سے بھوک اور بچوں کی غذائی قلت بڑھ رہی ہے۔ ضلعی انتظامیہ نے ابھی تک تھرپارکر کو آفت زدہ قرار نہیں دیا، جس پر کارکن وکیل قربان سمیجو نے سندھ ہائی کورٹ کے میرپورخاص سرکٹ سے رجوع کیا، جس نے این ڈی ایم اے اور سندھ کے محکموں سے رپورٹس طلب کیں۔ ایک مطالعے کے مطابق مارچ تا جون 2024 کے دوران مٹھی سول اسپتال میں زیر علاج 129 شدید غذائی قلت کے شکار بچوں میں سے 117 میں خون کی کمی پائی گئی۔", "title_sd": "ٿر ۾ ڏڪار، مال سميت لڏپلاڻ تي مجبور ٿري", "ex_sd": "ٿرپارڪر ۾ برساتون نه ٿيڻ سبب ڏڪار متاثر خاندان فصلن جي تباهي ۽ چاري جي کوٽ سبب مال سميت بيراج جي علائقن ڏانهن لڏپلاڻ ڪري رهيا آهن، جنهن سان بک ۽ ٻارن ۾ غذائي کوٽ وڌي رهي آهي. ضلعي انتظاميا اڃا تائين ٿرپارڪر کي آفت متاثر قرار نه ڏنو آهي، جنهن تي ڪارڪن وڪيل قربان سميجو سنڌ هاءِ ڪورٽ جي ميرپورخاص سرڪٽ سان رجوع ڪيو، جنهن اين ڊي ايم اي ۽ سنڌ جي کاتن کان رپورٽون طلب ڪيون. هڪ اڀياس موجب مارچ کان جون 2024 دوران مٺي سول اسپتال ۾ علاج هيٺ 129 سخت غذائي کوٽ جو شڪار ٻارن مان 117 ۾ رت جي کوٽ ملي.", "title_en": "Tharis on the Move as Drought Drives Livestock Exodus", "ex_en": "With rains failing in Tharparkar, drought-hit families are migrating with their livestock toward barrage areas as crops wither and fodder runs out, deepening hunger and child malnutrition. The district administration has yet to declare Tharparkar calamity-hit, prompting activist-lawyer Qurban Samejo to petition the Sindh High Court's Mirpurkhas circuit, which summoned NDMA and Sindh departments for reports. A study found 117 of 129 severely malnourished children treated at Mithi Civil Hospital between March and June 2024 suffered from anaemia."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

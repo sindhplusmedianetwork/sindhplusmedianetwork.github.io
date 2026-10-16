@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "سعودی سپریم کورٹ نے سری لنکن شہری کی سزائے موت کالعدم قرار دے دی", "ex_ur": "سعودی عرب کی سپریم کورٹ نے فیس بک پوسٹ پر توہین مذہب کے الزام میں سری لنکن مزدور انوجن سیواراسا کو سنائی گئی سزائے موت کالعدم قرار دے دی ہے۔ 27 سالہ نوجوان کو جولائی میں گرفتار کیا گیا تھا جب اس کے حذف شدہ کمنٹ کا اسکرین شاٹ سعودی حکام تک پہنچا؛ اپیل کورٹ نے ستمبر میں اس کی ابتدائی پانچ سالہ سزا کو موت میں بدل دیا تھا۔ کولمبو نے اس نتیجے کا سہرا مسلسل سفارتی کوششوں کو دیا۔", "title_en": "Saudi Top Court Overturns Death Sentence of Sri Lankan Over Facebook Post", "ex_en": "Saudi Arabia's Supreme Court has overturned the death sentence of Sri Lankan migrant worker Anojan Sivarasa, convicted of blasphemy over a Facebook comment. The 27-year-old was arrested in July after a screenshot of his deleted comment reached Saudi officials; an appellate court had raised his initial five-year term to death in September. Colombo credited sustained diplomatic efforts for the outcome."}</script>
+<script id="artLang" type="application/json">{"title_ur": "سعودی سپریم کورٹ نے سری لنکن شہری کی سزائے موت کالعدم قرار دے دی", "ex_ur": "سعودی عرب کی سپریم کورٹ نے فیس بک پوسٹ پر توہین مذہب کے الزام میں سری لنکن مزدور انوجن سیواراسا کو سنائی گئی سزائے موت کالعدم قرار دے دی ہے۔ 27 سالہ نوجوان کو جولائی میں گرفتار کیا گیا تھا جب اس کے حذف شدہ کمنٹ کا اسکرین شاٹ سعودی حکام تک پہنچا؛ اپیل کورٹ نے ستمبر میں اس کی ابتدائی پانچ سالہ سزا کو موت میں بدل دیا تھا۔ کولمبو نے اس نتیجے کا سہرا مسلسل سفارتی کوششوں کو دیا۔", "title_sd": "سعودي سپريم ڪورٽ طرفان سريلنڪن شهري جي موت جي سزا ڪالعدم قرار", "ex_sd": "سعودي عرب جي سپريم ڪورٽ فيس بڪ پوسٽ تي مذهبي توهين جي الزام ۾ سريلنڪن مزدور انوجن سيواراسا کي ڏنل موت جي سزا ڪالعدم قرار ڏئي ڇڏي آهي. 27 ورهين جي نوجوان کي جولاءِ ۾ گرفتار ڪيو ويو هو جڏهن سندس ڊليٽ ڪيل ڪمينٽ جو اسڪرين شاٽ سعودي اختيارين تائين پهتو؛ اپيل ڪورٽ سيپٽمبر ۾ سندس شروعاتي پنجن سالن جي سزا کي موت ۾ تبديل ڪيو هو. ڪولمبو هن نتيجي جو ڪريڊٽ مسلسل سفارتي ڪوششن کي ڏنو.", "title_en": "Saudi Top Court Overturns Death Sentence of Sri Lankan Over Facebook Post", "ex_en": "Saudi Arabia's Supreme Court has overturned the death sentence of Sri Lankan migrant worker Anojan Sivarasa, convicted of blasphemy over a Facebook comment. The 27-year-old was arrested in July after a screenshot of his deleted comment reached Saudi officials; an appellate court had raised his initial five-year term to death in September. Colombo credited sustained diplomatic efforts for the outcome."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

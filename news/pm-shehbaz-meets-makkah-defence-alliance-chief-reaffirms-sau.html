@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "وزیراعظم سے مکہ ڈیفنس الائنس کے سربراہ کی ملاقات، سعودی عرب سے عزم کا اعادہ", "ex_ur": "وزیراعظم شہباز شریف سے مکہ جوائنٹ ڈیفنس ایگریمنٹ کے پہلے سیکرٹری جنرل لیفٹیننٹ جنرل (ر) نعمان محمود نے اسلام آباد میں ملاقات کی۔ وزیراعظم نے سعودی عرب کی خودمختاری اور علاقائی سالمیت کے تحفظ کے عزم کا اعادہ کیا۔", "title_en": "PM Shehbaz Meets Makkah Defence Alliance Chief, Reaffirms Saudi Security Pledge", "ex_en": "Prime Minister Shehbaz Sharif met Lt Gen (retd) Nauman Mahmood, the first secretary-general of the Makkah Joint Defence Agreement, in Islamabad. He reaffirmed Pakistan's commitment to Saudi Arabia's sovereignty and territorial integrity, calling the pact a historic milestone."}</script>
+<script id="artLang" type="application/json">{"title_ur": "وزیراعظم سے مکہ ڈیفنس الائنس کے سربراہ کی ملاقات، سعودی عرب سے عزم کا اعادہ", "ex_ur": "وزیراعظم شہباز شریف سے مکہ جوائنٹ ڈیفنس ایگریمنٹ کے پہلے سیکرٹری جنرل لیفٹیننٹ جنرل (ر) نعمان محمود نے اسلام آباد میں ملاقات کی۔ وزیراعظم نے سعودی عرب کی خودمختاری اور علاقائی سالمیت کے تحفظ کے عزم کا اعادہ کیا۔", "title_sd": "وزيراعظم سان مڪه دفاعي اتحاد جي سربراهه جي ملاقات، سعودي عرب سان عزم جو ورجاءُ", "ex_sd": "وزيراعظم شهباز شريف سان مڪه جوائنٽ ڊفينس ايگريمينٽ جي پهرين سيڪريٽري جنرل ليفٽيننٽ جنرل (ر) نعمان محمود اسلام آباد ۾ ملاقات ڪئي. وزيراعظم سعودي عرب جي خودمختياري ۽ علائقائي سالميت جي تحفظ جي عزم جو ورجاءُ ڪيو.", "title_en": "PM Shehbaz Meets Makkah Defence Alliance Chief, Reaffirms Saudi Security Pledge", "ex_en": "Prime Minister Shehbaz Sharif met Lt Gen (retd) Nauman Mahmood, the first secretary-general of the Makkah Joint Defence Agreement, in Islamabad. He reaffirmed Pakistan's commitment to Saudi Arabia's sovereignty and territorial integrity, calling the pact a historic milestone."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

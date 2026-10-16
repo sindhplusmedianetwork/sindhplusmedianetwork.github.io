@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "اوپن اے آئی کے سعودی انجینئر پر امریکہ میں خفیہ ریکارڈنگ ڈیوائس نصب کرنے کا الزام", "ex_ur": "امریکی حکام نے اوپن اے آئی کے 35 سالہ سعودی انجینئر عبدالرحمٰن الفوزان پر کمپنی کے دفتر میں زبانی گفتگو خفیہ طور پر ریکارڈ کرنے کی کوشش کا الزام عائد کیا ہے۔ ایف بی آئی کے مطابق اس نے 28 ستمبر کے آس پاس ایگزیکٹو کانفرنس روم کے ٹی وی کے پیچھے ٹوائلٹ پیپر میں چھپا کر انگوٹھے کے سائز کا ریکارڈنگ ڈیوائس نصب کیا۔ اس کے بیگ سے دوسرا ڈیوائس بھی ملا؛ 9 اکتوبر کو گرفتار ملزم کو سزا ہونے پر پانچ سال تک قید ہو سکتی ہے۔", "title_en": "Saudi OpenAI Engineer Charged in US Over Hidden Recording Device", "ex_en": "US authorities have charged 35-year-old Saudi national Abdulrahman Alfozan, an OpenAI engineer, with attempting to intercept oral communications at the company's offices. The FBI says he planted a thumb-sized recording device, hidden in toilet paper, behind a TV in an executive conference room around September 28. A second device was found in his bag; arrested on October 9, he faces up to five years in prison if convicted."}</script>
+<script id="artLang" type="application/json">{"title_ur": "اوپن اے آئی کے سعودی انجینئر پر امریکہ میں خفیہ ریکارڈنگ ڈیوائس نصب کرنے کا الزام", "ex_ur": "امریکی حکام نے اوپن اے آئی کے 35 سالہ سعودی انجینئر عبدالرحمٰن الفوزان پر کمپنی کے دفتر میں زبانی گفتگو خفیہ طور پر ریکارڈ کرنے کی کوشش کا الزام عائد کیا ہے۔ ایف بی آئی کے مطابق اس نے 28 ستمبر کے آس پاس ایگزیکٹو کانفرنس روم کے ٹی وی کے پیچھے ٹوائلٹ پیپر میں چھپا کر انگوٹھے کے سائز کا ریکارڈنگ ڈیوائس نصب کیا۔ اس کے بیگ سے دوسرا ڈیوائس بھی ملا؛ 9 اکتوبر کو گرفتار ملزم کو سزا ہونے پر پانچ سال تک قید ہو سکتی ہے۔", "title_sd": "اوپن اي آءِ جي سعودي انجنيئر تي آمريڪا ۾ ڳجهي رڪارڊنگ ڊوائيس لڳائڻ جو الزام", "ex_sd": "آمريڪي اختيارين اوپن اي آءِ جي 35 سالن جي سعودي انجنيئر عبدالرحمٰن الفوزان تي ڪمپني جي دفتر ۾ زباني ڳالهه ٻولهه ڳجهي طور رڪارڊ ڪرڻ جي ڪوشش جو الزام لڳايو آهي. ايف بي آءِ موجب هن 28 سيپٽمبر ڀرسان ايگزيڪٽو ڪانفرنس روم جي ٽي وي پٺيان ٽوائلٽ پيپر ۾ لڪائي انگوٺي جيترو رڪارڊنگ ڊوائيس لڳايو. هن جي ٿيلهي مان ٻيو ڊوائيس به مليو؛ 9 آڪٽوبر تي گرفتار جوابدار کي سزا ٿيڻ تي پنجن سالن تائين قيد ٿي سگهي ٿي.", "title_en": "Saudi OpenAI Engineer Charged in US Over Hidden Recording Device", "ex_en": "US authorities have charged 35-year-old Saudi national Abdulrahman Alfozan, an OpenAI engineer, with attempting to intercept oral communications at the company's offices. The FBI says he planted a thumb-sized recording device, hidden in toilet paper, behind a TV in an executive conference room around September 28. A second device was found in his bag; arrested on October 9, he faces up to five years in prison if convicted."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

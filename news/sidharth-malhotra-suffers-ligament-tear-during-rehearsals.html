@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "سدھارتھ ملہوترا ریہرسل کے دوران ٹانگ کی انجری کا شکار", "ex_ur": "بالی ووڈ اداکار سدھارتھ ملہوترا ریہرسل کے دوران ٹانگ میں لگامنٹ ٹیئر کا شکار ہو گئے، انسٹاگرام پر حفاظتی بوٹ میں لپٹی ٹانگ کی تصویر شیئر کر کے مداحوں کو آگاہ کیا۔ انہوں نے مذاق میں لکھا کہ 'بریک اے لیگ' کو کچھ زیادہ ہی سنجیدہ لے لیا؛ یہ انجری جام نگر میں نوراتری تقریب سے چند گھنٹے قبل ہوئی۔ انہوں نے انجری کے باوجود پرفارم کیا تاہم اب آرام کا مشورہ دیا گیا ہے۔", "title_en": "Sidharth Malhotra Suffers Ligament Tear During Rehearsals", "ex_en": "Bollywood star Sidharth Malhotra suffered a ligament tear in his leg during rehearsals, revealing the injury with a photo of his leg in a protective boot on Instagram. He joked he had taken “break a leg” too seriously; the injury came hours before a Navratri event in Jamnagar. He performed despite the injury but has been advised to rest."}</script>
+<script id="artLang" type="application/json">{"title_ur": "سدھارتھ ملہوترا ریہرسل کے دوران ٹانگ کی انجری کا شکار", "ex_ur": "بالی ووڈ اداکار سدھارتھ ملہوترا ریہرسل کے دوران ٹانگ میں لگامنٹ ٹیئر کا شکار ہو گئے، انسٹاگرام پر حفاظتی بوٹ میں لپٹی ٹانگ کی تصویر شیئر کر کے مداحوں کو آگاہ کیا۔ انہوں نے مذاق میں لکھا کہ 'بریک اے لیگ' کو کچھ زیادہ ہی سنجیدہ لے لیا؛ یہ انجری جام نگر میں نوراتری تقریب سے چند گھنٹے قبل ہوئی۔ انہوں نے انجری کے باوجود پرفارم کیا تاہم اب آرام کا مشورہ دیا گیا ہے۔", "title_sd": "سڌارتھ ملهوترا ريهرسل دوران ٽنگ جي زخم جو شڪار", "ex_sd": "بالي ووڊ اداڪار سڌارتھ ملهوترا ريهرسل دوران ٽنگ ۾ لگامنٽ ٽيئر جو شڪار ٿي ويو، انسٽاگرام تي حفاظتي بوٽ ۾ ويڙهيل ٽنگ جي تصوير شيئر ڪري مداحن کي آگاهه ڪيو. هن مذاق ۾ لکيو ته 'بريڪ اي ليگ' کي ڪجهه وڌيڪ ئي سنجيدو وٺي ورتو؛ هي زخم ڄام نگر ۾ نوراتري تقريب کان ڪجهه ڪلاڪ اڳ ٿيو. هن زخم باوجود پرفارم ڪيو پر هاڻي آرام جو مشورو ڏنو ويو آهي.", "title_en": "Sidharth Malhotra Suffers Ligament Tear During Rehearsals", "ex_en": "Bollywood star Sidharth Malhotra suffered a ligament tear in his leg during rehearsals, revealing the injury with a photo of his leg in a protective boot on Instagram. He joked he had taken “break a leg” too seriously; the injury came hours before a Navratri event in Jamnagar. He performed despite the injury but has been advised to rest."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

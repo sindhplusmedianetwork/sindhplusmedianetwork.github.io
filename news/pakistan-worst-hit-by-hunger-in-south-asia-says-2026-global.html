@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "2026 کے عالمی بھوک انڈیکس میں پاکستان جنوبی ایشیا میں سب سے پیچھے", "ex_ur": "2026 کے عالمی بھوک انڈیکس میں پاکستان کا جنوبی ایشیا میں سب سے خراب اسکور رہا، جس سے خوراک کی بڑھتی ہوئی عدم تحفظ کی عکاسی ہوتی ہے۔ رپورٹ کے مطابق معاشی عدم استحکام، مہنگائی اور موسمیاتی جھٹکے اس کی بنیادی وجوہات ہیں۔", "title_en": "Pakistan Worst Hit by Hunger in South Asia, Says 2026 Global Hunger Index", "ex_en": "Pakistan recorded the highest score in South Asia on the 2026 Global Hunger Index, reflecting a worsening food security crisis driven by economic instability, food price inflation and climate shocks. The report warns that progress on hunger in South Asia has largely stagnated since 2018."}</script>
+<script id="artLang" type="application/json">{"title_ur": "2026 کے عالمی بھوک انڈیکس میں پاکستان جنوبی ایشیا میں سب سے پیچھے", "ex_ur": "2026 کے عالمی بھوک انڈیکس میں پاکستان کا جنوبی ایشیا میں سب سے خراب اسکور رہا، جس سے خوراک کی بڑھتی ہوئی عدم تحفظ کی عکاسی ہوتی ہے۔ رپورٹ کے مطابق معاشی عدم استحکام، مہنگائی اور موسمیاتی جھٹکے اس کی بنیادی وجوہات ہیں۔", "title_sd": "2026 جي عالمي بک انڊيڪس ۾ پاڪستان ڏکڻ ايشيا ۾ سڀ کان پوئتي", "ex_sd": "پاڪستان 2026 جي گلوبل هنگر انڊيڪس تي ڏکڻ ايشيا ۾ سڀ کان وڌيڪ اسڪور رڪارڊ ڪيو، جيڪو معاشي عدم استحڪام، خوراڪ جي قيمتن ۾ واڌ ۽ موسمياتي جھٽڪن سبب بگڙندڙ خوراڪ تحفظ جي بحران کي ظاهر ڪري ٿو. رپورٽ خبردار ڪري ٿي ته 2018 کانپوءِ ڏکڻ ايشيا ۾ بک تي اڳڀرائي گهڻو ڪري رڪجي وئي آهي.", "title_en": "Pakistan Worst Hit by Hunger in South Asia, Says 2026 Global Hunger Index", "ex_en": "Pakistan recorded the highest score in South Asia on the 2026 Global Hunger Index, reflecting a worsening food security crisis driven by economic instability, food price inflation and climate shocks. The report warns that progress on hunger in South Asia has largely stagnated since 2018."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

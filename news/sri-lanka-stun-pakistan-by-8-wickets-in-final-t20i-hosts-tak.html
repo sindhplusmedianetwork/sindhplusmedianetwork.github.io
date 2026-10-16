@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "سری لنکا نے آخری ٹی ٹوئنٹی میں پاکستان کو 8 وکٹوں سے ہرا دیا، سیریز پاکستان کے نام", "ex_ur": "سری لنکا نے راولپنڈی میں تیسرے اور آخری ٹی ٹوئنٹی میچ میں پاکستان کو 8 وکٹوں سے شکست دے کر وائٹ واش سے بچ گیا۔ کپتان کسل مینڈس کی 48 گیندوں پر ناقابل شکست 87 رنز کی اننگز کی بدولت مہمان ٹیم نے 17.1 اوورز میں 169 رنز کا ہدف حاصل کر لیا۔ تاہم سیریز پاکستان نے 2-1 سے جیت لی، کپتان صاحبزادہ فرحان (76) پلیئر آف دی سیریز قرار پائے۔", "title_en": "Sri Lanka Stun Pakistan by 8 Wickets in Final T20I; Hosts Take Series 2-1", "ex_en": "Sri Lanka defeated Pakistan by eight wickets in the third and final T20I at Rawalpindi, avoiding a series whitewash. Captain Kusal Mendis's unbeaten 87 off 48 balls powered the 169-run chase, completed in 17.1 overs. Pakistan nevertheless won the series 2-1, with captain Sahibzada Farhan (76) named Player of the Series."}</script>
+<script id="artLang" type="application/json">{"title_ur": "سری لنکا نے آخری ٹی ٹوئنٹی میں پاکستان کو 8 وکٹوں سے ہرا دیا، سیریز پاکستان کے نام", "ex_ur": "سری لنکا نے راولپنڈی میں تیسرے اور آخری ٹی ٹوئنٹی میچ میں پاکستان کو 8 وکٹوں سے شکست دے کر وائٹ واش سے بچ گیا۔ کپتان کسل مینڈس کی 48 گیندوں پر ناقابل شکست 87 رنز کی اننگز کی بدولت مہمان ٹیم نے 17.1 اوورز میں 169 رنز کا ہدف حاصل کر لیا۔ تاہم سیریز پاکستان نے 2-1 سے جیت لی، کپتان صاحبزادہ فرحان (76) پلیئر آف دی سیریز قرار پائے۔", "title_sd": "سري لنڪا پاران آخري ٽي ٽوئنٽي ۾ پاڪستان کي 8 وڪيٽن تان شڪست، سيريز پاڪستان جي نالي", "ex_sd": "سري لنڪا راولپنڊي ۾ ٽئين ۽ آخري ٽي ٽوئنٽي ميچ ۾ پاڪستان کي 8 وڪيٽن تان شڪست ڏئي وائيٽ واش کان بچي ويو. ڪپتان ڪسل مينڊس جي 48 بالن تي ناقابل شڪست 87 رنسن جي اننگز سبب مهمان ٽيم 17.1 اوورن ۾ 169 رنسن جو هدف حاصل ڪري ورتو. تنهن هوندي سيريز پاڪستان 2-1 تان کٽي ورتي، ڪپتان صاحبزاده فرحان (76) پليئر آف دي سيريز قرار پيو.", "title_en": "Sri Lanka Stun Pakistan by 8 Wickets in Final T20I; Hosts Take Series 2-1", "ex_en": "Sri Lanka defeated Pakistan by eight wickets in the third and final T20I at Rawalpindi, avoiding a series whitewash. Captain Kusal Mendis's unbeaten 87 off 48 balls powered the 169-run chase, completed in 17.1 overs. Pakistan nevertheless won the series 2-1, with captain Sahibzada Farhan (76) named Player of the Series."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

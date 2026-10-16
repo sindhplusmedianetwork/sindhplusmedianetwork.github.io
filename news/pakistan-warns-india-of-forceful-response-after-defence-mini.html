@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "بھارتی وزیر دفاع کی دھمکیوں پر پاکستان کی وارننگ: 'جارحیت کا بھرپور جواب دیا جائے گا'", "ex_ur": "پاکستان نے جمعہ کو بھارتی وزیر دفاع کے اشتعال انگیز بیانات کی مذمت کی جن میں فوجی جارحیت کی دھمکی دی گئی، اور خبردار کیا کہ کسی بھی حملے کا بھرپور جواب دیا جائے گا۔ دفتر خارجہ کے ترجمان سجاد حیدر خان نے کہا کہ تحمل اور امن کے عزم کو کمزوری نہیں سمجھنا چاہیے، اور بھارت کو مئی 2025 کی فوجی جارحیت کے نتائج یاد دلائے۔", "title_en": "Pakistan Warns India of 'Forceful Response' After Defence Minister's Threats", "ex_en": "Pakistan on Friday condemned what it called provocative remarks by India's defence minister threatening military aggression, warning that any attack would be met with a forceful response. Foreign Office spokesperson Sajjad Haider Khan said restraint must never be mistaken for weakness, and reminded India of the outcome of its military aggression in May 2025."}</script>
+<script id="artLang" type="application/json">{"title_ur": "بھارتی وزیر دفاع کی دھمکیوں پر پاکستان کی وارننگ: 'جارحیت کا بھرپور جواب دیا جائے گا'", "ex_ur": "پاکستان نے جمعہ کو بھارتی وزیر دفاع کے اشتعال انگیز بیانات کی مذمت کی جن میں فوجی جارحیت کی دھمکی دی گئی، اور خبردار کیا کہ کسی بھی حملے کا بھرپور جواب دیا جائے گا۔ دفتر خارجہ کے ترجمان سجاد حیدر خان نے کہا کہ تحمل اور امن کے عزم کو کمزوری نہیں سمجھنا چاہیے، اور بھارت کو مئی 2025 کی فوجی جارحیت کے نتائج یاد دلائے۔", "title_sd": "ڀارتي وزير دفاع جي ڌمڪين تي پاڪستان جي خبردار: 'جارحيت جو ڀرپور جواب ڏنو ويندو'", "ex_sd": "پاڪستان جمعي تي ڀارتي وزير دفاع جي اشتعال انگيز بيانن جي مذمت ڪئي جن ۾ فوجي جارحيت جي ڌمڪي ڏني وئي هئي، ۽ خبردار ڪيو ته ڪنهن به حملي جو ڀرپور جواب ڏنو ويندو. پرڏيهي دفتر جي ترجمان سجاد حيدر خان چيو ته تحمل کي ڪمزوري نه سمجهيو وڃي، ۽ ڀارت کي مئي 2025ع جي فوجي جارحيت جا نتيجا ياد ڏياريا.", "title_en": "Pakistan Warns India of 'Forceful Response' After Defence Minister's Threats", "ex_en": "Pakistan on Friday condemned what it called provocative remarks by India's defence minister threatening military aggression, warning that any attack would be met with a forceful response. Foreign Office spokesperson Sajjad Haider Khan said restraint must never be mistaken for weakness, and reminded India of the outcome of its military aggression in May 2025."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

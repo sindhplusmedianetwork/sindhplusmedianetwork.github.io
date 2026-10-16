@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "ٹیکس گوشوارے کی آخری تاریخ: تاجروں کا 2 دسمبر تک توسیع کا مطالبہ", "ex_ur": "ٹیکس سال 2026 کے انکم ٹیکس گوشوارے جمع کرانے کی 15 اکتوبر کی آخری تاریخ کے موقع پر تاجر تنظیموں اور ٹیکس بار ایسوسی ایشنز نے ایف بی آر سے 2 دسمبر تک توسیع کا مطالبہ کیا۔ ان کا موقف ہے کہ آئرس پورٹل کی خرابیاں اور گوشوارہ فارم کی دیر سے اطلاع تاخیر کی وجوہات ہیں۔", "title_en": "Traders Press FBR to Extend Tax Return Deadline to December 2", "ex_en": "With the October 15 deadline for filing income tax returns for Tax Year 2026 arriving, trade bodies and tax bar associations urged the FBR to extend it to December 2, blaming persistent IRIS portal glitches and the late notification of the final return form. The demand covered both income tax returns and wealth statements."}</script>
+<script id="artLang" type="application/json">{"title_ur": "ٹیکس گوشوارے کی آخری تاریخ: تاجروں کا 2 دسمبر تک توسیع کا مطالبہ", "ex_ur": "ٹیکس سال 2026 کے انکم ٹیکس گوشوارے جمع کرانے کی 15 اکتوبر کی آخری تاریخ کے موقع پر تاجر تنظیموں اور ٹیکس بار ایسوسی ایشنز نے ایف بی آر سے 2 دسمبر تک توسیع کا مطالبہ کیا۔ ان کا موقف ہے کہ آئرس پورٹل کی خرابیاں اور گوشوارہ فارم کی دیر سے اطلاع تاخیر کی وجوہات ہیں۔", "title_sd": "ٽيڪس گوشوارن جي آخري تاريخ: واپارين طرفان 2 ڊسمبر تائين توسيع جو مطالبو", "ex_sd": "ٽيڪس سال 2026 جي انڪم ٽيڪس گوشوارن داخل ڪرڻ جي 15 آڪٽوبر واري آخري تاريخ اچڻ سان، واپاري تنظيمن ۽ ٽيڪس بار ايسوسيئيشنن ايف بي آر تي زور ڏنو ته ان کي 2 ڊسمبر تائين وڌايو وڃي، آءِ آر آءِ ايس پورٽل جي مسلسل خرابين ۽ حتمي گوشواره فارم جي دير سان اطلاع کي ذميوار قرار ڏيندي. مطالبو انڪم ٽيڪس گوشوارن ۽ دولت جي بيانن ٻنهي تي هو.", "title_en": "Traders Press FBR to Extend Tax Return Deadline to December 2", "ex_en": "With the October 15 deadline for filing income tax returns for Tax Year 2026 arriving, trade bodies and tax bar associations urged the FBR to extend it to December 2, blaming persistent IRIS portal glitches and the late notification of the final return form. The demand covered both income tax returns and wealth statements."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

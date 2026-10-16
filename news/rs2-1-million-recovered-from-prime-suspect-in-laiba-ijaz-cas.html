@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "لیبہ اعجاز کیس: ایف آئی اے نے مرکزی ملزم نعمان سے 2.1 ملین روپے برآمد کر لیے", "ex_ur": "فیڈرل انویسٹی گیشن ایجنسی نے لیبہ اعجاز خودکشی کیس کے مرکزی ملزم نعمان سے 2.1 ملین روپے برآمد کر لیے ہیں۔ لیبہ نے ہارورڈ یونیورسٹی میں داخلے کے جھانسے میں دھوکہ کھانے کے بعد خودکشی کی تھی، ایف آئی آر کے مطابق ملزمان نے ان سے 9.3 ملین روپے بٹورے۔ مانسہرہ میں فراڈ کیس کے اشتہاری ملزم نعمان کو ریکوری مکمل ہونے کے بعد مانسہرہ پولیس کے حوالے کیا جائے گا۔", "title_en": "Rs2.1 Million Recovered From Prime Suspect in Laiba Ijaz Case, Says FIA", "ex_en": "The Federal Investigation Agency has recovered Rs2.1 million from Nauman, the prime suspect in the Laiba Ijaz suicide case. Laiba died by suicide after being defrauded over a promised Harvard University admission, with the FIR alleging the suspects took Rs9.3 million from her. Nauman, a proclaimed offender in a Mansehra fraud case, will be handed over to Mansehra police after the recovery process."}</script>
+<script id="artLang" type="application/json">{"title_ur": "لیبہ اعجاز کیس: ایف آئی اے نے مرکزی ملزم نعمان سے 2.1 ملین روپے برآمد کر لیے", "ex_ur": "فیڈرل انویسٹی گیشن ایجنسی نے لیبہ اعجاز خودکشی کیس کے مرکزی ملزم نعمان سے 2.1 ملین روپے برآمد کر لیے ہیں۔ لیبہ نے ہارورڈ یونیورسٹی میں داخلے کے جھانسے میں دھوکہ کھانے کے بعد خودکشی کی تھی، ایف آئی آر کے مطابق ملزمان نے ان سے 9.3 ملین روپے بٹورے۔ مانسہرہ میں فراڈ کیس کے اشتہاری ملزم نعمان کو ریکوری مکمل ہونے کے بعد مانسہرہ پولیس کے حوالے کیا جائے گا۔", "title_sd": "ليبه اعجاز ڪيس: ايف آءِ اي پاران مرڪزي جوابدار نعمان کان 2.1 ملين رپيا هٿ", "ex_sd": "فيڊرل انويسٽيگيشن ايجنسي ليبه اعجاز خودڪشي ڪيس جي مرڪزي جوابدار نعمان کان 2.1 ملين رپيا هٿ ڪري ورتا آهن. ليبه هارورڊ يونيورسٽي ۾ داخلا جي ٺڳي کائڻ کانپوءِ خودڪشي ڪئي هئي، ايف آءِ آر موجب جوابدارن هن کان 9.3 ملين رپيا هٿ ڪيا. مانسهره ۾ فراڊ ڪيس جي اشتهاري جوابدار نعمان کي وصولي مڪمل ٿيڻ کانپوءِ مانسهره پوليس حوالي ڪيو ويندو.", "title_en": "Rs2.1 Million Recovered From Prime Suspect in Laiba Ijaz Case, Says FIA", "ex_en": "The Federal Investigation Agency has recovered Rs2.1 million from Nauman, the prime suspect in the Laiba Ijaz suicide case. Laiba died by suicide after being defrauded over a promised Harvard University admission, with the FIR alleging the suspects took Rs9.3 million from her. Nauman, a proclaimed offender in a Mansehra fraud case, will be handed over to Mansehra police after the recovery process."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

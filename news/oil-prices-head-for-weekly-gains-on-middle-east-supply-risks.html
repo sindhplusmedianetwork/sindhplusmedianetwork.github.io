@@ -83,20 +83,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "مشرقِ وسطیٰ کی سپلائی خدشات پر تیل کی قیمتیں ہفتہ وار اضافے کی طرف", "ex_ur": "مشرقِ وسطیٰ کی سپلائی پر غیر یقینی صورتحال اور امریکی خام تیل کے ذخائر میں توقع سے زیادہ کمی کے باعث تیل کی قیمتوں میں جمعہ کو کمی آئی، مگر ہفتہ وار بنیاد پر اضافے کی طرف تھیں۔ برینٹ فیوچرز 71 سینٹ گر کر 105.21 ڈالر فی بیرل جبکہ ڈبلیو ٹی آئی 77 سینٹ گر کر 97.20 ڈالر رہا، تاہم آبنائے ہرمز کے بہاؤ پر خدشات کے باعث دونوں ہفتے بھر میں بڑھے۔ شپ ٹریکر کیپلر کے مطابق 13 اکتوبر تک سات روز میں ہرمز سے اوسطاً 11.62 ملین بیرل روزانہ گزرا، جو 17.15 ملین بیرل کی بنیادی سطح کا تقریباً 68 فیصد ہے۔", "title_en": "Oil Prices Head for Weekly Gains on Middle East Supply Risks", "ex_en": "Oil prices eased on Friday but were heading for weekly gains amid uncertainty over Middle East supplies and a larger-than-expected US crude stocks draw. Brent futures fell 71 cents to $105.21 a barrel while WTI dropped 77 cents to $97.20, though both were up for the week on fears over Strait of Hormuz flows. Ship tracker Kpler said Hormuz clearance averaged 11.62 million barrels per day over seven days to October 13, about 68 per cent of the 17.15 million bpd baseline."}</script>
+<script id="artLang" type="application/json">{"title_ur": "مشرقِ وسطیٰ کی سپلائی خدشات پر تیل کی قیمتیں ہفتہ وار اضافے کی طرف", "ex_ur": "مشرقِ وسطیٰ کی سپلائی پر غیر یقینی صورتحال اور امریکی خام تیل کے ذخائر میں توقع سے زیادہ کمی کے باعث تیل کی قیمتوں میں جمعہ کو کمی آئی، مگر ہفتہ وار بنیاد پر اضافے کی طرف تھیں۔ برینٹ فیوچرز 71 سینٹ گر کر 105.21 ڈالر فی بیرل جبکہ ڈبلیو ٹی آئی 77 سینٹ گر کر 97.20 ڈالر رہا، تاہم آبنائے ہرمز کے بہاؤ پر خدشات کے باعث دونوں ہفتے بھر میں بڑھے۔ شپ ٹریکر کیپلر کے مطابق 13 اکتوبر تک سات روز میں ہرمز سے اوسطاً 11.62 ملین بیرل روزانہ گزرا، جو 17.15 ملین بیرل کی بنیادی سطح کا تقریباً 68 فیصد ہے۔", "title_sd": "وچ اوڀر جي سپلاءِ جي خدشن سبب تيل جي قيمتن ۾ هفتيوار واڌ جو امڪان", "ex_sd": "وچ اوڀر جي سپلاءِ بابت غير يقيني صورتحال ۽ آمريڪي خام تيل جي ذخيرن ۾ اميد کان وڌيڪ گهٽتائي سبب جمعي تي تيل جون قيمتون گهٽيون، پر هفتيوار بنيادن تي واڌ طرف هيون. برينٽ فيوچرز 71 سينٽ گهٽجي 105.21 ڊالر في بيرل ۽ ڊبليو ٽي آءِ 77 سينٽ گهٽجي 97.20 ڊالر رهيو، پر آبنائي هرمز جي وهڪري بابت خدشن سبب ٻئي هفتي دوران وڌيا. شپ ٽريڪر ڪيپلر موجب 13 آڪٽوبر تائين ستن ڏينهن ۾ هرمز مان سراسري 11.62 ملين بيرل روزانو گذريو، جيڪو 17.15 ملين بيرل جي بنيادي سطح جو لڳ ڀڳ 68 سيڪڙو آهي.", "title_en": "Oil Prices Head for Weekly Gains on Middle East Supply Risks", "ex_en": "Oil prices eased on Friday but were heading for weekly gains amid uncertainty over Middle East supplies and a larger-than-expected US crude stocks draw. Brent futures fell 71 cents to $105.21 a barrel while WTI dropped 77 cents to $97.20, though both were up for the week on fears over Strait of Hormuz flows. Ship tracker Kpler said Hormuz clearance averaged 11.62 million barrels per day over seven days to October 13, about 68 per cent of the 17.15 million bpd baseline."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

@@ -82,20 +82,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "پیمرا کا ٹی وی چینلز کو دھماکوں اور دہشت گرد حملوں کی لائیو کوریج سے منع کرنے کا انتباہ", "ex_ur": "پیمرا نے 13 اکتوبر کو جاری نوٹیفکیشن میں تمام سیٹلائٹ ٹی وی چینلز کو دھماکوں، فائرنگ اور دہشت گرد حملوں کی براہ راست کوریج سے منع کیا ہے۔ خلاف ورزی پر پیمرا آرڈیننس کی دفعات 29-اے، 30 اور 33 کے تحت کارروائی کا انتباہ دیا گیا۔", "title_en": "Pemra Warns TV Channels Against Live Coverage of Blasts, Terror Attacks", "ex_en": "Pemra has ordered satellite TV channels not to broadcast or air live coverage of explosions, firing and terrorist attacks, reiterating its February 2023 ban. Channels must air only information verified by the relevant authorities, and violations can invite legal action under the Pemra Ordinance."}</script>
+<script id="artLang" type="application/json">{"title_ur": "پیمرا کا ٹی وی چینلز کو دھماکوں اور دہشت گرد حملوں کی لائیو کوریج سے منع کرنے کا انتباہ", "ex_ur": "پیمرا نے 13 اکتوبر کو جاری نوٹیفکیشن میں تمام سیٹلائٹ ٹی وی چینلز کو دھماکوں، فائرنگ اور دہشت گرد حملوں کی براہ راست کوریج سے منع کیا ہے۔ خلاف ورزی پر پیمرا آرڈیننس کی دفعات 29-اے، 30 اور 33 کے تحت کارروائی کا انتباہ دیا گیا۔", "title_sd": "پيمرا طرفان ٽي وي چينلن کي ڌماڪن ۽ دهشتگرد حملن جي لائيو ڪوريج کان خبردار", "ex_sd": "پيمرا سيٽلائيٽ ٽي وي چينلن کي حڪم ڏنو آهي ته ڌماڪن، فائرنگ ۽ دهشتگرد حملن جي لائيو ڪوريج نشر نه ڪن، پنهنجي فيبروري 2023 واري پابندي کي ورجائيندي. چينلن کي صرف لاڳاپيل اختيارين کان تصديق ٿيل معلومات نشر ڪرڻ گهرجي، ۽ خلاف ورزي تي پيمرا آرڊيننس تحت قانوني ڪارروائي ٿي سگهي ٿي.", "title_en": "Pemra Warns TV Channels Against Live Coverage of Blasts, Terror Attacks", "ex_en": "Pemra has ordered satellite TV channels not to broadcast or air live coverage of explosions, firing and terrorist attacks, reiterating its February 2023 ban. Channels must air only information verified by the relevant authorities, and violations can invite legal action under the Pemra Ordinance."}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>

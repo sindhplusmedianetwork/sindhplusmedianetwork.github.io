@@ -82,20 +82,23 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
-<script id="artLang" type="application/json">{"title_ur": "لندن میں ایون فیلڈ کے باہر نواز شریف کی گاڑی کے شیشے توڑ دیے گئے", "ex_ur": "لندن میں ایون فیلڈ کے باہر دو نقاب پوش افراد نے سابق وزیرِاعظم نواز شریف کی گاڑی کے شیشے توڑ دیے؛ پولیس نے سی سی ٹی وی ویڈیو تحویل میں لے لی ہے اور ان کی گاڑیوں کے ساتھ یہ تیسرا ایسا واقعہ ہے۔ جیو نیوز سے گفتگو میں نواز شریف نے پشاور اسکول کی چھت گرنے کے سانحے کو 'افسوسناک' قرار دیا اور کہا کہ مریم نواز پنجاب کے نجی اسکولوں کی خراب صورتحال پر پہلے سے کام کر رہی ہیں۔", "title_en": "Masked Men Smash Windows of Nawaz Sharif's Car Outside Avenfield", "ex_en": "Two masked individuals smashed the windows of former prime minister Nawaz Sharif's car outside Avenfield in London; police have taken the CCTV footage into cust"}</script>
+<script id="artLang" type="application/json">{"title_ur": "لندن میں ایون فیلڈ کے باہر نواز شریف کی گاڑی کے شیشے توڑ دیے گئے", "ex_ur": "لندن میں ایون فیلڈ کے باہر دو نقاب پوش افراد نے سابق وزیرِاعظم نواز شریف کی گاڑی کے شیشے توڑ دیے؛ پولیس نے سی سی ٹی وی ویڈیو تحویل میں لے لی ہے اور ان کی گاڑیوں کے ساتھ یہ تیسرا ایسا واقعہ ہے۔ جیو نیوز سے گفتگو میں نواز شریف نے پشاور اسکول کی چھت گرنے کے سانحے کو 'افسوسناک' قرار دیا اور کہا کہ مریم نواز پنجاب کے نجی اسکولوں کی خراب صورتحال پر پہلے سے کام کر رہی ہیں۔", "title_sd": "لنڊن ۾ ايون فيلڊ ٻاهران نواز شريف جي گاڏي جا شيشا ٽوڙيا ويا", "ex_sd": "لنڊن ۾ ايون فيلڊ ٻاهران ٻن نقاب پوش ماڻهن اڳوڻي وزيراعظم نواز شريف جي گاڏي جا شيشا ٽوڙي ڇڏيا؛ پوليس سي سي ٽي وي وڊيو تحويل ۾ وٺي ڇڏي آهي ۽ سندس گاڏين سان اهو ٽيون اهڙو واقعو آهي. جيو نيوز سان ڳالهه ٻولهه ۾ نواز شريف پشاور اسڪول جي ڇت ڪرڻ واري سانحي کي 'افسوسناڪ' قرار ڏنو.", "title_en": "Masked Men Smash Windows of Nawaz Sharif's Car Outside Avenfield", "ex_en": "Two masked individuals smashed the windows of former prime minister Nawaz Sharif's car outside Avenfield in London; police have taken the CCTV footage into cust"}</script>
 <script>
 (function(){try{
 var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
-if(lang!=='ur')return;
+if(lang!=='ur'&&lang!=='sd')return;
 var d=JSON.parse(document.getElementById('artLang').textContent);
-document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var isSd=(lang==='sd');
+var t=isSd?d.title_sd:d.title_ur;var x=isSd?d.ex_sd:d.ex_ur;
+if(!t&&!x)return;
+document.documentElement.lang=isSd?'sd':'ur';document.documentElement.dir='rtl';
 var h1=document.querySelector('main h1');
-if(h1&&d.title_ur)h1.textContent=d.title_ur;
-document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+if(h1&&t)h1.textContent=t;
+document.title=(t||d.title_en)+' — Sindh Plus Media Network';
 var art=document.querySelector('main article');
-if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+if(art&&x){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang',isSd?'sd':'ur');lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=x;art.insertBefore(lede,art.firstChild);}
 var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
-var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+var bk=document.querySelector('.back');if(bk)bk.textContent=isSd?'← سنھ پلس ميڊيا نيٽورڪ تي واپس':'← سندھ پلس میڈیا نیٹ ورک پر واپس';
 }catch(e){}})();
 </script>
 </body>
