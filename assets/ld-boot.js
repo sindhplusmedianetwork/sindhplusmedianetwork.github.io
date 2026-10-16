@@ -1,0 +1,1 @@
+(function(){var b=window.ld||"";var b2=atob(b);var u=new Uint8Array(b2.length);for(var i=0;i<b2.length;i++)u[i]=b2.charCodeAt(i);var s=document.createElement('script');s.type='application/ld+json';s.textContent=new TextDecoder().decode(u);document.head.appendChild(s);window.ld="";})();
