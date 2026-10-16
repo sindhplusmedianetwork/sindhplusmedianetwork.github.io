@@ -34,10 +34,7 @@
 <link rel="icon" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
 <script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
-<script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-check-compat.js"></script>
 <meta name="theme-color" content="#c8102e">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -50,47 +47,6 @@
 <script src="assets/ld-3.js"></script>
 <script src="assets/ld-boot.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Tahir Adnan","image":"https://sindhplusmedianetwork.github.io/tahir-adnan.jpg","description":"Tahir Adnan is a Pakistani journalist (MA Journalism), TEFL-certified English teacher, and founder of Sindh Plus Media Network.","nationality":"Pakistani","jobTitle":["Journalist","English Teacher","Founder"],"worksFor":{"@type":"Organization","name":"Sindh Plus Media Network","url":"https://sindhplusmedianetwork.github.io"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Shah Abdul Latif University"},"knowsAbout":["Journalism","English Teaching","TEFL","Digital Media","SEO","Documentary Production"],"url":"https://sindhplusmedianetwork.github.io/about.html","sameAs":["https://sindhplusmedianetwork.github.io","https://www.instagram.com/sindhplusmedianetwork/","https://www.tiktok.com/@sindhplusmedianetwork","https://x.com/sindhplusmedianetwork","https://www.pinterest.com/tahiradnan618/"]}</script></head>
-<body><div id="fbLanding" style="display:flex">
-<div class="fbL-head"><div style="display:flex;align-items:center;gap:10px"><img src="logo.png" alt="Sindh Plus Media Network logo" style="width:44px;height:44px;border-radius:10px;object-fit:cover;flex-shrink:0"><div><div class="fbL-logo">Sindh Plus Media Network</div><div style="font-size:13px;opacity:.85">Free forever</div></div></div><div id="fbClock" style="font-size:16px;font-weight:700;text-align:right;line-height:1.35"></div></div>
-<div class="fbL-body">
-<div class="fbL-brand">
-<h1>Sindh Plus Media Network</h1>
-<p>News, Community, Friends, Rishta Services, Tools &amp; Jobs — sab kuch ek jagah, aapki apni zaban mein.</p>
-<div class="fbL-feats">
-<div class="fbL-feat">📰 <span>Taza khabrein — English, اردو, سنڌي, 中文</span></div>
-<div class="fbL-feat">👥 <span>Community — post karein, dost banayein</span></div>
-<div class="fbL-feat">💍 <span>Rishta Services — verified profiles</span></div>
-</div>
-</div>
-<div class="fbL-card">
-<div class="fbL-tabs">
-<div class="fbL-tab on" id="fbTabLogin" onclick="fbTab('login')">Log In</div>
-<div class="fbL-tab" id="fbTabSignup" onclick="fbTab('signup')">Sign Up</div>
-</div>
-<div id="fbPaneLogin">
-<input class="fbL-input" id="fbLEmail" type="email" placeholder="Email address" autocomplete="email">
-<input class="fbL-input" id="fbLPass" type="password" placeholder="Password" autocomplete="current-password" onkeydown="if(event.key==='Enter')fbLogin()">
-<button class="fbL-btn blue" id="fbLoginBtn" onclick="fbLogin()">Log In</button>
-<button class="fbL-forgot" onclick="fbForgot()">Forgot password?</button>
-<div class="fbL-div">or</div>
-<button class="fbL-btn google" onclick="fbGoogle()">&#128309; Continue with Google</button>
-</div>
-<div id="fbPaneSignup" style="display:none">
-<input class="fbL-input" id="fbSName" placeholder="Your name" autocomplete="name">
-<input class="fbL-input" id="fbSEmail" type="email" placeholder="Email address" autocomplete="email">
-<input class="fbL-input" id="fbSPass" type="password" placeholder="New password (min 6)" autocomplete="new-password" onkeydown="if(event.key==='Enter')fbSignup()">
-<button class="fbL-btn green" id="fbSignupBtn" onclick="fbSignup()">Create Account</button>
-<div class="fbL-div">or</div>
-<button class="fbL-btn google" onclick="fbGoogle()">&#128309; Continue with Google</button>
-<p class="fbL-note">Email + mobile verification required — no fake accounts.</p>
-</div>
-<div class="fbL-err" id="fbErr"></div>
-<div class="fbL-ok" id="fbOk"></div>
-<button class="fbL-guest" onclick="fbGuest()">Browse news as guest &#8594;</button>
-</div>
-</div>
-<div class="fbL-foot">Sindh Plus Media Network — Truth First</div>
-</div>
 
 <div class="topbar"><div class="wrap"><span id="dateLine"></span><span style="color:#666;margin:0 6px">|</span><span id="clockLine" style="color:#ffd24d;font-weight:700"></span><select class="langbtn" id="tzSel" onchange="setTz(this.value)" style="padding:5px 8px;margin-left:6px" aria-label="Timezone"></select><button class="langbtn" id="installBtn" onclick="installApp()" style="display:none;margin-right:8px">📲 App</button><select class="langbtn" id="langSel" onchange="setLang(this.value)" style="padding:5px 8px" aria-label="Language"><option value="en">English</option><option value="ur">اردو</option><option value="sd">سنڌي</option><option value="zh">中文</option></select></div></div>
 <header><div class="wrap">
@@ -175,51 +131,6 @@
   <div id="cbFeed"></div>
 </div>
 
-<div class="wrap cb-view" id="view-friends" style="display:none">
-  <h2 class="cb-sec-title" data-cblbl="friendsTitle">Friends &amp; Chat</h2>
-  <div class="gate-slot"></div>
-  <div id="cbFriendsBody" style="display:none">
-    <div class="cb-tabs">
-      <button class="cb-tab active" id="cbFTabReq" onclick="cbFTab('req')"><span data-cblbl="requests">Requests</span> <span id="cbReqCount"></span></button>
-      <button class="cb-tab" id="cbFTabList" onclick="cbFTab('list')" data-cblbl="myFriends">My Friends</button>
-      <button class="cb-tab" id="cbFTabFind" onclick="cbFTab('find')" data-cblbl="findFriends">Find Friends</button>
-    </div>
-    <div id="cbFReq"></div>
-    <div id="cbFList" style="display:none"></div>
-    <div id="cbFFind" style="display:none">
-      <input class="cb-input" id="cbFindQ" data-cbph="searchName" placeholder="Search by name..." oninput="cbFindFriends()">
-      <div id="cbFindRes"></div>
-    </div>
-    <div id="cbChatWrap" style="display:none">
-      <div class="cb-chat-head">
-        <button class="cb-btn sm sec" onclick="cbCloseChat()">←</button>
-        <div class="cb-avatar" id="cbChatAvatar">?</div>
-        <div><b id="cbChatName"></b><div class="cb-muted" id="cbChatNote" style="font-size:11px"></div></div>
-      </div>
-      <div id="cbChatMsgs"></div>
-      <div class="cb-chat-bar">
-        <input class="cb-input" id="cbChatInput" maxlength="500" data-cbph="typeMsg" placeholder="Type a message..." onkeydown="if(event.key==='Enter')cbSendMsg()">
-        <button class="cb-btn" onclick="cbSendMsg()">➤</button>
-      </div>
-      <div class="cb-err" id="cbChatErr"></div>
-    </div>
-  </div>
-</div>
-
-<div class="wrap cb-view" id="view-rishta" style="display:none">
-  <h2 class="cb-sec-title" data-cblbl="rishtaTitle">Rishta — Find Your Life Partner</h2>
-  <p class="cb-muted" data-cblbl="rishtaSub">Messaging is for ID-verified members only.</p>
-  <div class="gate-slot"></div>
-  <div id="cbVerifBanner"></div>
-  <div class="cb-toolbar">
-    <select class="cb-select" id="cbFltGender" onchange="cbRenderRishta()"><option value="" data-cblbl="allGenders">All</option><option>Female</option><option>Male</option></select>
-    <select class="cb-select" id="cbFltCity" onchange="cbRenderRishta()"><option value="" data-cblbl="allCities">All cities</option></select>
-    <select class="cb-select" id="cbFltVerif" onchange="cbRenderRishta()"><option value="0" data-cblbl="allProfiles">All profiles</option><option value="1" data-cblbl="verifiedOnly">✓ Verified only</option></select>
-  </div>
-  <div id="cbRishtaBtns"></div>
-  <div class="rishta-grid" id="cbRishtaGrid"></div>
-</div>
-
 <div class="wrap cb-view" id="view-tools" style="display:none">
   <h2 class="cb-sec-title" data-cblbl="toolsTitle">Daily Tools</h2>
   <p class="cb-muted" data-cblbl="toolsSub">Prayer times, weather, currency &amp; unit converter — free, every day.</p>
@@ -252,102 +163,6 @@
 </div>
 
 
-<div class="wrap cb-view" id="view-store" style="display:none">
-  <h2 class="cb-sec-title">🛒 Store</h2>
-  <p class="cb-muted">Top products from Daraz Pakistan at great prices — tap <b>Buy on Daraz</b> to order directly on Daraz.pk with cash on delivery.</p>
-  <div class="st-cats" id="stCats"></div>
-  <div class="cb-toolbar">
-    <input class="cb-input" id="stSearch" placeholder="Search products..." oninput="stRender()">
-  </div>
-  <div id="stGrid" class="st-grid"></div>
-  <p class="cb-muted" style="font-size:12px;margin-top:8px">Prices are from Daraz.pk and may change. Orders, payment and delivery are handled by Daraz.</p>
-</div>
-
-
-<div class="wrap cb-view" id="view-support" style="display:none">
-  <h2 class="cb-sec-title">🎧 Support</h2>
-  <p class="cb-muted">Koi sawal ya masla ho to WhatsApp par rabta karein — hum jald jawab denge.</p>
-  <a class="cb-btn" style="display:inline-block;text-decoration:none;background:#25D366;color:#fff;padding:12px 24px;border-radius:10px;font-weight:700;margin-top:12px" href="https://wa.me/923302080250?text=Assalam-o-Alaikum!%20Mujhe%20support%20chahiye." target="_blank" rel="noopener">💬 WhatsApp: 0330 2080250</a>
-</div>
-
-<!-- Auth modal -->
-<div class="cb-modal-bg" id="cbAuthModal">
-  <div class="cb-modal">
-    <button class="x" onclick="cbCloseModal('cbAuthModal')">✕</button>
-    <h2 data-cblbl="joinTitle">Join Sindh Plus</h2>
-    <p class="cb-muted" data-cblbl="joinSub">Free forever. Post, chat and find rishta.</p>
-    <button class="cb-btn w100" style="width:100%;margin:8px 0;background:#fff;color:#333;border:1.5px solid #ddd" onclick="cbGoogleLogin()">🔵 <span data-cblbl="googleBtn">Continue with Google</span></button>
-    <div class="cb-muted" style="text-align:center;margin:8px 0">—</div>
-    <input class="cb-input" id="cbEmName" data-cbph="yourName" placeholder="Your name">
-    <input class="cb-input" id="cbEmEmail" type="email" placeholder="Email">
-    <input class="cb-input" id="cbEmPass" type="password" placeholder="Password (min 6)">
-    <button class="cb-btn" style="width:100%;margin:4px 0" onclick="cbEmailSignup()" data-cblbl="signup">Sign Up</button>
-    <button class="cb-btn sec" style="width:100%" onclick="cbEmailLogin()" data-cblbl="login">Login</button>
-    <div class="cb-err" id="cbAuthErr"></div>
-  </div>
-</div>
-
-<!-- V4: mandatory verification modal (email + mobile) -->
-<div class="cb-modal-bg" id="cbVerifyModal">   <div class="cb-modal">
-<button class="x" onclick="cbCloseModal('cbVerifyModal')">✕</button>
-<h2 data-cblbl="verifyTitle">Verify your account</h2>
-<div id="cbVerifySteps"></div>
-</div> </div>  <!-- Rishta profile modal -->
-<div class="cb-modal-bg" id="cbProfModal">
-  <div class="cb-modal">
-    <button class="x" onclick="cbCloseModal('cbProfModal')">✕</button>
-    <h2 data-cblbl="myProfile">My Rishta Profile</h2>
-    <input class="cb-input" id="cbPfName" data-cbph="yourName" placeholder="Your name">
-    <div style="display:flex;gap:8px">
-      <input class="cb-input" id="cbPfAge" type="number" min="18" max="80" placeholder="Age">
-      <select class="cb-select" id="cbPfGender"><option>Female</option><option>Male</option></select>
-    </div>
-    <input class="cb-input" id="cbPfCity" data-cbph="city" placeholder="City">
-    <input class="cb-input" id="cbPfEdu" placeholder="Education">
-    <input class="cb-input" id="cbPfJob" placeholder="Profession">
-    <select class="cb-select" id="cbPfLooking"><option>Marriage</option><option>Serious relationship</option></select>
-    <textarea class="cb-textarea" id="cbPfAbout" rows="3" maxlength="500" placeholder="About yourself..."></textarea>
-    <button class="cb-btn" style="width:100%" onclick="cbSaveProfile()" data-cblbl="saveProfile">Save Profile</button>
-    <div class="cb-err" id="cbProfErr"></div><div class="cb-ok" id="cbProfOk"></div>
-  </div>
-</div>
-
-<!-- ID verification modal: 3 mandatory steps -->
-<div class="cb-modal-bg" id="cbVerifModal">
-  <div class="cb-modal">
-    <button class="x" onclick="cbCloseModal('cbVerifModal');cbStopCam()">✕</button>
-    <h2 data-cblbl="verifyTitle">Verify Your ID</h2>
-    <p class="cb-muted" data-cblbl="verifyPipeline"><b>AI initial check + admin final approval.</b> All 3 steps are required.</p>
-    <div class="cb-step" id="cbVs1">
-      <h4>1️⃣ <span data-cblbl="vsIdFront">ID card — FRONT photo</span></h4>
-      <input type="file" id="cbIdFront" accept="image/*">
-      <img class="prev" id="cbIdFrontPrev" style="display:none">
-    </div>
-    <div class="cb-step" id="cbVs2">
-      <h4>1️⃣ <span data-cblbl="vsIdBack">ID card — BACK photo</span></h4>
-      <input type="file" id="cbIdBack" accept="image/*">
-      <img class="prev" id="cbIdBackPrev" style="display:none">
-    </div>
-    <div class="cb-step" id="cbVs3">
-      <h4>2️⃣ <span data-cblbl="vsHolding">Selfie HOLDING your ID card</span></h4>
-      <input type="file" id="cbHolding" accept="image/*" capture="user">
-      <img class="prev" id="cbHoldingPrev" style="display:none">
-    </div>
-    <div class="cb-step" id="cbVs4">
-      <h4>3️⃣ <span data-cblbl="vsLive">LIVE photo — taken right now</span></h4>
-      <p class="cb-muted" style="font-size:12px" data-cblbl="vsLiveNote">Old/uploaded photos are NOT allowed here — only a fresh camera capture.</p>
-      <video id="cbLiveVideo" autoplay playsinline style="display:none"></video>
-      <div style="display:flex;gap:8px;margin-top:8px">
-        <button class="cb-btn sm sec" id="cbCamStart" onclick="cbStartCam()" data-cblbl="openCamera">Open camera</button>
-        <button class="cb-btn sm" id="cbCamShot" onclick="cbCaptureLive()" style="display:none" data-cblbl="capture">Capture</button>
-      </div>
-      <canvas id="cbLiveCanvas" style="display:none"></canvas>
-      <img class="prev" id="cbLivePrev" style="display:none">
-    </div>
-    <button class="cb-btn" style="width:100%;margin-top:8px" id="cbVerifSubmit" onclick="cbSubmitVerification()" data-cblbl="submitVerif">Submit for verification</button>
-    <div class="cb-err" id="cbVerifErr"></div><div class="cb-ok" id="cbVerifOk"></div>
-  </div>
-</div>
 
 
 <div id="artModal"><div class="art-paper"><button class="closebtn" onclick="closeArt()">✕</button><img id="amImg" alt="News article image"><div class="art-body"><span class="cc" id="amCat" style="font-size:12px;color:var(--orange);font-weight:800"></span><h1 id="amTitle"></h1><div class="art-meta" id="amMeta"></div><button class="cb-act" id="amShareBtn" onclick="shareArticle()" style="margin:6px 0 10px;font-size:14px">↗ <span id="amShareLbl">Share</span></button><div id="amBody"></div></div></div></div>
@@ -356,12 +171,9 @@
 <nav id="bottomNav" aria-label="Sections">
   <button data-tab="news" class="active" onclick="showTab('news')">📰<span data-cblbl="news">News</span></button>
   <button data-tab="community" onclick="showTab('community')">👥<span data-cblbl="community">Community</span></button>
-  <button data-tab="friends" onclick="showTab('friends')">💬<span data-cblbl="friends">Friends</span></button>
-  <button data-tab="rishta" onclick="showTab('rishta')">💍<span data-cblbl="rishta">Rishta Services</span></button>
-  <button data-tab="tools" onclick="showTab('tools')">🧰<span data-cblbl="tools">Tools</span></button>
+      <button data-tab="tools" onclick="showTab('tools')">🧰<span data-cblbl="tools">Tools</span></button>
   <button data-tab="jobs" onclick="showTab('jobs')">💼<span data-cblbl="jobs">Jobs</span></button>
-  <button data-tab="store" onclick="showTab('store')">🛒<span>Store</span></button>
-  <button data-tab="support" onclick="showTab('support')">🎧<span>Support</span></button>
+    <button data-tab="support" onclick="showTab('support')">🎧<span>Support</span></button>
 </nav>
 <button id="chatFab" onclick="toggleChat()" aria-label="Chat with Sindh Plus AI"><img src="images/ui/chat-icon.webp" alt="Sindh Plus AI"></button>
 <div id="chatPanel" role="dialog" aria-label="Sindh Plus AI chat">
@@ -401,7 +213,7 @@ const firebaseConfig = {
 <script src="assets/ap-4.js"></script>
 <script src="assets/ap-5.js"></script>
 <script src="assets/ap-6.js"></script>
-<script src="assets/app-boot.js"></script><script src="assets/landing.js"></script>
+<script src="assets/app-boot.js"></script>
 <script>
 window.addEventListener('load',function(){try{
  var list=(window.SEED||[]).slice(0,10).map(function(a){
