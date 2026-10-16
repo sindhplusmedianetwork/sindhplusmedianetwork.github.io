@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latitude/Longitude Converter — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Convert GPS coordinates between decimal degrees and degrees-minutes-seconds (DMS) format. Works for both latitude and longitude with N/S/E/W directions.">
+<meta name="keywords" content="lat long converter, decimal degrees to dms, dms to decimal converter, gps coordinates converter, degrees minutes seconds calculator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/lat-long-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Latitude/Longitude Converter — Free Online Tool">
+<meta property="og:description" content="Convert GPS coordinates between decimal degrees and degrees-minutes-seconds (DMS) format. Works for both latitude and longitude with N/S/E/W directions.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/lat-long-converter.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Latitude/Longitude Converter — Free Online Tool">
+<meta name="twitter:description" content="Convert GPS coordinates between decimal degrees and degrees-minutes-seconds (DMS) format. Works for both latitude and longitude with N/S/E/W directions.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Latitude/Longitude Converter","url":"https://sindhplusmedianetwork.github.io/tools/lat-long-converter.html","description":"Convert GPS coordinates between decimal degrees and degrees-minutes-seconds (DMS) format. Works for both latitude and longitude with N/S/E/W directions.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Geography &amp; Travel</div>
+<h1>Latitude/Longitude Converter</h1>
+<p class="desc">Convert GPS coordinates between decimal degrees and degrees-minutes-seconds (DMS) format. Works for both latitude and longitude with N/S/E/W directions.</p>
+<div class="toolbox">
+<label>Direction<select id='cm'><option value='d2s'>Decimal &rarr; DMS</option><option value='s2d'>DMS &rarr; Decimal</option></select></label><div id='cwD'><label>Decimal value<input type='number' id='cdec' placeholder='24.8607' step='any'></label><label>Type<select id='ct'><option value='lat'>Latitude</option><option value='lon'>Longitude</option></select></label></div><div id='cwS' style='display:none'><label>Degrees<input type='number' id='cd' placeholder='24' step='any'></label><label>Minutes<input type='number' id='cmn' placeholder='51' min='0' max='59' step='any'></label><label>Seconds<input type='number' id='cs' placeholder='38.5' min='0' max='59.999' step='any'></label><label>Direction<select id='cdir'><option>N</option><option>S</option><option>E</option><option>W</option></select></label></div><button onclick='convCoord()'>Convert</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Latitude/Longitude Converter — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Flat-long-converter.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Latitude/Longitude Converter — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Flat-long-converter.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#GPS #Coordinates #LatLong #DMSConverter #TravelTools #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+document.getElementById('cm').addEventListener('change',function(){var m=this.value;document.getElementById('cwD').style.display=m==='d2s'?'':'none';document.getElementById('cwS').style.display=m==='s2d'?'':'none';});
+function convCoord(){var m=document.getElementById('cm').value;var R=document.getElementById('result');if(m==='d2s'){var v=parseFloat(document.getElementById('cdec').value),t=document.getElementById('ct').value;if(isNaN(v)||(t==='lat'&&Math.abs(v)>90)||(t==='lon'&&Math.abs(v)>180)){R.innerHTML='Enter a valid decimal coordinate.';return;}var dir=v<0?(t==='lat'?'S':'W'):(t==='lat'?'N':'E');var av=Math.abs(v);var d=Math.floor(av),mn=Math.floor((av-d)*60),s=((av-d)*60-mn)*60;R.innerHTML='<b>DMS: '+d+'&deg; '+mn+'\' '+s.toFixed(2)+'\" '+dir+'</b>';}else{var d2=parseFloat(document.getElementById('cd').value)||0,mn2=parseFloat(document.getElementById('cmn').value)||0,s2=parseFloat(document.getElementById('cs').value)||0,dr=document.getElementById('cdir').value;if(mn2<0||mn2>=60||s2<0||s2>=60){R.innerHTML='Minutes and seconds must be 0-59.';return;}var dec=d2+mn2/60+s2/3600;if(dr==='S'||dr==='W')dec=-dec;R.innerHTML='<b>Decimal: '+dec.toFixed(6)+'&deg;</b>';}}
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interview Question Generator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Practice with 100+ real interview questions. Choose behavioral, technical or HR questions, shuffle them, and prepare winning answers before your interview.">
+<meta name="keywords" content="interview questions, common interview questions and answers, behavioral interview questions, hr interview questions, interview preparation, job interview practice">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/interview-question-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Interview Question Generator — Free Online Tool">
+<meta property="og:description" content="Practice with 100+ real interview questions. Choose behavioral, technical or HR questions, shuffle them, and prepare winning answers before your interview.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/interview-question-generator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Interview Question Generator — Free Online Tool">
+<meta name="twitter:description" content="Practice with 100+ real interview questions. Choose behavioral, technical or HR questions, shuffle them, and prepare winning answers before your interview.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Interview Question Generator","url":"https://sindhplusmedianetwork.github.io/tools/interview-question-generator.html","description":"Practice with 100+ real interview questions. Choose behavioral, technical or HR questions, shuffle them, and prepare winning answers before your interview.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Jobs &amp; Career</div>
+<h1>Interview Question Generator</h1>
+<p class="desc">Practice with 100+ real interview questions. Choose behavioral, technical or HR questions, shuffle them, and prepare winning answers before your interview.</p>
+<div class="toolbox">
+<label>Category<select id='c'><option value='all'>All Categories</option><option value='beh'>Behavioral</option><option value='tech'>Technical / Problem Solving</option><option value='hr'>HR / General</option></select></label><label>Number of questions<input type='number' id='n' value='10' min='1' max='50'></label><button onclick='gen()'>Generate Questions</button> <button onclick='gen();'>Shuffle Again</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Interview Question Generator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Finterview-question-generator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Interview Question Generator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Finterview-question-generator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#InterviewTips #JobInterview #CareerTools #JobSearch #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var QB={
+beh:["Tell me about yourself.","Describe a challenging project you worked on and how you handled it.","Tell me about a time you failed. What did you learn?","Describe a situation where you had to meet a tight deadline.","Tell me about a time you disagreed with your manager.","Describe a time you went above and beyond at work.","Tell me about a conflict with a coworker and how you resolved it.","Describe a time you had to learn something completely new quickly.","Tell me about a time you received difficult feedback.","Describe a situation where you persuaded others to follow your idea.","Tell me about a time you made a mistake at work.","Describe a time you worked with a difficult team member.","Tell me about a goal you set and achieved.","Describe a time you prioritized multiple urgent tasks.","Tell me about a time you improved a process at work.","Describe a situation where you took initiative without being asked.","Tell me about a time you dealt with an angry customer.","Describe a time you adapted to a major change at work.","Tell me about a time you mentored a colleague.","Describe a time you made a difficult decision with limited information.","Tell me about a team project that did not go well.","Describe a situation where you exceeded expectations.","Tell me about a time you had to say no at work.","Describe a time you handled multiple projects at once.","Tell me about a time you spotted a problem early.","Describe working with someone from a different background.","Tell me about a proud professional achievement.","Describe a time you received praise for your work.","Tell me about a time you trained someone.","Describe a situation where you solved a problem creatively.","Tell me about a time you missed a deadline.","Describe a time you volunteered for extra responsibility.","Tell me about a time you delivered bad news.","Describe working under pressure for an extended period.","Tell me about a time you simplified a complex process.","Describe balancing quality and speed.","Tell me about a time you advocated for a colleague.","Describe turning a negative situation positive.","Tell me about following a process you disagreed with.","Describe your biggest professional growth moment."],
+tech:["Walk me through how you approach an unfamiliar problem.","How do you prioritize when everything seems urgent?","Describe your process for learning a new tool.","How do you ensure quality in your work?","Explain a complex concept from your field simply.","How do you stay updated in your profession?","Describe a technical challenge you solved recently.","How do you handle ambiguous requirements?","What methods do you use to stay organized?","How do you verify your work before delivery?","How would you break a large project into tasks?","How do you document your work?","What metrics measure success in your role?","How do you handle errors in your output?","Describe using data analysis in your role.","How do you approach process improvement?","What complex task have you automated?","How do you balance speed and accuracy?","Describe a time you used data to decide.","How do you keep your skills current?","What project management methods have you used?","How do you estimate time for a new task?","Describe your presentation experience.","How do you ensure consistency in your work?","What is your troubleshooting approach?","How do you track changes in your work?","Describe a workflow you designed or improved.","How do you collaborate across technical levels?","What if your usual tools were unavailable?","How do you validate information before acting?","Describe working with sprint deadlines.","How do you manage project risks?","What steps before starting a new assignment?","How do you measure your work impact?","Describe a difficult analytical problem you solved."],
+hr:["Why do you want to work here?","Why should we hire you?","What are your greatest strengths?","What is your biggest weakness?","Where do you see yourself in five years?","Why are you leaving your current job?","What motivates you?","How do you handle stress?","Are you a team player? Give an example.","What are your salary expectations?","What do you know about our company?","Why did you choose this career?","Are you willing to relocate?","How do you handle criticism?","What makes you a unique candidate?","Describe your ideal work environment.","How do you balance work and life?","What are you passionate about?","Do you prefer working alone or in a team?","How soon can you start?","What questions do you have for us?","How do you define success?","What is your management style?","What would your previous manager say about you?","Are you applying to other companies?","What are your long-term career goals?","How do you stay motivated in repetitive work?","Why choose you over other candidates?","Describe your communication style.","How do you build trust with a new team?"]};
+function gen(){
+var c=document.getElementById('c').value,n=parseInt(document.getElementById('n').value)||10;
+var pool=c==='all'?QB.beh.concat(QB.tech,QB.hr):QB[c];
+n=Math.min(pool.length,Math.max(1,n));
+var idx=pool.map(function(_,i){return i;});
+for(var i=idx.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=idx[i];idx[i]=idx[j];idx[j]=t;}
+var h='<b>'+n+' interview questions:</b><ol>';
+for(var k=0;k<n;k++){h+='<li style="margin:6px 0;">'+pool[idx[k]]+'</li>';}
+h+='</ol><span style="font-size:13px;color:#555;">Tip: answer aloud using the STAR method (Situation, Task, Action, Result).</span>';
+document.getElementById('result').innerHTML=h;}
+</script>
+</body>
+</html>

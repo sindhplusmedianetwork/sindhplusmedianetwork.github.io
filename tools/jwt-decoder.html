@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JWT Decoder — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Paste a JSON Web Token to instantly see its decoded header and payload, with human-readable dates for the exp, iat and nbf claims plus a note on whether the token is expired. The signature is shown but cannot be verified without the secret key. All decoding happens locally — your token never leaves the browser.">
+<meta name="keywords" content="jwt decoder, jwt decoder online, decode jwt token, json web token decoder, jwt payload viewer, jwt debugger, jwt.io alternative, read jwt token, jwt expiry checker, parse jwt">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/jwt-decoder.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JWT Decoder — Free Online Tool">
+<meta property="og:description" content="Paste a JSON Web Token to instantly see its decoded header and payload, with human-readable dates for the exp, iat and nbf claims plus a note on whether the token is expired. The signature is shown but cannot be verified without the secret key. All decoding happens locally — your token never leaves the browser.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/jwt-decoder.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JWT Decoder — Free Online Tool">
+<meta name="twitter:description" content="Paste a JSON Web Token to instantly see its decoded header and payload, with human-readable dates for the exp, iat and nbf claims plus a note on whether the token is expired. The signature is shown but cannot be verified without the secret key. All decoding happens locally — your token never leaves the browser.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"JWT Decoder","url":"https://sindhplusmedianetwork.github.io/tools/jwt-decoder.html","description":"Paste a JSON Web Token to instantly see its decoded header and payload, with human-readable dates for the exp, iat and nbf claims plus a note on whether the token is expired. The signature is shown but cannot be verified without the secret key. All decoding happens locally — your token never leaves the browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>JWT Decoder</h1>
+<p class="desc">Paste a JSON Web Token to instantly see its decoded header and payload, with human-readable dates for the exp, iat and nbf claims plus a note on whether the token is expired. The signature is shown but cannot be verified without the secret key. All decoding happens locally — your token never leaves the browser.</p>
+<div class="toolbox">
+<label>JWT token:<br><textarea id='a' rows='5' style='width:100%' placeholder='eyJhbGciOi...'></textarea></label><br><button onclick='go()'>Decode</button><div id='result'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=JWT Decoder — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjwt-decoder.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=JWT Decoder — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjwt-decoder.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#JWT #WebDev #JSON #APITesting #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function E(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}function b64u(s){s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';var bin=atob(s);var u8=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)u8[i]=bin.charCodeAt(i);return new TextDecoder().decode(u8);}function dt(sec){var d=new Date(sec*1000);return d.toLocaleString()+' (UTC '+d.toISOString().replace('T',' ').slice(0,19)+')';}function dur(s){s=Math.abs(Math.round(s));var d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);var p=[];if(d)p.push(d+'d');if(h)p.push(h+'h');if(m)p.push(m+'m');if(!p.length)p.push(s+'s');return p.join(' ');}function go(){var t=document.getElementById('a').value.trim();var r=document.getElementById('result');var p=t.split('.');if(p.length!==3){r.innerHTML="<p style='color:#b00'>Invalid JWT: expected 3 dot-separated parts, got "+p.length+".</p>";return;}var h,pl;try{h=JSON.parse(b64u(p[0]));pl=JSON.parse(b64u(p[1]));}catch(e){r.innerHTML="<p style='color:#b00'>Could not decode token: "+E(e.message)+"</p>";return;}var now=Date.now()/1000,notes=[];['iat','nbf','exp'].forEach(function(k){if(pl[k]){var extra='';if(k==='exp')extra=pl[k]<now?' — <b style="color:#b00">EXPIRED</b> '+dur(now-pl[k])+' ago':' — valid for '+dur(pl[k]-now);notes.push('<li><b>'+k+'</b>: '+E(dt(pl[k]))+extra+'</li>');}});var html="<h4>Header</h4><pre>"+E(JSON.stringify(h,null,2))+"</pre><h4>Payload</h4><pre>"+E(JSON.stringify(pl,null,2))+"</pre>";if(notes.length)html+="<h4>Time claims</h4><ul>"+notes.join('')+"</ul>";html+="<h4>Signature</h4><pre style='word-break:break-all'>"+E(p[2])+"</pre><p style='font-size:small'>The signature cannot be verified client-side without the secret key — this tool only decodes.</p>";r.innerHTML=html;}
+</script>
+</body>
+</html>

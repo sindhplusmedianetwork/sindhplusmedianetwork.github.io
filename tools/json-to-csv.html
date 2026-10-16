@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON to CSV Converter — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Convert a JSON array of objects (or a single object) into CSV with proper quoting and escaping: quotes are doubled and any field containing a comma, quote or newline is wrapped in quotes. Headers are the union of all keys in order of first appearance. Choose comma, semicolon or tab as the delimiter.">
+<meta name="keywords" content="json to csv converter, json to csv online, convert json to csv, json array to csv, json to spreadsheet, export json to csv free, json csv converter online, json to excel">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/json-to-csv.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JSON to CSV Converter — Free Online Tool">
+<meta property="og:description" content="Convert a JSON array of objects (or a single object) into CSV with proper quoting and escaping: quotes are doubled and any field containing a comma, quote or newline is wrapped in quotes. Headers are the union of all keys in order of first appearance. Choose comma, semicolon or tab as the delimiter.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/json-to-csv.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JSON to CSV Converter — Free Online Tool">
+<meta name="twitter:description" content="Convert a JSON array of objects (or a single object) into CSV with proper quoting and escaping: quotes are doubled and any field containing a comma, quote or newline is wrapped in quotes. Headers are the union of all keys in order of first appearance. Choose comma, semicolon or tab as the delimiter.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"JSON to CSV Converter","url":"https://sindhplusmedianetwork.github.io/tools/json-to-csv.html","description":"Convert a JSON array of objects (or a single object) into CSV with proper quoting and escaping: quotes are doubled and any field containing a comma, quote or newline is wrapped in quotes. Headers are the union of all keys in order of first appearance. Choose comma, semicolon or tab as the delimiter.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>JSON to CSV Converter</h1>
+<p class="desc">Convert a JSON array of objects (or a single object) into CSV with proper quoting and escaping: quotes are doubled and any field containing a comma, quote or newline is wrapped in quotes. Headers are the union of all keys in order of first appearance. Choose comma, semicolon or tab as the delimiter.</p>
+<div class="toolbox">
+<label>Paste JSON array:<br><textarea id="a" rows="10" style="width:100%" placeholder='[{"name":"Ali","age":27},{"name":"Sara"}]'></textarea></label><br><label>Delimiter: <select id="d"><option value="comma">Comma (,)</option><option value="semi">Semicolon (;)</option><option value="tab">Tab</option></select></label> <button onclick="go()">Convert to CSV</button><div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=JSON to CSV Converter — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjson-to-csv.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=JSON to CSV Converter — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjson-to-csv.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#JSONtoCSV #JSON #CSV #WebDev #CodeTools #SPMN #FreeTools #Data</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function go(){
+var src=document.getElementById('a').value;
+var d=document.getElementById('d').value;
+var out=document.getElementById('result');
+if(!src.trim()){out.innerHTML='<p style="color:#b00">Please paste some JSON first.</p>';return;}
+function escH(x){return String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+var delim=d==='tab'?'\t':(d==='semi'?';':',');
+try{
+var data=JSON.parse(src);
+if(data!==null&&typeof data==='object'&&!Array.isArray(data))data=[data];
+if(!Array.isArray(data))throw new Error('JSON must be an array of objects or a single object.');
+var headers=[];
+data.forEach(function(r){if(r&&typeof r==='object')Object.keys(r).forEach(function(k){if(headers.indexOf(k)<0)headers.push(k);});});
+function cell(v){
+if(v===null||v===undefined)return '';
+var s=typeof v==='object'?JSON.stringify(v):String(v);
+if(s.indexOf('"')>=0||s.indexOf(delim)>=0||s.indexOf('\n')>=0||s.indexOf('\r')>=0)return '"'+s.replace(/"/g,'""')+'"';
+return s;
+}
+var rows=[headers.map(cell).join(delim)];
+data.forEach(function(r){rows.push(headers.map(function(h){return cell(r?r[h]:'');}).join(delim));});
+out.innerHTML='<pre style="white-space:pre-wrap">'+escH(rows.join('\n'))+'</pre>';
+}catch(e){out.innerHTML='<p style="color:#b00"><b>Error:</b> '+escH(e.message)+'</p>';}
+}
+</script>
+</body>
+</html>

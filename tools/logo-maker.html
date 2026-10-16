@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Maker — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Make a simple logo free online. Type your brand name, pick a shape, background and text colors, and download your logo as PNG.">
+<meta name="keywords" content="logo maker, free logo creator, simple logo generator, brand logo online, text logo maker, brand mark generator, startup logo creator, free logotype maker, company logo design, initial logo creator, minimal logo design">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/logo-maker.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Logo Maker — Free Online Tool">
+<meta property="og:description" content="Make a simple logo free online. Type your brand name, pick a shape, background and text colors, and download your logo as PNG.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/logo-maker.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Logo Maker — Free Online Tool">
+<meta name="twitter:description" content="Make a simple logo free online. Type your brand name, pick a shape, background and text colors, and download your logo as PNG.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Logo Maker","url":"https://sindhplusmedianetwork.github.io/tools/logo-maker.html","description":"Make a simple logo free online. Type your brand name, pick a shape, background and text colors, and download your logo as PNG.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Image &amp; Graphics</div>
+<h1>Logo Maker</h1>
+<p class="desc">Make a simple logo free online. Type your brand name, pick a shape, background and text colors, and download your logo as PNG.</p>
+<div class="toolbox">
+<label>Brand text<input type='text' id='t' value='My Brand'></label><label>Shape<select id='sh'><option value='circle'>Circle</option><option value='square'>Square</option><option value='round'>Rounded square</option></select></label><label>Background color<input type='color' id='bg' value='#ff7a00'></label><label>Text color<input type='color' id='tc' value='#ffffff'></label><label>Size (px)<select id='sz'><option>256</option><option selected>512</option><option>1024</option></select></label><button onclick='go()'>Make Logo</button><div><canvas id='cv' style='max-width:300px;margin-top:10px'></canvas></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Logo Maker — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Flogo-maker.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Logo Maker — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Flogo-maker.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#LogoMaker #Branding #DesignTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function dl(u,n){var a=document.createElement('a');a.href=u;a.download=n;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},500);}function go(){var R=document.getElementById('result');
+ var t=(document.getElementById('t').value||'Logo').trim(),sh=document.getElementById('sh').value;
+ var bg=document.getElementById('bg').value,tc=document.getElementById('tc').value,sz=parseInt(document.getElementById('sz').value);
+ if(!t){R.innerHTML='Enter brand text.';return;}
+ var cv=document.getElementById('cv');cv.width=sz;cv.height=sz;
+ var x=cv.getContext('2d');
+ x.fillStyle=bg;
+ if(sh==='circle'){x.beginPath();x.arc(sz/2,sz/2,sz/2,0,7);x.fill();}
+ else if(sh==='round'){var r=sz*0.2;x.beginPath();x.moveTo(r,0);x.arcTo(sz,0,sz,sz,r);x.arcTo(sz,sz,0,sz,r);x.arcTo(0,sz,0,0,r);x.arcTo(0,0,sz,0,r);x.fill();}
+ else x.fillRect(0,0,sz,sz);
+ x.fillStyle=tc;x.textAlign='center';x.textBaseline='middle';
+ var fs=sz/5;x.font='bold '+fs+'px Arial';
+ while(x.measureText(t).width>sz*0.85&&fs>10){fs-=4;x.font='bold '+fs+'px Arial';}
+ x.fillText(t,sz/2,sz/2+fs*0.05);
+ cv.toBlob(function(b){var u=URL.createObjectURL(b);R.innerHTML='Logo created ('+sz+'x'+sz+' px). A basic text logo.<br><br><a href="'+u+'" download="logo.png" style="display:inline-block;padding:10px 20px;background:#ff7a00;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Download Logo PNG</a>';},'image/png');}
+</script>
+</body>
+</html>

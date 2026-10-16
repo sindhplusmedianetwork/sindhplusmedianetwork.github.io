@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meeting Notes Summarizer — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Turn long meeting notes into a crisp summary. Paste your notes to extract the key points, decisions and important details automatically.">
+<meta name="keywords" content="meeting notes summarizer, notes summary tool, meeting minutes generator, summarize text online, key points extractor, automatic summarizer free, summarize meeting transcript, meeting recap generator, notes to summary, key takeaways extractor, meeting minutes maker">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/meeting-notes-summarizer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meeting Notes Summarizer — Free Online Tool">
+<meta property="og:description" content="Turn long meeting notes into a crisp summary. Paste your notes to extract the key points, decisions and important details automatically.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/meeting-notes-summarizer.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Meeting Notes Summarizer — Free Online Tool">
+<meta name="twitter:description" content="Turn long meeting notes into a crisp summary. Paste your notes to extract the key points, decisions and important details automatically.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Meeting Notes Summarizer","url":"https://sindhplusmedianetwork.github.io/tools/meeting-notes-summarizer.html","description":"Turn long meeting notes into a crisp summary. Paste your notes to extract the key points, decisions and important details automatically.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">AI &amp; Productivity</div>
+<h1>Meeting Notes Summarizer</h1>
+<p class="desc">Turn long meeting notes into a crisp summary. Paste your notes to extract the key points, decisions and important details automatically.</p>
+<div class="toolbox">
+<label>Paste meeting notes:<textarea id='nt' rows='8' style='width:100%' placeholder='Paste the full meeting notes here...'></textarea></label><br><button onclick='gen()'>Summarize</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Meeting Notes Summarizer — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmeeting-notes-summarizer.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Meeting Notes Summarizer — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmeeting-notes-summarizer.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#Meetings #Productivity #Summarizer #NotesApp #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function gen(){
+  var txt=document.getElementById('nt').value.trim();
+  if(txt.length<50){document.getElementById('result').innerHTML='Please paste longer notes (at least a few sentences).';return;}
+  var sens=txt.replace(/\n+/g,' ').split(/(?<=[.!?])\s+/).filter(function(s){return s.trim().length>15;});
+  var kw=/\b(decided|agreed|deadline|budget|approved|action|important|must|will|plan|next|launch|target|goal|issue|problem|risk|discussed)\b/i;
+  function score(s){var sc=0;if(kw.test(s))sc+=3;var nums=(s.match(/\d+/g)||[]).length;sc+=nums*2;if(s.length>40&&s.length<220)sc+=1;var caps=(s.match(/\b[A-Z][a-z]+\b/g)||[]).length;sc+=Math.min(caps,3)*0.5;return sc;}
+  var ranked=sens.map(function(s){return {s:s.trim(),sc:score(s)};}).sort(function(a,b){return b.sc-a.sc;});
+  var top=ranked.slice(0,Math.min(5,ranked.length));
+  var dates=(txt.match(/\b(\d{1,2}[\/-]\d{1,2}[\/-]\d{2,4}|(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2})/gi)||[]).slice(0,5);
+  var h='<b>Summary ('+sens.length+' sentences \u2192 '+top.length+' key points):</b><ul>'+top.map(function(o){return '<li>'+esc(o.s)+'</li>';}).join('')+'</ul>';
+  if(dates.length)h+='<b>Dates mentioned:</b> '+dates.map(esc).join(', ');
+  document.getElementById('result').innerHTML=h;
+}
+</script>
+</body>
+</html>

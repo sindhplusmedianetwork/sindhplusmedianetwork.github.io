@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Formatter — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Paste minified or messy JavaScript and get indented, readable code. The formatter is string-aware (single, double and template literals), comment-aware (line and block comments), and only breaks semicolons outside for-loop parentheses. Heuristic formatter - it handles most everyday code, but very unusual syntax may need a manual tidy.">
+<meta name="keywords" content="javascript formatter online, format js code, js beautifier, javascript pretty print, tidy javascript online, beautify js free, format javascript online free, js indenter, javascript code formatter, unminify js, js tidy free, format minified js">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/js-formatter.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JavaScript Formatter — Free Online Tool">
+<meta property="og:description" content="Paste minified or messy JavaScript and get indented, readable code. The formatter is string-aware (single, double and template literals), comment-aware (line and block comments), and only breaks semicolons outside for-loop parentheses. Heuristic formatter - it handles most everyday code, but very unusual syntax may need a manual tidy.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/js-formatter.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript Formatter — Free Online Tool">
+<meta name="twitter:description" content="Paste minified or messy JavaScript and get indented, readable code. The formatter is string-aware (single, double and template literals), comment-aware (line and block comments), and only breaks semicolons outside for-loop parentheses. Heuristic formatter - it handles most everyday code, but very unusual syntax may need a manual tidy.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"JavaScript Formatter","url":"https://sindhplusmedianetwork.github.io/tools/js-formatter.html","description":"Paste minified or messy JavaScript and get indented, readable code. The formatter is string-aware (single, double and template literals), comment-aware (line and block comments), and only breaks semicolons outside for-loop parentheses. Heuristic formatter - it handles most everyday code, but very unusual syntax may need a manual tidy.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>JavaScript Formatter</h1>
+<p class="desc">Paste minified or messy JavaScript and get indented, readable code. The formatter is string-aware (single, double and template literals), comment-aware (line and block comments), and only breaks semicolons outside for-loop parentheses. Heuristic formatter - it handles most everyday code, but very unusual syntax may need a manual tidy.</p>
+<div class="toolbox">
+<label>Paste JavaScript:<br><textarea id="a" rows="10" style="width:100%" placeholder="function hi(){console.log('hi');}"></textarea></label><br><label>Indent: <select id="n"><option value="2">2 spaces</option><option value="4">4 spaces</option></select></label> <button onclick="fmt()">Format JS</button><div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=JavaScript Formatter — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjs-formatter.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=JavaScript Formatter — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjs-formatter.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#JSFormatter #JavaScript #WebDev #CodeTools #SPMN #FreeTools #Coding</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function fmt(){
+var src=document.getElementById('a').value;
+var n=parseInt(document.getElementById('n').value,10)||2;
+var out=document.getElementById('result');
+if(!src.trim()){out.innerHTML='<p style="color:#b00">Please paste some JavaScript first.</p>';return;}
+var res='',indent=0,i=0,paren=0,inS=null,inC=null,atStart=true;
+function pad(){var s='';for(var k=0;k<indent*n;k++)s+=' ';return s;}
+function nl(){res=res.replace(/[ \t]+$/,'')+'\n';atStart=true;}
+function put(){if(atStart){res+=pad();atStart=false;}}
+function prev(){return res.length?res[res.length-1]:'';}
+while(i<src.length){
+var c=src[i],nx=src[i+1]||'';
+if(inC==='line'){res+=c;i++;if(c==='\n'){inC=null;atStart=true;}continue;}
+if(inC==='block'){res+=c;i++;if(c==='*'&&nx==='/'){res+='/';i++;inC=null;}continue;}
+if(inS){
+res+=c;i++;
+if(c==='\\'&&i<src.length){res+=src[i];i++;}
+else if(c===inS){inS=null;}
+continue;
+}
+if(c==='"'||c==='\''||c==='\x60'){inS=c;put();res+=c;i++;continue;}
+if(c==='/'&&nx==='/'){put();res+='//';i+=2;inC='line';continue;}
+if(c==='/'&&nx==='*'){put();res+='/*';i+=2;inC='block';continue;}
+if(c==='('){paren++;put();res+=c;i++;continue;}
+if(c===')'){paren=Math.max(0,paren-1);put();res+=c;i++;continue;}
+if(c==='{'){if(!atStart&&prev()!==' '&&prev()!=='\n')res+=' ';put();res+='{';nl();indent++;i++;continue;}
+if(c==='}'){indent=Math.max(0,indent-1);nl();put();res+='}';nl();i++;continue;}
+if(c===';'){put();res+=';';if(paren===0)nl();i++;continue;}
+if(c===','){put();res+=',';var j=i+1;while(j<src.length&&/\s/.test(src[j]))j++;if(src[j]!==')'&&src[j]!==']')res+=' ';i++;continue;}
+if(/\s/.test(c)){
+var k=i+1;while(k<src.length&&/\s/.test(src[k]))k++;
+var nc=src[k]||'';
+if(!atStart&&/[A-Za-z0-9_$]/.test(prev())&&/[A-Za-z0-9_$]/.test(nc))res+=' ';
+i=k;continue;
+}
+put();res+=c;i++;
+}
+res=res.replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+function escH(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+out.innerHTML='<pre style="white-space:pre-wrap">'+escH(res)+'</pre>';
+}
+</script>
+</body>
+</html>

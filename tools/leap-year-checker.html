@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leap Year Checker — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Check if any year is a leap year in one click. This free leap year calculator instantly tells you whether a year has 366 days with February 29th.">
+<meta name="keywords" content="leap year checker, is it a leap year, leap year calculator, leap year list, check leap year online, leap years list, february 29 years, is 2028 a leap year, leap year meaning, next leap years">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/leap-year-checker.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leap Year Checker — Free Online Tool">
+<meta property="og:description" content="Check if any year is a leap year in one click. This free leap year calculator instantly tells you whether a year has 366 days with February 29th.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/leap-year-checker.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leap Year Checker — Free Online Tool">
+<meta name="twitter:description" content="Check if any year is a leap year in one click. This free leap year calculator instantly tells you whether a year has 366 days with February 29th.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Leap Year Checker","url":"https://sindhplusmedianetwork.github.io/tools/leap-year-checker.html","description":"Check if any year is a leap year in one click. This free leap year calculator instantly tells you whether a year has 366 days with February 29th.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Date &amp; Time</div>
+<h1>Leap Year Checker</h1>
+<p class="desc">Check if any year is a leap year in one click. This free leap year calculator instantly tells you whether a year has 366 days with February 29th.</p>
+<div class="toolbox">
+<label>Enter a Year<input type='number' id='y' placeholder='2026' step='1'></label><button onclick='calc()'>Check Year</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Leap Year Checker — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fleap-year-checker.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Leap Year Checker — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fleap-year-checker.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#LeapYear #LeapYearChecker #DateTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function calc(){
+var y=parseInt(document.getElementById('y').value,10);
+var r=document.getElementById('result');
+if(isNaN(y)||y<1||y>9999){r.innerHTML='Please enter a valid year (1-9999).';return;}
+var leap=(y%4===0&&y%100!==0)||(y%400===0);
+var next=y+1;
+while(!((next%4===0&&next%100!==0)||(next%400===0))){next++;}
+r.innerHTML='<b style="font-size:20px">'+y+'</b> is '+(leap?'<b>a leap year</b> — it has 366 days and February 29th.':'<b>not a leap year</b> — it has 365 days.')
++(leap?'':'<br>Next leap year: <b>'+next+'</b>');
+}
+</script>
+</body>
+</html>

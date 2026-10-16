@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrix Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Add, subtract and multiply 2x2 matrices, or find the determinant, inverse and transpose of a matrix. Free matrix calculator with instant results.">
+<meta name="keywords" content="matrix calculator, 2x2 matrix, matrix multiplication, matrix inverse, determinant calculator, transpose matrix, add matrices, matrix operations, 2x2 determinant, inverse matrix formula, matrix multiply calculator, cramer&#x27;s rule 2x2">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/matrix-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Matrix Calculator — Free Online Tool">
+<meta property="og:description" content="Add, subtract and multiply 2x2 matrices, or find the determinant, inverse and transpose of a matrix. Free matrix calculator with instant results.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/matrix-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Matrix Calculator — Free Online Tool">
+<meta name="twitter:description" content="Add, subtract and multiply 2x2 matrices, or find the determinant, inverse and transpose of a matrix. Free matrix calculator with instant results.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Matrix Calculator","url":"https://sindhplusmedianetwork.github.io/tools/matrix-calculator.html","description":"Add, subtract and multiply 2x2 matrices, or find the determinant, inverse and transpose of a matrix. Free matrix calculator with instant results.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Math &amp; Calculators</div>
+<h1>Matrix Calculator</h1>
+<p class="desc">Add, subtract and multiply 2x2 matrices, or find the determinant, inverse and transpose of a matrix. Free matrix calculator with instant results.</p>
+<div class="toolbox">
+<p>Matrix A</p><label><input type='number' id='a11' placeholder='1' step='any' style='width:45%;display:inline-block'> <input type='number' id='a12' placeholder='2' step='any' style='width:45%;display:inline-block'></label><label><input type='number' id='a21' placeholder='3' step='any' style='width:45%;display:inline-block'> <input type='number' id='a22' placeholder='4' step='any' style='width:45%;display:inline-block'></label><p>Matrix B</p><label><input type='number' id='b11' placeholder='5' step='any' style='width:45%;display:inline-block'> <input type='number' id='b12' placeholder='6' step='any' style='width:45%;display:inline-block'></label><label><input type='number' id='b21' placeholder='7' step='any' style='width:45%;display:inline-block'> <input type='number' id='b22' placeholder='8' step='any' style='width:45%;display:inline-block'></label><label>Operation<select id='op'><option value='add'>A + B</option><option value='sub'>A − B</option><option value='mul'>A × B</option><option value='det'>Determinant of A</option><option value='inv'>Inverse of A</option><option value='trn'>Transpose of A</option></select></label><button onclick='calc()'>Calculate</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Matrix Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmatrix-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Matrix Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmatrix-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#MatrixCalculator #LinearAlgebra #MathTools #FreeCalculator #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function fmt(x){if(typeof x!=='number'||!isFinite(x))return 'Invalid';if(x===0)return '0';var a=Math.abs(x);if(a>=1e15||a<1e-9)return x.toExponential(4);return parseFloat(x.toPrecision(12)).toString();}function m2(x){return '[ '+fmt(x[0])+', '+fmt(x[1])+'<br>&nbsp;&nbsp;'+fmt(x[2])+', '+fmt(x[3])+' ]';}function calc(){var ids=['a11','a12','a21','a22','b11','b12','b21','b22'];var v={};for(var i=0;i<8;i++){v[ids[i]]=parseFloat(document.getElementById(ids[i]).value);}var op=document.getElementById('op').value;var needB=(op==='add'||op==='sub'||op==='mul');var needA=['a11','a12','a21','a22'];for(var j=0;j<4;j++){if(isNaN(v[needA[j]])){document.getElementById('result').innerHTML='Please fill all of matrix A.';return;}}if(needB){var needBb=['b11','b12','b21','b22'];for(var k=0;k<4;k++){if(isNaN(v[needBb[k]])){document.getElementById('result').innerHTML='Please fill all of matrix B for this operation.';return;}}}var A=[v.a11,v.a12,v.a21,v.a22],B=[v.b11,v.b12,v.b21,v.b22],R,out='';if(op==='add'){R=[A[0]+B[0],A[1]+B[1],A[2]+B[2],A[3]+B[3]];out='A + B =<br><b>'+m2(R)+'</b>';}else if(op==='sub'){R=[A[0]-B[0],A[1]-B[1],A[2]-B[2],A[3]-B[3]];out='A − B =<br><b>'+m2(R)+'</b>';}else if(op==='mul'){R=[A[0]*B[0]+A[1]*B[2],A[0]*B[1]+A[1]*B[3],A[2]*B[0]+A[3]*B[2],A[2]*B[1]+A[3]*B[3]];out='A × B =<br><b>'+m2(R)+'</b>';}else if(op==='det'){out='det(A) = <b>'+fmt(A[0]*A[3]-A[1]*A[2])+'</b>';}else if(op==='inv'){var d=A[0]*A[3]-A[1]*A[2];if(d===0){document.getElementById('result').innerHTML='Matrix A is singular (determinant = 0), no inverse exists.';return;}R=[A[3]/d,-A[1]/d,-A[2]/d,A[0]/d];out='A⁻¹ =<br><b>'+m2(R)+'</b>';}else{R=[A[0],A[2],A[1],A[3]];out='Aᵀ =<br><b>'+m2(R)+'</b>';}document.getElementById('result').innerHTML=out;}
+</script>
+</body>
+</html>

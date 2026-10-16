@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meal Planner — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Plan a full week of meals in minutes. Fill in breakfast, lunch and dinner for each day, save your plan, and auto-generate a shopping list.">
+<meta name="keywords" content="meal planner, weekly meal plan, meal planning template, 7 day meal planner, weekly menu planner">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/meal-planner.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meal Planner — Free Online Tool">
+<meta property="og:description" content="Plan a full week of meals in minutes. Fill in breakfast, lunch and dinner for each day, save your plan, and auto-generate a shopping list.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/meal-planner.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Meal Planner — Free Online Tool">
+<meta name="twitter:description" content="Plan a full week of meals in minutes. Fill in breakfast, lunch and dinner for each day, save your plan, and auto-generate a shopping list.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Meal Planner","url":"https://sindhplusmedianetwork.github.io/tools/meal-planner.html","description":"Plan a full week of meals in minutes. Fill in breakfast, lunch and dinner for each day, save your plan, and auto-generate a shopping list.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Everyday Life</div>
+<h1>Meal Planner</h1>
+<p class="desc">Plan a full week of meals in minutes. Fill in breakfast, lunch and dinner for each day, save your plan, and auto-generate a shopping list.</p>
+<div class="toolbox">
+<div id='mp'></div><button onclick='saveM()'>Save Plan</button> <button onclick='shop()'>Generate Shopping List</button> <button onclick='window.print()'>Print</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Meal Planner — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmeal-planner.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Meal Planner — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmeal-planner.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#MealPlanner #WeeklyMeals #CookingTools #LifeTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var DAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],MEALS=['Breakfast','Lunch','Dinner'];
+(function(){var h='';DAYS.forEach(function(d,di){h+='<div style="border:1px solid #ddd;border-radius:8px;padding:10px;margin:8px 0;"><b>'+d+'</b>';MEALS.forEach(function(m,mi){h+='<label style="font-size:13px;">'+m+'<input id="m'+di+'_'+mi+'" placeholder="..."></label>';});h+='</div>';});document.getElementById('mp').innerHTML=h;
+try{var p=JSON.parse(localStorage.getItem('spmn_meal')||'null');if(p)DAYS.forEach(function(d,di){MEALS.forEach(function(m,mi){var e=document.getElementById('m'+di+'_'+mi);if(e)e.value=p[di*3+mi]||'';});});}catch(e){}})();
+function getM(){var a=[];DAYS.forEach(function(d,di){MEALS.forEach(function(m,mi){a.push(document.getElementById('m'+di+'_'+mi).value.trim());});});return a;}
+function saveM(){try{localStorage.setItem('spmn_meal',JSON.stringify(getM()));document.getElementById('result').innerHTML='Meal plan saved!';}catch(e){}}
+function shop(){
+var items={};getM().forEach(function(m){if(m)m.split(',').forEach(function(x){x=x.trim();if(x)items[x.toLowerCase()]=(items[x.toLowerCase()]||0)+1;});});
+var keys=Object.keys(items);
+if(!keys.length){document.getElementById('result').innerHTML='Add some meals first.';return;}
+document.getElementById('result').innerHTML='<b>Shopping list ('+keys.length+' items):</b><ul>'+keys.map(function(k){return '<li><label style="font-size:14px;"><input type="checkbox" style="width:auto;"> '+k+(items[k]>1?' (x'+items[k]+')':'')+'</label></li>';}).join('')+'</ul>';}
+</script>
+</body>
+</html>

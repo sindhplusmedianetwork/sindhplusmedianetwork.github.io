@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jet Lag Planner — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Beat jet lag with a simple pre-trip sleep shifting plan. Enter your home and destination time zones to get a day-by-day schedule that eases the transition.">
+<meta name="keywords" content="jet lag planner, beat jet lag tips, adjust to new time zone, travel sleep schedule planner, minimize jet lag calculator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/jet-lag-planner.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jet Lag Planner — Free Online Tool">
+<meta property="og:description" content="Beat jet lag with a simple pre-trip sleep shifting plan. Enter your home and destination time zones to get a day-by-day schedule that eases the transition.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/jet-lag-planner.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jet Lag Planner — Free Online Tool">
+<meta name="twitter:description" content="Beat jet lag with a simple pre-trip sleep shifting plan. Enter your home and destination time zones to get a day-by-day schedule that eases the transition.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Jet Lag Planner","url":"https://sindhplusmedianetwork.github.io/tools/jet-lag-planner.html","description":"Beat jet lag with a simple pre-trip sleep shifting plan. Enter your home and destination time zones to get a day-by-day schedule that eases the transition.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Geography &amp; Travel</div>
+<h1>Jet Lag Planner</h1>
+<p class="desc">Beat jet lag with a simple pre-trip sleep shifting plan. Enter your home and destination time zones to get a day-by-day schedule that eases the transition.</p>
+<div class="toolbox">
+<label>Home UTC offset (e.g. 5 for PKT)<input type='number' id='jh' placeholder='5' step='0.5'></label><label>Destination UTC offset<input type='number' id='jd' placeholder='8' step='0.5'></label><label>Days before trip to start<input type='number' id='jdy' placeholder='3' min='1' max='7'></label><button onclick='planJet()'>Make My Plan</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Jet Lag Planner — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjet-lag-planner.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Jet Lag Planner — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjet-lag-planner.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#JetLag #TravelTips #SleepSchedule #LongHaulFlight #TravelTools #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function planJet(){var h=parseFloat(document.getElementById('jh').value),d=parseFloat(document.getElementById('jd').value),days=parseInt(document.getElementById('jdy').value)||3;var R=document.getElementById('result');if(isNaN(h)||isNaN(d)||h<-12||h>14||d<-12||d>14){R.innerHTML='Enter valid UTC offsets (-12 to +14).';return;}days=Math.min(7,Math.max(1,days));var diff=d-h;if(diff===0){R.innerHTML='No time difference - no jet lag to plan for.';return;}var east=diff>0;var shift=Math.min(Math.abs(diff),days);var htm='<b>Time difference: '+Math.abs(diff)+' hours '+(east?'east (destination ahead)':'west (destination behind)')+'</b><br><small>Eastward travel is usually harder - shifting helps.</small><br><br><b>Your plan:</b><br>';for(var i=shift;i>=1;i--){var dir=east?'earlier':'later';var light=east?'Get bright light in the morning.':'Get bright light in the evening.';htm+='Day -'+i+': go to bed and wake up <b>1 hour '+dir+'</b> than usual. '+light+'<br>';}htm+='Day 0 (travel): set your watch to destination time on boarding; '+(east?'avoid evening light, seek morning light on arrival.':'seek evening light on arrival.')+'<br><br><small>Heuristic guide, not medical advice. Stay hydrated and avoid excess caffeine/alcohol.</small>';R.innerHTML=htm;}
+</script>
+</body>
+</html>

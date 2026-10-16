@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Tree Explorer — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Explore JSON like a file explorer. Search any key or value, click a node to see its full JSON path, data type and value — ideal for large API responses.">
+<meta name="keywords" content="json explorer, json path finder, search json online, json navigator, json node finder, explore api json, jsonpath tool, json data explorer, json path extractor, json search tool, browse json structure, json key finder, api response explorer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/json-tree-explorer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JSON Tree Explorer — Free Online Tool">
+<meta property="og:description" content="Explore JSON like a file explorer. Search any key or value, click a node to see its full JSON path, data type and value — ideal for large API responses.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/json-tree-explorer.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JSON Tree Explorer — Free Online Tool">
+<meta name="twitter:description" content="Explore JSON like a file explorer. Search any key or value, click a node to see its full JSON path, data type and value — ideal for large API responses.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"JSON Tree Explorer","url":"https://sindhplusmedianetwork.github.io/tools/json-tree-explorer.html","description":"Explore JSON like a file explorer. Search any key or value, click a node to see its full JSON path, data type and value — ideal for large API responses.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Files &amp; Data</div>
+<h1>JSON Tree Explorer</h1>
+<p class="desc">Explore JSON like a file explorer. Search any key or value, click a node to see its full JSON path, data type and value — ideal for large API responses.</p>
+<div class="toolbox">
+<label>Paste JSON<textarea id='je_t' rows='6' placeholder='Paste JSON here...'></textarea></label><button onclick='jeGo()'>Load Explorer</button><div id='je_bar' style='display:none;margin-top:10px'><label>Search keys & values<input type='text' id='je_q' placeholder='type to filter...' oninput='jeFilter()'></label></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=JSON Tree Explorer — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjson-tree-explorer.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=JSON Tree Explorer — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjson-tree-explorer.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#JSONExplorer #JSONTools #APITools #DeveloperTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var jeData=null,jeId=0;
+function jeGo(){var t=document.getElementById('je_t').value.trim();var r=document.getElementById('result');if(!t){r.innerHTML='<p style="color:#c00">Please paste JSON data.</p>';return;}try{jeData=JSON.parse(t);}catch(e){r.innerHTML='<p style="color:#c00"><b>Invalid JSON:</b> '+String(e.message).replace(/</g,'&lt;')+'</p>';return;}document.getElementById('je_bar').style.display='';jeId=0;r.innerHTML='<div id="je_tree">'+jeBuild(jeData,'$',0)+'</div><div id="je_info" style="margin-top:12px;padding:10px;background:#f7f7f7;border:1px solid #ddd">Click any node to see its path, type and value.</div>';}
+function jeEsc(s){return String(s).split('&').join('&amp;').split('<').join('&lt;').split('>').join('&gt;');}
+function jeType(v){if(v===null)return 'null';if(Array.isArray(v))return 'array['+v.length+']';return typeof v;}
+function jeVal(v){if(v===null)return 'null';if(typeof v==='object')return jeType(v);if(typeof v==='string')return '"'+v+'"';return String(v);}
+function jeBuild(v,path,depth){jeId++;var id='je'+jeId;var pad=depth*16;var label;if(v!==null&&typeof v==='object'){var keys=Array.isArray(v)?v.map(function(_,i){return i;}):Object.keys(v);var kids='';keys.forEach(function(k){var p=Array.isArray(v)?path+'['+k+']':path+'.'+k;kids+='<div data-k="'+jeEsc(String(k)).toLowerCase()+'" data-v="">'+jeBuild(v[k],p,depth+1)+'</div>';});label='<div style="padding:2px 0 2px '+pad+'px"><span onclick="jePick(\''+id+'\',\''+path.replace(/'/g,'')+'\')" data-k="" data-v="" style="cursor:pointer"> <span style="color:#c00">[+]</span> <b>'+jeEsc(path.split('.').pop().split('[').pop()||'$')+'</b> <span style="color:#999">'+jeType(v)+'</span></span><div id="'+id+'" style="display:none">'+kids+'</div></div>';return label;}return '<div style="padding:2px 0 2px '+pad+'px"><span onclick="jePick(\''+id+'\',\''+path.replace(/'/g,'')+'\')" data-k="'+jeEsc(String(path.split('.').pop())).toLowerCase()+'" data-v="'+jeEsc(String(v)).toLowerCase()+'" style="cursor:pointer"> <span style="color:#909">'+jeEsc(String(path.split('.').pop()))+':</span> <span style="color:#060">'+jeEsc(jeVal(v))+'</span> <span style="color:#999">('+jeType(v)+')</span></span><span id="'+id+'" style="display:none"></span></div>';}
+function jePick(id,path){var el=document.getElementById(id);var info=document.getElementById('je_info');if(el&&el.children.length){var show=el.style.display==='none';el.style.display=show?'':'none';}var val=jeGetPath(path);info.innerHTML='<b>Path:</b> <code>'+jeEsc(path)+'</code><br><b>Type:</b> '+jeType(val)+'<br><b>Value:</b> <code>'+jeEsc(jeVal(val)).slice(0,300)+'</code>';}
+function jeGetPath(path){var v=jeData;var parts=path.slice(1).split('.');for(var i=0;i<parts.length;i++){var p=parts[i];var m=p.match(/^(.*)\[(\d+)\]$/);if(m){if(m[1])v=v[m[1]];v=v[parseInt(m[2],10)];}else if(p)v=v[p];}return v;}
+function jeFilter(){var q=document.getElementById('je_q').value.toLowerCase();var tree=document.getElementById('je_tree');if(!tree)return;var spans=tree.querySelectorAll('span[data-k]');spans.forEach(function(s){var k=s.getAttribute('data-k')||'',v=s.getAttribute('data-v')||'';var hit=!q||k.indexOf(q)>=0||v.indexOf(q)>=0;var row=s.closest('div');if(row)row.style.display=hit?'':'none';});}
+</script>
+</body>
+</html>

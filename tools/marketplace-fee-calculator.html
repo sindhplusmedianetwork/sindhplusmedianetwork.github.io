@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketplace Fee Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Find out exactly how much marketplaces take from your sales. Calculate Amazon, eBay, Etsy or Daraz fees and see your real net profit after all deductions.">
+<meta name="keywords" content="marketplace fee calculator, amazon seller fees calculator, ebay fee calculator, etsy fees calculator, daraz commission calculator, selling fees calculator, amazon referral fee calculator, ebay final value fee, etsy transaction fee, marketplace commission rates, online selling fees, seller profit after fees">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/marketplace-fee-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marketplace Fee Calculator — Free Online Tool">
+<meta property="og:description" content="Find out exactly how much marketplaces take from your sales. Calculate Amazon, eBay, Etsy or Daraz fees and see your real net profit after all deductions.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/marketplace-fee-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Marketplace Fee Calculator — Free Online Tool">
+<meta name="twitter:description" content="Find out exactly how much marketplaces take from your sales. Calculate Amazon, eBay, Etsy or Daraz fees and see your real net profit after all deductions.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Marketplace Fee Calculator","url":"https://sindhplusmedianetwork.github.io/tools/marketplace-fee-calculator.html","description":"Find out exactly how much marketplaces take from your sales. Calculate Amazon, eBay, Etsy or Daraz fees and see your real net profit after all deductions.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Business &amp; Ecommerce</div>
+<h1>Marketplace Fee Calculator</h1>
+<p class="desc">Find out exactly how much marketplaces take from your sales. Calculate Amazon, eBay, Etsy or Daraz fees and see your real net profit after all deductions.</p>
+<div class="toolbox">
+<label>Sale Price ($)<input type='number' id='p' placeholder='29.99' min='0' step='0.01'></label><label>Marketplace<select id='m'><option value='15'>Amazon (15%)</option><option value='13'>eBay (13%)</option><option value='6.5'>Etsy (6.5%)</option><option value='8'>Daraz (8%)</option><option value='c'>Custom rate</option></select></label><label>Custom Fee % (if selected)<input type='number' id='f' placeholder='10' min='0' step='0.01'></label><label>Shipping Cost ($)<input type='number' id='s' placeholder='5' min='0' step='0.01'></label><button onclick='calc()'>Calculate Fees</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Marketplace Fee Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmarketplace-fee-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Marketplace Fee Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmarketplace-fee-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#MarketplaceFees #AmazonSeller #EbaySeller #EtsySeller #BusinessTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function calc(){var p=parseFloat(document.getElementById('p').value);var m=document.getElementById('m').value;var f=parseFloat(document.getElementById('f').value)||0;var s=parseFloat(document.getElementById('s').value)||0;var r=document.getElementById('result');if(isNaN(p)||p<=0){r.innerHTML='Please enter a valid sale price greater than 0.';return;}var rate=m==='c'?f:parseFloat(m);if(rate<0||rate>100){r.innerHTML='Please enter a valid fee rate between 0 and 100.';return;}if(s<0){r.innerHTML='Shipping cost cannot be negative.';return;}var fee=p*rate/100;var net=p-fee-s;var margin=p>0?net/p*100:0;r.innerHTML='Sale price: $'+p.toFixed(2)+'<br>Marketplace fee ('+rate+'%): <b>$'+fee.toFixed(2)+'</b><br>Shipping: $'+s.toFixed(2)+'<br><b>You keep: $'+net.toFixed(2)+'</b><br>Net margin: '+margin.toFixed(1)+'%';}
+</script>
+</body>
+</html>

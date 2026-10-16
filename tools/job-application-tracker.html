@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Application Tracker — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Track every job application in one place. Add company, role, date and status, filter by stage, and never lose track of your job hunt. Data is saved in your browser.">
+<meta name="keywords" content="job application tracker, job search tracker, application tracking spreadsheet, job hunt organizer, track job applications">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/job-application-tracker.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Job Application Tracker — Free Online Tool">
+<meta property="og:description" content="Track every job application in one place. Add company, role, date and status, filter by stage, and never lose track of your job hunt. Data is saved in your browser.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/job-application-tracker.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Job Application Tracker — Free Online Tool">
+<meta name="twitter:description" content="Track every job application in one place. Add company, role, date and status, filter by stage, and never lose track of your job hunt. Data is saved in your browser.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Job Application Tracker","url":"https://sindhplusmedianetwork.github.io/tools/job-application-tracker.html","description":"Track every job application in one place. Add company, role, date and status, filter by stage, and never lose track of your job hunt. Data is saved in your browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Jobs &amp; Career</div>
+<h1>Job Application Tracker</h1>
+<p class="desc">Track every job application in one place. Add company, role, date and status, filter by stage, and never lose track of your job hunt. Data is saved in your browser.</p>
+<div class="toolbox">
+<label>Company<input id='c' placeholder='Company name'></label><label>Position<input id='p' placeholder='Job title'></label><label>Date Applied<input type='date' id='d'></label><label>Status<select id='s'><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option><option>Withdrawn</option></select></label><label>Notes<input id='n' placeholder='Optional notes'></label><button onclick='addA()'>Add Application</button><br><br><label>Filter<select id='f' onchange='render()'><option value=''>All</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option><option>Withdrawn</option></select></label><div id='tbl'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Job Application Tracker — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjob-application-tracker.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Job Application Tracker — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fjob-application-tracker.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#JobTracker #JobSearch #CareerTools #JobHunt #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function getA(){try{return JSON.parse(localStorage.getItem('spmn_jobs')||'[]');}catch(e){return[];}}
+function setA(a){try{localStorage.setItem('spmn_jobs',JSON.stringify(a));}catch(e){}}
+function esc2(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function addA(){
+var c=document.getElementById('c').value.trim(),p=document.getElementById('p').value.trim();
+if(!c||!p){document.getElementById('result').innerHTML='Please enter company and position.';return;}
+var a=getA();
+a.unshift({c:c,p:p,d:document.getElementById('d').value||new Date().toISOString().slice(0,10),s:document.getElementById('s').value,n:document.getElementById('n').value.trim(),id:Date.now()});
+setA(a);
+document.getElementById('c').value='';document.getElementById('p').value='';document.getElementById('n').value='';
+document.getElementById('result').innerHTML='Application added!';
+render();}
+function delA(id){setA(getA().filter(function(x){return x.id!==id;}));render();}
+function render(){
+var f=document.getElementById('f').value,a=getA().filter(function(x){return !f||x.s===f;});
+var col={Applied:'#2563eb',Interview:'#d97706',Offer:'#16a34a',Rejected:'#b91c1c',Withdrawn:'#6b7280'};
+var h='<b>Total: '+getA().length+' applications</b><br><br>';
+if(!a.length){h+='No applications yet.';}
+else{h+='<table style="border-collapse:collapse;width:100%;font-size:13px;"><tr style="background:#f1f5f9;"><th style="border:1px solid #ddd;padding:6px;">Company</th><th style="border:1px solid #ddd;padding:6px;">Role</th><th style="border:1px solid #ddd;padding:6px;">Date</th><th style="border:1px solid #ddd;padding:6px;">Status</th><th style="border:1px solid #ddd;padding:6px;"></th></tr>';
+a.forEach(function(x){h+='<tr><td style="border:1px solid #ddd;padding:6px;">'+esc2(x.c)+'</td><td style="border:1px solid #ddd;padding:6px;">'+esc2(x.p)+'</td><td style="border:1px solid #ddd;padding:6px;">'+esc2(x.d)+'</td><td style="border:1px solid #ddd;padding:6px;color:'+(col[x.s]||'#000')+';font-weight:600;">'+esc2(x.s)+'</td><td style="border:1px solid #ddd;padding:6px;"><button onclick="delA('+x.id+')" style="padding:2px 8px;">x</button></td></tr>';});
+h+='</table>';}
+document.getElementById('tbl').innerHTML=h;}
+render();
+</script>
+</body>
+</html>

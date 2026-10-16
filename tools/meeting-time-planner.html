@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meeting Time Planner — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Plan meetings across time zones with ease. Pick a meeting time in your city and instantly see what time it will be for participants in 8 major world cities.">
+<meta name="keywords" content="meeting time planner, world meeting planner, find meeting time across time zones, international meeting scheduler, best time for global meeting, schedule across time zones, global team meeting time, overlap hours finder, remote meeting scheduler, timezone meeting tool">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/meeting-time-planner.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meeting Time Planner — Free Online Tool">
+<meta property="og:description" content="Plan meetings across time zones with ease. Pick a meeting time in your city and instantly see what time it will be for participants in 8 major world cities.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/meeting-time-planner.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Meeting Time Planner — Free Online Tool">
+<meta name="twitter:description" content="Plan meetings across time zones with ease. Pick a meeting time in your city and instantly see what time it will be for participants in 8 major world cities.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Meeting Time Planner","url":"https://sindhplusmedianetwork.github.io/tools/meeting-time-planner.html","description":"Plan meetings across time zones with ease. Pick a meeting time in your city and instantly see what time it will be for participants in 8 major world cities.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Date &amp; Time</div>
+<h1>Meeting Time Planner</h1>
+<p class="desc">Plan meetings across time zones with ease. Pick a meeting time in your city and instantly see what time it will be for participants in 8 major world cities.</p>
+<div class="toolbox">
+<label>Meeting Date<input type='date' id='d'></label><label>Meeting Time<input type='time' id='t' value='10:00'></label><label>Your Time Zone<select id='fz'><option value='UTC'>UTC</option><option value='America/New_York'>New York (ET)</option><option value='America/Chicago'>Chicago (CT)</option><option value='America/Denver'>Denver (MT)</option><option value='America/Los_Angeles'>Los Angeles (PT)</option><option value='Europe/London'>London (GMT/BST)</option><option value='Europe/Paris'>Paris (CET)</option><option value='Europe/Berlin'>Berlin (CET)</option><option value='Asia/Dubai'>Dubai (GST)</option><option value='Asia/Karachi'>Karachi (PKT)</option><option value='Asia/Kolkata'>Mumbai/Kolkata (IST)</option><option value='Asia/Dhaka'>Dhaka (BST)</option><option value='Asia/Bangkok'>Bangkok (ICT)</option><option value='Asia/Singapore'>Singapore (SGT)</option><option value='Asia/Hong_Kong'>Hong Kong (HKT)</option><option value='Asia/Tokyo'>Tokyo (JST)</option><option value='Australia/Sydney'>Sydney (AET)</option><option value='Pacific/Auckland'>Auckland (NZT)</option></select></label><button onclick='calc()'>Plan Meeting</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Meeting Time Planner — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmeeting-time-planner.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Meeting Time Planner — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmeeting-time-planner.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#MeetingPlanner #TimeZoneMeeting #WorldClock #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var MP=[['New York','America/New_York'],['London','Europe/London'],['Dubai','Asia/Dubai'],['Karachi','Asia/Karachi'],['Mumbai','Asia/Kolkata'],['Singapore','Asia/Singapore'],['Tokyo','Asia/Tokyo'],['Sydney','Australia/Sydney']];
+function tzOff2(tz,utcMs){
+var f=new Intl.DateTimeFormat('en-US',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+var o={};f.formatToParts(new Date(utcMs)).forEach(function(p){o[p.type]=p.value;});
+return (Date.UTC(+o.year,+o.month-1,+o.day,(+o.hour)%24,+o.minute,+o.second)-utcMs)/60000;
+}
+function calc(){
+var d=document.getElementById('d').value;
+var t=document.getElementById('t').value||'10:00';
+var from=document.getElementById('fz').value;
+var r=document.getElementById('result');
+if(!d){r.innerHTML='Please pick a meeting date.';return;}
+var dp=d.split('-'),tp=t.split(':');
+var guess=Date.UTC(+dp[0],+dp[1]-1,+dp[2],+tp[0],+(tp[1]||0));
+var utcMs=guess-tzOff2(from,guess)*60000;
+utcMs=guess-tzOff2(from,utcMs)*60000;
+var out=new Date(utcMs);
+var h='<b>Meeting: '+d+' '+t+' ('+document.getElementById('fz').selectedOptions[0].text+')</b><br><br>';
+h+='<table style="border-collapse:collapse;width:100%;max-width:420px;margin:0 auto">';
+h+='<tr><th style="border:1px solid #ccc;padding:7px;background:#f5f5f5;text-align:left">City</th><th style="border:1px solid #ccc;padding:7px;background:#f5f5f5;text-align:left">Local Time</th></tr>';
+for(var i=0;i<MP.length;i++){
+var lt=out.toLocaleString('en-US',{timeZone:MP[i][1],weekday:'short',hour:'2-digit',minute:'2-digit',hour12:true});
+h+='<tr><td style="border:1px solid #ccc;padding:7px"><b>'+MP[i][0]+'</b></td><td style="border:1px solid #ccc;padding:7px">'+lt+'</td></tr>';
+}
+h+='</table>';
+r.innerHTML=h;
+}
+</script>
+</body>
+</html>
