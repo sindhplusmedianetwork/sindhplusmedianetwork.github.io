@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunrise &amp; Sunset Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Calculate sunrise, sunset, solar noon and day length for any location and date using the standard solar position algorithm - no internet needed.">
+<meta name="keywords" content="sunrise sunset calculator, sun times by location, solar noon calculator, day length calculator, golden hour calculator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/sunrise-sunset-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sunrise &amp; Sunset Calculator — Free Online Tool">
+<meta property="og:description" content="Calculate sunrise, sunset, solar noon and day length for any location and date using the standard solar position algorithm - no internet needed.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/sunrise-sunset-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sunrise &amp; Sunset Calculator — Free Online Tool">
+<meta name="twitter:description" content="Calculate sunrise, sunset, solar noon and day length for any location and date using the standard solar position algorithm - no internet needed.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Sunrise &amp; Sunset Calculator","url":"https://sindhplusmedianetwork.github.io/tools/sunrise-sunset-calculator.html","description":"Calculate sunrise, sunset, solar noon and day length for any location and date using the standard solar position algorithm - no internet needed.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Geography &amp; Travel</div>
+<h1>Sunrise &amp; Sunset Calculator</h1>
+<p class="desc">Calculate sunrise, sunset, solar noon and day length for any location and date using the standard solar position algorithm - no internet needed.</p>
+<div class="toolbox">
+<label>Latitude<input type='number' id='sl1' placeholder='24.8607' step='any'></label><label>Longitude<input type='number' id='sl2' placeholder='67.0011' step='any'></label><label>Date<input type='date' id='sd'></label><label>UTC offset (optional, auto if blank)<input type='number' id='so' placeholder='5' step='0.5'></label><button onclick='calcSun()'>Calculate Sun Times</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Sunrise &amp; Sunset Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fsunrise-sunset-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Sunrise &amp; Sunset Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fsunrise-sunset-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#SunriseSunset #SolarCalculator #DayLength #Astronomy #TravelTools #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+document.getElementById('sd').valueAsDate=new Date();
+function sunT(lat,lon,N,tz,isRise){var lngH=lon/15;var t=N+((isRise?6:18)-lngH)/24;var M=0.9856*t-3.289;var L=M+1.916*Math.sin(M*Math.PI/180)+0.020*Math.sin(2*M*Math.PI/180)+282.634;L=((L%360)+360)%360;var RA=Math.atan(0.91764*Math.tan(L*Math.PI/180))*180/Math.PI;RA=((RA%360)+360)%360;RA=RA+(Math.floor(L/90)*90-Math.floor(RA/90)*90);RA/=15;var sinD=0.39782*Math.sin(L*Math.PI/180);var cosD=Math.cos(Math.asin(sinD));var cosH=(Math.cos(90.833*Math.PI/180)-sinD*Math.sin(lat*Math.PI/180))/(cosD*Math.cos(lat*Math.PI/180));if(cosH>1)return 'polar-night';if(cosH<-1)return 'polar-day';var H=isRise?360-Math.acos(cosH)*180/Math.PI:Math.acos(cosH)*180/Math.PI;H/=15;var T=H+RA-0.06571*t-6.622;var UT=T-lngH;UT=((UT%24)+24)%24;var loc=UT+tz;loc=((loc%24)+24)%24;var hh=Math.floor(loc),mm=Math.round((loc-hh)*60);if(mm===60){hh=(hh+1)%24;mm=0;}return String(hh).padStart(2,'0')+':'+String(mm).padStart(2,'0');}
+function calcSun(){var lat=parseFloat(document.getElementById('sl1').value),lon=parseFloat(document.getElementById('sl2').value);var ds=document.getElementById('sd').value;var tzIn=document.getElementById('so').value;var R=document.getElementById('result');if(isNaN(lat)||isNaN(lon)||Math.abs(lat)>90||Math.abs(lon)>180||!ds){R.innerHTML='Enter valid coordinates and date.';return;}var dt=new Date(ds+'T12:00:00');var start=new Date(dt.getFullYear(),0,0);var N=Math.floor((dt-start)/864e5);var tz=tzIn===''?Math.round(lon/15):parseFloat(tzIn);var sr=sunT(lat,lon,N,tz,true),ss=sunT(lat,lon,N,tz,false);if(sr==='polar-night'||ss==='polar-night'){R.innerHTML='<b>Polar night</b> - the sun does not rise on this date at this location.';return;}if(sr==='polar-day'){R.innerHTML='<b>Midnight sun</b> - the sun does not set on this date at this location.';return;}var p1=sr.split(':'),p2=ss.split(':');var mins=(+p2[0])*60+(+p2[1])-((+p1[0])*60+(+p1[1]));if(mins<0)mins+=1440;R.innerHTML='<b>Sunrise:</b> '+sr+'<br><b>Sunset:</b> '+ss+'<br><b>Day length:</b> '+Math.floor(mins/60)+'h '+Math.round(mins%60)+'m<br><small>UTC'+(tz>=0?'+':'')+tz+'. Standard solar algorithm &plusmn;1 min.</small>';}
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triangle Solver — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Solve any triangle: enter any 3 known values among the 3 sides and 3 angles, and get all sides, angles, perimeter and area using the laws of sines and cosines.">
+<meta name="keywords" content="triangle solver, solve triangle calculator, SSS SAS ASA calculator, law of sines calculator, law of cosines calculator, find missing side triangle">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/triangle-solver.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Triangle Solver — Free Online Tool">
+<meta property="og:description" content="Solve any triangle: enter any 3 known values among the 3 sides and 3 angles, and get all sides, angles, perimeter and area using the laws of sines and cosines.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/triangle-solver.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Triangle Solver — Free Online Tool">
+<meta name="twitter:description" content="Solve any triangle: enter any 3 known values among the 3 sides and 3 angles, and get all sides, angles, perimeter and area using the laws of sines and cosines.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Triangle Solver","url":"https://sindhplusmedianetwork.github.io/tools/triangle-solver.html","description":"Solve any triangle: enter any 3 known values among the 3 sides and 3 angles, and get all sides, angles, perimeter and area using the laws of sines and cosines.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Science &amp; Engineering</div>
+<h1>Triangle Solver</h1>
+<p class="desc">Solve any triangle: enter any 3 known values among the 3 sides and 3 angles, and get all sides, angles, perimeter and area using the laws of sines and cosines.</p>
+<div class="toolbox">
+<p style='font-size:13px'>Enter exactly <b>3</b> known values (side a, b, c and angles A, B, C in degrees; angle A is opposite side a).</p><label>Side a<input type='number' id='ta' step='any' min='0'></label><label>Side b<input type='number' id='tb' step='any' min='0'></label><label>Side c<input type='number' id='tc' step='any' min='0'></label><label>Angle A (&deg;)<input type='number' id='tA' step='any' min='0'></label><label>Angle B (&deg;)<input type='number' id='tB' step='any' min='0'></label><label>Angle C (&deg;)<input type='number' id='tC' step='any' min='0'></label><button onclick='solveTri()'>Solve Triangle</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Triangle Solver — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Ftriangle-solver.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Triangle Solver — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Ftriangle-solver.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#TriangleSolver #GeometryTools #Trigonometry #MathCalculator #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function tg(id){var v=parseFloat(document.getElementById(id).value);return isNaN(v)?null:v;}
+function solveTri(){var R=document.getElementById('result');var a=tg('ta'),b=tg('tb'),c=tg('tc'),A=tg('tA'),B=tg('tB'),C=tg('tC');var n=[a,b,c,A,B,C].filter(function(v){return v!==null;}).length;if(n!==3){R.innerHTML='Please enter exactly 3 known values.';return;}var rad=function(d){return d*Math.PI/180;},deg=function(r){return r*180/Math.PI;};var ss=[a,b,c].filter(function(v){return v!==null;}),aa=[A,B,C].filter(function(v){return v!==null;});for(var i=0;i<ss.length;i++)if(ss[i]<=0){R.innerHTML='Sides must be positive.';return;}for(var j=0;j<aa.length;j++)if(aa[j]<=0||aa[j]>=180){R.innerHTML='Angles must be between 0 and 180 degrees.';return;}var note='';
+function out(a,b,c,A,B,C){var p=a+b+c,s=p/2,ar=Math.sqrt(Math.max(0,s*(s-a)*(s-b)*(s-c)));return '<b>Sides:</b> a = '+a.toFixed(3)+', b = '+b.toFixed(3)+', c = '+c.toFixed(3)+'<br><b>Angles:</b> A = '+A.toFixed(2)+'&deg;, B = '+B.toFixed(2)+'&deg;, C = '+C.toFixed(2)+'&deg;<br><b>Perimeter:</b> '+p.toFixed(3)+'<br><b>Area:</b> '+ar.toFixed(3);}
+try{
+if(ss.length===3){if(a+b<=c||a+c<=b||b+c<=a){R.innerHTML='Invalid triangle: violates the triangle inequality.';return;}A=deg(Math.acos(Math.min(1,Math.max(-1,(b*b+c*c-a*a)/(2*b*c)))));B=deg(Math.acos(Math.min(1,Math.max(-1,(a*a+c*c-b*b)/(2*a*c)))));C=180-A-B;}
+else if(ss.length===2&&aa.length===1){
+ if(a!==null&&b!==null&&C!==null){c=Math.sqrt(a*a+b*b-2*a*b*Math.cos(rad(C)));A=deg(Math.asin(Math.min(1,a*Math.sin(rad(C))/c)));B=180-A-C;}
+ else if(b!==null&&c!==null&&A!==null){a=Math.sqrt(b*b+c*c-2*b*c*Math.cos(rad(A)));B=deg(Math.asin(Math.min(1,b*Math.sin(rad(A))/a)));C=180-A-B;}
+ else if(a!==null&&c!==null&&B!==null){b=Math.sqrt(a*a+c*c-2*a*c*Math.cos(rad(B)));A=deg(Math.asin(Math.min(1,a*Math.sin(rad(B))/b)));C=180-A-B;}
+ else{var k,ang;if(a!==null&&b!==null&&A!==null){k=b*Math.sin(rad(A))/a;ang='B';}else if(a!==null&&b!==null&&B!==null){k=a*Math.sin(rad(B))/b;ang='A';}else if(b!==null&&c!==null&&B!==null){k=c*Math.sin(rad(B))/b;ang='C';}else if(b!==null&&c!==null&&C!==null){k=b*Math.sin(rad(C))/c;ang='B';}else if(a!==null&&c!==null&&A!==null){k=c*Math.sin(rad(A))/a;ang='C';}else{k=a*Math.sin(rad(C))/c;ang='A';}k=Math.min(1,Math.max(0,k));if(k<=0){R.innerHTML='No valid triangle with these values.';return;}var amb=deg(Math.asin(k));if(ang==='A')A=amb;else if(ang==='B')B=amb;else C=amb;if(A===null)A=180-B-C;else if(B===null)B=180-A-C;else C=180-A-B;var kk=a!==null?a/Math.sin(rad(A)):(b!==null?b/Math.sin(rad(B)):c/Math.sin(rad(C)));if(a===null)a=kk*Math.sin(rad(A));if(b===null)b=kk*Math.sin(rad(B));if(c===null)c=kk*Math.sin(rad(C));note='<br><small>SSA (ambiguous) case: showing the acute-angle solution; a second solution may exist.</small>';}
+}
+else if(ss.length===1&&aa.length===2){if(A===null)A=180-B-C;else if(B===null)B=180-A-C;else C=180-A-B;if(A<=0||B<=0||C<=0){R.innerHTML='Angles must sum to less than 180 degrees.';return;}var k2=a!==null?a/Math.sin(rad(A)):(b!==null?b/Math.sin(rad(B)):c/Math.sin(rad(C)));if(a===null)a=k2*Math.sin(rad(A));if(b===null)b=k2*Math.sin(rad(B));if(c===null)c=k2*Math.sin(rad(C));}
+else{R.innerHTML='This combination cannot determine a unique triangle.';return;}
+R.innerHTML=out(a,b,c,A,B,C)+note;
+}catch(e){R.innerHTML='Could not solve this triangle. Check your values.';}}
+</script>
+</body>
+</html>
