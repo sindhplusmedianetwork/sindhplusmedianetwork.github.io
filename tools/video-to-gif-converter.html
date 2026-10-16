@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video to GIF Converter — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Extract frames from any video free. Capture still frames at even intervals and download them as a filmstrip PNG or individual images. (True animated-GIF encoding needs a library; this honest version gives you the frames.)">
+<meta name="keywords" content="video to gif, extract video frames, video frame capture, video to images, gif frames extractor, mp4 frames to png, video stills extractor, capture frames from video, video frame grabber, mp4 to jpg frames">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/video-to-gif-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Video to GIF Converter — Free Online Tool">
+<meta property="og:description" content="Extract frames from any video free. Capture still frames at even intervals and download them as a filmstrip PNG or individual images. (True animated-GIF encoding needs a library; this honest version gives you the frames.)">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/video-to-gif-converter.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Video to GIF Converter — Free Online Tool">
+<meta name="twitter:description" content="Extract frames from any video free. Capture still frames at even intervals and download them as a filmstrip PNG or individual images. (True animated-GIF encoding needs a library; this honest version gives you the frames.)">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Video to GIF Converter","url":"https://sindhplusmedianetwork.github.io/tools/video-to-gif-converter.html","description":"Extract frames from any video free. Capture still frames at even intervals and download them as a filmstrip PNG or individual images. (True animated-GIF encoding needs a library; this honest version gives you the frames.)","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Video &amp; Audio</div>
+<h1>Video to GIF Converter</h1>
+<p class="desc">Extract frames from any video free. Capture still frames at even intervals and download them as a filmstrip PNG or individual images. (True animated-GIF encoding needs a library; this honest version gives you the frames.)</p>
+<div class="toolbox">
+<label>Select video<input type='file' id='f' accept='video/*'></label><label>Number of frames<select id='n'><option>6</option><option selected>8</option><option>12</option></select></label><button onclick='go()'>Extract Frames</button><div><video id='pv' style='max-width:100%;margin-top:10px;display:none'></video></div><div id='strip' style='margin-top:10px'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Video to GIF Converter — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fvideo-to-gif-converter.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Video to GIF Converter — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fvideo-to-gif-converter.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#VideoToGIF #FrameExtractor #VideoTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function dl(u,n){var a=document.createElement('a');a.href=u;a.download=n;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},500);}document.getElementById('f').addEventListener('change',function(){var f=this.files[0];if(!f)return;var v=document.getElementById('pv');v.src=URL.createObjectURL(f);v.style.display='block';});
+ function go(){var f=document.getElementById('f').files[0];var R=document.getElementById('result');
+ if(!f){R.innerHTML='Select a video first.';return;}
+ var n=parseInt(document.getElementById('n').value),v=document.getElementById('pv');
+ R.innerHTML='Extracting '+n+' frames...';
+ v.onloadedmetadata=function(){
+  var dur=v.duration,W=v.videoWidth,H=v.videoHeight;
+  var tw=Math.min(160,W),th=Math.round(tw*H/W);
+  var strip=document.createElement('canvas');strip.width=tw*n;strip.height=th;
+  var sx=strip.getContext('2d'),tmp=document.createElement('canvas');tmp.width=W;tmp.height=H;
+  var tx=tmp.getContext('2d'),i=0;
+  document.getElementById('strip').innerHTML='';
+  function cap(){
+   if(i>=n){
+    var u=strip.toDataURL('image/png');
+    var im=document.createElement('img');im.src=u;im.style.maxWidth='100%';
+    document.getElementById('strip').appendChild(im);
+    strip.toBlob(function(b){var du=URL.createObjectURL(b);
+     R.innerHTML='Extracted '+n+' frames as a filmstrip.<br><br><a href="'+du+'" download="frames-strip.png" style="display:inline-block;padding:10px 20px;background:#ff7a00;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Download Filmstrip PNG</a><br><small>Honest note: this extracts still frames; it does not encode an animated GIF.</small>';});
+    return;
+   }
+   v.currentTime=(dur*(i+0.5)/n);
+  }
+  v.onseeked=function(){tx.drawImage(v,0,0);sx.drawImage(tmp,0,0,W,H,i*tw,0,tw,th);i++;setTimeout(cap,60);};
+  cap();
+ };}
+</script>
+</body>
+</html>

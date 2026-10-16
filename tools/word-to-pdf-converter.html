@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word-to-PDF Converter — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Turn Word documents into clean PDFs. Upload a .docx, .txt, .md or .html file (or paste text) and save it as a nicely formatted PDF.">
+<meta name="keywords" content="word to pdf converter free, docx to pdf online, convert word document to pdf, doc to pdf free, save word as pdf, word pdf converter, docx to pdf no watermark, convert document to pdf free, save as pdf online, word file to pdf">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/word-to-pdf-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Word-to-PDF Converter — Free Online Tool">
+<meta property="og:description" content="Turn Word documents into clean PDFs. Upload a .docx, .txt, .md or .html file (or paste text) and save it as a nicely formatted PDF.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/word-to-pdf-converter.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Word-to-PDF Converter — Free Online Tool">
+<meta name="twitter:description" content="Turn Word documents into clean PDFs. Upload a .docx, .txt, .md or .html file (or paste text) and save it as a nicely formatted PDF.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Word-to-PDF Converter","url":"https://sindhplusmedianetwork.github.io/tools/word-to-pdf-converter.html","description":"Turn Word documents into clean PDFs. Upload a .docx, .txt, .md or .html file (or paste text) and save it as a nicely formatted PDF.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">PDF &amp; Documents</div>
+<h1>Word-to-PDF Converter</h1>
+<p class="desc">Turn Word documents into clean PDFs. Upload a .docx, .txt, .md or .html file (or paste text) and save it as a nicely formatted PDF.</p>
+<div class="toolbox">
+<label>Upload document (.docx, .txt, .md, .html):<input type='file' id='f' accept='.docx,.txt,.md,.markdown,.html,.htm'></label><br><label>Or paste text:<textarea id='tx' rows='6' style='width:100%' placeholder='Paste or type your document text here...'></textarea></label><br><label>Title:<input id='ti' placeholder='Document title'></label><br><button onclick='go()'>Create PDF</button><p style='font-size:13px;color:#555'>Opens a print dialog \u2014 choose \u201CSave as PDF\u201D as the printer.</p>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Word-to-PDF Converter — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fword-to-pdf-converter.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Word-to-PDF Converter — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fword-to-pdf-converter.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#WordToPDF #PDFTools #ConvertToPDF #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+
+function dl(data,name,type){var b=data instanceof Blob?data:new Blob([data],{type:type||'application/pdf'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},800);}
+function readBuf(f){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result);};r.onerror=function(){rej(new Error('read'));};r.readAsArrayBuffer(f);});}
+function readTxt(f){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result);};r.onerror=function(){rej(new Error('read'));};r.readAsText(f);});}
+async function pdfLib(){if(window.PDFLib&&PDFLib.PDFDocument)return PDFLib;await new Promise(function(res,rej){var s=document.createElement('script');s.src='https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js';s.onload=res;s.onerror=function(){rej(new Error('cdn'));};document.head.appendChild(s);});if(!(window.PDFLib&&PDFLib.PDFDocument))throw new Error('cdn');return PDFLib;}
+function cdnErr(){return 'Could not load the PDF engine (needs internet once). Check your connection and try again.';}
+function busy(t){document.getElementById('result').innerHTML='<i>'+t+'</i>';}
+function err(t){document.getElementById('result').innerHTML='<span style="color:#c00">'+t+'</span>';}
+function ok(t){document.getElementById('result').innerHTML='<span style="color:#2e7d32"><b>'+t+'</b></span>';}
+function parseRanges(str,max,keepOrder){var out=[],seen={};var parts=String(str).split(',');for(var k=0;k<parts.length;k++){var part=parts[k].trim();if(!part)continue;var m=part.match(/^(\d+)\s*-\s*(\d+)$/);if(m){var a=+m[1],b=+m[2];if(a>b){var t=a;a=b;b=t;}for(var i=a;i<=b;i++){if(i>=1&&i<=max&&!seen[i]){seen[i]=1;out.push(i);}}}else if(/^\d+$/.test(part)){var n=+part;if(n>=1&&n<=max&&!seen[n]){seen[n]=1;out.push(n);}}else{throw new Error('Invalid page selection: "'+part+'"');}}if(!out.length)throw new Error('No valid pages selected.');if(!keepOrder)out.sort(function(a,b){return a-b;});return out;}
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+async function docxText(buf){
+  var b=new Uint8Array(buf),pos=0,xml=null;
+  while(pos<b.length-4){
+    if(b[pos]===0x50&&b[pos+1]===0x4B&&b[pos+2]===0x03&&b[pos+3]===0x04){
+      var fnL=b[pos+26]|(b[pos+27]<<8),exL=b[pos+28]|(b[pos+29]<<8);
+      var cs=b[pos+18]|(b[pos+19]<<8)|(b[pos+20]<<16)|(b[pos+21]<<24),md=b[pos+8];
+      var nm='';for(var i=0;i<fnL;i++)nm+=String.fromCharCode(b[pos+30+i]);
+      var ds=pos+30+fnL+exL;
+      if(nm==='word/document.xml'){
+        var ch=b.slice(ds,ds+cs),raw;
+        if(md===8){var d=new DecompressionStream('deflate-raw'),w=d.writable.getWriter();await w.write(ch);await w.close();var r=d.readable.getReader(),pp=[];while(true){var rr=await r.read();if(rr.done)break;pp.push(rr.value);}var t2=0;pp.forEach(function(p){t2+=p.length;});raw=new Uint8Array(t2);var o=0;pp.forEach(function(p){raw.set(p,o);o+=p.length;});}else raw=ch;
+        xml=new TextDecoder().decode(raw);break;
+      }
+      pos=ds+cs;
+    }else pos++;
+  }
+  if(!xml)throw new Error('bad docx');
+  var out='',ps=xml.split(/<w:p[\s>]/);ps.shift();
+  ps.forEach(function(p){var ts=p.match(/<w:t[^>]*>([\s\S]*?)<\/w:t>/g)||[];var line=ts.map(function(t){return t.replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"');}).join('');if(line.trim())out+=line+'\n\n';});
+  return out.trim();
+}
+async function go(){
+  var f=document.getElementById('f').files[0], tx=document.getElementById('tx').value, ti=document.getElementById('ti').value.trim()||'Document';
+  busy('Preparing...');
+  try{
+    var body='';
+    if(f){
+      var nm=f.name.toLowerCase();
+      if(/\.docx$/.test(nm)){body=await docxText(await readBuf(f));}
+      else if(/\.html?$/.test(nm)){body={html:await readTxt(f)};}
+      else{body=await readTxt(f);}
+    }else if(tx.trim()){body=tx;}
+    else{err('Upload a file or paste some text.');return;}
+    var html='';
+    if(body&&body.html){html=body.html;}
+    else{if(!String(body).trim()){err('No readable text found in that file.');return;}html='<h1>'+esc(ti)+'</h1>'+String(body).split('\n').map(function(l){return l.trim()?'<p>'+esc(l)+'</p>':'';}).join('');}
+    var w=window.open('','_blank','width=800,height=900');
+    if(!w){err('Popup blocked \u2014 please allow popups and try again.');return;}
+    w.document.write('<html><head><title>'+esc(ti)+'</title><style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;line-height:1.7;color:#222}h1{border-bottom:2px solid #333;padding-bottom:10px}@media print{body{margin:20px}}</style></head><body>'+html+'<script>window.onload=function(){setTimeout(function(){window.print();},400);}<\/script></body></html>');
+    w.document.close();
+    ok('Print window opened \u2014 choose \u201CSave as PDF\u201D to finish.');
+  }catch(e){err('Could not read file: '+(e.message==='bad docx'?'that .docx looks invalid.':'unsupported file.'));}
+}
+</script>
+</body>
+</html>

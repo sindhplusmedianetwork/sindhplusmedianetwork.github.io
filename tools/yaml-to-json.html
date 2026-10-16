@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YAML to JSON Converter — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Convert YAML to pretty-printed JSON with a built-in parser for the common YAML subset: indentation-based nested maps, lists with - items, auto-typed scalars (numbers, true/false, null, quoted strings stay strings), # comments and --- markers. Honest note: this is not full YAML 1.2 - anchors, multi-line scalars (| and &gt;) and complex keys are not supported.">
+<meta name="keywords" content="yaml to json converter, yaml to json online, convert yaml to json, yaml parser online, yml to json, yaml json converter free, convert yml online, yaml to json free">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/yaml-to-json.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YAML to JSON Converter — Free Online Tool">
+<meta property="og:description" content="Convert YAML to pretty-printed JSON with a built-in parser for the common YAML subset: indentation-based nested maps, lists with - items, auto-typed scalars (numbers, true/false, null, quoted strings stay strings), # comments and --- markers. Honest note: this is not full YAML 1.2 - anchors, multi-line scalars (| and &gt;) and complex keys are not supported.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/yaml-to-json.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="YAML to JSON Converter — Free Online Tool">
+<meta name="twitter:description" content="Convert YAML to pretty-printed JSON with a built-in parser for the common YAML subset: indentation-based nested maps, lists with - items, auto-typed scalars (numbers, true/false, null, quoted strings stay strings), # comments and --- markers. Honest note: this is not full YAML 1.2 - anchors, multi-line scalars (| and &gt;) and complex keys are not supported.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"YAML to JSON Converter","url":"https://sindhplusmedianetwork.github.io/tools/yaml-to-json.html","description":"Convert YAML to pretty-printed JSON with a built-in parser for the common YAML subset: indentation-based nested maps, lists with - items, auto-typed scalars (numbers, true/false, null, quoted strings stay strings), # comments and --- markers. Honest note: this is not full YAML 1.2 - anchors, multi-line scalars (| and &gt;) and complex keys are not supported.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>YAML to JSON Converter</h1>
+<p class="desc">Convert YAML to pretty-printed JSON with a built-in parser for the common YAML subset: indentation-based nested maps, lists with - items, auto-typed scalars (numbers, true/false, null, quoted strings stay strings), # comments and --- markers. Honest note: this is not full YAML 1.2 - anchors, multi-line scalars (| and &gt;) and complex keys are not supported.</p>
+<div class="toolbox">
+<label>Paste YAML:<br><textarea id="a" rows="10" style="width:100%" placeholder="name: Ali&#10;age: 27&#10;tags:&#10;  - dev&#10;  - web"></textarea></label><br><button onclick="go()">Convert to JSON</button><div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=YAML to JSON Converter — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fyaml-to-json.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=YAML to JSON Converter — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fyaml-to-json.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#YAMLtoJSON #YAML #JSON #WebDev #CodeTools #SPMN #FreeTools #DevOps</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function go(){
+var src=document.getElementById('a').value;
+var out=document.getElementById('result');
+if(!src.trim()){out.innerHTML='<p style="color:#b00">Please paste some YAML first.</p>';return;}
+function escH(x){return String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+try{
+var data=parseYaml(src);
+out.innerHTML='<pre style="white-space:pre-wrap">'+escH(JSON.stringify(data,null,2))+'</pre><p style="color:#666;font-size:12px">Note: covers the common YAML subset (nested maps, lists, numbers, booleans, null, quoted strings) - not full YAML 1.2 (no anchors, multi-line scalars, or complex keys).</p>';
+}catch(e){out.innerHTML='<p style="color:#b00"><b>Parse error:</b> '+escH(e.message)+'</p>';}
+}
+function parseYaml(src){
+var lines=[];
+src.split('\n').forEach(function(raw){
+if(/^\s*---/.test(raw))return;
+var l=raw.replace(/\s+#.*$/,'');
+if(l.trim()==='')return;
+lines.push(l);
+});
+if(!lines.length)throw new Error('Empty document');
+var pos=0;
+function ind(l){return l.match(/^ */)[0].length;}
+function sp(n){var s='';for(var i=0;i<n;i++)s+=' ';return s;}
+function scalar(v){
+v=v.trim();
+if(v===''||v==='~'||/^null$/i.test(v))return null;
+var dq=v.match(/^"(.*)"$/),sq=v.match(/^'(.*)'$/);
+if(dq)return dq[1];
+if(sq)return sq[1];
+if(/^(true|false)$/i.test(v))return v.toLowerCase()==='true';
+if(/^-?\d+$/.test(v))return parseInt(v,10);
+if(/^-?(\d+\.\d*|\.\d+)([eE][+-]?\d+)?$/.test(v))return parseFloat(v);
+return v;
+}
+function isList(l){return /^\s*-\s/.test(l);}
+function parseNode(){
+if(pos>=lines.length)return null;
+return isList(lines[pos])?parseList(ind(lines[pos])):parseMap(ind(lines[pos]));
+}
+function parseList(base){
+var arr=[];
+while(pos<lines.length&&ind(lines[pos])===base&&isList(lines[pos])){
+var l=lines[pos].replace(/^\s*-\s?/,'');
+pos++;
+if(l.trim()===''){
+arr.push((pos<lines.length&&ind(lines[pos])>base)?parseNode():null);
+}else{
+var m=l.match(/^("[^"]*"|'[^']*'|[^:]+):(\s+|$)(.*)$/);
+if(m){
+lines.splice(pos,0,sp(base+2)+l);
+arr.push(parseMap(base+2));
+}else if(/^- /.test(l)||l==='-'){
+lines.splice(pos,0,sp(base+2)+l);
+arr.push(parseList(base+2));
+}else{arr.push(scalar(l));}
+}
+}
+return arr;
+}
+function parseMap(base){
+var obj={};
+while(pos<lines.length&&ind(lines[pos])===base&&!isList(lines[pos])){
+var l=lines[pos].replace(/^\s*/,'');
+var m=l.match(/^("[^"]*"|'[^']*'|[^:]+):(\s+|$)(.*)$/);
+pos++;
+if(!m)continue;
+var key=m[1].trim().replace(/^["']|["']$/g,''),rest=m[3];
+if(rest.trim()!==''){obj[key]=scalar(rest);}
+else{obj[key]=(pos<lines.length&&ind(lines[pos])>base)?parseNode():null;}
+}
+return obj;
+}
+return parseNode();
+}
+</script>
+</body>
+</html>

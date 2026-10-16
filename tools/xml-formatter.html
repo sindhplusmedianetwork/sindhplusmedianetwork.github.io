@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XML Formatter — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Tokenizer-based XML formatter that puts every tag, comment, CDATA section and declaration on its own line with 2-space indentation. Handles open, close and self-closing tags plus DOCTYPE and processing instructions. Best effort for well-formed XML - malformed input is shown as-is.">
+<meta name="keywords" content="xml formatter online, format xml code, xml beautifier, pretty print xml, tidy xml online, indent xml, beautify xml free, format xml online free, xml pretty printer, xml indenter">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/xml-formatter.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XML Formatter — Free Online Tool">
+<meta property="og:description" content="Tokenizer-based XML formatter that puts every tag, comment, CDATA section and declaration on its own line with 2-space indentation. Handles open, close and self-closing tags plus DOCTYPE and processing instructions. Best effort for well-formed XML - malformed input is shown as-is.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/xml-formatter.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XML Formatter — Free Online Tool">
+<meta name="twitter:description" content="Tokenizer-based XML formatter that puts every tag, comment, CDATA section and declaration on its own line with 2-space indentation. Handles open, close and self-closing tags plus DOCTYPE and processing instructions. Best effort for well-formed XML - malformed input is shown as-is.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"XML Formatter","url":"https://sindhplusmedianetwork.github.io/tools/xml-formatter.html","description":"Tokenizer-based XML formatter that puts every tag, comment, CDATA section and declaration on its own line with 2-space indentation. Handles open, close and self-closing tags plus DOCTYPE and processing instructions. Best effort for well-formed XML - malformed input is shown as-is.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>XML Formatter</h1>
+<p class="desc">Tokenizer-based XML formatter that puts every tag, comment, CDATA section and declaration on its own line with 2-space indentation. Handles open, close and self-closing tags plus DOCTYPE and processing instructions. Best effort for well-formed XML - malformed input is shown as-is.</p>
+<div class="toolbox">
+<label>Paste XML:<br><textarea id="a" rows="10" style="width:100%" placeholder="<root><item>1</item></root>"></textarea></label><br><button onclick="fmt()">Format XML</button><div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=XML Formatter — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fxml-formatter.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=XML Formatter — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fxml-formatter.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#XMLFormatter #XML #WebDev #CodeTools #SPMN #FreeTools #API</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function fmt(){
+var src=document.getElementById('a').value;
+var out=document.getElementById('result');
+if(!src.trim()){out.innerHTML='<p style="color:#b00">Please paste some XML first.</p>';return;}
+var toks=src.match(/<\?[\s\S]*?\?>|<!--[\s\S]*?-->|<!\[CDATA\[[\s\S]*?\]\]>|<!DOCTYPE[^>]*>|<[^>]+>|[^<]+/g)||[];
+var indent=0,lines=[];
+function pad(){var s='';for(var i=0;i<indent*2;i++)s+=' ';return s;}
+function escH(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+for(var k=0;k<toks.length;k++){
+var t=toks[k];
+if(/^<\?/.test(t)||/^<!--/.test(t)||/^<!\[CDATA/.test(t)||/^<!DOCTYPE/.test(t)){lines.push(pad()+t.trim());continue;}
+if(/^<\//.test(t)){indent=Math.max(0,indent-1);lines.push(pad()+t.trim());continue;}
+if(/^</.test(t)){
+var selfClose=/\/>$/.test(t);
+lines.push(pad()+t.trim());
+if(!selfClose)indent++;
+continue;}
+var txt=t.replace(/\s+/g,' ').trim();
+if(txt)lines.push(pad()+txt);
+}
+out.innerHTML='<pre style="white-space:pre-wrap">'+escH(lines.join('\n'))+'</pre>';
+}
+</script>
+</body>
+</html>
