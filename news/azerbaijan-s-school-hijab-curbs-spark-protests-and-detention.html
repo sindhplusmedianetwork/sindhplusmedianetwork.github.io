@@ -82,5 +82,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "آذربائیجان میں اسکولوں میں حجاب پر پابندی پر احتجاج اور گرفتاریاں", "ex_ur": "آذربائیجان میں اسکول یونیفارم کے نئے ضابطوں کے تحت حجاب پہننے والی طالبات اور اساتذہ کو سرکاری اسکولوں میں داخلے سے روکا جا رہا ہے، جس پر احتجاج اور گرفتاریاں ہو رہی ہیں۔ 21 ستمبر کے ضابطے حجاب کا نام لیے بغیر تعلیم میں سیکولرازم کے منافی لباس پر پابندی لگاتے ہیں۔ 37 مظاہرین حراست میں لیے گئے جبکہ اس تنازع سے قریبی اتحادی ترکی سے تعلقات بھی کشیدہ ہوئے ہیں۔", "title_en": "Azerbaijan's School Hijab Curbs Spark Protests and Detentions", "ex_en": "New school uniform rules in Azerbaijan have effectively barred hijab-wearing students and teachers from state schools, triggering protests and detentions. The September 21 rules ban clothing seen as contradicting secularism in education without naming the hijab explicitly. Thirty-seven protesters were detained, and the row has strained ties with ally Turkiye."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

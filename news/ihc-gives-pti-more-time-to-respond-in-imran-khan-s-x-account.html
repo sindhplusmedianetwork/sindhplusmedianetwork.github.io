@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "اسلام آباد ہائی کورٹ کا عمران خان کے ایکس اکاؤنٹ کیس میں پی ٹی آئی کو مزید وقت", "ex_ur": "اسلام آباد ہائی کورٹ نے جمعرات کو پی ٹی آئی کے عبوری چیئرمین بیرسٹر گوہر علی خان کو بانی پی ٹی آئی عمران خان کے آفیشل ایکس اکاؤنٹ پر پابندی کی درخواست کے جواب میں تحریری جواب داخل کرنے کے لیے مزید وقت دے دیا، اور سماعت 23 نومبر تک ملتوی کر دی۔ گوہر نے جسٹس ارباب محمد طاہر کو بتایا کہ پی ٹی آئی اکاؤنٹ کی ملکیت کا دعویٰ نہیں کرتی، مگر بدلتے حالات کے پیشِ نظر مزید وقت درکار ہے۔ الگ سے، جوڈیشل مجسٹریٹ شائستہ کنڈی نے پی ٹی آئی بانی اور دیگر کے خلاف 2014 کے دھرنا مقدمات میں مفروروں کے وارنٹ گرفتاری جاری کر دیے۔", "title_en": "IHC Gives PTI More Time to Respond in Imran Khan's X Account Case", "ex_en": "The Islamabad High Court on Thursday granted PTI interim chairman Barrister Gohar Ali Khan more time to file a written reply to a petition seeking a ban on party founder Imran Khan's official X account, adjourning the hearing to November 23. Gohar told Justice Arbab Muhammad Tahir that PTI did not claim ownership of the account but needed more time in light of changed circumstances. Separately, Judicial Magistrate Shaista Kundi issued arrest warrants for absconders in the 2014 sit-in cases against the PTI founder and others."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

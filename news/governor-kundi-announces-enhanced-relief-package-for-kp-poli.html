@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "گورنر کنڈی کا خیبر پختونخوا پولیس کے لیے بہتر ریلیف پیکج کا اعلان", "ex_ur": "خیبر پختونخوا کے گورنر فیصل کریم کنڈی نے پولیس کے لیے نظرثانی شدہ ویلفیئر پیکج کا اعلان کیا جس کے تحت شہداء کا معاوضہ بڑھا کر 17 سے 35 ملین روپے کر دیا گیا، پلاٹوں کی جگہ نقد ادائیگی 70 ملین تک ہوگی اور زخمیوں و معذوروں کا معاوضہ بھی بڑھایا گیا۔", "title_en": "Governor Kundi Announces Enhanced Relief Package for KP Police", "ex_en": "KP Governor Faisal Karim Kundi has announced a revised police welfare package raising martyrs' compensation to Rs17–35 million by rank, replacing plots with cash payments up to Rs70 million, and sharply increasing injury and disability payments."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "بریورز کا ڈاجرز کو سویپ، 1982 کے بعد پہلی ورلڈ سیریز میں رسائی", "ex_ur": "ملواکی بریورز نے این ایل سی ایس میں لاس اینجلس ڈاجرز کو چار میچوں میں کلین سویپ کر کے 1982 کے بعد پہلی بار ورلڈ سیریز میں جگہ بنا لی — چوتھے میچ میں 4-0 سے پیچھے رہنے کے بعد 6-4 سے کامیابی حاصل کی۔ چھٹی اننگز میں گیریٹ مچل کے فیصلہ کن ہوم رن نے واپسی مکمل کی، جبکہ جیک باؤرز چھ آر بی آئیز کے ساتھ این ایل سی ایس کے ایم وی پی قرار پائے۔ دو بار کے دفاعی چیمپئن ڈاجرز کی تیسری مسلسل کامیابی کی امید ختم؛ ملواکی 23 اکتوبر کو گارڈینز۔ریز کے فاتح کے خلاف پہلا میچ میزبانی کرے گا۔", "title_en": "Brewers Sweep Dodgers, Reach First World Series Since 1982", "ex_en": "The Milwaukee Brewers completed a stunning four-game sweep of the Los Angeles Dodgers in the NLCS, winning Game 4 6-4 to reach the World Series for the first time since 1982. Garrett Mitchell's go-ahead home run in the sixth inning sealed a comeback from 4-0 down, and Jake Bauers was named NLCS MVP with six RBIs in the series. The two-time defending champion Dodgers' bid for a three-peat is over; Milwaukee hosts Game 1 on October 23 against the winner of Guardians-Rays."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

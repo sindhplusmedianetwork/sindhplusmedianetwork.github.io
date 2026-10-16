@@ -82,5 +82,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "گلگت بلتستان میں شہری علاقوں کے بلدیاتی انتخابات 5 دسمبر کو، چار مراحل میں ہوں گے", "ex_ur": "گلگت بلتستان کے شہری علاقوں میں بلدیاتی انتخابات 5 دسمبر کو ہوں گے، جس کا شیڈول لوکل گورنمنٹ ایکٹ میں ترامیم کے بعد اعلان کیا گیا ہے۔ چیف الیکشن کمشنر راجہ شہباز خان کے مطابق انتخابات چار مراحل میں ہوں گے؛ پہلے مرحلے میں گلگت (42 نشستیں)، سکردو (21) اور چلاس (13) میں براہِ راست انتخابات ہوں گے۔ خواتین کے لیے مخصوص نشستیں — گلگت میں 7، سکردو میں 4، چلاس میں 2 — کے علاوہ غیر مسلموں، نوجوانوں اور معذور افراد کے لیے ایک ایک مخصوص نشست بھی شامل ہے۔ ان کا کہنا تھا کہ تمام تیاریاں مکمل ہیں اور انتخابات چاروں مراحل میں مکمل کیے جائیں گے۔", "title_en": "GB Announces Local Body Elections in Urban Areas for Dec 5 in Four Phases", "ex_en": "Gilgit-Baltistan will hold local body elections in its urban areas on December 5, with the schedule announced after amendments to the Local Government Act. Chief Election Commissioner Raja Shahbaz Khan said polling will take place in four phases; the first phase covers direct elections in Gilgit (42 seats), Skardu (21) and Chilas (13). Reserved seats for women — 7 in Gilgit, 4 in Skardu, 2 in Chilas — plus one each for non-Muslims, youth and persons with disabilities are also part of the plan. He said all preparations are complete and the elections will be finished across the four phases."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

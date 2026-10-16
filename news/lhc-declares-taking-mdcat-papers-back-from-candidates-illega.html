@@ -82,5 +82,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "ایم ڈی کیٹ کے پرچے واپس لینا غیر قانونی قرار، لاہور ہائیکورٹ کا حکم", "ex_ur": "لاہور ہائی کورٹ کے راولپنڈی بنچ نے ایم ڈی کیٹ کے سوالیہ پرچے امتحان کے بعد امیدواروں سے واپس لینے کے عمل کو غیر قانونی قرار دے دیا۔ جسٹس احسن رضا کاظمی نے طلبہ کی درخواستیں منظور کرتے ہوئے پی ایم ڈی سی کو تمام سوالیہ پرچے فوری طور پر ایپ پر اپ لوڈ کرنے کا حکم دیا، اور اسی روز تعمیل کی ہدایت کی۔", "title_en": "LHC Declares Taking MDCAT Papers Back From Candidates Illegal", "ex_en": "The Lahore High Court's Rawalpindi bench has declared the practice of taking MDCAT question papers back from candidates after the exam illegal. Justice Ahsan Raza Kazmi allowed the students' petitions and ordered the PMDC to upload all question papers to the app immediately, directing compliance the same day."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

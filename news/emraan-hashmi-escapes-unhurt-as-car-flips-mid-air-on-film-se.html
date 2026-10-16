@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "عمران ہاشمی فلم کی شوٹنگ کے دوران بڑے حادثے سے بال بال بچ گئے", "ex_ur": "بالی ووڈ اداکار عمران ہاشمی بنگلورو میں اپنی نئی فلم 'گن ماسٹر جی 9' کے کلائمکس کی شوٹنگ کے دوران بڑے حادثے سے بال بال بچ گئے۔ کرین سے لٹکی گاڑی ہوا میں پلٹ کر نیچے کھڑی وین پر گری جو اداکار کے چہرے کے انتہائی قریب آئی، تاہم ترجمان نے تصدیق کی کہ وہ خیریت سے ہیں۔ جنیلیا ڈی سوزا کے ساتھ یہ فلم 27 نومبر کو ریلیز ہوگی۔", "title_en": "Emraan Hashmi Escapes Unhurt as Car Flips Mid-Air on Film Set", "ex_en": "Actor Emraan Hashmi narrowly escaped injury when a crane-suspended car flipped mid-air and crashed onto a van during the climax shoot of Gunmaaster G9 in Bengaluru. The vehicle landed extremely close to his face, but his spokesperson confirmed he is fine. The film, co-starring Genelia Deshmukh, releases November 27."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

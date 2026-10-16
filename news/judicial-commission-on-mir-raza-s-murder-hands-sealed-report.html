@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://sindhplusmedianetwork.github.io/images/news/img-75.jpg">
 <meta property="og:type" content="article">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Judicial Commission on Mir Raza's Murder Hands Sealed Report to Sindh Govt", "author": {"@type": "Organization", "name": "Sindh Plus Media Network"}, "publisher": {"@type": "Organization", "name": "Sindh Plus Media Network", "url": "https://sindhplusmedianetwork.github.io"}, "datePublished": "2026-10-16", "image": "https://sindhplusmedianetwork.github.io/images/news/img-75.jpg", "description": "A judicial commission headed by Sindh High Court Justice Omar Sial wrapped up its probe last week after recording statements of 49 witnesses across 15 hearings, handing its sealed report to the Sindh government's focal person Javed Ahmed Abro on Thursday. Whether the findings are made public is now up to the provincial government. Mir Raza Ali, 25, disappeared on July 28 after leaving his PECHS home and was found dead with gunshot wounds in Gulistan-i-Jauhar the next day."}
+{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Judicial Commission on Mir Raza's Murder Hands Sealed Report to Sindh Govt", "author": {"@type": "Organization", "name": "Sindh Plus Media Network"}, "publisher": {"@type": "Organization", "name": "Sindh Plus Media Network", "url": "https://sindhplusmedianetwork.github.io"}, "datePublished": "2026-10-16", "image": "https://sindhplusmedianetwork.github.io/images/news/img-75.jpg", "description": "A judicial commission headed by Sindh High Court Justice Omar Sial wrapped up its probe last week after recording statements of 49 witnesses across 15 hearings,"}
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -82,6 +82,22 @@ function copyLink(btn){
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(location.href).then(done).catch(function(){prompt("Copy link:",location.href);});}
   else{prompt("Copy link:",location.href);}
 }
+</script>
+<script id="artLang" type="application/json">{"title_ur": "میر رضا کے قتل کی عدالتی کمیشن نے سیل شدہ رپورٹ سندھ حکومت کے حوالے کر دی", "ex_ur": "سندھ ہائی کورٹ کے جسٹس عمر سیال کی سربراہی میں جوڈیشل کمیشن نے 15 سماعتوں میں 49 گواہوں کے بیانات قلمبند کر کے گزشتہ ہفتے تحقیقات مکمل کر لیں، اور جمعرات کو سیل بند رپورٹ سندھ حکومت کے فوکل پرسن جاوید احمد ابرو کے حوالے کر دی۔ رپورٹ کو عام کیا جائے گا یا نہیں، یہ اب صوبائی حکومت کا اختیار ہے۔ 25 سالہ میر رضا علی 28 جولائی کو پی ای چ ایچ ایس کے گھر سے نکلنے کے بعد لاپتہ ہوئے تھے، اور اگلے روز گلستانِ جوہر میں گولیوں سے چھلنی لاش ملی تھی۔", "title_en": "Judicial Commission on Mir Raza's Murder Hands Sealed Report to Sindh Govt", "ex_en": "A judicial commission headed by Sindh High Court Justice Omar Sial wrapped up its probe last week after recording statements of 49 witnesses across 15 hearings,"}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
 </script>
 </body>
 </html>

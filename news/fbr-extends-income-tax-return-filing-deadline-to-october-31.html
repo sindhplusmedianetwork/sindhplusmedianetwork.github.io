@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://sindhplusmedianetwork.github.io/images/news/img-68.jpg">
 <meta property="og:type" content="article">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "FBR Extends Income Tax Return Filing Deadline to October 31", "author": {"@type": "Organization", "name": "Sindh Plus Media Network"}, "publisher": {"@type": "Organization", "name": "Sindh Plus Media Network", "url": "https://sindhplusmedianetwork.github.io"}, "datePublished": "2026-10-16", "image": "https://sindhplusmedianetwork.github.io/images/news/img-68.jpg", "description": "The Federal Board of Revenue has pushed the income tax return deadline for tax year 2026 to October 31 under Section 214A, after trade bodies and tax bars cited form delays and heavy online traffic; the original September 30 cutoff had already been moved to October 15. FBR says 6.71 million returns were filed by October 14 — up 34.38% from last year — with Rs66.81 billion in tax paid alongside returns."}
+{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "FBR Extends Income Tax Return Filing Deadline to October 31", "author": {"@type": "Organization", "name": "Sindh Plus Media Network"}, "publisher": {"@type": "Organization", "name": "Sindh Plus Media Network", "url": "https://sindhplusmedianetwork.github.io"}, "datePublished": "2026-10-16", "image": "https://sindhplusmedianetwork.github.io/images/news/img-68.jpg", "description": "The Federal Board of Revenue has pushed the income tax return deadline for tax year 2026 to October 31 under Section 214A, after trade bodies and tax bars cited"}
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -82,6 +82,22 @@ function copyLink(btn){
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(location.href).then(done).catch(function(){prompt("Copy link:",location.href);});}
   else{prompt("Copy link:",location.href);}
 }
+</script>
+<script id="artLang" type="application/json">{"title_ur": "ایف بی آر نے انکم ٹیکس گوشوارے جمع کرانے کی آخری تاریخ 31 اکتوبر تک بڑھا دی", "ex_ur": "فیڈرل بورڈ آف ریونیو نے ٹیکس سال 2026 کے انکم ٹیکس گوشواروں کی آخری تاریخ انکم ٹیکس آرڈیننس کی دفعہ 214-A کے تحت 31 اکتوبر تک بڑھا دی ہے؛ تاجر تنظیموں اور ٹیکس بار ایسوسی ایشنز نے فارموں کی تاخیر اور آن لائن رش کا حوالہ دیا تھا، جبکہ اصل 30 ستمبر کی تاریخ پہلے ہی 15 اکتوبر تک بڑھائی جا چکی تھی۔ ایف بی آر کے مطابق 14 اکتوبر تک 67.1 لاکھ گوشوارے جمع ہوئے — گزشتہ سال سے 34.38 فیصد زیادہ — اور گوشواروں کے ساتھ 66.81 ارب روپے ٹیکس ادا ہوا۔", "title_en": "FBR Extends Income Tax Return Filing Deadline to October 31", "ex_en": "The Federal Board of Revenue has pushed the income tax return deadline for tax year 2026 to October 31 under Section 214A, after trade bodies and tax bars cited"}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
 </script>
 </body>
 </html>

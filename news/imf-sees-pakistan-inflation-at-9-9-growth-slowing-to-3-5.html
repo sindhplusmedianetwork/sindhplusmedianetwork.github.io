@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "آئی ایم ایف: پاکستان میں مہنگائی 9.9 فیصد، ترقی کی شرح 3.5 فیصد رہے گی", "ex_ur": "آئی ایم ایف کے ورلڈ اکنامک آؤٹ لک کے مطابق مالی سال 27-2026 میں پاکستان میں مہنگائی 9.9 فیصد اور جی ڈی پی ترقی 3.5 فیصد رہنے کا امکان ہے۔ کرنٹ اکاؤنٹ خسارہ جی ڈی پی کا ایک فیصد جبکہ بے روزگاری 6.5 فیصد متوقع ہے۔", "title_en": "IMF Sees Pakistan Inflation at 9.9%, Growth Slowing to 3.5%", "ex_en": "The IMF's World Economic Outlook projects Pakistan's inflation at 9.9 percent in FY2026-27 with GDP growth easing to 3.5 percent. The current account is expected to slip into a one-percent-of-GDP deficit while unemployment eases to 6.5 percent."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

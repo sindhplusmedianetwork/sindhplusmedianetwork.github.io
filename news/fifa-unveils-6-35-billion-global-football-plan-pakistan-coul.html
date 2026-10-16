@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "فیفا کا 6.35 ارب ڈالر کا عالمی فٹ بال منصوبہ؛ پاکستان کو 25 ملین ڈالر تک مل سکتے ہیں", "ex_ur": "فیفا نے 2027 سے 2030 تک عالمی فٹ بال کی ترقی میں 6.35 ارب ڈالر کی سرمایہ کاری کا منصوبہ پیش کیا ہے، جس کے تحت اس کے 211 رکن ممالک — بشمول پاکستان — میں سے ہر ایک کو 25 ملین ڈالر تک اضافی فنڈ مل سکتا ہے۔ یہ منصوبہ 2026 فیفا ورلڈ کپ کی ریکارڈ تجارتی کامیابی کے بعد آیا ہے؛ حتمی منظوری مارچ 2027 میں فیفا کانگریس دے گی، جبکہ فیفا کونسل دسمبر 2026 کے اجلاس میں تفصیلات کو حتمی شکل دے گی۔ فنڈنگ میں خواتین اور نوجوانوں کے فٹ بال اور انفراسٹرکچر کو ترجیح دی جائے گی، اور 1.7 ارب ڈالر ہنگامی ذخائر کے طور پر رکھنے کی تجویز ہے؛ فیفا کے صدر جیانی انفانٹینو نے متنازع فیفا فارورڈ انٹرپرائز منصوبے کی غلطیوں پر معافی بھی مانگی اور کہا کہ اسے مستقل طور پر ختم کر دیا گیا ہے۔", "title_en": "FIFA Unveils $6.35 Billion Global Football Plan; Pakistan Could Get Up to $25 Million", "ex_en": "FIFA has presented a plan to invest $6.35 billion in global football development from 2027 to 2030, under which each of its 211 member associations — including Pakistan — could receive up to $25 million in additional funds. The plan follows the record commercial success of the 2026 FIFA World Cup; final approval rests with the FIFA Congress in March 2027, while the FIFA Council will finalise details at its December 2026 meeting. Funding will prioritise women's and youth football and infrastructure, with $1.7 billion proposed as emergency reserves; FIFA president Gianni Infantino also apologised for mistakes in the controversial FIFA Forward Enterprise project and said it has been permanently ended."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

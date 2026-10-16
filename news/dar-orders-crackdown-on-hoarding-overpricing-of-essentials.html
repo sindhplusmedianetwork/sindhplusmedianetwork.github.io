@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "ڈار کا ضروری اشیا کی ذخیرہ اندوزی اور مہنگے داموں کے خلاف کارروائی کا حکم", "ex_ur": "نائب وزیراعظم اسحاق ڈار نے ضروری اشیا کی ذخیرہ اندوزی، مصنوعی قلت اور مہنگے داموں فروخت کے خلاف سخت کارروائی کی ہدایت کی ہے — کابینہ کمیٹی کے جائزے میں مارکیٹ میں ذخائر تسلی بخش پائے گئے۔ ستمبر میں مہنگائی 10.3 فیصد رہی، پیاز کی قیمتیں سال بھر میں دوگنی سے زیادہ ہوئیں، پیٹرول 47.52 فیصد مہنگا ہوا، اور پنجاب میں تقریباً 40 لاکھ ٹن گندم کا سراغ نہیں مل سکا۔ آئی ایم ایف نے بھی رواں مالی سال کے لیے پاکستان کی مہنگائی کی پیش گوئی بڑھا کر 9.9 فیصد کر دی ہے۔", "title_en": "Dar Orders Crackdown on Hoarding, Overpricing of Essentials", "ex_en": "Deputy Prime Minister Ishaq Dar has directed a strict crackdown on hoarding, artificial shortages and overpricing of essential commodities after a cabinet committee review found market stocks adequate. The move comes as September inflation hit 10.3 per cent, onion prices more than doubled year-on-year, petrol rose 47.52 per cent, and around 4 million tonnes of wheat in Punjab remained untraceable amid hoarding fears. The IMF has also raised Pakistan's inflation forecast to 9.9 per cent for the fiscal year."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

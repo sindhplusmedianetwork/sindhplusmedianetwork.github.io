@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "واشک میں انٹیلی جنس آپریشن، بھارتی پراکسی کے 5 دہشت گرد ہلاک", "ex_ur": "بلوچستان کے ضلع واشک میں 12 اور 13 اکتوبر کی درمیانی شب انٹیلی جنس بنیاد پر آپریشن میں فتنہ الہندوستان کے 5 دہشت گرد ہلاک کر دیے گئے۔ آئی ایس پی آر کے مطابق دہشت گردوں کے ٹھکانے سے اسلحہ اور گولہ بارود برآمد ہوا۔", "title_en": "Five Indian-Proxy Terrorists Killed in Washuk Intelligence Operation", "ex_en": "Five terrorists of Fitna al-Hindustan, described as an Indian proxy, were killed in an intelligence-based operation in Washuk, Balochistan, on the night of October 12-13. Weapons, ammunition and explosives were recovered from the busted hideout, the ISPR said."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>
