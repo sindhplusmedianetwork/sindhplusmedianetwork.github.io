@@ -278,3 +278,9 @@ body.rtl .cb-chat-bar{flex-direction:row-reverse}
 .st-cats{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
 .st-cats .cb-tab{white-space:nowrap}
 
+
+.card{position:relative}
+.cs{position:absolute;top:8px;right:8px;width:36px;height:36px;border-radius:50%;border:none;background:rgba(0,0,0,.55);color:#fff;font-size:17px;line-height:1;cursor:pointer;z-index:3;display:flex;align-items:center;justify-content:center}
+.cs:active{transform:scale(.9)}
+#latestList li{position:relative;padding-right:44px}
+.ls{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:1px solid #ddd;background:#fff;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center}
