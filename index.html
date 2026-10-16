@@ -973,3 +973,701 @@ priceNote:"قیمتیں مارکیٹ سے ~2 گنا (50 فیصد مارجن) آ�
 saveSettings:"محفوظ کریں",products:"مصنوعات",sampleProd:"نمونہ",savedOk:"✅ محفوظ ہو گیا!",
 tools:"ٹولز",jobs:"نوکریاں",
 toolsTitle:"روزانہ ٹولز",toolsSub:"نماز کے اوقات، موسم، کرنسی اور یونٹ کنورٹر — م�
+�ت، روزانہ۔",
+prayer:"نماز کے اوقات",weather:"موسم",currency:"کرنسی",units:"یونٹس",
+prayerCity:"شہر",getPrayer:"اوقات دیکھیں",wxCityPh:"شہر کا نام...",getWx:"موسم دیکھیں",
+amount:"رقم",fromC:"از",toC:"تک",convert:"کنورٹ کریں",
+unitType:"قسم",length:"لمبائی",weight:"وزن",temp:"درجہ حرارت",unitVal:"قیمت",unitFrom:"از",unitTo:"تک",
+jobsTitle:"نوکریاں اور اسکالرشپس",jobsSub:"دنیا بھر کی نوکریاں اور اسکالرشپس — اپلائی کے لیے آفیشل لنک کھولیں۔",
+tabJobs:"نوکریاں",tabScholar:"اسکالرشپس",
+searchJobs:"عنوان یا ادارہ تلاش کریں...",allCountries:"تمام ممالک",
+applyNow:"اپلائی کریں →",noJobs:"کوئی لسٹنگ نہیں ملی۔",sampleNote:"نمونہ لسٹنگ — نئی نوکریاں اور اسکالرشپس روزانہ شامل ہوتی ہیں۔",
+deadline:"آخری تاریخ",cityLbl:"شہر"}
+};
+function nt(k){ const L = (typeof LANG!=='undefined' && LANG==='ur') ? 'ur' : 'en'; return (NT[L]&&NT[L][k]) || NT.en[k] || k; }
+function escH(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function cbToday(){ return new Date().toISOString().slice(0,10); }
+function cbPairId(a,b){ return [a,b].sort().join('_'); }
+function cbTs(){ return firebase.firestore.FieldValue.serverTimestamp(); }
+
+/* ---------- tabs ---------- */
+function showTab(name){
+  ['mainView','adminView','view-community','view-friends','view-rishta','view-tools','view-jobs','view-store','view-support'].forEach(id=>{const e=document.getElementById(id);if(e)e.style.display='none';});
+  const map={news:'mainView',admin:'adminView',community:'view-community',friends:'view-friends',rishta:'view-rishta',tools:'view-tools',jobs:'view-jobs',store:'view-store',support:'view-support'};
+  const el=document.getElementById(map[name]||'mainView'); if(el) el.style.display='block';
+  document.querySelectorAll('#bottomNav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));
+  window.scrollTo(0,0);
+  if(name==='community') cbLoadFeed();
+  if(name==='friends') cbRenderFriends();
+  if(name==='rishta') cbLoadRishta();
+  if(name==='admin') cbAdminLoad();
+  if(name==='tools') tlShow('prayer');
+  if(name==='jobs') jbInit();
+  if(name==='store') stInit();
+}
+function showMain(){ showTab('news'); }
+function showAdmin(){ showTab('admin'); }
+function cbApplyLabels(){
+  document.querySelectorAll('[data-cblbl]').forEach(e=>{const k=e.getAttribute('data-cblbl'); if(NT.en[k]) e.textContent=nt(k);});
+  document.querySelectorAll('[data-cbph]').forEach(e=>{const k=e.getAttribute('data-cbph'); if(NT.en[k]) e.placeholder=nt(k);});
+}
+
+/* ---------- modals ---------- */
+function cbOpenModal(id){ document.getElementById(id).classList.add('open'); }
+function cbCloseModal(id){ document.getElementById(id).classList.remove('open'); }
+function cbShowErr(id,msg){ const e=document.getElementById(id); e.textContent=msg; e.style.display='block'; }
+function cbShowOk(id,msg){ const e=document.getElementById(id); e.textContent=msg; e.style.display='block'; }
+function cbHideMsg(id){ document.getElementById(id).style.display='none'; }
+
+/* ---------- image compress ---------- */
+function cbCompress(file,maxDim,q){
+  maxDim=maxDim||800; q=q||0.7;
+  return new Promise((res,rej)=>{
+    const url=URL.createObjectURL(file), img=new Image();
+    img.onload=()=>{ try{
+      const s=Math.min(1,maxDim/Math.max(img.width,img.height));
+      const c=document.createElement('canvas'); c.width=Math.round(img.width*s); c.height=Math.round(img.height*s);
+      c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+      URL.revokeObjectURL(url); res(c.toDataURL('image/jpeg',q));
+    }catch(e){ rej(e); } };
+    img.onerror=rej; img.src=url;
+  });
+}
+
+/* ---------- auth ---------- */
+function cbAuthBoxHTML(){
+  if(rUser){
+    const n=escH(rUser.displayName||rUser.email||'Member');
+    return '<div class="cb-card" style="display:flex;align-items:center;gap:10px"><div class="cb-avatar">'+escH(n.charAt(0).toUpperCase())+'</div><div style="flex:1"><b>'+n+'</b></div><button class="cb-btn sm sec" onclick="cbLogout()">'+nt('logout')+'</button></div>';
+  }
+  return '<div class="cb-card"><p class="cb-muted">'+nt('loginToJoin')+'</p><button class="cb-btn" onclick="cbOpenModal(\'cbAuthModal\')">'+nt('loginBtn')+'</button></div>';
+}
+function cbUpdateAuthBoxes(){
+  ['cbCommAuth','cbFriendsAuth','cbRishtaAuth'].forEach(id=>{const e=document.getElementById(id); if(e) e.innerHTML=cbAuthBoxHTML();});
+  const comp=document.getElementById('cbComposer'); if(comp) comp.style.display=rUser?'block':'none';
+  const fb=document.getElementById('cbFriendsBody'); if(fb) fb.style.display=rUser?'block':'none';
+  cbRenderGate();
+}
+async function cbGoogleLogin(){
+  cbHideMsg('cbAuthErr');
+  try{ const r=await rAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider()); rUser=r.user; await cbEnsureUser(); cbCloseModal('cbAuthModal'); await cbRefreshGate(); if(!cbCanAct()){ cbRenderVerifySteps(); cbOpenModal('cbVerifyModal'); } }
+  catch(e){ cbShowErr('cbAuthErr','Google login failed: '+(e.message||e.code)); }
+}
+async function cbEmailSignup(){
+  cbHideMsg('cbAuthErr');
+  const name=document.getElementById('cbEmName').value.trim(), email=document.getElementById('cbEmEmail').value.trim(), pass=document.getElementById('cbEmPass').value;
+  if(!name||!email||pass.length<6){ cbShowErr('cbAuthErr',nt('fillAll')); return; }
+  try{ const r=await rAuth.createUserWithEmailAndPassword(email,pass); await r.updateProfile({displayName:name}); rUser=rAuth.currentUser; await cbEnsureUser(name); try{ await rUser.sendEmailVerification(); }catch(e){} cbCloseModal('cbAuthModal'); await cbRefreshGate(); cbRenderVerifySteps(); cbOpenModal('cbVerifyModal'); }
+  catch(e){ cbShowErr('cbAuthErr',e.message||e.code); }
+}
+async function cbEmailLogin(){
+  cbHideMsg('cbAuthErr');
+  const email=document.getElementById('cbEmEmail').value.trim(), pass=document.getElementById('cbEmPass').value;
+  if(!email||!pass){ cbShowErr('cbAuthErr',nt('fillAll')); return; }
+  try{ const r=await rAuth.signInWithEmailAndPassword(email,pass); rUser=r.user; await cbEnsureUser(); cbCloseModal('cbAuthModal'); await cbRefreshGate(); if(!cbCanAct()){ cbRenderVerifySteps(); cbOpenModal('cbVerifyModal'); } }
+  catch(e){ cbShowErr('cbAuthErr',e.message||e.code); }
+}
+async function cbLogout(){ try{ await rAuth.signOut(); }catch(e){} rUser=null; cbUpdateAuthBoxes(); }
+async function cbEnsureUser(name){
+  if(!rUser) return;
+  try{ await rDb.collection('cb_users').doc(rUser.uid).set({uid:rUser.uid,name:name||rUser.displayName||rUser.email,email:rUser.email||'',nameLower:(name||rUser.displayName||'').toLowerCase(),ts:cbTs()},{merge:true}); }catch(e){}
+  await cbRefreshVerif();
+  cbRefreshGate();
+}
+
+
+/* ================= V4: MANDATORY VERIFICATION GATE =================
+   Owner order (Tahir Adnan): EVERY user must verify EMAIL + MOBILE NUMBER
+   before they can post, comment, like, chat, send friend requests, order
+   from the store, add wallet balance, or create a rishta profile.
+   Browsing (news, tools, jobs, products) stays open for everyone.
+   Anti-fake layers: 1 verified email per account (Firebase) + 1 verified
+   mobile per account (linkWithPhoneNumber refuses numbers already used)
+   + email verification link + admin post approval + 3-step ID check.
+   --- Firebase console setup for Phone Auth ---
+   1. Firebase console > project rishta-match-b5077 > Authentication >
+      Sign-in method > enable "Phone".
+   2. (Optional) Add test numbers under Phone > "Phone numbers for testing".
+   NOTE: If Firebase ever gates Phone Auth behind Blaze billing, cbSendOtp
+   surfaces the exact console error and email verification keeps working. */
+let cbEmailOk=false, cbPhoneOk=false, cbPhoneNum='';
+async function cbRefreshGate(){
+  cbEmailOk=false; cbPhoneOk=false; cbPhoneNum='';
+  if(rUser){
+    try{ await rUser.reload(); rUser=rAuth.currentUser; }catch(e){}
+    cbEmailOk=!!(rUser&&rUser.emailVerified);
+    try{ const d=await rDb.collection('cb_users').doc(rUser.uid).get();
+      if(d.exists){ const u=d.data(); cbPhoneOk=!!u.phoneVerified; cbPhoneNum=u.phone||''; } }catch(e){}
+    try{ await rDb.collection('cb_users').doc(rUser.uid).set({emailVerified:cbEmailOk},{merge:true}); }catch(e){}
+  }
+  cbRenderGate();
+}
+function cbCanAct(){ return !!rUser && cbEmailOk && cbPhoneOk; }
+function cbGate(){
+  if(!rUser){ cbOpenModal('cbAuthModal'); return false; }
+  if(!cbCanAct()){ cbRenderVerifySteps(); cbOpenModal('cbVerifyModal'); return false; }
+  return true;
+}
+function cbRenderGate(){
+  const show=!!rUser && !cbCanAct();
+  document.querySelectorAll('.gate-slot').forEach(el=>{
+    if(!show){ el.innerHTML=''; el.style.display='none'; return; }
+    el.style.display='block';
+    el.innerHTML='<div class="gate-banner">\uD83D\uDD12 '+escH(nt('gateBanner'))
+      +' <button class="cb-btn sm" onclick="cbRenderVerifySteps();cbOpenModal(\'cbVerifyModal\')">'+escH(nt('verifyNow'))+'</button></div>';
+  });
+  const av=document.getElementById('cbCompAvatar');
+  if(av&&rUser) av.textContent=(rUser.displayName||rUser.email||'?').charAt(0).toUpperCase();
+}
+function cbStepRow(n,label,done,btnHtml){
+  return '<div class="vstep'+(done?' done':'')+'"><span class="vnum">'+(done?'\u2713':n)
+    +'</span><div style="flex:1"><b>'+label+'</b><div class="vbtns">'+btnHtml+'</div></div></div>';
+}
+function cbRenderVerifySteps(){
+  const box=document.getElementById('cbVerifySteps'); if(!box) return;
+  try{ if(cbRecapV&&!cbPhoneConfirm){ cbRecapV.clear(); } }catch(e){} cbRecapV=null;
+  let h='<p class="cb-muted">'+escH(nt('verifySub'))+'</p>';
+  h+=cbStepRow(1,nt('stepSignup'),true,'');
+  if(cbEmailOk){ h+=cbStepRow(2,nt('stepEmail'),true,'<span class="cb-ok" style="display:inline">'+escH(nt('emailDone'))+' \u2713</span>'); }
+  else{
+    h+=cbStepRow(2,nt('stepEmail'),false,
+      '<p class="cb-muted">'+escH(nt('emailSent'))+'</p>'
+      +'<button class="cb-btn sm" onclick="cbSendEmailVerif()">'+escH(nt('resendEmail'))+'</button> '
+      +'<button class="cb-btn sm sec" onclick="cbCheckEmailDone()">'+escH(nt('iveClicked'))+'</button>'
+      +'<div class="cb-err" id="cbEmVerifErr"></div>');
+  }
+  if(cbPhoneOk){ h+=cbStepRow(3,nt('stepPhone'),true,'<span class="cb-ok" style="display:inline">'+escH(nt('phoneDone'))+' \u2713</span>'); }
+  else{
+    h+=cbStepRow(3,nt('stepPhone'),false,
+      '<div id="cbOtpForm"><input class="cb-input" id="cbPhNum" placeholder="'+escH(nt('phonePh'))+'" style="margin-bottom:8px">'
+      +'<button class="cb-btn sm" onclick="cbSendOtp()">'+escH(nt('sendOtp'))+'</button></div>'
+      +'<div id="cbOtpCode" style="display:none"><input class="cb-input" id="cbPhOtp" placeholder="'+escH(nt('otpPh'))+'" style="margin:8px 0">'
+      +'<button class="cb-btn sm" onclick="cbVerifyOtp()">'+escH(nt('verifyOtp'))+'</button></div>'
+      +'<div class="cb-err" id="cbPhErr"></div><div id="cbRecap"></div>');
+  }
+  box.innerHTML=h;
+  if(cbCanAct()){ box.innerHTML+='<div class="cb-ok">'+escH(nt('allVerified'))+'</div>'; setTimeout(()=>{cbCloseModal('cbVerifyModal');},1200); }
+}
+async function cbSendEmailVerif(){ cbHideMsg('cbEmVerifErr'); try{ await rUser.sendEmailVerification(); cbRenderVerifySteps(); }catch(e){ cbShowErr('cbEmVerifErr',e.message||e.code); } }
+async function cbCheckEmailDone(){ await cbRefreshGate(); cbRenderVerifySteps(); }
+let cbRecapV=null, cbPhoneConfirm=null;
+function cbEnsureRecap(){
+  if(cbRecapV) return cbRecapV;
+  cbRecapV=new firebase.auth.RecaptchaVerifier('cbRecap',{size:'invisible'});
+  return cbRecapV;
+}
+async function cbSendOtp(){
+  cbHideMsg('cbPhErr');
+  const ph=((document.getElementById('cbPhNum')||{}).value||'').replace(/[\s-]/g,'');
+  if(!/^\+[1-9]\d{7,14}$/.test(ph)){ cbShowErr('cbPhErr',nt('phoneBad')); return; }
+  try{
+    cbPhoneConfirm=await rUser.linkWithPhoneNumber(ph,cbEnsureRecap());
+    document.getElementById('cbOtpForm').style.display='none';
+    document.getElementById('cbOtpCode').style.display='block';
+  }catch(e){ try{ if(cbRecapV){cbRecapV.clear();} }catch(_){} cbRecapV=null; cbShowErr('cbPhErr',e.message||e.code); }
+}
+async function cbVerifyOtp(){
+  cbHideMsg('cbPhErr');
+  const code=((document.getElementById('cbPhOtp')||{}).value||'').trim();
+  if(!code||!cbPhoneConfirm) return;
+  try{
+    const res=await cbPhoneConfirm.confirm(code);
+    rUser=res.user;
+    await rDb.collection('cb_users').doc(rUser.uid).set({phone:res.user.phoneNumber||'',phoneVerified:true},{merge:true});
+    await cbRefreshGate(); cbRenderVerifySteps();
+  }catch(e){ cbShowErr('cbPhErr',e.message||e.code); }
+}
+/* verified badges: blue = email+mobile verified, gold = + ID verified */
+function cbVBadge(ev,pv,idv){
+  if(idv) return '<span class="vbadge gold" title="'+escH(nt('idVerified'))+'">\u2713</span>';
+  if(ev&&pv) return '<span class="vbadge blue" title="'+escH(nt('verifiedBadge'))+'">\u2713</span>';
+  return '';
+}
+function cbTimeAgo(ts){
+  try{
+    const d=(ts&&ts.toDate)?ts.toDate():(ts?new Date(ts):null);
+    if(!d||isNaN(d.getTime())) return '';
+    const s=Math.floor((Date.now()-d.getTime())/1000);
+    if(s<60) return s+'s'; if(s<3600) return Math.floor(s/60)+'m';
+    if(s<86400) return Math.floor(s/3600)+'h'; return Math.floor(s/86400)+'d';
+  }catch(e){ return ''; }
+}
+function cbSharePost(pid){
+  const url=location.origin+location.pathname+'#post-'+pid;
+  if(navigator.share){ navigator.share({title:'Sindh Plus',text:'Sindh Plus Media Network',url:url}).catch(()=>{}); }
+  else{ try{ navigator.clipboard.writeText(url); alert(nt('linkCopied')); }catch(e){ prompt('Copy:',url); } }
+}
+/* ---------- community ---------- */
+let cbPostImgData=null;
+async function cbSubmitPost(){
+  cbHideMsg('cbPostErr'); cbHideMsg('cbPostOk');
+  if(!cbGate()) return;
+  const text=document.getElementById('cbPostText').value.trim();
+  if(!text && !cbPostImgData){ cbShowErr('cbPostErr',nt('postPh')); return; }
+  try{
+    await rDb.collection('posts').add({uid:rUser.uid,name:rUser.displayName||rUser.email,text:text,img:cbPostImgData||null,status:'pending',likes:[],cc:0,ts:cbTs(),ev:cbEmailOk?1:0,pv:cbPhoneOk?1:0,idv:(cbMyVerif&&cbMyVerif.status==='approved')?1:0});
+    document.getElementById('cbPostText').value=''; document.getElementById('cbPostImg').value=''; cbPostImgData=null;
+    const pv=document.getElementById('cbPostPrev'); pv.style.display='none'; pv.src='';
+    cbShowOk('cbPostOk',nt('postPending')); cbLoadMyPending();
+  }catch(e){ cbShowErr('cbPostErr',e.message||'Error'); }
+}
+async function cbLoadMyPending(){
+  const box=document.getElementById('cbMyPending'); if(!box) return; box.innerHTML='';
+  if(!rUser) return;
+  try{
+    const s=await rDb.collection('posts').where('uid','==',rUser.uid).get();
+    const pend=s.docs.map(d=>d.data()).filter(p=>p.status==='pending');
+    if(pend.length) box.innerHTML='<div class="cb-card"><span class="cb-badge pend">⏳ '+pend.length+' pending approval</span></div>';
+  }catch(e){}
+}
+async function cbLoadFeed(){
+  const feed=document.getElementById('cbFeed'); if(!feed) return;
+  feed.innerHTML='<p class="cb-muted">…</p>';
+  try{
+    const s=await rDb.collection('posts').orderBy('ts','desc').limit(40).get();
+    const posts=s.docs.map(d=>({id:d.id,...d.data()})).filter(p=>p.status==='approved').slice(0,30);
+    cbLoadMyPending();
+    if(!posts.length){ feed.innerHTML='<div class="cb-card"><p class="cb-muted">'+nt('noPosts')+'</p></div>'; return; }
+    feed.innerHTML=posts.map(p=>{
+      const liked=rUser&&(p.likes||[]).includes(rUser.uid);
+      const nm=escH(p.name||'Member');
+      return '<div class="cb-card fb-post" id="cbp-'+p.id+'">'
+      +'<div class="cb-post-head"><div class="cb-avatar">'+escH(nm.charAt(0).toUpperCase())+'</div><div><b>'+nm+'</b>'+cbVBadge(p.ev,p.pv,p.idv)+'<div class="cb-post-time">'+cbTimeAgo(p.ts)+'</div></div></div>'
+      +(p.text?'<p class="fb-text">'+escH(p.text)+'</p>':'')
+      +(p.img?'<img class="cb-post-img fb-img" src="'+p.img+'" alt="post image" loading="lazy">':'')
+      +'<div class="fb-counts">'+(p.likes||[]).length+' likes &middot; '+(p.cc||0)+' '+nt('comments')+'</div>'+'<div class="cb-actions fb-actions">'
+      +'<button class="cb-act'+(liked?' liked':'')+'" onclick="cbToggleLike(\''+p.id+'\')">♥ '+(p.likes||[]).length+'</button>'
+      +'<button class="cb-act" onclick="cbToggleComments(\''+p.id+'\')">💬 '+(p.cc||0)+' '+nt('comments')+'</button>'
+      +'<button class="cb-act" onclick="cbSharePost(\''+p.id+'\')">↗ '+nt('share')+'</button>'
+      +'</div><div id="cbc-'+p.id+'" style="display:none"></div></div>';
+    }).join('');
+  }catch(e){ feed.innerHTML='<div class="cb-card"><p class="cb-muted">Error loading feed.</p></div>'; }
+}
+async function cbToggleLike(pid){
+  if(!cbGate()) return;
+  const ref=rDb.collection('posts').doc(pid);
+  try{
+    const d=await ref.get(); if(!d.exists) return;
+    const likes=d.data().likes||[];
+    if(likes.includes(rUser.uid)) await ref.update({likes:firebase.firestore.FieldValue.arrayRemove(rUser.uid)});
+    else await ref.update({likes:firebase.firestore.FieldValue.arrayUnion(rUser.uid)});
+    cbLoadFeed();
+  }catch(e){}
+}
+async function cbToggleComments(pid){
+  const box=document.getElementById('cbc-'+pid);
+  if(box.style.display==='none'){ box.style.display='block'; await cbLoadComments(pid); }
+  else box.style.display='none';
+}
+async function cbLoadComments(pid){
+  const box=document.getElementById('cbc-'+pid);
+  let html='';
+  try{
+    const s=await rDb.collection('posts').doc(pid).collection('comments').orderBy('ts','asc').limit(50).get();
+    html=s.docs.map(d=>{const c=d.data();return '<div class="cb-comment"><b>'+escH(c.name||'Member')+'</b> '+escH(c.text||'')+'</div>';}).join('');
+  }catch(e){}
+  html+='<div style="display:flex;gap:6px;margin-top:6px"><input class="cb-input" id="cbi-'+pid+'" maxlength="300" placeholder="'+nt('addComment')+'…" style="margin:0"><button class="cb-btn sm" onclick="cbAddComment(\''+pid+'\')">'+nt('addComment')+'</button></div>';
+  box.innerHTML=html;
+}
+async function cbAddComment(pid){
+  if(!cbGate()) return;
+  const inp=document.getElementById('cbi-'+pid); const text=(inp.value||'').trim(); if(!text) return;
+  try{
+    const pref=rDb.collection('posts').doc(pid);
+    await pref.collection('comments').add({uid:rUser.uid,name:rUser.displayName||rUser.email,text:text,ts:cbTs()});
+    await pref.update({cc:firebase.firestore.FieldValue.increment(1)});
+    cbLoadComments(pid); cbLoadFeed();
+  }catch(e){}
+}
+
+/* ---------- friends ---------- */
+async function cbAreFriends(a,b){
+  try{ const d=await rDb.collection('friendships').doc(cbPairId(a,b)).get(); return d.exists; }catch(e){ return false; }
+}
+function cbFTab(which){
+  ['req','list','find'].forEach(w=>{
+    document.getElementById('cbF'+w[0].toUpperCase()+w.slice(1)).style.display = (w===which)?'block':'none';
+    document.getElementById('cbFTab'+w[0].toUpperCase()+w.slice(1)).classList.toggle('active',w===which);
+  });
+  document.getElementById('cbChatWrap').style.display='none';
+  if(which==='req')cbLoadReqs(); if(which==='list')cbLoadFriends(); if(which==='find')cbFindFriends();
+}
+async function cbRenderFriends(){ cbUpdateAuthBoxes(); if(rUser) cbFTab('req'); }
+async function cbLoadReqs(){
+  const box=document.getElementById('cbFReq'); box.innerHTML='<p class="cb-muted">…</p>';
+  try{
+    const s=await rDb.collection('friendRequests').where('to','==',rUser.uid).get();
+    const incoming=s.docs.map(d=>({id:d.id,...d.data()})).filter(r=>r.status==='pending');
+    const s2=await rDb.collection('friendRequests').where('from','==',rUser.uid).get();
+    const sent=s2.docs.map(d=>({id:d.id,...d.data()})).filter(r=>r.status==='pending');
+    document.getElementById('cbReqCount').textContent=incoming.length?('('+incoming.length+')'):'';
+    let html='';
+    if(!incoming.length) html+='<p class="cb-muted">'+nt('noReqs')+'</p>';
+    html+=incoming.map(r=>'<div class="cb-friend-row"><div class="cb-avatar">'+escH((r.fromName||'?').charAt(0).toUpperCase())+'</div><div class="grow"><b>'+escH(r.fromName||'Member')+'</b></div><button class="cb-btn sm" onclick="cbReqAct(\''+r.id+'\',1)">'+nt('accept')+'</button> <button class="cb-btn sm sec" onclick="cbReqAct(\''+r.id+'\',0)">'+nt('decline')+'</button></div>').join('');
+    if(sent.length) html+='<p class="cb-muted" style="margin-top:10px">Sent:</p>'+sent.map(r=>'<div class="cb-friend-row"><div class="grow">'+escH(r.toName||'Member')+'</div><span class="cb-badge pend">'+nt('requested')+'</span></div>').join('');
+    box.innerHTML=html;
+  }catch(e){ box.innerHTML='<p class="cb-muted">Error.</p>'; }
+}
+async function cbReqAct(rid,accept){
+  try{
+    const d=await rDb.collection('friendRequests').doc(rid).get(); if(!d.exists) return;
+    const r=d.data();
+    await rDb.collection('friendRequests').doc(rid).update({status:accept?'accepted':'declined'});
+    if(accept) await rDb.collection('friendships').doc(cbPairId(r.from,r.to)).set({a:r.from,b:r.to,ts:cbTs()});
+    cbLoadReqs();
+  }catch(e){}
+}
+async function cbLoadFriends(){
+  const box=document.getElementById('cbFList'); box.innerHTML='<p class="cb-muted">…</p>';
+  try{
+    const s=await rDb.collection('friendships').get();
+    const mine=s.docs.map(d=>d.data()).filter(f=>f.a===rUser.uid||f.b===rUser.uid);
+    const ids=mine.map(f=>f.a===rUser.uid?f.b:f.a);
+    const names={};
+    await Promise.all(ids.map(async id=>{ try{ const u=await rDb.collection('cb_users').doc(id).get(); names[id]=u.exists?(u.data().name||'Member'):'Member'; }catch(e){ names[id]='Member'; } }));
+    cbMyFriends={}; ids.forEach(id=>cbMyFriends[id]=1);
+    if(!ids.length){ box.innerHTML='<p class="cb-muted">'+nt('noFriends')+'</p>'; return; }
+    box.innerHTML=ids.map(id=>'<div class="cb-friend-row"><div class="cb-avatar">'+escH((names[id]||'?').charAt(0).toUpperCase())+'</div><div class="grow"><b>'+escH(names[id])+'</b></div><button class="cb-btn sm" onclick="cbOpenChat(\''+id+'\',\''+escH(names[id]).replace(/'/g,"\\'")+'\')">💬 '+nt('chat')+'</button></div>').join('');
+  }catch(e){ box.innerHTML='<p class="cb-muted">Error.</p>'; }
+}
+async function cbFindFriends(){
+  const box=document.getElementById('cbFindRes'); if(box) box.innerHTML='';
+  await cbFindFriendsQ('');
+}
+async function cbFindFriendsQ(q){
+  const box=document.getElementById('cbFindRes'); if(!box) return;
+  q=(document.getElementById('cbFindQ').value||'').toLowerCase().trim();
+  try{
+    const s=await rDb.collection('cb_users').limit(100).get();
+    let users=s.docs.map(d=>d.data()).filter(u=>u.uid!==rUser.uid);
+    if(q) users=users.filter(u=>(u.nameLower||'').includes(q));
+    users=users.slice(0,20);
+    if(!users.length){ box.innerHTML='<p class="cb-muted">'+nt('noUsers')+'</p>'; return; }
+    const s2=await rDb.collection('friendRequests').where('from','==',rUser.uid).get();
+    const sent={}; s2.docs.forEach(d=>{const r=d.data(); if(r.status==='pending') sent[r.to]=1;});
+    const fs=await rDb.collection('friendships').get();
+    const fr={}; fs.docs.forEach(d=>{const f=d.data(); if(f.a===rUser.uid)fr[f.b]=1; if(f.b===rUser.uid)fr[f.a]=1;});
+    box.innerHTML=users.map(u=>{
+      const nm=escH(u.name||'Member');
+      let btn='';
+      if(fr[u.uid]) btn='<button class="cb-btn sm" onclick="cbOpenChat(\''+u.uid+'\',\''+nm.replace(/'/g,"\\'")+'\')">💬 '+nt('chat')+'</button>';
+      else if(sent[u.uid]) btn='<span class="cb-badge pend">'+nt('requested')+'</span>';
+      else btn='<button class="cb-btn sm sec" onclick="cbSendReq(\''+u.uid+'\',\''+nm.replace(/'/g,"\\'")+'\')">'+nt('addFriend')+'</button>';
+      return '<div class="cb-friend-row"><div class="cb-avatar">'+escH(nm.charAt(0).toUpperCase())+'</div><div class="grow"><b>'+nm+'</b></div>'+btn+'</div>';
+    }).join('');
+  }catch(e){ box.innerHTML='<p class="cb-muted">Error.</p>'; }
+}
+async function cbSendReq(toUid,toName){
+  if(!cbGate()) return;
+  try{
+    await rDb.collection('friendRequests').add({from:rUser.uid,fromName:rUser.displayName||rUser.email,to:toUid,toName:toName,status:'pending',ts:cbTs()});
+    cbFindFriendsQ();
+  }catch(e){}
+}
+
+/* ---------- chat ---------- */
+async function cbOpenChat(uid,name){
+  if(!cbGate()) return;
+  cbChatWith={uid:uid,name:name};
+  showTab('friends');
+  ['req','list','find'].forEach(w=>{document.getElementById('cbF'+w[0].toUpperCase()+w.slice(1)).style.display='none';});
+  document.getElementById('cbChatWrap').style.display='block';
+  document.getElementById('cbChatName').textContent=name;
+  document.getElementById('cbChatAvatar').textContent=(name||'?').charAt(0).toUpperCase();
+  const fr=await cbAreFriends(rUser.uid,uid);
+  document.getElementById('cbChatNote').textContent=fr?nt('unlimited'):nt('limited');
+  if(cbChatUnsub)cbChatUnsub();
+  const cid=cbPairId(rUser.uid,uid);
+  cbChatUnsub=rDb.collection('messages').where('chatId','==',cid).onSnapshot(snap=>{
+    const msgs=snap.docs.map(d=>d.data()).sort((a,b)=>{const ta=a.ts?a.ts.toMillis?a.ts.toMillis():0:0,tb=b.ts?b.ts.toMillis?b.ts.toMillis():0:0;return ta-tb;});
+    const box=document.getElementById('cbChatMsgs');
+    box.innerHTML=msgs.map(m=>'<div class="cb-msg '+(m.from===rUser.uid?'me':'them')+'">'+escH(m.text||'')+'</div>').join('');
+    box.scrollTop=box.scrollHeight;
+  },()=>{});
+}
+function cbCloseChat(){ if(cbChatUnsub)cbChatUnsub(); cbChatWith=null; document.getElementById('cbChatWrap').style.display='none'; cbFTab('list'); }
+async function cbSentToday(){
+  try{
+    const s=await rDb.collection('messages').where('from','==',rUser.uid).get();
+    const t=cbToday(); let n=0;
+    s.docs.forEach(d=>{ if(d.data().day===t) n++; });
+    return n;
+  }catch(e){ return 0; }
+}
+async function cbSendMsg(){
+  cbHideMsg('cbChatErr');
+  if(!cbChatWith) return; if(!cbGate()) return;
+  const inp=document.getElementById('cbChatInput'); const text=(inp.value||'').trim(); if(!text) return;
+  try{
+    const fr=await cbAreFriends(rUser.uid,cbChatWith.uid);
+    if(!fr){ const n=await cbSentToday(); if(n>=5){ cbShowErr('cbChatErr',nt('freeLimit')); return; } }
+    await rDb.collection('messages').add({chatId:cbPairId(rUser.uid,cbChatWith.uid),participants:[rUser.uid,cbChatWith.uid],from:rUser.uid,to:cbChatWith.uid,text:text,ts:cbTs(),day:cbToday()});
+    inp.value='';
+  }catch(e){ cbShowErr('cbChatErr',e.message||'Error'); }
+}
+
+/* ---------- rishta ---------- */
+/* SAMPLE_RISHTA: 8 sample profiles with AI-generated illustrative avatars (not real people).
+Shown only when Firestore 'profiles' is empty. */
+var SAMPLE_RISHTA=[
+{name:"Ahmed Raza",age:28,gender:"Male",city:"Karachi",edu:"BBA",job:"Bank Officer",looking:"Marriage",about:"Deeni gharane se talluq, namazi, family-oriented. Simple nikah ko tarjeeh.",photo:"images/rishta-m1.jpg",verified:true},
+{name:"Bilal Hussain",age:31,gender:"Male",city:"Lahore",edu:"MBA",job:"Business Owner",looking:"Marriage",about:"Apna karobar, settled life. Educated aur suljhi hui life partner ki talash.",photo:"images/rishta-m2.jpg",verified:true},
+{name:"Usman Tariq",age:26,gender:"Male",city:"Hyderabad",edu:"BSc Computer Science",job:"Software Developer",looking:"Marriage",about:"IT professional, deendar. Walden ke sath rehta hun, choti family.",photo:"images/rishta-m3.jpg",verified:false},
+{name:"Imran Sheikh",age:32,gender:"Male",city:"Karachi",edu:"MA Economics",job:"Government Officer",looking:"Marriage",about:"Sarkari mulazim, mustaqil rozgar. Shareef aur gharailu larki se rishta darkar.",photo:"images/rishta-m4.jpg",verified:true},
+{name:"Fatima Khan",age:25,gender:"Female",city:"Karachi",edu:"BSc",job:"Teacher",looking:"Marriage",about:"Parhi likhi, deendar larki. Taleem ko ahmiyat dene wale gharane se rishta chahiye.",photo:"images/rishta-f1.jpg",verified:true},
+{name:"Ayesha Malik",age:27,gender:"Female",city:"Lahore",edu:"MBA",job:"HR Manager",looking:"Marriage",about:"Professional working woman, balanced lifestyle. Understanding partner ki talash.",photo:"images/rishta-f2.jpg",verified:true},
+{name:"Sana Ahmed",age:24,gender:"Female",city:"Sukkur",edu:"BA",job:"Homemaker",looking:"Marriage",about:"Gharailu, suljhi hui larki. Deeni mahol wale ghar se rishta darkar.",photo:"images/rishta-f3.jpg",verified:false},
+{name:"Hira Shahid",age:27,gender:"Female",city:"Islamabad",edu:"MSc Psychology",job:"Counselor",looking:"Marriage",about:"Psychologist, soft-spoken. Izzat aur mohabbat par mabni rishta chahiye.",photo:"images/rishta-f4.jpg",verified:true}
+];
+async function cbLoadRishta(){
+  cbUpdateAuthBoxes();
+  try{
+    const s=await rDb.collection('profiles').get();
+    cbAllRishta=s.docs.map(d=>d.data());
+  }catch(e){ cbAllRishta=[]; }
+  if(!cbAllRishta.length && typeof SAMPLE_RISHTA!=='undefined') cbAllRishta=SAMPLE_RISHTA.slice();
+  const cities=[...new Set(cbAllRishta.map(p=>p.city).filter(Boolean))].sort();
+  const cs=document.getElementById('cbFltCity');
+  const cur=cs.value; cs.innerHTML='<option value="">'+nt('allCities')+'</option>'+cities.map(c=>'<option'+(c===cur?' selected':'')+'>'+escH(c)+'</option>').join('');
+  // verification banner
+  const vb=document.getElementById('cbVerifBanner');
+  if(!rUser){ vb.innerHTML=''; }
+  else if(cbMyVerif&&cbMyVerif.status==='approved'){ vb.innerHTML='<div class="cb-card"><span class="cb-badge">✓ '+nt('verifOk')+'</span></div>'; }
+  else if(cbMyVerif&&cbMyVerif.status==='pending'){ vb.innerHTML='<div class="cb-card"><span class="cb-badge pend">'+nt('verifPending')+'</span></div>'; }
+  else { vb.innerHTML='<div class="cb-card"><p class="cb-muted">'+nt('verifyIdWhy')+'</p><button class="cb-btn" onclick="cbOpenVerif()">'+nt('verifyIdBtn')+'</button></div>'; }
+  // profile buttons
+  const bb=document.getElementById('cbRishtaBtns');
+  if(rUser){
+    const mine=cbAllRishta.find(p=>p.uid===rUser.uid);
+    bb.innerHTML='<button class="cb-btn sec" onclick="cbOpenProfile()">'+nt(mine?'editProfile':'createProfile')+'</button>';
+    if(mine){ document.getElementById('cbPfName').value=mine.name||'';document.getElementById('cbPfAge').value=mine.age||'';document.getElementById('cbPfGender').value=mine.gender||'Female';document.getElementById('cbPfCity').value=mine.city||'';document.getElementById('cbPfEdu').value=mine.edu||'';document.getElementById('cbPfJob').value=mine.job||'';document.getElementById('cbPfLooking').value=mine.looking||'Marriage';document.getElementById('cbPfAbout').value=mine.about||''; }
+  } else bb.innerHTML='';
+  cbRenderRishta();
+}
+function cbRenderRishta(){
+  const grid=document.getElementById('cbRishtaGrid'); if(!grid) return;
+  const fg=document.getElementById('cbFltGender').value, fc=document.getElementById('cbFltCity').value, fv=document.getElementById('cbFltVerif').value;
+  let list=cbAllRishta.filter(p=>(!fg||p.gender===fg)&&(!fc||p.city===fc)&&(!(fv==='1')||p.verified===true));
+  if(!list.length){ grid.innerHTML='<p class="cb-muted">'+nt('noRishta')+'</p>'; return; }
+  grid.innerHTML=list.map(p=>{
+    const nm=escH(p.name||'?');
+    const badge=p.verified?'<span class="cb-badge">✓ '+nt('verified')+'</span>':'';
+    const msgBtn=(rUser&&p.uid&&p.uid!==rUser.uid)?'<button class="cb-btn sm" style="margin-top:8px" onclick="cbRishtaMsg(\''+p.uid+'\',\''+nm.replace(/'/g,"\\'")+'\')">💬 '+nt('msg')+'</button>':'';
+    const phHtml=p.photo?'<img src="'+escH(p.photo)+'" alt="'+nm+'" loading="lazy" onerror="this.remove()">':escH(nm.charAt(0).toUpperCase());
+return '<div class="rishta-card"><div class="ph">'+phHtml+'</div><div class="pb">'
+      +'<h4>'+nm+(p.age?', '+escH(p.age):'')+'</h4>'+badge
+      +'<div class="meta">'+escH(p.city||'')+(p.edu?' · '+escH(p.edu):'')+'</div>'
+      +'<div class="meta">'+escH(p.looking||'')+'</div>'
+      +(p.about?'<div class="meta" style="margin-top:6px">'+escH(p.about).slice(0,90)+'</div>':'')
+      +msgBtn+'</div></div>';
+  }).join('');
+}
+async function cbRishtaMsg(uid,name){
+  if(!cbGate()) return;
+  const ok=await cbIsVerified(rUser.uid);
+  if(!ok){ cbOpenVerif(); return; }
+  cbOpenChat(uid,name);
+}
+async function cbIsVerified(uid){
+  try{
+    const d=await rDb.collection('verifications').doc(uid).get();
+    if(d.exists&&d.data().status==='approved') return true;
+    const p=await rDb.collection('profiles').doc(uid).get();
+    return p.exists&&p.data().verified===true;
+  }catch(e){ return false; }
+}
+async function cbRefreshVerif(){
+  cbMyVerif=null;
+  if(!rUser) return;
+  try{ const d=await rDb.collection('verifications').doc(rUser.uid).get(); if(d.exists) cbMyVerif=d.data(); }catch(e){}
+}
+function cbOpenProfile(){ cbHideMsg('cbProfErr'); cbHideMsg('cbProfOk'); cbOpenModal('cbProfModal'); }
+async function cbSaveProfile(){
+  cbHideMsg('cbProfErr'); cbHideMsg('cbProfOk');
+  if(!cbGate()) return;
+  const p={name:document.getElementById('cbPfName').value.trim(),age:parseInt(document.getElementById('cbPfAge').value)||0,
+    gender:document.getElementById('cbPfGender').value,city:document.getElementById('cbPfCity').value.trim(),
+    edu:document.getElementById('cbPfEdu').value.trim(),job:document.getElementById('cbPfJob').value.trim(),
+    looking:document.getElementById('cbPfLooking').value,about:document.getElementById('cbPfAbout').value.trim(),
+    uid:rUser.uid,email:rUser.email||'',updated:new Date().toISOString()};
+  if(!p.name||!p.age||p.age<18||!p.city){ cbShowErr('cbProfErr',nt('fillAll')); return; }
+  try{
+    const ver=await cbIsVerified(rUser.uid);
+    p.verified=ver===true;
+    await rDb.collection('profiles').doc(rUser.uid).set(p,{merge:true});
+    cbShowOk('cbProfOk',nt('profileSaved'));
+    setTimeout(()=>{cbCloseModal('cbProfModal');cbLoadRishta();},1000);
+  }catch(e){ cbShowErr('cbProfErr',e.message||'Error'); }
+}
+
+/* ---------- ID verification: 3 mandatory steps ---------- */
+let cbCamStream=null;
+function cbOpenVerif(){
+  if(!cbGate()) return;
+  cbV={idFront:null,idBack:null,holding:null,live:null};
+  ['cbIdFrontPrev','cbIdBackPrev','cbHoldingPrev','cbLivePrev'].forEach(id=>{const e=document.getElementById(id);e.style.display='none';e.src='';});
+  ['cbVs1','cbVs2','cbVs3','cbVs4'].forEach(id=>document.getElementById(id).classList.remove('done'));
+  cbHideMsg('cbVerifErr'); cbHideMsg('cbVerifOk');
+  cbOpenModal('cbVerifModal');
+}
+async function cbVerifFile(inputId,prevId,stepId,key,maxDim){
+  const f=document.getElementById(inputId).files[0]; if(!f) return;
+  try{
+    const data=await cbCompress(f,maxDim||800,0.7);
+    cbV[key]=data;
+    const pv=document.getElementById(prevId); pv.src=data; pv.style.display='block';
+    document.getElementById(stepId).classList.add('done');
+  }catch(e){ cbShowErr('cbVerifErr','Image error — try again.'); }
+}
+async function cbStartCam(){
+  cbHideMsg('cbVerifErr');
+  try{
+    cbCamStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false});
+    const v=document.getElementById('cbLiveVideo'); v.srcObject=cbCamStream; v.style.display='block';
+    document.getElementById('cbCamShot').style.display='';
+    document.getElementById('cbCamStart').style.display='none';
+  }catch(e){ cbShowErr('cbVerifErr',nt('needCam')); }
+}
+function cbCaptureLive(){
+  try{
+    const v=document.getElementById('cbLiveVideo'), c=document.getElementById('cbLiveCanvas');
+    const w=v.videoWidth||640, h=v.videoHeight||480;
+    const s=Math.min(1,600/Math.max(w,h));
+    c.width=Math.round(w*s); c.height=Math.round(h*s);
+    c.getContext('2d').drawImage(v,0,0,c.width,c.height);
+    const data=c.toDataURL('image/jpeg',0.7);
+    cbV.live=data;
+    const pv=document.getElementById('cbLivePrev'); pv.src=data; pv.style.display='block';
+    document.getElementById('cbVs4').classList.add('done');
+    cbStopCam();
+  }catch(e){ cbShowErr('cbVerifErr','Capture failed — try again.'); }
+}
+function cbStopCam(){ try{ if(cbCamStream){ cbCamStream.getTracks().forEach(t=>t.stop()); cbCamStream=null; } }catch(e){} }
+async function cbSubmitVerification(){
+  cbHideMsg('cbVerifErr'); cbHideMsg('cbVerifOk');
+  if(!cbGate()) return;
+  if(!cbV.idFront||!cbV.idBack||!cbV.holding||!cbV.live){ cbShowErr('cbVerifErr',nt('needAll')); return; }
+  const btn=document.getElementById('cbVerifSubmit'); btn.disabled=true;
+  cbShowOk('cbVerifOk',nt('aiChecking'));
+  let verdict='manual', reason='AI check unavailable — manual review';
+  try{
+    const _vp='You are an identity verification assistant. Four photos in order: (1) ID card FRONT, (2) ID card BACK, (3) selfie of a person HOLDING their ID card, (4) LIVE camera photo. Task: decide whether photos (3) and (4) clearly show THE SAME adult person, and whether that person plausibly matches the portrait on the ID in photo (1). Reply in exactly this format - first line: VERDICT: PASS or VERDICT: REVIEW. Second line: REASON: one short sentence. Choose PASS only if clearly confident all photos show the same adult person. In ANY doubt choose REVIEW.';
+    const _vr=await fetch('https://text.pollinations.ai/openai',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'openai',max_tokens:150,messages:[{role:'user',content:[
+        {type:'text',text:_vp},
+        {type:'image_url',image_url:{url:cbV.idFront}},{type:'image_url',image_url:{url:cbV.idBack}},
+        {type:'image_url',image_url:{url:cbV.holding}},{type:'image_url',image_url:{url:cbV.live}}]}]})});
+    const _vj=await _vr.json();
+    const _tx=(_vj&&_vj.choices&&_vj.choices[0]&&_vj.choices[0].message&&_vj.choices[0].message.content)||'';
+    const _up=String(_tx).toUpperCase();
+    verdict=(_up.indexOf('VERDICT: PASS')>=0||_up.indexOf('VERDICT:PASS')>=0)?'pass':'manual';
+    reason=String(_tx).slice(0,400)||reason;
+  }catch(e){ verdict='manual'; }
+  const status=verdict==='pass'?'approved':'pending';
+  try{
+    await rDb.collection('verifications').doc(rUser.uid).set({
+      uid:rUser.uid,name:rUser.displayName||rUser.email,
+      idFront:cbV.idFront,idBack:cbV.idBack,holdingSelfie:cbV.holding,livePhoto:cbV.live,
+      aiCheck:verdict,aiReason:String(reason).slice(0,400),status:status,ts:cbTs()
+    });
+    if(verdict==='pass'){
+      await rDb.collection('profiles').doc(rUser.uid).set({verified:true},{merge:true});
+      cbShowOk('cbVerifOk',nt('aiPass'));
+    }else{
+      cbShowOk('cbVerifOk',nt('aiManual'));
+    }
+    await cbRefreshVerif();
+    setTimeout(()=>{cbCloseModal('cbVerifModal');cbLoadRishta();},1800);
+  }catch(e){ cbShowErr('cbVerifErr',e.message||'Error'); }
+  btn.disabled=false;
+}
+
+/* ---------- admin extensions (Tahir) ---------- */
+function cbIsAdmin(){ try{ return auth&&auth.currentUser&&auth.currentUser.email===ADMIN_EMAIL; }catch(e){ return false; } }
+async function cbAdminLoad(){
+  const sec=document.getElementById('cbAdminSec'); if(!sec) return;
+  if(!cbIsAdmin()){ sec.style.display='none'; return; }
+  sec.style.display='block';
+  // pending posts
+  try{
+    const s=await rDb.collection('posts').where('status','==','pending').get();
+    const box=document.getElementById('cbAdmPosts');
+    if(!s.docs.length) box.innerHTML='<p class="cb-muted">—</p>';
+    else box.innerHTML=s.docs.map(d=>{const p=d.data();return '<div class="cb-adm-item"><b>'+escH(p.name||'?')+'</b><p>'+escH(p.text||'')+'</p>'
+      +(p.img?'<img class="thumb" src="'+p.img+'">':'')
+      +'<div><button class="cb-btn sm" onclick="cbAdmPost(\''+d.id+'\',1)">'+nt('approve')+'</button> <button class="cb-btn sm sec" onclick="cbAdmPost(\''+d.id+'\',0)">'+nt('del')+'</button></div></div>';}).join('');
+  }catch(e){}
+
+  // V4: users + verification status
+  try{
+    const u=await rDb.collection('cb_users').orderBy('ts','desc').limit(60).get();
+    const v=await rDb.collection('verifications').where('status','==','approved').get();
+    const idOk={}; v.forEach(d=>{ idOk[d.id]=1; });
+    const box=document.getElementById('cbAdmUsers');
+    if(box){
+      box.innerHTML=u.docs.map(d=>{ const x=d.data();
+        const em=x.emailVerified?'<span class="vbadge blue" title="email">✓</span>':'<span class="vbadge off" title="email">✓</span>';
+        const ph=x.phoneVerified?'<span class="vbadge blue" title="'+escH(x.phone||'mobile')+'">✓</span>':'<span class="vbadge off" title="mobile">✓</span>';
+        const idv=idOk[d.id]?'<span class="vbadge gold" title="ID">✓</span>':'';
+        return '<div class="cb-adm-item"><b>'+escH(x.name||x.email||'?')+'</b> '
+          +'<span class="cb-muted" style="font-size:11px">'+escH(x.email||'')+(x.phone?' '+escH(x.phone):'')+'</span> '
+          +em+' '+ph+' '+idv+'</div>';
+      }).join('')||'<p class="cb-muted">—</p>';
+    }
+  }catch(e){}
+  // verifications
+  try{
+    const s=await rDb.collection('verifications').where('status','==','pending').get();
+    const s2=await rDb.collection('verifications').where('status','==','approved').get();
+    const box=document.getElementById('cbAdmVerif');
+    let html='';
+    if(s.docs.length){
+      html+='<p class="cb-muted">Pending manual review:</p>'+s.docs.map(d=>{const v=d.data();return '<div class="cb-adm-item"><b>'+escH(v.name||v.uid)+'</b>'
+        +'<div class="cb-verif-grid"><img src="'+v.idFront+'" alt="ID front"><img src="'+v.idBack+'" alt="ID back"><img src="'+v.holdingSelfie+'" alt="holding selfie"><img src="'+v.livePhoto+'" alt="live photo"></div>'
+        +'<p class="cb-muted">'+nt('aiReason')+': '+escH(v.aiReason||v.aiCheck||'')+'</p>'
+        +'<div><button class="cb-btn sm" onclick="cbAdmVerif(\''+d.id+'\',1)">'+nt('approve')+'</button> <button class="cb-btn sm sec" onclick="cbAdmVerif(\''+d.id+'\',0)">'+nt('reject')+'</button></div></div>';}).join('');
+    }
+    const aiOk=s2.docs.filter(d=>(d.data().aiCheck||'')==='pass');
+    if(aiOk.length){
+      html+='<p class="cb-muted" style="margin-top:10px">AI-verified (can revoke):</p>'+aiOk.map(d=>{const v=d.data();return '<div class="cb-adm-item"><b>'+escH(v.name||v.uid)+'</b> <span class="cb-badge">✓ AI</span> <button class="cb-btn sm sec" onclick="cbAdmVerif(\''+d.id+'\',0)">'+nt('reject')+'</button></div>';}).join('');
+    }
+    if(!html) html='<p class="cb-muted">—</p>';
+    box.innerHTML=html;
+  }catch(e){}
+  stAdminLoad();
+}
+async function cbAdmPost(pid,ok){
+  try{
+    if(ok) await rDb.collection('posts').doc(pid).update({status:'approved'});
+    else await rDb.collection('posts').doc(pid).delete();
+    cbAdminLoad();
+  }catch(e){}
+}
+async function cbAdmVerif(uid,ok){
+  try{
+    await rDb.collection('verifications').doc(uid).update({status:ok?'approved':'rejected'});
+    await rDb.collection('profiles').doc(uid).set({verified:!!ok},{merge:true});
+    cbAdminLoad();
+  }catch(e){}
+}
+
+/* ---------- init ---------- */
+/* ---- Firebase App Check (anti-abuse, FREE) ----
+   Setup (Firebase console, project rishta-match-b5077):
+   1. Build > App Check > Apps > select this web app > Register.
+   2. Get a reCAPTCHA v3 SITE KEY: https://www.google.com/recaptcha/admin
+   3. In App Check, set reCAPTCHA v3 as provider with that site key.
+   4. Uncomment the 2 lines below and paste the site key.
+   Until then App Check stays OFF; the app works normally. */
+// try{ const ac=firebase.appCheck(); ac.activate('PASTE_RECAPTCHA_V3_SITE_KEY_HERE', true); }catch(e){ console.log('appcheck off', e); }
+function cbInit(){
+  try{
+    rApp=firebase.initializeApp(RISHTA_CFG,'cbRishta');
+    rDb=rApp.firestore(); rAuth=rApp.auth();
+    rAuth.onAuthStateChanged(async u=>{ rUser=u; if(u){await cbEnsureUser();} else {cbMyVerif=null;cbEmailOk=false;cbPhoneOk=false;cbPhoneNum='';cbRenderGate();} cbUpdateAuthBoxes(); });
+  }catch(e){ console.log('cb fb init skipped',e); }
+  cbApplyLabels();
+  const ls=document.getElementById('langSel');
+  if(ls) ls.addEventListener('change',()=>setTimeout(cbApplyLabels,50));
+  // post image preview
+  const pi=document.getEleme
