@@ -82,5 +82,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "تحقیق: پاکستان میں 15 لاکھ بچے آن لائن جنسی استحصال کے خطرے سے دوچار", "ex_ur": "یونیسیف، ایکپیٹ انٹرنیشنل اور انٹرپول کی تحقیق کے مطابق ایک سال میں تقریباً 15 لاکھ بچے آن لائن جنسی استحصال کا شکار ہوئے۔ متاثرہ بچوں میں سے آدھے سے زائد نے کسی کو نہیں بتایا اور کسی نے رسمی شکایت نہیں کی۔", "title_en": "Study Finds 1.5 Million Pakistani Children Faced Online Sexual Abuse in a Year", "ex_en": "A UNICEF, ECPAT International and INTERPOL study found that about 1.5 million Pakistani children aged 12-17 faced technology-facilitated sexual exploitation in one year. Over half told no one, and none used formal reporting channels."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

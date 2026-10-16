@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "اربوں ڈالر کا فضائی دفاع حوثی میزائلوں کو کیوں نہیں روک پا رہا؟", "ex_ur": "حوثی میزائل اور ڈرون حملوں نے پیٹریاٹ اور تھاڈ سسٹمز کے باوجود سعودی عرب کے مہنگے فضائی دفاع کی کمزوریاں بے نقاب کر دی ہیں۔ ماہرین کم بلندی پر پرواز کرنے والے کروز میزائلوں، بیک وقت متعدد حملوں اور انٹرسیپٹرز کی کمی کو بڑی وجوہات قرار دیتے ہیں۔ لاگت کا عدم توازن شدید ہے، 12 ملین ڈالر کے انٹرسیپٹر اس میزائلوں کے خلاف استعمال ہو رہے ہیں جن کی قیمت اس کا عشر عشیر بھی نہیں۔", "title_en": "Why Saudi Arabia's Costly Air Defences Keep Missing Houthi Missiles", "ex_en": "Repeated Houthi missile and drone strikes have exposed gaps in Saudi Arabia's expensive air defences, despite Patriot and THAAD systems. Experts cite low-flying cruise missiles, saturation tactics and interceptor depletion as key reasons for the breaches. The cost imbalance is severe, with $12 million interceptors used against missiles costing a fraction of that."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

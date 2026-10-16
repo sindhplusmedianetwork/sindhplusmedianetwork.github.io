@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://sindhplusmedianetwork.github.io/images/news/img-73.jpg">
 <meta property="og:type" content="article">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Thailand's Queen Suthida Pilots Boeing 737 to Japan Herself", "author": {"@type": "Organization", "name": "Sindh Plus Media Network"}, "publisher": {"@type": "Organization", "name": "Sindh Plus Media Network", "url": "https://sindhplusmedianetwork.github.io"}, "datePublished": "2026-10-16", "image": "https://sindhplusmedianetwork.github.io/images/news/img-73.jpg", "description": "Thailand's Queen Suthida personally flew a royal fleet Boeing 737-8Z6 from Bangkok to Japan on October 14 — a seven-hour journey — to reach Hokkaido for the ASEAN Women's Ice Hockey Championship, where she serves as IIHF Women's Global Ambassador. The queen holds a commercial pilot's license with about 1,190 flight hours and drove herself to her hotel after landing; days earlier she became the first reigning queen to solo-fly a supersonic fighter jet."}
+{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Thailand's Queen Suthida Pilots Boeing 737 to Japan Herself", "author": {"@type": "Organization", "name": "Sindh Plus Media Network"}, "publisher": {"@type": "Organization", "name": "Sindh Plus Media Network", "url": "https://sindhplusmedianetwork.github.io"}, "datePublished": "2026-10-16", "image": "https://sindhplusmedianetwork.github.io/images/news/img-73.jpg", "description": "Thailand's Queen Suthida personally flew a royal fleet Boeing 737-8Z6 from Bangkok to Japan on October 14 — a seven-hour journey — to reach Hokkaido for the ASE"}
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -81,6 +81,22 @@ function copyLink(btn){
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(location.href).then(done).catch(function(){prompt("Copy link:",location.href);});}
   else{prompt("Copy link:",location.href);}
 }
+</script>
+<script id="artLang" type="application/json">{"title_ur": "تھائی لینڈ کی ملکہ سوتھیڈا نے خود بوئنگ 737 اڑا کر جاپان کا سفر کیا", "ex_ur": "تھائی لینڈ کی ملکہ سوتھیدا نے 14 اکتوبر کو شاہی بیڑے کا بوئنگ 737-8Z6 خود اڑا کر بینکاک سے جاپان کا سات گھنٹے کا سفر کیا تاکہ آسیان ویمنز آئس ہاکی چیمپئن شپ کے لیے ہوکائیڈو پہنچ سکیں، جہاں وہ آئی آئی ایچ ایف ویمنز گلوبل ایمبیسیڈر ہیں۔ ملکہ کے پاس کمرشل پائلٹ لائسنس اور تقریباً 1,190 گھنٹے کی پرواز کا تجربہ ہے اور لینڈنگ کے بعد وہ خود گاڑی چلا کر ہوٹل گئیں؛ چند روز قبل وہ سپرسونک لڑاکا طیارہ اکیلے اڑانے والی دنیا کی پہلی حکمران ملکہ بنی تھیں۔", "title_en": "Thailand's Queen Suthida Pilots Boeing 737 to Japan Herself", "ex_en": "Thailand's Queen Suthida personally flew a royal fleet Boeing 737-8Z6 from Bangkok to Japan on October 14 — a seven-hour journey — to reach Hokkaido for the ASE"}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
 </script>
 </body>
 </html>

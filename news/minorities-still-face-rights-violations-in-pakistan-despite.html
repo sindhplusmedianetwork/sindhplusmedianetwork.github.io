@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://sindhplusmedianetwork.github.io/images/news/img-70.jpg">
 <meta property="og:type" content="article">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Minorities Still Face Rights Violations in Pakistan Despite New Laws: HRCP", "author": {"@type": "Organization", "name": "Sindh Plus Media Network"}, "publisher": {"@type": "Organization", "name": "Sindh Plus Media Network", "url": "https://sindhplusmedianetwork.github.io"}, "datePublished": "2026-10-16", "image": "https://sindhplusmedianetwork.github.io/images/news/img-70.jpg", "description": "The Human Rights Commission of Pakistan's seventh annual report on freedom of religion finds religious minorities still suffer blasphemy-law misuse, forced conversions, hate speech and mob attacks — including two on the Ahmadi community in Chenab Nagar and the torching of a Christian practitioner's dispensary in Sheikhupura on October 9. HRCP welcomed the National Commission for Minorities Act 2025 but noted the commission itself still hasn't been constituted."}
+{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Minorities Still Face Rights Violations in Pakistan Despite New Laws: HRCP", "author": {"@type": "Organization", "name": "Sindh Plus Media Network"}, "publisher": {"@type": "Organization", "name": "Sindh Plus Media Network", "url": "https://sindhplusmedianetwork.github.io"}, "datePublished": "2026-10-16", "image": "https://sindhplusmedianetwork.github.io/images/news/img-70.jpg", "description": "The Human Rights Commission of Pakistan's seventh annual report on freedom of religion finds religious minorities still suffer blasphemy-law misuse, forced conv"}
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -82,6 +82,22 @@ function copyLink(btn){
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(location.href).then(done).catch(function(){prompt("Copy link:",location.href);});}
   else{prompt("Copy link:",location.href);}
 }
+</script>
+<script id="artLang" type="application/json">{"title_ur": "نئے قوانین کے باوجود پاکستان میں اقلیتوں کو حقوق کی خلاف ورزیوں کا سامنا، ایچ آر سی پی", "ex_ur": "ہیومن رائٹس کمیشن آف پاکستان کی مذہبی آزادی پر ساتویں سالانہ رپورٹ کے مطابق مذہبی اقلیتیں اب بھی توہینِ مذہب کے قوانین کے غلط استعمال، جبری تبدیلیِ مذہب، نفرت انگیز تقاریر اور ہجوم کے حملوں کا شکار ہیں — جن میں چناب نگر میں احمدی برادری پر دو حملے اور 9 اکتوبر کو شیخوپورہ میں ایک مسیحی طبیب کی ڈسپنسری کو آگ لگانا شامل ہے۔ ایچ آر سی پی نے قومی کمیشن برائے اقلیات ایکٹ 2025 کا خیرمقدم کیا مگر کہا کہ کمیشن ابھی تک تشکیل نہیں دیا گیا۔", "title_en": "Minorities Still Face Rights Violations in Pakistan Despite New Laws: HRCP", "ex_en": "The Human Rights Commission of Pakistan's seventh annual report on freedom of religion finds religious minorities still suffer blasphemy-law misuse, forced conv"}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
 </script>
 </body>
 </html>

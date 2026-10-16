@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "سری لنکا نے آخری ٹی ٹوئنٹی میں پاکستان کو 8 وکٹوں سے ہرا دیا، سیریز پاکستان کے نام", "ex_ur": "سری لنکا نے راولپنڈی میں تیسرے اور آخری ٹی ٹوئنٹی میچ میں پاکستان کو 8 وکٹوں سے شکست دے کر وائٹ واش سے بچ گیا۔ کپتان کسل مینڈس کی 48 گیندوں پر ناقابل شکست 87 رنز کی اننگز کی بدولت مہمان ٹیم نے 17.1 اوورز میں 169 رنز کا ہدف حاصل کر لیا۔ تاہم سیریز پاکستان نے 2-1 سے جیت لی، کپتان صاحبزادہ فرحان (76) پلیئر آف دی سیریز قرار پائے۔", "title_en": "Sri Lanka Stun Pakistan by 8 Wickets in Final T20I; Hosts Take Series 2-1", "ex_en": "Sri Lanka defeated Pakistan by eight wickets in the third and final T20I at Rawalpindi, avoiding a series whitewash. Captain Kusal Mendis's unbeaten 87 off 48 balls powered the 169-run chase, completed in 17.1 overs. Pakistan nevertheless won the series 2-1, with captain Sahibzada Farhan (76) named Player of the Series."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

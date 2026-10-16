@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "شنگھائی انویسٹمنٹ کانفرنس میں سندھ کے 34 معاہدے", "ex_ur": "سندھ حکومت نے شنگھائی میں دوسری سندھ انویسٹمنٹ کانفرنس میں چینی اور پاکستانی کاروباروں اور سرکاری اداروں کے ساتھ توانائی، مینوفیکچرنگ، زراعت اور جدید ٹیکنالوجیز کے شعبوں میں 34 معاہدے کیے۔ وزیراعلیٰ مراد علی شاہ نے خصوصی اقتصادی زونوں میں 10 سالہ انکم ٹیکس چھوٹ کا اعلان کیا، جس میں 1530 ایکڑ دھابیجی خصوصی اقتصادی زون سی پیک کا ترجیحی منصوبہ ہے؛ 12 سال کے وقفے کے بعد ہونے والی ایک روزہ کانفرنس میں تقریباً 400 مندوبین نے شرکت کی۔", "title_en": "Sindh Seals 34 MoUs at Shanghai Investment Conference", "ex_en": "The Sindh government secured 34 MoUs with Chinese and Pakistani businesses and government entities at the second Sindh Investment Conference in Shanghai, targeting energy, manufacturing, agriculture and emerging technologies. Chief Minister Murad Ali Shah announced a 10-year income-tax exemption in special economic zones, with the 1,530-acre Dhabeji SEZ as a CPEC priority project; the day-long moot drew around 400 delegates after a 12-year gap."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>

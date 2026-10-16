@@ -83,5 +83,21 @@ function copyLink(btn){
   else{prompt("Copy link:",location.href);}
 }
 </script>
+<script id="artLang" type="application/json">{"title_ur": "گلگت بلتستان میں بارش اور برف باری، دو افراد جاں بحق", "ex_ur": "نگر کے علاقے گل مات کے دو نوجوان عارف حسین اور کاشف علی جمعرات کو قراقرم ہائی وے پر پیسان کے قریب گاڑی پر لینڈ سلائیڈنگ آنے سے جاں بحق ہو گئے۔ بابوسر ٹاپ پر شدید برف باری کے بعد بابوسر پاس سڑک ہر طرح کی ٹریفک کے لیے بند کر دی گئی، جہاں دایمر پولیس نے برف میں پھنسے سیاحوں کو نکالا، جبکہ خنجراب پاس سے بھی ٹریفک متاثر رہی۔", "title_en": "Two Killed as Rain, Snow Disrupt Life Across Gilgit-Baltistan", "ex_en": "Two young men from Gulmat, Nagar — Arif Hussain and Kashif Ali — were killed on Thursday when a landslide hit their vehicle on the Karakoram Highway near Pissan. Heavy snowfall at Babusar Top forced the closure of the Babusar Pass road, where Diamer police rescued tourists stranded in the snow, while traffic through Khunjerab Pass also stayed disrupted."}</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);var lang=q.get('lang')||'en';
+if(lang!=='ur')return;
+var d=JSON.parse(document.getElementById('artLang').textContent);
+document.documentElement.lang='ur';document.documentElement.dir='rtl';
+var h1=document.querySelector('main h1');
+if(h1&&d.title_ur)h1.textContent=d.title_ur;
+document.title=(d.title_ur||d.title_en)+' — Sindh Plus Media Network';
+var art=document.querySelector('main article');
+if(art&&d.ex_ur){var lede=document.createElement('p');lede.setAttribute('dir','rtl');lede.setAttribute('lang','ur');lede.style.fontFamily="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif";lede.style.fontSize='19px';lede.style.lineHeight='2.4';lede.textContent=d.ex_ur;art.insertBefore(lede,art.firstChild);}
+var ub=document.querySelector('.ubox');if(ub)ub.style.display='none';
+var bk=document.querySelector('.back');if(bk)bk.textContent='← سندھ پلس میڈیا نیٹ ورک پر واپس';
+}catch(e){}})();
+</script>
 </body>
 </html>
