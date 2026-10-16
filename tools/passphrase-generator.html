@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passphrase Generator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Create memorable yet highly secure passphrases with our free passphrase generator. It picks random words from a built-in wordlist using cryptographically secure randomness, with options for separators, capitalization and a trailing number. Passphrases are easier to remember than passwords and harder to crack.">
+<meta name="keywords" content="passphrase generator, random passphrase generator, memorable password generator, diceware passphrase generator, secure passphrase maker, word password generator, passphrase creator, strong passphrase generator, random word password, easy to remember password generator, passphrase tool, generate passphrase online, secure memorable password, xkcd password generator, four word password generator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/passphrase-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Passphrase Generator — Free Online Tool">
+<meta property="og:description" content="Create memorable yet highly secure passphrases with our free passphrase generator. It picks random words from a built-in wordlist using cryptographically secure randomness, with options for separators, capitalization and a trailing number. Passphrases are easier to remember than passwords and harder to crack.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/passphrase-generator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Passphrase Generator — Free Online Tool">
+<meta name="twitter:description" content="Create memorable yet highly secure passphrases with our free passphrase generator. It picks random words from a built-in wordlist using cryptographically secure randomness, with options for separators, capitalization and a trailing number. Passphrases are easier to remember than passwords and harder to crack.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Passphrase Generator","url":"https://sindhplusmedianetwork.github.io/tools/passphrase-generator.html","description":"Create memorable yet highly secure passphrases with our free passphrase generator. It picks random words from a built-in wordlist using cryptographically secure randomness, with options for separators, capitalization and a trailing number. Passphrases are easier to remember than passwords and harder to crack.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Security &amp; Privacy</div>
+<h1>Passphrase Generator</h1>
+<p class="desc">Create memorable yet highly secure passphrases with our free passphrase generator. It picks random words from a built-in wordlist using cryptographically secure randomness, with options for separators, capitalization and a trailing number. Passphrases are easier to remember than passwords and harder to crack.</p>
+<div class="toolbox">
+<label>Number of words (3&ndash;8):<br><input type="number" id="nw" value="4" min="3" max="8" style="width:100%"></label><br>
+<label>Separator:<br><select id="sep" style="width:100%"><option value="dash">Hyphen (-)</option><option value="space">Space</option></select></label><br>
+<label><input type="checkbox" id="cap"> Capitalize each word</label><br>
+<label><input type="checkbox" id="tn"> Add trailing number</label><br>
+<button onclick="ppgGen()">Generate Passphrase</button>
+<div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Passphrase Generator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fpassphrase-generator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Passphrase Generator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fpassphrase-generator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#PassphraseGenerator #PasswordSecurity #CyberSecurity #OnlineSecurity #Diceware #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function ppgE(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+var ppgWords=['apple','brave','cloud','dance','eagle','flame','grape','happy','island','jungle','kite','lemon','magic','night','ocean','piano','quiet','river','sunny','tiger','umbrella','violet','water','yellow','zebra','anchor','baker','candle','door','engine','forest','garden','house','ice','jacket','king','ladder','moon','nest','orange','paper','queen','rocket','stone','table','uncle','voice','window','box','year','zero','alpha','bridge','chair','dream','earth','frost','globe','hill','ink','joy','knife'];
+var ppgLast='';
+function ppgGen(){
+var n=parseInt(document.getElementById('nw').value,10);
+var r=document.getElementById('result');
+if(isNaN(n)||n<3||n>8){r.innerHTML='<p style="color:red">Choose between 3 and 8 words.</p>';return;}
+var sep=document.getElementById('sep').value==='space'?' ':'-';
+var cap=document.getElementById('cap').checked;
+var tn=document.getElementById('tn').checked;
+var rnd=new Uint32Array(n);crypto.getRandomValues(rnd);
+var words=[];
+for(var i=0;i<n;i++){var w=ppgWords[rnd[i]%ppgWords.length];if(cap){w=w.charAt(0).toUpperCase()+w.slice(1);}words.push(w);}
+var ph=words.join(sep);
+if(tn){var d=new Uint8Array(1);crypto.getRandomValues(d);ph+=sep+(d[0]%10);}
+var ent=(n*Math.log2(ppgWords.length)).toFixed(1);
+ppgLast=ph;
+r.innerHTML='<p><strong>Your passphrase:</strong></p><p style="font-family:monospace;background:#f4f4f4;padding:10px;border-radius:6px;word-break:break-all">'+ppgE(ph)+'</p><p>Entropy: <strong>'+ent+' bits</strong> ('+n+' words from a '+ppgWords.length+'-word list)</p><button onclick="ppgCopy()">Copy</button>';
+}
+function ppgCopy(){navigator.clipboard.writeText(ppgLast).then(function(){alert('Copied!');}).catch(function(){alert('Copy failed - select and copy manually.');});}
+</script>
+</body>
+</html>

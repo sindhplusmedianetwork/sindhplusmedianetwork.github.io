@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplication Table Generator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Generate multiplication tables for any number instantly. Perfect for kids learning times tables and quick revision before math tests.">
+<meta name="keywords" content="multiplication table generator, times table generator, multiplication chart, times tables practice, math table maker, multiplication table 1 to 20, times table chart maker, multiplication facts practice, learn times tables, math tables generator, times table worksheet">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/multiplication-table-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Multiplication Table Generator — Free Online Tool">
+<meta property="og:description" content="Generate multiplication tables for any number instantly. Perfect for kids learning times tables and quick revision before math tests.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/multiplication-table-generator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Multiplication Table Generator — Free Online Tool">
+<meta name="twitter:description" content="Generate multiplication tables for any number instantly. Perfect for kids learning times tables and quick revision before math tests.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Multiplication Table Generator","url":"https://sindhplusmedianetwork.github.io/tools/multiplication-table-generator.html","description":"Generate multiplication tables for any number instantly. Perfect for kids learning times tables and quick revision before math tests.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Education &amp; Learning</div>
+<h1>Multiplication Table Generator</h1>
+<p class="desc">Generate multiplication tables for any number instantly. Perfect for kids learning times tables and quick revision before math tests.</p>
+<div class="toolbox">
+<label>Number<input type='number' id='mt_n' placeholder='7' min='1' max='1000'></label><label>Up to (multiplier)<input type='number' id='mt_u' value='10' min='1' max='100'></label><button onclick='mtGo()'>Generate Table</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Multiplication Table Generator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmultiplication-table-generator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Multiplication Table Generator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmultiplication-table-generator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#MultiplicationTable #TimesTable #MathHelp #KidsLearning #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function mtGo(){var n=parseFloat(document.getElementById('mt_n').value),u=parseInt(document.getElementById('mt_u').value,10);var r=document.getElementById('result');if(isNaN(n)){r.innerHTML='<p style="color:#c00">Enter a number.</p>';return;}if(isNaN(u)||u<1||u>100){r.innerHTML='<p style="color:#c00">Multiplier must be between 1 and 100.</p>';return;}var h='<h4>Multiplication table of '+n+'</h4><table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse"><tr><th style="background:#f0f0f0">×</th><th style="background:#f0f0f0">=</th></tr>';for(var i=1;i<=u;i++){h+='<tr><td style="text-align:center">'+n+' × '+i+'</td><td style="text-align:center"><b>'+(n*i)+'</b></td></tr>';}h+='</table>';r.innerHTML=h;}
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Signature Tool — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Sign PDFs with your handwritten signature. Draw your signature, choose the page and position, and get a signed PDF instantly.">
+<meta name="keywords" content="sign pdf online free, electronic signature pdf, draw signature on pdf, pdf signer, add signature to pdf document, draw signature pdf, esign document free, sign pdf without printing, digital signature maker, pdf autograph tool">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/pdf-signature-tool.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PDF Signature Tool — Free Online Tool">
+<meta property="og:description" content="Sign PDFs with your handwritten signature. Draw your signature, choose the page and position, and get a signed PDF instantly.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/pdf-signature-tool.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PDF Signature Tool — Free Online Tool">
+<meta name="twitter:description" content="Sign PDFs with your handwritten signature. Draw your signature, choose the page and position, and get a signed PDF instantly.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"PDF Signature Tool","url":"https://sindhplusmedianetwork.github.io/tools/pdf-signature-tool.html","description":"Sign PDFs with your handwritten signature. Draw your signature, choose the page and position, and get a signed PDF instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">PDF &amp; Documents</div>
+<h1>PDF Signature Tool</h1>
+<p class="desc">Sign PDFs with your handwritten signature. Draw your signature, choose the page and position, and get a signed PDF instantly.</p>
+<div class="toolbox">
+<label>Draw your signature:<br><canvas id='sg' width='320' height='120' style='border:2px dashed #999;border-radius:8px;touch-action:none;background:#fff'></canvas></label><br><button onclick='clrs()'>Clear</button><br><br><label>Select PDF:<input type='file' id='f' accept='.pdf,application/pdf'></label><br><label>Page number:<input id='pg' type='number' min='1' value='1'></label><br><label>Position:<select id='ps'><option value='br'>Bottom right</option><option value='bl'>Bottom left</option><option value='c'>Center</option></select></label><br><label>Width (px):<input id='wd' type='number' min='40' max='400' value='150'></label><br><button onclick='go()'>Sign PDF</button><p style='font-size:13px;color:#555'>Adds your drawn signature as an image. For legally certified digital signatures, use Adobe Acrobat.</p>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=PDF Signature Tool — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fpdf-signature-tool.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=PDF Signature Tool — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fpdf-signature-tool.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#SignPDF #ESignature #PDFTools #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+
+function dl(data,name,type){var b=data instanceof Blob?data:new Blob([data],{type:type||'application/pdf'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},800);}
+function readBuf(f){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result);};r.onerror=function(){rej(new Error('read'));};r.readAsArrayBuffer(f);});}
+function readTxt(f){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result);};r.onerror=function(){rej(new Error('read'));};r.readAsText(f);});}
+async function pdfLib(){if(window.PDFLib&&PDFLib.PDFDocument)return PDFLib;await new Promise(function(res,rej){var s=document.createElement('script');s.src='https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js';s.onload=res;s.onerror=function(){rej(new Error('cdn'));};document.head.appendChild(s);});if(!(window.PDFLib&&PDFLib.PDFDocument))throw new Error('cdn');return PDFLib;}
+function cdnErr(){return 'Could not load the PDF engine (needs internet once). Check your connection and try again.';}
+function busy(t){document.getElementById('result').innerHTML='<i>'+t+'</i>';}
+function err(t){document.getElementById('result').innerHTML='<span style="color:#c00">'+t+'</span>';}
+function ok(t){document.getElementById('result').innerHTML='<span style="color:#2e7d32"><b>'+t+'</b></span>';}
+function parseRanges(str,max,keepOrder){var out=[],seen={};var parts=String(str).split(',');for(var k=0;k<parts.length;k++){var part=parts[k].trim();if(!part)continue;var m=part.match(/^(\d+)\s*-\s*(\d+)$/);if(m){var a=+m[1],b=+m[2];if(a>b){var t=a;a=b;b=t;}for(var i=a;i<=b;i++){if(i>=1&&i<=max&&!seen[i]){seen[i]=1;out.push(i);}}}else if(/^\d+$/.test(part)){var n=+part;if(n>=1&&n<=max&&!seen[n]){seen[n]=1;out.push(n);}}else{throw new Error('Invalid page selection: "'+part+'"');}}if(!out.length)throw new Error('No valid pages selected.');if(!keepOrder)out.sort(function(a,b){return a-b;});return out;}
+
+(function(){var cv=document.getElementById('sg');if(!cv)return;var cx=cv.getContext('2d'),dr=false,lx=0,ly=0;
+function pos(e){var r=cv.getBoundingClientRect();var t=e.touches?e.touches[0]:e;return [t.clientX-r.left,t.clientY-r.top];}
+cv.addEventListener('pointerdown',function(e){dr=true;var p=pos(e);lx=p[0];ly=p[1];e.preventDefault();});
+cv.addEventListener('pointermove',function(e){if(!dr)return;var p=pos(e);cx.strokeStyle='#111';cx.lineWidth=2.5;cx.lineCap='round';cx.beginPath();cx.moveTo(lx,ly);cx.lineTo(p[0],p[1]);cx.stroke();lx=p[0];ly=p[1];e.preventDefault();});
+window.addEventListener('pointerup',function(){dr=false;});})();
+function clrs(){var cv=document.getElementById('sg');cv.getContext('2d').clearRect(0,0,cv.width,cv.height);}
+async function go(){
+  var f=document.getElementById('f').files[0];
+  if(!f){err('Please select a PDF file.');return;}
+  var cv=document.getElementById('sg'),d=cv.getContext('2d').getImageData(0,0,cv.width,cv.height).data,blank=true;
+  for(var i=3;i<d.length;i+=40){if(d[i]>0){blank=false;break;}}
+  if(blank){err('Please draw your signature first.');return;}
+  busy('Signing...');
+  try{
+    var bin=atob(cv.toDataURL('image/png').split(',')[1]),png=new Uint8Array(bin.length);
+    for(var j=0;j<bin.length;j++)png[j]=bin.charCodeAt(j);
+    var L=await pdfLib(),doc=await L.PDFDocument.load(await readBuf(f),{ignoreEncryption:true});
+    var pgN=Math.min(Math.max(+document.getElementById('pg').value||1,1),doc.getPageCount());
+    var img=await doc.embedPng(png),p=doc.getPage(pgN-1),pw=p.getWidth(),ph=p.getHeight();
+    var w=+document.getElementById('wd').value||150,h=w*img.height/img.width,ps=document.getElementById('ps').value,x,y;
+    if(ps==='br'){x=pw-w-50;y=60;}else if(ps==='bl'){x=50;y=60;}else{x=pw/2-w/2;y=ph/2-h/2;}
+    p.drawImage(img,{x:x,y:y,width:w,height:h});
+    dl(await doc.save(),f.name.replace(/\.pdf$/i,'')+'-signed.pdf');
+    ok('Done! Signature placed on page '+pgN+'. Download started.');
+  }catch(e){err(e.message==='cdn'?cdnErr():'Error: '+e.message);}
+}
+</script>
+</body>
+</html>

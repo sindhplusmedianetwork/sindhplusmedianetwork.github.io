@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiple-Choice Test Maker — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Create your own multiple-choice tests for any subject. Add questions with four options, mark the correct answer, then take the quiz and get your score instantly.">
+<meta name="keywords" content="multiple choice test maker, mcq quiz maker, create mcq test online, make quiz with answers, custom test creator, exam practice tool, quiz builder free, create online test, exam maker tool, practice test generator, self assessment quiz">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/multiple-choice-test-maker.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Multiple-Choice Test Maker — Free Online Tool">
+<meta property="og:description" content="Create your own multiple-choice tests for any subject. Add questions with four options, mark the correct answer, then take the quiz and get your score instantly.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/multiple-choice-test-maker.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Multiple-Choice Test Maker — Free Online Tool">
+<meta name="twitter:description" content="Create your own multiple-choice tests for any subject. Add questions with four options, mark the correct answer, then take the quiz and get your score instantly.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Multiple-Choice Test Maker","url":"https://sindhplusmedianetwork.github.io/tools/multiple-choice-test-maker.html","description":"Create your own multiple-choice tests for any subject. Add questions with four options, mark the correct answer, then take the quiz and get your score instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Education &amp; Learning</div>
+<h1>Multiple-Choice Test Maker</h1>
+<p class="desc">Create your own multiple-choice tests for any subject. Add questions with four options, mark the correct answer, then take the quiz and get your score instantly.</p>
+<div class="toolbox">
+<label>Question<textarea id='mq_q' rows='2' placeholder='What is the capital of Pakistan?'></textarea></label><label>Option A<input type='text' id='mq_a' placeholder='Karachi'></label><label>Option B<input type='text' id='mq_b' placeholder='Lahore'></label><label>Option C<input type='text' id='mq_c' placeholder='Islamabad'></label><label>Option D<input type='text' id='mq_d' placeholder='Peshawar'></label><label>Correct answer<select id='mq_ok'><option value='0'>A</option><option value='1'>B</option><option value='2'>C</option><option value='3'>D</option></select></label><button onclick='mqAdd()'>Add Question</button> <button onclick='mqQuiz()'>Start Test</button> <button onclick='mqClear()'>Clear All</button><p style='color:#666;font-size:13px'>Saved questions: <b id='mq_n'>0</b></p>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Multiple-Choice Test Maker — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmultiple-choice-test-maker.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Multiple-Choice Test Maker — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fmultiple-choice-test-maker.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#MCQMaker #QuizMaker #TestPrep #StudentTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function mqGet(){try{return JSON.parse(localStorage.getItem('spmn_mcq')||'[]');}catch(e){return [];}}
+function mqSet(a){localStorage.setItem('spmn_mcq',JSON.stringify(a));mqCount();}
+function mqCount(){document.getElementById('mq_n').textContent=mqGet().length;}
+function mqE(s){return String(s).replace(/</g,'&lt;');}
+function mqAdd(){var q=document.getElementById('mq_q').value.trim();var opts=[0,1,2,3].map(function(i){return document.getElementById('mq_'+'abcd'[i]).value.trim();});var ok=parseInt(document.getElementById('mq_ok').value,10);var r=document.getElementById('result');if(!q){r.innerHTML='<p style="color:#c00">Enter a question.</p>';return;}if(opts.some(function(o){return !o;})){r.innerHTML='<p style="color:#c00">Fill in all four options.</p>';return;}var a=mqGet();a.push({q:q,opts:opts,ok:ok});mqSet(a);document.getElementById('mq_q').value='';['a','b','c','d'].forEach(function(x){document.getElementById('mq_'+x).value='';});r.innerHTML='<p style="color:#080">Question added. Total: '+a.length+'.</p>';}
+function mqClear(){if(confirm('Delete all questions?')){mqSet([]);document.getElementById('result').innerHTML='<p>All questions cleared.</p>';}}
+function mqQuiz(){var a=mqGet();var r=document.getElementById('result');if(!a.length){r.innerHTML='<p style="color:#c00">Add questions first.</p>';return;}var idx=0,score=0,answers=[];function ask(){if(idx>=a.length){var h='<h4>Test complete!</h4><p style="font-size:20px"><b>Score: '+score+' / '+a.length+'</b> ('+Math.round(score/a.length*100)+'%)</p><ol>';a.forEach(function(q,i){var mine=answers[i];h+='<li>'+mqE(q.q)+'<br><span style="color:'+(mine===q.ok?'#080':'#c00')+'">Your answer: '+mqE(q.opts[mine])+'</span>'+(mine===q.ok?' ✓':' — correct: <b>'+mqE(q.opts[q.ok])+'</b>')+'</li>';});h+='</ol><button onclick="mqQuiz()">Retake Test</button>';r.innerHTML=h;return;}var q=a[idx];var h='<p>Question '+(idx+1)+' of '+a.length+'</p><p><b>'+mqE(q.q)+'</b></p>';q.opts.forEach(function(o,i){h+='<label style="display:block;margin:6px 0"><input type="radio" name="mqo" value="'+i+'"> '+mqE(o)+'</label>';});h+='<button onclick="mqAns()">Submit Answer</button>';r.innerHTML=h;window.mqAns=function(){var sel=document.querySelector('input[name=mqo]:checked');if(!sel){alert('Pick an answer first.');return;}var v=parseInt(sel.value,10);answers.push(v);if(v===q.ok)score++;idx++;ask();};}ask();}
+mqCount();
+</script>
+</body>
+</html>

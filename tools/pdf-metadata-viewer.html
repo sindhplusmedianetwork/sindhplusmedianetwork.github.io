@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Metadata Viewer — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="See what&#x27;s hidden inside a PDF: title, author, creator app, creation date and page count. Instant privacy check before you share a file.">
+<meta name="keywords" content="pdf metadata viewer, check pdf info, pdf properties online, view pdf author, pdf creation date checker, pdf details extractor, pdf exif data, document properties viewer, pdf info checker, see pdf details, pdf author finder">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/pdf-metadata-viewer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PDF Metadata Viewer — Free Online Tool">
+<meta property="og:description" content="See what&#x27;s hidden inside a PDF: title, author, creator app, creation date and page count. Instant privacy check before you share a file.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/pdf-metadata-viewer.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PDF Metadata Viewer — Free Online Tool">
+<meta name="twitter:description" content="See what&#x27;s hidden inside a PDF: title, author, creator app, creation date and page count. Instant privacy check before you share a file.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"PDF Metadata Viewer","url":"https://sindhplusmedianetwork.github.io/tools/pdf-metadata-viewer.html","description":"See what&#x27;s hidden inside a PDF: title, author, creator app, creation date and page count. Instant privacy check before you share a file.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">PDF &amp; Documents</div>
+<h1>PDF Metadata Viewer</h1>
+<p class="desc">See what&#x27;s hidden inside a PDF: title, author, creator app, creation date and page count. Instant privacy check before you share a file.</p>
+<div class="toolbox">
+<label>Select PDF:<input type='file' id='f' accept='.pdf,application/pdf'></label><br><button onclick='go()'>View Metadata</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=PDF Metadata Viewer — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fpdf-metadata-viewer.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=PDF Metadata Viewer — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fpdf-metadata-viewer.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#PDFMetadata #PDFTools #PrivacyCheck #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+
+function dl(data,name,type){var b=data instanceof Blob?data:new Blob([data],{type:type||'application/pdf'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},800);}
+function readBuf(f){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result);};r.onerror=function(){rej(new Error('read'));};r.readAsArrayBuffer(f);});}
+function readTxt(f){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result);};r.onerror=function(){rej(new Error('read'));};r.readAsText(f);});}
+async function pdfLib(){if(window.PDFLib&&PDFLib.PDFDocument)return PDFLib;await new Promise(function(res,rej){var s=document.createElement('script');s.src='https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js';s.onload=res;s.onerror=function(){rej(new Error('cdn'));};document.head.appendChild(s);});if(!(window.PDFLib&&PDFLib.PDFDocument))throw new Error('cdn');return PDFLib;}
+function cdnErr(){return 'Could not load the PDF engine (needs internet once). Check your connection and try again.';}
+function busy(t){document.getElementById('result').innerHTML='<i>'+t+'</i>';}
+function err(t){document.getElementById('result').innerHTML='<span style="color:#c00">'+t+'</span>';}
+function ok(t){document.getElementById('result').innerHTML='<span style="color:#2e7d32"><b>'+t+'</b></span>';}
+function parseRanges(str,max,keepOrder){var out=[],seen={};var parts=String(str).split(',');for(var k=0;k<parts.length;k++){var part=parts[k].trim();if(!part)continue;var m=part.match(/^(\d+)\s*-\s*(\d+)$/);if(m){var a=+m[1],b=+m[2];if(a>b){var t=a;a=b;b=t;}for(var i=a;i<=b;i++){if(i>=1&&i<=max&&!seen[i]){seen[i]=1;out.push(i);}}}else if(/^\d+$/.test(part)){var n=+part;if(n>=1&&n<=max&&!seen[n]){seen[n]=1;out.push(n);}}else{throw new Error('Invalid page selection: "'+part+'"');}}if(!out.length)throw new Error('No valid pages selected.');if(!keepOrder)out.sort(function(a,b){return a-b;});return out;}
+
+function pdfUnesc2(s){return s.replace(/\\([nrtbf()\\])/g,function(m,c){return {n:'\n',r:' ',t:' ',b:'',f:'','(':'(',')':')','\\':'\\'}[c];}).replace(/\\([0-7]{1,3})/g,function(m,o){return String.fromCharCode(parseInt(o,8));});}
+async function go(){
+  var f=document.getElementById('f').files[0];
+  if(!f){err('Please select a PDF file.');return;}
+  busy('Reading...');
+  try{
+    var b=new Uint8Array(await readBuf(f)), s='';for(var i=0;i<b.length;i++)s+=String.fromCharCode(b[i]);
+    function get(k){var m=s.match(new RegExp('/'+k+'\\s*\\(((?:\\\\[\\s\\S]|[^\\\\()])*)\\)'));return m?pdfUnesc2(m[1]):'';}
+    var pages=(s.match(/\/Type\s*\/Page[^s]/g)||[]).length;
+    var rows=[['File name',f.name],['File size',(f.size/1024).toFixed(1)+' KB'],['Pages',pages||'unknown'],['Title',get('Title')],['Author',get('Author')],['Subject',get('Subject')],['Keywords',get('Keywords')],['Creator',get('Creator')],['Producer',get('Producer')],['Created',get('CreationDate')],['Modified',get('ModDate')]];
+    var h='<b>PDF metadata:</b><table style="border-collapse:collapse;margin-top:8px;width:100%">';
+    rows.forEach(function(r){h+='<tr><td style="border:1px solid #ddd;padding:6px;background:#f7f7f7"><b>'+r[0]+'</b></td><td style="border:1px solid #ddd;padding:6px;word-break:break-all">'+(r[1]||'<span style="color:#999">not set</span>')+'</td></tr>';});
+    document.getElementById('result').innerHTML=h+'</table>';
+  }catch(e){err('Could not read file.');}
+}
+</script>
+</body>
+</html>
