@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Signature Checker — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Check a file&#x27;s real type by reading its magic-number signature bytes — not just its extension. Detect PNG, JPEG, GIF, PDF, ZIP and MP4 files and get warned when the extension doesn&#x27;t match the actual content, a common trick in malware and phishing attachments. Analysis runs entirely in your browser.">
+<meta name="keywords" content="file signature checker, check file type, magic number checker, file type verifier, detect real file type, file extension checker, verify file format, file header checker, is this file really a pdf, fake file extension detector, file type identifier, magic bytes checker, file authenticity check, check file signature online, file format validator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/file-signature-checker.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="File Signature Checker — Free Online Tool">
+<meta property="og:description" content="Check a file&#x27;s real type by reading its magic-number signature bytes — not just its extension. Detect PNG, JPEG, GIF, PDF, ZIP and MP4 files and get warned when the extension doesn&#x27;t match the actual content, a common trick in malware and phishing attachments. Analysis runs entirely in your browser.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/file-signature-checker.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="File Signature Checker — Free Online Tool">
+<meta name="twitter:description" content="Check a file&#x27;s real type by reading its magic-number signature bytes — not just its extension. Detect PNG, JPEG, GIF, PDF, ZIP and MP4 files and get warned when the extension doesn&#x27;t match the actual content, a common trick in malware and phishing attachments. Analysis runs entirely in your browser.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"File Signature Checker","url":"https://sindhplusmedianetwork.github.io/tools/file-signature-checker.html","description":"Check a file&#x27;s real type by reading its magic-number signature bytes — not just its extension. Detect PNG, JPEG, GIF, PDF, ZIP and MP4 files and get warned when the extension doesn&#x27;t match the actual content, a common trick in malware and phishing attachments. Analysis runs entirely in your browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Security &amp; Privacy</div>
+<h1>File Signature Checker</h1>
+<p class="desc">Check a file&#x27;s real type by reading its magic-number signature bytes — not just its extension. Detect PNG, JPEG, GIF, PDF, ZIP and MP4 files and get warned when the extension doesn&#x27;t match the actual content, a common trick in malware and phishing attachments. Analysis runs entirely in your browser.</p>
+<div class="toolbox">
+<label>Choose a file:<br><input type="file" id="sf" style="width:100%"></label><br>
+<button onclick="fscCheck()">Check File Signature</button>
+<div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=File Signature Checker — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Ffile-signature-checker.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=File Signature Checker — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Ffile-signature-checker.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#FileSecurity #MalwareProtection #CyberSecurity #FileForensics #OnlineSafety #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function fscE(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+async function fscCheck(){
+var f=document.getElementById('sf').files[0];
+var r=document.getElementById('result');
+if(!f){r.innerHTML='<p style="color:red">Please choose a file first.</p>';return;}
+try{
+var buf=await f.slice(0,8).arrayBuffer();
+var bytes=new Uint8Array(buf);
+var hex='';
+for(var i=0;i<bytes.length;i++){hex+=bytes[i].toString(16).padStart(2,'0').toUpperCase();}
+var type='Unknown';var exts=[];
+if(hex.indexOf('89504E47')===0){type='PNG image';exts=['png'];}
+else if(hex.indexOf('FFD8FF')===0){type='JPEG image';exts=['jpg','jpeg'];}
+else if(hex.indexOf('47494638')===0){type='GIF image';exts=['gif'];}
+else if(hex.indexOf('25504446')===0){type='PDF document';exts=['pdf'];}
+else if(hex.indexOf('504B0304')===0){type='ZIP archive';exts=['zip'];}
+else if(hex.substr(8,8)==='66747970'){type='MP4 video';exts=['mp4','m4v'];}
+var nm=f.name;
+var aext=nm.indexOf('.')>-1?nm.split('.').pop().toLowerCase():'(none)';
+var ok=exts.indexOf(aext)>-1;
+var out='<p>First bytes: <code>'+hex+'</code></p><p>Detected type: <strong>'+type+'</strong></p><p>File extension: <strong>.'+fscE(aext)+'</strong></p>';
+if(type==='Unknown'){out+='<p style="color:orange">Could not identify this file from its signature bytes.</p>';}
+else if(ok){out+='<p style="color:green"><strong>MATCH</strong> - the extension agrees with the detected type.</p>';}
+else{out+='<p style="color:red"><strong>MISMATCH WARNING</strong> - the file claims to be .'+fscE(aext)+' but its signature says '+type+'. Treat it with caution!</p>';}
+r.innerHTML=out;
+}catch(e){r.innerHTML='<p style="color:red">Could not read the file: '+fscE(e.message||'unknown error')+'</p>';}
+}
+</script>
+</body>
+</html>

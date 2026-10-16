@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fraction Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Add, subtract, multiply and divide fractions with this free fraction calculator. Every answer is automatically simplified to lowest terms, with the decimal value shown too.">
+<meta name="keywords" content="fraction calculator, add fractions, subtract fractions, multiply fractions, divide fractions, simplify fractions, fraction to decimal, mixed number calculator, fraction simplifier, improper fraction calculator, mixed fraction calculator, fraction math solver, adding unlike fractions">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/fraction-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fraction Calculator — Free Online Tool">
+<meta property="og:description" content="Add, subtract, multiply and divide fractions with this free fraction calculator. Every answer is automatically simplified to lowest terms, with the decimal value shown too.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/fraction-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fraction Calculator — Free Online Tool">
+<meta name="twitter:description" content="Add, subtract, multiply and divide fractions with this free fraction calculator. Every answer is automatically simplified to lowest terms, with the decimal value shown too.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Fraction Calculator","url":"https://sindhplusmedianetwork.github.io/tools/fraction-calculator.html","description":"Add, subtract, multiply and divide fractions with this free fraction calculator. Every answer is automatically simplified to lowest terms, with the decimal value shown too.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Math &amp; Calculators</div>
+<h1>Fraction Calculator</h1>
+<p class="desc">Add, subtract, multiply and divide fractions with this free fraction calculator. Every answer is automatically simplified to lowest terms, with the decimal value shown too.</p>
+<div class="toolbox">
+<label>Fraction 1<input type='number' id='n1' placeholder='1' step='1' style='width:45%;display:inline-block'> / <input type='number' id='d1' placeholder='2' step='1' style='width:45%;display:inline-block'></label><label>Operation<select id='op'><option value='add'>+ Add</option><option value='sub'>− Subtract</option><option value='mul'>× Multiply</option><option value='div'>÷ Divide</option></select></label><label>Fraction 2<input type='number' id='n2' placeholder='1' step='1' style='width:45%;display:inline-block'> / <input type='number' id='d2' placeholder='3' step='1' style='width:45%;display:inline-block'></label><button onclick='calc()'>Calculate</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Fraction Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Ffraction-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Fraction Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Ffraction-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#FractionCalculator #MathTools #Fractions #FreeCalculator #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function fmt(x){if(typeof x!=='number'||!isFinite(x))return 'Invalid';if(x===0)return '0';var a=Math.abs(x);if(a>=1e15||a<1e-9)return x.toExponential(4);return parseFloat(x.toPrecision(12)).toString();}function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){var t=a%b;a=b;b=t;}return a||1;}function calc(){var n1=parseInt(document.getElementById('n1').value),d1=parseInt(document.getElementById('d1').value),n2=parseInt(document.getElementById('n2').value),d2=parseInt(document.getElementById('d2').value),op=document.getElementById('op').value;if(isNaN(n1)||isNaN(d1)||isNaN(n2)||isNaN(d2)||d1===0||d2===0){document.getElementById('result').innerHTML='Please enter two valid fractions (denominators cannot be zero).';return;}var n,d;if(op==='add'){n=n1*d2+n2*d1;d=d1*d2;}else if(op==='sub'){n=n1*d2-n2*d1;d=d1*d2;}else if(op==='mul'){n=n1*n2;d=d1*d2;}else{if(n2===0){document.getElementById('result').innerHTML='Cannot divide by zero.';return;}n=n1*d2;d=d1*n2;}if(d<0){n=-n;d=-d;}var g=gcd(n,d);var sn=n/g,sd=d/g;var dec=sn/sd;var mix='';if(Math.abs(sn)>=sd&&sd!==1){var w=Math.floor(Math.abs(sn)/sd);var r=Math.abs(sn)%sd;mix=(sn<0?'-':'')+w+(r?' '+r+'/'+sd:'');}else{mix=sn+'/'+sd;}document.getElementById('result').innerHTML='<b>Result: '+mix+'</b><br>Decimal: '+fmt(dec);}
+</script>
+</body>
+</html>

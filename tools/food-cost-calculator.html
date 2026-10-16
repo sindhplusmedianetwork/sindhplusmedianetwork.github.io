@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Cost Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Calculate the exact cost of any dish. Enter each ingredient&#x27;s cost to find your total cost and cost per serving - perfect for home cooks and food businesses.">
+<meta name="keywords" content="food cost calculator, recipe cost calculator, cost per serving, dish costing, restaurant food cost">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/food-cost-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Food Cost Calculator — Free Online Tool">
+<meta property="og:description" content="Calculate the exact cost of any dish. Enter each ingredient&#x27;s cost to find your total cost and cost per serving - perfect for home cooks and food businesses.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/food-cost-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Food Cost Calculator — Free Online Tool">
+<meta name="twitter:description" content="Calculate the exact cost of any dish. Enter each ingredient&#x27;s cost to find your total cost and cost per serving - perfect for home cooks and food businesses.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Food Cost Calculator","url":"https://sindhplusmedianetwork.github.io/tools/food-cost-calculator.html","description":"Calculate the exact cost of any dish. Enter each ingredient&#x27;s cost to find your total cost and cost per serving - perfect for home cooks and food businesses.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Everyday Life</div>
+<h1>Food Cost Calculator</h1>
+<p class="desc">Calculate the exact cost of any dish. Enter each ingredient&#x27;s cost to find your total cost and cost per serving - perfect for home cooks and food businesses.</p>
+<div class="toolbox">
+<label>Number of Servings<input type='number' id='sv' placeholder='4' min='1' step='1'></label><div id='fi'></div><button onclick='addF()'>+ Add Ingredient</button> <button onclick='fc()'>Calculate Cost</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Food Cost Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Ffood-cost-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Food Cost Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Ffood-cost-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#FoodCost #RecipeCost #CookingTools #LifeTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var _fc=0;
+function addF(){_fc++;var d=document.createElement('div');d.innerHTML='<label>Ingredient<input id="fn'+_fc+'" placeholder="e.g. Chicken"></label><label>Cost<input type="number" id="fp'+_fc+'" min="0" step="0.01" placeholder="0"></label>';
+d.style.cssText='border:1px solid #ddd;border-radius:6px;padding:8px;margin:6px 0;';document.getElementById('fi').appendChild(d);}
+addF();addF();addF();
+function fc(){
+var sv=parseFloat(document.getElementById('sv').value)||1;
+var total=0,rows=[];
+for(var i=1;i<=_fc;i++){var nm=document.getElementById('fn'+i),pr=parseFloat(document.getElementById('fp'+i).value)||0;
+if(nm&&nm.value.trim()&&pr>0){total+=pr;rows.push([nm.value.trim(),pr]);}}
+if(!rows.length){document.getElementById('result').innerHTML='Please add at least one ingredient with cost.';return;}
+var per=total/sv;
+var h='<b>Total dish cost: '+total.toFixed(2)+'</b><br><div style="font-size:24px;font-weight:800;color:#16a34a;">Cost per serving: '+per.toFixed(2)+'</div><br>';
+h+='<table style="border-collapse:collapse;font-size:13px;"><tr style="background:#f1f5f9;"><th style="border:1px solid #ddd;padding:6px;">Ingredient</th><th style="border:1px solid #ddd;padding:6px;">Cost</th><th style="border:1px solid #ddd;padding:6px;">% of total</th></tr>';
+rows.forEach(function(r){h+='<tr><td style="border:1px solid #ddd;padding:6px;">'+r[0]+'</td><td style="border:1px solid #ddd;padding:6px;">'+r[1].toFixed(2)+'</td><td style="border:1px solid #ddd;padding:6px;">'+Math.round(r[1]/total*100)+'%</td></tr>';});
+document.getElementById('result').innerHTML=h+'</table>';}
+</script>
+</body>
+</html>

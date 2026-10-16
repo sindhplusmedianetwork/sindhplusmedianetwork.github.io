@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DKIM Record Guide — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Understand and set up DKIM email authentication for your domain. Enter your domain and selector to get the exact DNS TXT record name (selector._domainkey), plus clear setup steps for Google Workspace, Microsoft 365 and Zoho Mail.">
+<meta name="keywords" content="dkim record guide, dkim setup guide, dkim dns record, what is dkim selector, google workspace dkim setup, microsoft 365 dkim setup, zoho dkim setup, dkim txt record example, enable dkim email, dkim generator guide">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/dkim-record-guide.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DKIM Record Guide — Free Online Tool">
+<meta property="og:description" content="Understand and set up DKIM email authentication for your domain. Enter your domain and selector to get the exact DNS TXT record name (selector._domainkey), plus clear setup steps for Google Workspace, Microsoft 365 and Zoho Mail.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/dkim-record-guide.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DKIM Record Guide — Free Online Tool">
+<meta name="twitter:description" content="Understand and set up DKIM email authentication for your domain. Enter your domain and selector to get the exact DNS TXT record name (selector._domainkey), plus clear setup steps for Google Workspace, Microsoft 365 and Zoho Mail.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"DKIM Record Guide","url":"https://sindhplusmedianetwork.github.io/tools/dkim-record-guide.html","description":"Understand and set up DKIM email authentication for your domain. Enter your domain and selector to get the exact DNS TXT record name (selector._domainkey), plus clear setup steps for Google Workspace, Microsoft 365 and Zoho Mail.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Email &amp; Communication</div>
+<h1>DKIM Record Guide</h1>
+<p class="desc">Understand and set up DKIM email authentication for your domain. Enter your domain and selector to get the exact DNS TXT record name (selector._domainkey), plus clear setup steps for Google Workspace, Microsoft 365 and Zoho Mail.</p>
+<div class="toolbox">
+<label>Domain<br><input id='d' placeholder='example.com' style='width:100%;box-sizing:border-box'></label><br><br><label>Selector<br><input id='s' value='default' style='width:100%;box-sizing:border-box'></label><br><br><button onclick='genDkim()'>Show DKIM setup</button><div id='result' style='margin-top:14px'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=DKIM Record Guide — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fdkim-record-guide.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=DKIM Record Guide — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fdkim-record-guide.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#DKIM #EmailSecurity #DNS #GoogleWorkspace #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function cpyDkim(){var t=window.dkimName||'';if(!t){alert('Generate the setup first.');return;}navigator.clipboard.writeText(t).then(function(){alert('Record name copied to clipboard.')},function(){alert('Copy failed. Please try again.')});}
+function genDkim(){var d=document.getElementById('d').value.trim().toLowerCase().replace(/^https?:\/\//,'').replace(/\/.*$/,'');var s=document.getElementById('s').value.trim()||'default';var r=document.getElementById('result');if(!/^[a-z0-9.-]+\.[a-z]{2,}$/.test(d)){r.innerHTML='<p style=color:#b00020>Please enter a valid domain, e.g. example.com.</p>';return;}if(!/^[a-z0-9_-]+$/i.test(s)){r.innerHTML='<p style=color:#b00020>Selector may only contain letters, numbers, hyphen and underscore.</p>';return;}var name=s+'._domainkey.'+d;window.dkimName=name;r.innerHTML='<h3>Your DKIM DNS record</h3><p><b>Host/Name:</b></p><p style=font-family:monospace;background:#f5f5f5;padding:10px;word-break:break-all>'+name+'</p><p><b>Type:</b> TXT<br><b>Value:</b> the public key string provided by your email provider (long text starting with <span style=font-family:monospace>v=DKIM1; k=rsa; p=...</span>)</p><button onclick=cpyDkim()>Copy record name</button><h3 style=margin-top:14px>Setup steps</h3><ol style=font-size:14px;line-height:1.7><li><b>Google Workspace:</b> Admin console, then Apps, then Google Workspace, then Gmail, then Authenticate email. Select your domain, click Generate new record, copy the TXT value and add it to your DNS.</li><li><b>Microsoft 365:</b> Microsoft 365 Defender portal, then Email and collaboration, then Policies and rules, then Threat policies, then DKIM. Select your domain, create DKIM keys, add the two CNAME records shown (selector1 and selector2) to your DNS, then enable.</li><li><b>Zoho Mail:</b> Zoho Mail Control Panel, then Domains, select your domain, then Email Authentication, then DKIM. Add a selector, copy the TXT name and value, and add them to your DNS.</li><li>DNS changes can take up to 24 hours to propagate.</li><li>Verify by sending a test email to check-auth@verifier.port25.com or use an online DKIM checker.</li></ol><p style=font-size:13px;color:#555>Note: the private key stays with your provider; only the public key goes in DNS. Never share private keys.</p>';}
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Deliverability Checklist — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Check your email deliverability setup with an interactive 12-point checklist. Track SPF, DKIM, DMARC, list hygiene, warmup and content best practices with a live progress bar - your progress saves automatically in your browser.">
+<meta name="keywords" content="email deliverability checklist, improve email deliverability, email spam checklist, inbox deliverability test, email authentication checklist, avoid spam folder checklist, email sender reputation, email deliverability best practices, email warmup checklist, bulk email checklist">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/email-deliverability-checklist.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Email Deliverability Checklist — Free Online Tool">
+<meta property="og:description" content="Check your email deliverability setup with an interactive 12-point checklist. Track SPF, DKIM, DMARC, list hygiene, warmup and content best practices with a live progress bar - your progress saves automatically in your browser.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/email-deliverability-checklist.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Email Deliverability Checklist — Free Online Tool">
+<meta name="twitter:description" content="Check your email deliverability setup with an interactive 12-point checklist. Track SPF, DKIM, DMARC, list hygiene, warmup and content best practices with a live progress bar - your progress saves automatically in your browser.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Email Deliverability Checklist","url":"https://sindhplusmedianetwork.github.io/tools/email-deliverability-checklist.html","description":"Check your email deliverability setup with an interactive 12-point checklist. Track SPF, DKIM, DMARC, list hygiene, warmup and content best practices with a live progress bar - your progress saves automatically in your browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Email &amp; Communication</div>
+<h1>Email Deliverability Checklist</h1>
+<p class="desc">Check your email deliverability setup with an interactive 12-point checklist. Track SPF, DKIM, DMARC, list hygiene, warmup and content best practices with a live progress bar - your progress saves automatically in your browser.</p>
+<div class="toolbox">
+<div style='background:#eee;border-radius:8px;height:14px;overflow:hidden;margin-bottom:10px'><div id='bar' style='background:#1a73e8;height:14px;width:0%'></div></div><p id='pct' style='font-weight:bold;margin:0 0 10px 0'>0% complete (0 of 12)</p><label style='display:block;margin:8px 0'><input type='checkbox' id='k1' onclick='updD()'> SPF record published for your sending domain</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k2' onclick='updD()'> DKIM signing enabled for outgoing mail</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k3' onclick='updD()'> DMARC policy published (start with p=none)</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k4' onclick='updD()'> Reverse DNS (PTR) set for your sending IP</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k5' onclick='updD()'> From-domain alignment for SPF and DKIM</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k6' onclick='updD()'> List hygiene - remove bounces and inactives regularly</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k7' onclick='updD()'> Double opt-in for new subscribers</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k8' onclick='updD()'> Warm up new domains and IPs gradually</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k9' onclick='updD()'> Working unsubscribe link (one-click) in every email</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k10' onclick='updD()'> Complaint rate kept under 0.1%</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k11' onclick='updD()'> Plain-text version included with HTML emails</label><label style='display:block;margin:8px 0'><input type='checkbox' id='k12' onclick='updD()'> Test with mail-tester.com before big sends</label><br><button onclick='resetD()'>Reset checklist</button><div id='result' style='margin-top:10px'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Email Deliverability Checklist — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Femail-deliverability-checklist.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Email Deliverability Checklist — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Femail-deliverability-checklist.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#EmailDeliverability #EmailMarketing #InboxPlacement #SPF #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function updD(){var total=12;var c=0;for(var i=1;i<=total;i++){var el=document.getElementById('k'+i);if(el&&el.checked){c++;}}var p=Math.round(c/total*100);document.getElementById('bar').style.width=p+'%';document.getElementById('pct').innerHTML=p+'% complete ('+c+' of '+total+')';var st={};for(var j=1;j<=total;j++){st['k'+j]=document.getElementById('k'+j).checked;}try{localStorage.setItem('spmn_deliv',JSON.stringify(st));}catch(e){}document.getElementById('result').innerHTML=c===total?'<p style=color:#0a7a2f;font-weight:bold>All checks passed. Your deliverability setup looks solid.</p>':'';}
+function resetD(){for(var i=1;i<=12;i++){document.getElementById('k'+i).checked=false;}updD();}
+(function(){try{var st=JSON.parse(localStorage.getItem('spmn_deliv')||'{}');for(var i=1;i<=12;i++){if(st['k'+i]){document.getElementById('k'+i).checked=true;}}}catch(e){}updD();})();
+</script>
+</body>
+</html>

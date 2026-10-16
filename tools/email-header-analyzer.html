@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Header Analyzer — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Analyze raw email headers to trace where an email really came from. Paste full headers to see the From, To, Date, Subject, the full Received hop chain, SPF/DKIM/DMARC authentication results, and warnings for spoofing or Reply-To mismatches.">
+<meta name="keywords" content="email header analyzer, analyze email headers online, email header checker, trace email sender, email received headers explained, check spf dkim dmarc, email spoofing checker, view email headers, email forensics tool, verify email sender">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/email-header-analyzer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Email Header Analyzer — Free Online Tool">
+<meta property="og:description" content="Analyze raw email headers to trace where an email really came from. Paste full headers to see the From, To, Date, Subject, the full Received hop chain, SPF/DKIM/DMARC authentication results, and warnings for spoofing or Reply-To mismatches.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/email-header-analyzer.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Email Header Analyzer — Free Online Tool">
+<meta name="twitter:description" content="Analyze raw email headers to trace where an email really came from. Paste full headers to see the From, To, Date, Subject, the full Received hop chain, SPF/DKIM/DMARC authentication results, and warnings for spoofing or Reply-To mismatches.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Email Header Analyzer","url":"https://sindhplusmedianetwork.github.io/tools/email-header-analyzer.html","description":"Analyze raw email headers to trace where an email really came from. Paste full headers to see the From, To, Date, Subject, the full Received hop chain, SPF/DKIM/DMARC authentication results, and warnings for spoofing or Reply-To mismatches.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Email &amp; Communication</div>
+<h1>Email Header Analyzer</h1>
+<p class="desc">Analyze raw email headers to trace where an email really came from. Paste full headers to see the From, To, Date, Subject, the full Received hop chain, SPF/DKIM/DMARC authentication results, and warnings for spoofing or Reply-To mismatches.</p>
+<div class="toolbox">
+<label>Paste raw email headers<br><textarea id='h' rows='12' placeholder='Paste the full raw headers here (From:, To:, Received:, Authentication-Results:, ...)' style='width:100%;box-sizing:border-box;font-family:monospace'></textarea></label><br><br><button onclick='analyzeHdr()'>Analyze headers</button><div id='result' style='margin-top:14px'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Email Header Analyzer — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Femail-header-analyzer.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Email Header Analyzer — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Femail-header-analyzer.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#EmailSecurity #SPF #DKIM #DMARC #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function analyzeHdr(){var raw=document.getElementById('h').value;var r=document.getElementById('result');if(!raw.trim()){r.innerHTML='<p style=color:#b00020>Please paste raw email headers first.</p>';return;}var lines=raw.replace(/\r\n/g,'\n').replace(/\r/g,'\n').split('\n');var hdrs=[];var cur=null;for(var i=0;i<lines.length;i++){var ln=lines[i];if(/^[ \t]/.test(ln)&&cur){cur.value+=' '+ln.trim();}else{var m=ln.match(/^([^:]+):\s*(.*)$/);if(m){cur={name:m[1].toLowerCase(),value:m[2]};hdrs.push(cur);}else{cur=null;}}}function get(n){var v=[];for(var j=0;j<hdrs.length;j++){if(hdrs[j].name===n){v.push(hdrs[j].value);}}return v;}function one(n){var v=get(n);return v.length?v[0]:'';}var from=one('from'),to=one('to'),date=one('date'),subj=one('subject'),replyto=one('reply-to'),msgid=one('message-id');if(!from){r.innerHTML='<p style=color:#b00020>No valid headers found. Paste the full raw headers including From:, To: and Received: lines.</p>';return;}var received=get('received');var hops=received.length;var auth=one('authentication-results')||get('authentication-results').join(' ');function authRes(k){var mm=auth.match(new RegExp(k+'=([a-zA-Z]+)','i'));return mm?mm[1].toLowerCase():'not found';}var spf=authRes('spf'),dkim=authRes('dkim'),dmarc=authRes('dmarc');function badge(v){if(v==='pass'){return '<span style=color:#0a7a2f;font-weight:bold>PASS</span>';}if(v==='fail'){return '<span style=color:#b00020;font-weight:bold>FAIL</span>';}return '<span style=color:#8a6d00>'+v+'</span>';}function domOf(a){var mm=String(a).match(/@([A-Za-z0-9.-]+)/);return mm?mm[1].toLowerCase():'';}function escH(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}var warn='';if(replyto&&domOf(replyto)!==domOf(from)){warn+='<p style=color:#b00020;font-weight:bold>Warning: Reply-To domain ('+escH(domOf(replyto))+') does not match From domain ('+escH(domOf(from))+'). Possible spoofing.</p>';}if(spf==='fail'||dkim==='fail'||dmarc==='fail'){warn+='<p style=color:#b00020;font-weight:bold>Warning: one or more authentication checks failed. Treat this email with caution.</p>';}var hopRows='';for(var k=0;k<received.length;k++){var hv=received[k].length>140?received[k].substring(0,140)+'...':received[k];hopRows+='<tr><td style=border:1px solid #ddd;padding:6px;vertical-align:top>'+(k+1)+'</td><td style=border:1px solid #ddd;padding:6px>'+escH(hv)+'</td></tr>';}r.innerHTML='<h3>Header summary</h3><table style=border-collapse:collapse;width:100%;font-size:14px><tr><td style=border:1px solid #ddd;padding:6px;font-weight:bold;width:130px>From</td><td style=border:1px solid #ddd;padding:6px>'+escH(from)+'</td></tr><tr><td style=border:1px solid #ddd;padding:6px;font-weight:bold>To</td><td style=border:1px solid #ddd;padding:6px>'+escH(to)+'</td></tr><tr><td style=border:1px solid #ddd;padding:6px;font-weight:bold>Date</td><td style=border:1px solid #ddd;padding:6px>'+escH(date)+'</td></tr><tr><td style=border:1px solid #ddd;padding:6px;font-weight:bold>Subject</td><td style=border:1px solid #ddd;padding:6px>'+escH(subj)+'</td></tr><tr><td style=border:1px solid #ddd;padding:6px;font-weight:bold>Message-ID</td><td style=border:1px solid #ddd;padding:6px>'+escH(msgid)+'</td></tr><tr><td style=border:1px solid #ddd;padding:6px;font-weight:bold>Received hops</td><td style=border:1px solid #ddd;padding:6px>'+hops+'</td></tr><tr><td style=border:1px solid #ddd;padding:6px;font-weight:bold>SPF</td><td style=border:1px solid #ddd;padding:6px>'+badge(spf)+'</td></tr><tr><td style=border:1px solid #ddd;padding:6px;font-weight:bold>DKIM</td><td style=border:1px solid #ddd;padding:6px>'+badge(dkim)+'</td></tr><tr><td style=border:1px solid #ddd;padding:6px;font-weight:bold>DMARC</td><td style=border:1px solid #ddd;padding:6px>'+badge(dmarc)+'</td></tr></table>'+warn+(hops?'<h3 style=margin-top:14px>Received chain (oldest last)</h3><table style=border-collapse:collapse;width:100%;font-size:13px>'+hopRows+'</table>':'');}
+</script>
+</body>
+</html>

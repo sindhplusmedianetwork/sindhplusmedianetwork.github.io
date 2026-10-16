@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Checksum Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Calculate the SHA-256, SHA-1 or SHA-512 checksum of any file directly in your browser. Compare the result with the checksum published by the software vendor to verify your download is genuine and unmodified. Files are processed locally and never uploaded to any server.">
+<meta name="keywords" content="file checksum calculator, sha256 checksum calculator, file hash calculator, checksum checker, verify file checksum, sha256 file checker, md5 sha1 checksum tool, calculate file hash, checksum verifier online, file integrity checker, sha512 checksum, check download integrity, file hash generator, checksum calculator online, verify downloaded file">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/file-checksum-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="File Checksum Calculator — Free Online Tool">
+<meta property="og:description" content="Calculate the SHA-256, SHA-1 or SHA-512 checksum of any file directly in your browser. Compare the result with the checksum published by the software vendor to verify your download is genuine and unmodified. Files are processed locally and never uploaded to any server.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/file-checksum-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="File Checksum Calculator — Free Online Tool">
+<meta name="twitter:description" content="Calculate the SHA-256, SHA-1 or SHA-512 checksum of any file directly in your browser. Compare the result with the checksum published by the software vendor to verify your download is genuine and unmodified. Files are processed locally and never uploaded to any server.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"File Checksum Calculator","url":"https://sindhplusmedianetwork.github.io/tools/file-checksum-calculator.html","description":"Calculate the SHA-256, SHA-1 or SHA-512 checksum of any file directly in your browser. Compare the result with the checksum published by the software vendor to verify your download is genuine and unmodified. Files are processed locally and never uploaded to any server.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Security &amp; Privacy</div>
+<h1>File Checksum Calculator</h1>
+<p class="desc">Calculate the SHA-256, SHA-1 or SHA-512 checksum of any file directly in your browser. Compare the result with the checksum published by the software vendor to verify your download is genuine and unmodified. Files are processed locally and never uploaded to any server.</p>
+<div class="toolbox">
+<label>Choose a file:<br><input type="file" id="ff" style="width:100%"></label><br>
+<label>Algorithm:<br><select id="fa" style="width:100%"><option>SHA-256</option><option>SHA-1</option><option>SHA-512</option></select></label><br>
+<button onclick="fccCalc()">Calculate Checksum</button>
+<div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=File Checksum Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Ffile-checksum-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=File Checksum Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Ffile-checksum-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#Checksum #FileIntegrity #SHA256 #CyberSecurity #DataIntegrity #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function fccE(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+var fccLast='';
+function fccSize(b){if(b<1024)return b+' B';if(b<1048576)return (b/1024).toFixed(1)+' KB';return (b/1048576).toFixed(1)+' MB';}
+async function fccCalc(){
+var f=document.getElementById('ff').files[0];
+var algo=document.getElementById('fa').value;
+var r=document.getElementById('result');
+if(!f){r.innerHTML='<p style="color:red">Please choose a file first.</p>';return;}
+r.innerHTML='<p>Hashing, please wait&hellip;</p>';
+try{
+var buf=await f.arrayBuffer();
+var d=await crypto.subtle.digest(algo,buf);
+var hex=Array.prototype.map.call(new Uint8Array(d),function(x){return x.toString(16).padStart(2,'0');}).join('');
+fccLast=hex;
+r.innerHTML='<p><strong>'+fccE(f.name)+'</strong> ('+fccSize(f.size)+')</p><p><strong>'+algo+' checksum:</strong></p><p style="font-family:monospace;background:#f4f4f4;padding:10px;border-radius:6px;word-break:break-all">'+hex+'</p><button onclick="fccCopy()">Copy Hash</button><p style="font-size:0.9em">Compare this with the checksum published by the software vendor to verify integrity.</p>';
+}catch(e){r.innerHTML='<p style="color:red">Could not hash the file: '+fccE(e.message||'unknown error')+'</p>';}
+}
+function fccCopy(){navigator.clipboard.writeText(fccLast).then(function(){alert('Copied!');}).catch(function(){alert('Copy failed - select and copy manually.');});}
+</script>
+</body>
+</html>
