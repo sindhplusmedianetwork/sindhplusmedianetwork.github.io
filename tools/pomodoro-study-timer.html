@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pomodoro Study Timer — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Boost focus with the Pomodoro technique: 25 minutes of deep study, 5-minute breaks. Customizable work/break lengths with automatic cycle tracking and session counter.">
+<meta name="keywords" content="pomodoro timer, study timer, pomodoro technique timer, focus timer, 25 minute timer, study break timer, productivity timer online, focus session timer, study break reminder, pomodoro app online, concentration timer, deep work timer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/pomodoro-study-timer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pomodoro Study Timer — Free Online Tool">
+<meta property="og:description" content="Boost focus with the Pomodoro technique: 25 minutes of deep study, 5-minute breaks. Customizable work/break lengths with automatic cycle tracking and session counter.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/pomodoro-study-timer.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pomodoro Study Timer — Free Online Tool">
+<meta name="twitter:description" content="Boost focus with the Pomodoro technique: 25 minutes of deep study, 5-minute breaks. Customizable work/break lengths with automatic cycle tracking and session counter.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Pomodoro Study Timer","url":"https://sindhplusmedianetwork.github.io/tools/pomodoro-study-timer.html","description":"Boost focus with the Pomodoro technique: 25 minutes of deep study, 5-minute breaks. Customizable work/break lengths with automatic cycle tracking and session counter.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Education &amp; Learning</div>
+<h1>Pomodoro Study Timer</h1>
+<p class="desc">Boost focus with the Pomodoro technique: 25 minutes of deep study, 5-minute breaks. Customizable work/break lengths with automatic cycle tracking and session counter.</p>
+<div class="toolbox">
+<label>Focus minutes<input type='number' id='pm_w' value='25' min='1' max='120'></label><label>Short break minutes<input type='number' id='pm_s' value='5' min='1' max='60'></label><label>Long break minutes<input type='number' id='pm_l' value='15' min='1' max='60'></label><label>Focus sessions before long break<input type='number' id='pm_c' value='4' min='1' max='12'></label><button onclick='pmStart()'>Start</button> <button onclick='pmPause()'>Pause</button> <button onclick='pmReset()'>Reset</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Pomodoro Study Timer — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fpomodoro-study-timer.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Pomodoro Study Timer — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fpomodoro-study-timer.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#Pomodoro #StudyTimer #FocusTimer #Productivity #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var pmT=null,pmLeft=0,pmPhase='focus',pmDone=0,pmCycle=4,pmW=25,pmS=5,pmL=15,pmRun=false;
+function pmFmt(s){var m=Math.floor(s/60),ss=s%60;return (m<10?'0':'')+m+':'+(ss<10?'0':'')+ss;}
+function pmShow(){var label=pmPhase==='focus'?'FOCUS — study now!':pmPhase==='short'?'Short break — relax':'Long break — well earned!';document.getElementById('result').innerHTML='<p style="font-size:14px;color:#666">'+label+'</p><p style="font-size:48px;margin:5px 0"><b>'+pmFmt(pmLeft)+'</b></p><p>Completed focus sessions: <b>'+pmDone+'</b></p>';}
+function pmStart(){if(pmRun)return;if(pmLeft<=0){pmW=parseInt(document.getElementById('pm_w').value,10)||25;pmS=parseInt(document.getElementById('pm_s').value,10)||5;pmL=parseInt(document.getElementById('pm_l').value,10)||15;pmCycle=parseInt(document.getElementById('pm_c').value,10)||4;if(pmPhase==='focus')pmLeft=pmW*60;else if(pmPhase==='short')pmLeft=pmS*60;else pmLeft=pmL*60;}pmRun=true;pmShow();pmT=setInterval(function(){pmLeft--;if(pmLeft<=0){if(pmPhase==='focus'){pmDone++;pmPhase=(pmDone%pmCycle===0)?'long':'short';pmLeft=(pmPhase==='long'?pmL:pmS)*60;}else{pmPhase='focus';pmLeft=pmW*60;}try{if(window.Audio){var ctx=new (window.AudioContext||window.webkitAudioContext)();var o=ctx.createOscillator();o.connect(ctx.destination);o.start();o.stop(ctx.currentTime+0.3);}}catch(e){}}pmShow();},1000);}
+function pmPause(){pmRun=false;clearInterval(pmT);}
+function pmReset(){pmPause();pmLeft=0;pmPhase='focus';pmDone=0;document.getElementById('result').innerHTML='<p style="color:#666">Timer reset. Set your durations and press Start.</p>';}
+</script>
+</body>
+</html>

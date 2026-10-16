@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Token Generator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Generate cryptographically secure random tokens for API keys, session IDs and secrets. Choose hex, base64, base64url or alphanumeric formats and any length you need. Tokens are created locally with your browser&#x27;s secure random generator and never leave your device.">
+<meta name="keywords" content="random token generator, secure token generator, api key generator, random string generator, generate random token, hex token generator, base64 token generator, secret key generator, random api key generator, token generator online, csrf token generator, session token generator, random secret generator, uuid alternative, secure random string">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/random-token-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Random Token Generator — Free Online Tool">
+<meta property="og:description" content="Generate cryptographically secure random tokens for API keys, session IDs and secrets. Choose hex, base64, base64url or alphanumeric formats and any length you need. Tokens are created locally with your browser&#x27;s secure random generator and never leave your device.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/random-token-generator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Random Token Generator — Free Online Tool">
+<meta name="twitter:description" content="Generate cryptographically secure random tokens for API keys, session IDs and secrets. Choose hex, base64, base64url or alphanumeric formats and any length you need. Tokens are created locally with your browser&#x27;s secure random generator and never leave your device.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Random Token Generator","url":"https://sindhplusmedianetwork.github.io/tools/random-token-generator.html","description":"Generate cryptographically secure random tokens for API keys, session IDs and secrets. Choose hex, base64, base64url or alphanumeric formats and any length you need. Tokens are created locally with your browser&#x27;s secure random generator and never leave your device.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Security &amp; Privacy</div>
+<h1>Random Token Generator</h1>
+<p class="desc">Generate cryptographically secure random tokens for API keys, session IDs and secrets. Choose hex, base64, base64url or alphanumeric formats and any length you need. Tokens are created locally with your browser&#x27;s secure random generator and never leave your device.</p>
+<div class="toolbox">
+<label>Length (bytes, 1&ndash;256):<br><input type="number" id="tl" value="32" min="1" max="256" style="width:100%"></label><br>
+<label>Format:<br><select id="tf" style="width:100%"><option value="hex">Hex</option><option value="base64">Base64</option><option value="base64url">Base64URL</option><option value="alphanumeric">Alphanumeric</option></select></label><br>
+<button onclick="rtgGen()">Generate Token</button>
+<div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Random Token Generator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Frandom-token-generator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Random Token Generator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Frandom-token-generator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#TokenGenerator #APIKeys #WebDevelopment #CyberSecurity #OnlineSecurity #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function rtgE(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+var rtgLast='';
+function rtgGen(){
+var len=parseInt(document.getElementById('tl').value,10);
+var fmt=document.getElementById('tf').value;
+var r=document.getElementById('result');
+if(isNaN(len)||len<1||len>256){r.innerHTML='<p style="color:red">Enter a length between 1 and 256 bytes.</p>';return;}
+var b=new Uint8Array(len);crypto.getRandomValues(b);
+var tok='';
+if(fmt==='hex'){for(var i=0;i<len;i++){tok+=b[i].toString(16).padStart(2,'0');}}
+else if(fmt==='base64'||fmt==='base64url'){var s='';for(var j=0;j<len;j++){s+=String.fromCharCode(b[j]);}tok=btoa(s);if(fmt==='base64url'){tok=tok.replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}}
+else{var cs='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';for(var k=0;k<len;k++){tok+=cs[b[k]%62];}}
+rtgLast=tok;
+r.innerHTML='<p><strong>Token ('+fmt+', '+len+' random bytes):</strong></p><p style="font-family:monospace;background:#f4f4f4;padding:10px;border-radius:6px;word-break:break-all">'+rtgE(tok)+'</p><button onclick="rtgCopy()">Copy</button>';
+}
+function rtgCopy(){navigator.clipboard.writeText(rtgLast).then(function(){alert('Copied!');}).catch(function(){alert('Copy failed - select and copy manually.');});}
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regex Generator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Generate ready-made regex patterns for emails, international phone numbers, URLs, IPv4 addresses, YYYY-MM-DD dates, slugs and hex colors - or build a custom pattern from character classes (letters, digits, whitespace) with min/max length. Every pattern is shown in a click-to-select box and you can test it live against your own text.">
+<meta name="keywords" content="regex generator, generate regex online, regex builder, create regular expression, email regex pattern, phone regex pattern, regex pattern generator, custom regex builder, url regex, ipv4 regex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/regex-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Regex Generator — Free Online Tool">
+<meta property="og:description" content="Generate ready-made regex patterns for emails, international phone numbers, URLs, IPv4 addresses, YYYY-MM-DD dates, slugs and hex colors - or build a custom pattern from character classes (letters, digits, whitespace) with min/max length. Every pattern is shown in a click-to-select box and you can test it live against your own text.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/regex-generator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Regex Generator — Free Online Tool">
+<meta name="twitter:description" content="Generate ready-made regex patterns for emails, international phone numbers, URLs, IPv4 addresses, YYYY-MM-DD dates, slugs and hex colors - or build a custom pattern from character classes (letters, digits, whitespace) with min/max length. Every pattern is shown in a click-to-select box and you can test it live against your own text.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Regex Generator","url":"https://sindhplusmedianetwork.github.io/tools/regex-generator.html","description":"Generate ready-made regex patterns for emails, international phone numbers, URLs, IPv4 addresses, YYYY-MM-DD dates, slugs and hex colors - or build a custom pattern from character classes (letters, digits, whitespace) with min/max length. Every pattern is shown in a click-to-select box and you can test it live against your own text.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>Regex Generator</h1>
+<p class="desc">Generate ready-made regex patterns for emails, international phone numbers, URLs, IPv4 addresses, YYYY-MM-DD dates, slugs and hex colors - or build a custom pattern from character classes (letters, digits, whitespace) with min/max length. Every pattern is shown in a click-to-select box and you can test it live against your own text.</p>
+<div class="toolbox">
+<label>Preset: <select id="r"><option value="email">Email</option><option value="phone">Phone (international)</option><option value="url">URL</option><option value="ipv4">IPv4 address</option><option value="date">Date (YYYY-MM-DD)</option><option value="slug">Slug</option><option value="hex">Hex color</option><option value="custom">Custom builder</option></select></label><br><div id="cb" style="margin:8px 0;display:none"><label><input type="checkbox" id="cL" checked> Letters (A-Z a-z)</label> <label><input type="checkbox" id="cD" checked> Digits (0-9)</label> <label><input type="checkbox" id="cS"> Whitespace</label><br><label>Min length: <input id="mn" type="number" min="0" style="width:60px"></label> <label>Max length: <input id="mx" type="number" min="0" style="width:60px"></label></div><button onclick="gen()">Generate Pattern</button><br><br><label>Test text:<br><input id="t" style="width:100%" placeholder="Type text to test the pattern"></label> <button onclick="test()">Test It</button><div id="tres" style="margin-top:8px"></div><div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Regex Generator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fregex-generator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Regex Generator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fregex-generator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#RegexGenerator #Regex #WebDev #CodeTools #SPMN #FreeTools #Coding</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var currentPat='';
+var PRESETS={
+email:'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$',
+phone:'^\\+?[0-9\\s\\-().]{7,20}$',
+url:'^https?:\\/\\/[^\\s/$.?#].[^\\s]*$',
+ipv4:'^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$',
+date:'^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$',
+slug:'^[a-z0-9]+(?:-[a-z0-9]+)*$',
+hex:'^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$'
+};
+document.getElementById('r').addEventListener('change',function(){
+document.getElementById('cb').style.display=this.value==='custom'?'block':'none';
+});
+function gen(){
+var p=document.getElementById('r').value;
+var out=document.getElementById('result');
+function escH(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+var pat;
+if(p==='custom'){
+var cls='';
+if(document.getElementById('cL').checked)cls+='A-Za-z';
+if(document.getElementById('cD').checked)cls+='0-9';
+if(document.getElementById('cS').checked)cls+='\\s';
+if(!cls){out.innerHTML='<p style="color:#b00">Tick at least one character class for the custom builder.</p>';return;}
+var mn=document.getElementById('mn').value,mx=document.getElementById('mx').value,q='+';
+if(mn!==''&&mx!==''&&mn===mx)q='{'+mn+'}';
+else if(mn!==''&&mx!=='')q='{'+mn+','+mx+'}';
+else if(mn!=='')q='{'+mn+',}';
+pat='^['+cls+']'+q+'$';
+}else{pat=PRESETS[p];}
+currentPat=pat;
+out.innerHTML='<p>Your pattern (click to select, then copy):</p><input readonly value="'+escH(pat)+'" style="width:100%" onclick="this.select()">';
+}
+function test(){
+var s=document.getElementById('t').value;
+var t=document.getElementById('tres');
+function escH(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+if(!currentPat){t.innerHTML='<p style="color:#b00">Generate a pattern first.</p>';return;}
+try{
+var re=new RegExp(currentPat);
+var m=s.match(re);
+if(m)t.innerHTML='<p style="color:#0a0"><b>Match!</b> Matched text: <code>'+escH(m[0])+'</code></p>';
+else t.innerHTML='<p style="color:#b00"><b>No match.</b> The test text does not fit the pattern.</p>';
+}catch(e){t.innerHTML='<p style="color:#b00"><b>Invalid pattern:</b> '+escH(e.message)+'</p>';}
+}
+</script>
+</body>
+</html>

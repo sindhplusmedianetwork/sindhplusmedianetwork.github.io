@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Image Designer — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Design custom QR codes free. Type any text or link, pick foreground and background colors and size, and download a scannable QR code PNG. Supports up to ~271 characters.">
+<meta name="keywords" content="qr code generator, custom qr code, qr code designer, qr code with color, free qr code maker, qr code png download, qr code maker no signup, scannable qr png, url to qr code, custom color qr">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/qr-code-image-designer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="QR Code Image Designer — Free Online Tool">
+<meta property="og:description" content="Design custom QR codes free. Type any text or link, pick foreground and background colors and size, and download a scannable QR code PNG. Supports up to ~271 characters.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/qr-code-image-designer.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="QR Code Image Designer — Free Online Tool">
+<meta name="twitter:description" content="Design custom QR codes free. Type any text or link, pick foreground and background colors and size, and download a scannable QR code PNG. Supports up to ~271 characters.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"QR Code Image Designer","url":"https://sindhplusmedianetwork.github.io/tools/qr-code-image-designer.html","description":"Design custom QR codes free. Type any text or link, pick foreground and background colors and size, and download a scannable QR code PNG. Supports up to ~271 characters.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Image &amp; Graphics</div>
+<h1>QR Code Image Designer</h1>
+<p class="desc">Design custom QR codes free. Type any text or link, pick foreground and background colors and size, and download a scannable QR code PNG. Supports up to ~271 characters.</p>
+<div class="toolbox">
+<label>Text or URL<input type='text' id='t' value='https://sindhplusmedianetwork.github.io/'></label><label>Foreground color<input type='color' id='fg' value='#000000'></label><label>Background color<input type='color' id='bg' value='#ffffff'></label><label>Size<select id='sz'><option value='256'>256 px</option><option selected value='512'>512 px</option><option value='1024'>1024 px</option></select></label><button onclick='go()'>Generate QR Code</button><div><canvas id='cv' style='max-width:300px;margin-top:10px'></canvas></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=QR Code Image Designer — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fqr-code-image-designer.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=QR Code Image Designer — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fqr-code-image-designer.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#QRCode #QRGenerator #DesignTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+// Minimal QR Code encoder: byte mode, EC level L, versions 1-10.
+// Returns {n: size, m: 2D array of 0/1}.
+(function(){
+'use strict';
+// --- Galois field ---
+var EXP=new Array(512), LOG=new Array(256);
+(function(){var x=1;for(var i=0;i<255;i++){EXP[i]=x;LOG[x]=i;x<<=1;if(x&0x100)x^=0x11D;}for(var j=255;j<512;j++)EXP[j]=EXP[j-255];})();
+function gmul(a,b){return (a===0||b===0)?0:EXP[LOG[a]+LOG[b]];}
+function rsGen(n){var g=[1];for(var i=0;i<n;i++){var ng=new Array(g.length+1).fill(0);for(var j=0;j<g.length;j++){ng[j]^=gmul(g[j],EXP[i]);ng[j+1]^=g[j];}g=ng;}return g.reverse();}
+function rsEC(data,ecLen){var gen=rsGen(ecLen);var r=data.slice();for(var i=0;i<ecLen;i++)r.push(0);for(var k=0;k<data.length;k++){var c=r[k];if(c!==0){for(var j=1;j<=ecLen;j++)r[k+j]^=gmul(gen[j],c);}}return r.slice(data.length);}
+
+// version -> block groups [{count, dataCW, ecCW}]
+var BLOCKS={1:[[1,19,7]],2:[[1,34,10]],3:[[1,55,15]],4:[[1,80,20]],5:[[1,108,26]],6:[[2,68,18]],7:[[2,78,20]],8:[[2,97,24]],9:[[2,116,30]],10:[[2,68,18],[2,69,18]]};
+var ALIGN={1:[],2:[6,18],3:[6,22],4:[6,26],5:[6,30],6:[6,34],7:[6,22,38],8:[6,24,42],9:[6,26,46],10:[6,28,50]};
+var REMBITS={1:0,2:7,3:7,4:7,5:7,6:7,7:0,8:0,9:0,10:0};
+// format info strings for EC level L, masks 0..7 (MSB first)
+var FMT=['111011111000100','111001011110011','111110110101010','111100010011101','110011000101111','110001100011000','110110001000001','110100101110110'];
+var VERINFO={7:'000111110010010100',8:'001000010110111100',9:'001001101010011001',10:'001010010011010011'};
+
+function dataCap(ver){var t=0;BLOCKS[ver].forEach(function(g){t+=g[0]*g[1];});return t;}
+
+function encodeData(bytes,ver){
+  var cap=dataCap(ver), ccb=ver<10?8:16, bits=[];
+  function push(v,n){for(var i=n-1;i>=0;i--)bits.push((v>>i)&1);}
+  push(4,4); push(bytes.length,ccb);
+  for(var k=0;k<bytes.length;k++)push(bytes[k],8);
+  var max=cap*8, term=Math.min(4,max-bits.length);
+  for(var t=0;t<term;t++)bits.push(0);
+  while(bits.length%8!==0)bits.push(0);
+  var data=[];
+  for(var i=0;i<bits.length;i+=8){var b=0;for(var j=0;j<8;j++)b=(b<<1)|bits[i+j];data.push(b);}
+  var pads=[0xEC,0x11],pi=0;
+  while(data.length<cap){data.push(pads[pi%2]);pi++;}
+  return data;
+}
+
+function interleave(data,ver){
+  // split into blocks
+  var blocks=[],off=0;
+  BLOCKS[ver].forEach(function(g){
+    for(var i=0;i<g[0];i++){blocks.push({d:data.slice(off,off+g[1]),ec:g[2]});off+=g[1];}
+  });
+  var maxD=Math.max.apply(null,blocks.map(function(b){return b.d.length;}));
+  var out=[];
+  for(var i=0;i<maxD;i++)blocks.forEach(function(b){if(i<b.d.length)out.push(b.d[i]);});
+  var ecs=blocks.map(function(b){return rsEC(b.d,b.ec);});
+  var maxE=Math.max.apply(null,ecs.map(function(e){return e.length;}));
+  for(var j=0;j<maxE;j++)ecs.forEach(function(e){if(j<e.length)out.push(e[j]);});
+  // remainder bits
+  var bits=[];
+  out.forEach(function(b){for(var k=7;k>=0;k--)bits.push((b>>k)&1);});
+  for(var r=0;r<REMBITS[ver];r++)bits.push(0);
+  return bits;
+}
+
+function maskFn(m,x,y){
+  switch(m){
+    case 0:return (x+y)%2===0;
+    case 1:return y%2===0;
+    case 2:return x%3===0;
+    case 3:return (x+y)%3===0;
+    case 4:return (Math.floor(y/2)+Math.floor(x/3))%2===0;
+    case 5:return ((x*y)%2+(x*y)%3)===0;
+    case 6:return (((x*y)%2+(x*y)%3)%2)===0;
+    case 7:return (((x+y)%2+(x*y)%3)%2)===0;
+  }
+  return false;
+}
+
+function penalty(mat){
+  var n=mat.length, p=0, x, y, i;
+  // rule 1: runs
+  for(y=0;y<n;y++){var run=1;for(x=1;x<n;x++){if(mat[y][x]===mat[y][x-1])run++;else{if(run>=5)p+=3+(run-5);run=1;}}if(run>=5)p+=3+(run-5);}
+  for(x=0;x<n;x++){var r2=1;for(y=1;y<n;y++){if(mat[y][x]===mat[y-1][x])r2++;else{if(r2>=5)p+=3+(r2-5);r2=1;}}if(r2>=5)p+=3+(r2-5);}
+  // rule 2: 2x2
+  for(y=0;y<n-1;y++)for(x=0;x<n-1;x++){var c=mat[y][x];if(c===mat[y][x+1]&&c===mat[y+1][x]&&c===mat[y+1][x+1])p+=3;}
+  // rule 3: finder-like
+  function pat(a,b,c2,d,e,f,g2){return a===1&&b===0&&c2===1&&d===1&&e===1&&f===0&&g2===1;}
+  for(y=0;y<n;y++)for(x=0;x+10<n;x++){
+    if(pat(mat[y][x],mat[y][x+1],mat[y][x+2],mat[y][x+3],mat[y][x+4],mat[y][x+5],mat[y][x+6])&&mat[y][x+7]===0&&mat[y][x+8]===0&&mat[y][x+9]===0&&mat[y][x+10]===0)p+=40;
+    if(mat[y][x]===0&&mat[y][x+1]===0&&mat[y][x+2]===0&&mat[y][x+3]===0&&pat(mat[y][x+4],mat[y][x+5],mat[y][x+6],mat[y][x+7],mat[y][x+8],mat[y][x+9],mat[y][x+10]))p+=40;
+  }
+  for(x=0;x<n;x++)for(y=0;y+10<n;y++){
+    if(pat(mat[y][x],mat[y+1][x],mat[y+2][x],mat[y+3][x],mat[y+4][x],mat[y+5][x],mat[y+6][x])&&mat[y+7][x]===0&&mat[y+8][x]===0&&mat[y+9][x]===0&&mat[y+10][x]===0)p+=40;
+    if(mat[y][x]===0&&mat[y+1][x]===0&&mat[y+2][x]===0&&mat[y+3][x]===0&&pat(mat[y+4][x],mat[y+5][x],mat[y+6][x],mat[y+7][x],mat[y+8][x],mat[y+9][x],mat[y+10][x]))p+=40;
+  }
+  // rule 4: balance
+  var dark=0;for(y=0;y<n;y++)for(x=0;x<n;x++)dark+=mat[y][x];
+  var total=n*n;
+  p+=Math.floor(Math.abs(dark/total-0.5)*20)*10;
+  return p;
+}
+
+function buildMatrix(bits,ver){
+  var n=21+4*(ver-1);
+  var m=[],fn=[];
+  for(var y=0;y<n;y++){m.push(new Array(n).fill(0));fn.push(new Array(n).fill(false));}
+  function setF(x,y,v){m[y][x]=v;fn[y][x]=true;}
+  // finder patterns
+  var FP=[[1,1,1,1,1,1,1],[1,0,0,0,0,0,1],[1,0,1,1,1,0,1],[1,0,1,1,1,0,1],[1,0,1,1,1,0,1],[1,0,0,0,0,0,1],[1,1,1,1,1,1,1]];
+  function finder(px,py){for(var dy=-1;dy<=7;dy++)for(var dx=-1;dx<=7;dx++){var x=px+dx,y=py+dy;if(x<0||y<0||x>=n||y>=n)continue;var v=0;if(dx>=0&&dx<7&&dy>=0&&dy<7)v=FP[dy][dx];setF(x,y,v);}}
+  finder(0,0);finder(n-7,0);finder(0,n-7);
+  // timing
+  for(var t=8;t<n-8;t++){setF(t,6,t%2===0?1:0);setF(6,t,t%2===0?1:0);}
+  // alignment
+  var ap=ALIGN[ver],AL=[[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]];
+  for(var ai=0;ai<ap.length;ai++)for(var aj=0;aj<ap.length;aj++){
+    var cx=ap[ai],cy=ap[aj];
+    // skip only finder overlaps (alignment wins over timing)
+    if((cx<=8&&cy<=8)||(cx>=n-8&&cy<=8)||(cx<=8&&cy>=n-8))continue;
+    for(var dyy=-2;dyy<=2;dyy++)for(var dxx=-2;dxx<=2;dxx++)setF(cx+dxx,cy+dyy,AL[dyy+2][dxx+2]);
+  }
+  // reserve format info: row 8 cols 0-5,7,8 and col 8 rows 0-5,7 (first copy)
+  for(var fi=0;fi<=5;fi++){fn[8][fi]=true;fn[fi][8]=true;}
+  fn[8][7]=true;fn[7][8]=true;fn[8][8]=true;
+  // second copy: col 8 rows n-7..n-1, row 8 cols n-8..n-1
+  for(var k=0;k<7;k++){fn[n-1-k][8]=true;fn[8][n-1-k]=true;}
+  fn[8][n-8]=true;
+  // reserve version info
+  if(ver>=7){for(var jj=0;jj<3;jj++)for(var ii=0;ii<6;ii++){fn[n-11+jj][ii]=true;fn[ii][n-11+jj]=true;}}
+  // dark module
+  setF(8,4*ver+9,1);
+  // data placement
+  var bit=0;
+  for(var right=n-1;right>=1;right-=2){
+    if(right===6)right=5;
+    var up=((right+1)&2)===0;
+    for(var v=0;v<n;v++){
+      var yy=up?n-1-v:v;
+      for(var j=0;j<2;j++){
+        var xx=right-j;
+        if(!fn[yy][xx]&&bit<bits.length){m[yy][xx]=bits[bit++];}
+      }
+    }
+  }
+  return {m:m,fn:fn,n:n};
+}
+
+function drawFormat(m,ver,mask){
+  var n=m.length, s=FMT[mask], b=[];
+  for(var i=0;i<15;i++)b.push(s.charCodeAt(i)-48);
+  function set(x,y,v){m[y][x]=v;}
+  // first copy: bits[0]=MSB. row8: cols 0-5,7,8 ; col8: rows 7,5..0
+  var c1=[[0,8],[1,8],[2,8],[3,8],[4,8],[5,8],[7,8],[8,8],[8,7],[8,5],[8,4],[8,3],[8,2],[8,1],[8,0]];
+  for(var i2=0;i2<15;i2++)set(c1[i2][0],c1[i2][1],b[i2]);
+  // second copy: col8 rows n-1..n-7 = bits 0..6 ; row8 cols n-1..n-8 = bits 7..14
+  for(var k=0;k<7;k++)set(8,n-1-k,b[k]);
+  for(var k2=0;k2<8;k2++)set(n-1-k2,8,b[7+k2]);
+  // version info (MSB first, column-major bottom-to-top right-to-left)
+  if(ver>=7){var vs=VERINFO[ver],vb=[];for(var q=0;q<18;q++)vb.push(vs.charCodeAt(q)-48);
+    var vi=0;
+    for(var cc=5;cc>=0;cc--)for(var rr=n-9;rr>=n-11;rr--)m[rr][cc]=vb[vi++];
+    vi=0;
+    for(var r2=5;r2>=0;r2--)for(var c2=n-9;c2>=n-11;c2--)m[r2][c2]=vb[vi++];}
+}
+
+function qrMatrix(text){
+  var bytes=[];
+  for(var i=0;i<text.length;i++){var c=text.charCodeAt(i);if(c<128)bytes.push(c);else{/*UTF-8*/if(c<2048)bytes.push(192|(c>>6),128|(c&63));else bytes.push(224|(c>>12),128|((c>>6)&63),128|(c&63));}}
+  var ver=0;
+  for(var v=1;v<=10;v++){var ccb=v<10?8:16;if(dataCap(v)*8>=4+ccb+bytes.length*8){ver=v;break;}}
+  if(!ver)throw new Error('Text too long (max ~271 bytes)');
+  var data=encodeData(bytes,ver);
+  var bits=interleave(data,ver);
+  var built=buildMatrix(bits,ver), m=built.m, fn=built.fn, n=built.n;
+  var best=0,bestP=Infinity,bestM=null;
+  for(var mask=0;mask<8;mask++){
+    var t=m.map(function(r){return r.slice();});
+    for(var y=0;y<n;y++)for(var x=0;x<n;x++)if(!fn[y][x]&&maskFn(mask,x,y))t[y][x]^=1;
+    var p=penalty(t);
+    if(p<bestP){bestP=p;best=mask;bestM=t;}
+  }
+  drawFormat(bestM,ver,best);
+  return {n:n,m:bestM,version:ver,mask:best};
+}
+
+window.qrMatrix=qrMatrix;
+})();
+function dl(u,n){var a=document.createElement('a');a.href=u;a.download=n;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},500);}function go(){var R=document.getElementById('result');
+ var t=document.getElementById('t').value;
+ if(!t){R.innerHTML='Enter text or a URL.';return;}
+ var fg=document.getElementById('fg').value,bg=document.getElementById('bg').value,sz=parseInt(document.getElementById('sz').value);
+ var res;
+ try{res=window.qrMatrix(t);}catch(e){R.innerHTML=e.message;return;}
+ var n=res.n,q=4,scale=sz/(n+2*q);
+ var cv=document.getElementById('cv');cv.width=cv.height=Math.round(sz);
+ var x=cv.getContext('2d');x.fillStyle=bg;x.fillRect(0,0,cv.width,cv.height);x.fillStyle=fg;
+ for(var y=0;y<n;y++)for(var xx=0;xx<n;xx++)if(res.m[y][xx])x.fillRect(Math.round((xx+q)*scale),Math.round((y+q)*scale),Math.ceil(scale),Math.ceil(scale));
+ cv.toBlob(function(b){var u=URL.createObjectURL(b);
+  R.innerHTML='QR code generated (version '+res.version+', '+t.length+' chars). Tip: keep strong contrast or scanners may fail.<br><br><a href="'+u+'" download="qrcode.png" style="display:inline-block;padding:10px 20px;background:#ff7a00;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Download QR PNG</a>';},'image/png');}
+</script>
+</body>
+</html>

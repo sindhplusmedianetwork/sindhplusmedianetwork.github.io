@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resistor Color Code Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Decode 4-band resistor color codes instantly. Pick the band colors and see the resistance value with tolerance, plus a visual drawing of the resistor.">
+<meta name="keywords" content="resistor color code calculator, 4 band resistor calculator, resistor value chart, decode resistor colors, ohm color code reader">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/resistor-color-code-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Resistor Color Code Calculator — Free Online Tool">
+<meta property="og:description" content="Decode 4-band resistor color codes instantly. Pick the band colors and see the resistance value with tolerance, plus a visual drawing of the resistor.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/resistor-color-code-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Resistor Color Code Calculator — Free Online Tool">
+<meta name="twitter:description" content="Decode 4-band resistor color codes instantly. Pick the band colors and see the resistance value with tolerance, plus a visual drawing of the resistor.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Resistor Color Code Calculator","url":"https://sindhplusmedianetwork.github.io/tools/resistor-color-code-calculator.html","description":"Decode 4-band resistor color codes instantly. Pick the band colors and see the resistance value with tolerance, plus a visual drawing of the resistor.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Science &amp; Engineering</div>
+<h1>Resistor Color Code Calculator</h1>
+<p class="desc">Decode 4-band resistor color codes instantly. Pick the band colors and see the resistance value with tolerance, plus a visual drawing of the resistor.</p>
+<div class="toolbox">
+<div id='resdraw' style='text-align:center;margin:10px 0'></div><label>Band 1 (1st digit)<select id='rb1'></select></label><label>Band 2 (2nd digit)<select id='rb2'></select></label><label>Band 3 (multiplier)<select id='rb3'></select></label><label>Band 4 (tolerance)<select id='rb4'></select></label><button onclick='calcRes()'>Decode Resistor</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Resistor Color Code Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fresistor-color-code-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Resistor Color Code Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fresistor-color-code-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#ResistorCalculator #Electronics #ColorCode #EngineeringTools #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var RC_COL=[['Black','#000000',0],['Brown','#8B4513',1],['Red','#FF0000',2],['Orange','#FF7F00',3],['Yellow','#FFFF00',4],['Green','#008000',5],['Blue','#0000FF',6],['Violet','#8A2BE2',7],['Gray','#808080',8],['White','#FFFFFF',9]];
+var RC_MULT={'Black':1,'Brown':10,'Red':100,'Orange':1000,'Yellow':10000,'Green':100000,'Blue':1000000,'Violet':10000000,'Gray':100000000,'White':1000000000,'Gold':0.1,'Silver':0.01};
+var RC_TOL={'Brown':'1%','Red':'2%','Green':'0.5%','Blue':'0.25%','Violet':'0.1%','Gray':'0.05%','Gold':'5%','Silver':'10%'};
+var RC_HEX={'Black':'#000000','Brown':'#8B4513','Red':'#FF0000','Orange':'#FF7F00','Yellow':'#FFFF00','Green':'#008000','Blue':'#0000FF','Violet':'#8A2BE2','Gray':'#808080','White':'#FFFFFF','Gold':'#D4AF37','Silver':'#C0C0C0'};
+(function(){var d=RC_COL.map(function(c){return "<option>"+c[0]+"</option>";}).join('');document.getElementById('rb1').innerHTML=d;document.getElementById('rb2').innerHTML=d;var m='<option>Black</option><option>Brown</option><option>Red</option><option>Orange</option><option>Yellow</option><option>Green</option><option>Blue</option><option>Violet</option><option>Gray</option><option>White</option><option>Gold</option><option>Silver</option>';document.getElementById('rb3').innerHTML=m;var t='<option>Gold</option><option>Silver</option><option>Brown</option><option>Red</option><option>Green</option><option>Blue</option><option>Violet</option><option>Gray</option>';document.getElementById('rb4').innerHTML=t;document.getElementById('rb1').value='Brown';document.getElementById('rb2').value='Black';document.getElementById('rb3').value='Red';['rb1','rb2','rb3','rb4'].forEach(function(id){document.getElementById(id).addEventListener('change',calcRes);});calcRes();})();
+function fmtR(v){if(v>=1e9)return parseFloat((v/1e9).toPrecision(3))+' GΩ';if(v>=1e6)return parseFloat((v/1e6).toPrecision(3))+' MΩ';if(v>=1e3)return parseFloat((v/1e3).toPrecision(3))+' kΩ';return parseFloat(v.toPrecision(3))+' Ω';}
+function calcRes(){var b1=document.getElementById('rb1').value,b2=document.getElementById('rb2').value,b3=document.getElementById('rb3').value,b4=document.getElementById('rb4').value;var d1=RC_COL.filter(function(c){return c[0]===b1;})[0][2],d2=RC_COL.filter(function(c){return c[0]===b2;})[0][2];var val=(d1*10+d2)*RC_MULT[b3];var bands=[b1,b2,b3,b4].map(function(b){return "<div style='display:inline-block;width:22px;height:44px;background:"+RC_HEX[b]+";border:1px solid #999;margin:0 6px;vertical-align:middle'></div>";}).join('');document.getElementById('resdraw').innerHTML="<div style='display:inline-block;background:#E8C87A;border-radius:22px;padding:6px 26px;border:1px solid #b98'>"+bands+"</div>";document.getElementById('result').innerHTML='<b>Resistance: '+fmtR(val)+'</b><br>Tolerance: &plusmn;'+RC_TOL[b4]+' ('+b4+')';}
+</script>
+</body>
+</html>

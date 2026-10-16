@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume/CV Builder — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Build a professional resume in seconds. Fill in your name, experience, education and skills, and get a clean, printable CV layout instantly. Use the Print button to save it as a PDF.">
+<meta name="keywords" content="resume builder, cv builder, free resume maker, cv maker online, resume template, professional cv builder, create resume free, cv format">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/resume-cv-builder.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Resume/CV Builder — Free Online Tool">
+<meta property="og:description" content="Build a professional resume in seconds. Fill in your name, experience, education and skills, and get a clean, printable CV layout instantly. Use the Print button to save it as a PDF.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/resume-cv-builder.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Resume/CV Builder — Free Online Tool">
+<meta name="twitter:description" content="Build a professional resume in seconds. Fill in your name, experience, education and skills, and get a clean, printable CV layout instantly. Use the Print button to save it as a PDF.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Resume/CV Builder","url":"https://sindhplusmedianetwork.github.io/tools/resume-cv-builder.html","description":"Build a professional resume in seconds. Fill in your name, experience, education and skills, and get a clean, printable CV layout instantly. Use the Print button to save it as a PDF.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Jobs &amp; Career</div>
+<h1>Resume/CV Builder</h1>
+<p class="desc">Build a professional resume in seconds. Fill in your name, experience, education and skills, and get a clean, printable CV layout instantly. Use the Print button to save it as a PDF.</p>
+<div class="toolbox">
+<label>Full Name<input id='n' placeholder='Tahir Adnan'></label><label>Job Title<input id='t' placeholder='English Teacher'></label><label>Email<input id='e' placeholder='you@email.com'></label><label>Phone<input id='p' placeholder='+92 300 1234567'></label><label>Location<input id='l' placeholder='Karachi, Pakistan'></label><label>Professional Summary<textarea id='s' rows='3' placeholder='2-3 lines about your experience and strengths...'></textarea></label><label>Experience (one per line)<textarea id='x' rows='4' placeholder='English Teacher @ ABC School (2021-2023) - Taught kindergarten English'></textarea></label><label>Education (one per line)<textarea id='d' rows='3' placeholder='MA English - University of Karachi (2020)'></textarea></label><label>Skills (comma separated)<textarea id='k' rows='2' placeholder='Teaching, Communication, Classroom Management'></textarea></label><button onclick='build()'>Build Resume</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Resume/CV Builder — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fresume-cv-builder.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Resume/CV Builder — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fresume-cv-builder.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#ResumeBuilder #CVBuilder #JobTools #CareerTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function build(){
+var n=document.getElementById('n').value.trim();
+if(!n){document.getElementById('result').innerHTML='Please enter your full name.';return;}
+var t=document.getElementById('t').value.trim(),e=document.getElementById('e').value.trim(),p=document.getElementById('p').value.trim(),l=document.getElementById('l').value.trim(),s=document.getElementById('s').value.trim(),x=document.getElementById('x').value.trim(),d=document.getElementById('d').value.trim(),k=document.getElementById('k').value.trim();
+var contact=[e,p,l].filter(Boolean).map(esc).join(' &nbsp;|&nbsp; ');
+function lines(txt){return txt.split('\n').map(function(a){return a.trim();}).filter(Boolean);}
+var xh=lines(x).map(function(a){return '<li>'+esc(a)+'</li>';}).join('');
+var dh=lines(d).map(function(a){return '<li>'+esc(a)+'</li>';}).join('');
+var kh=k.split(',').map(function(a){return a.trim();}).filter(Boolean).map(function(a){return '<span style="display:inline-block;background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:2px 10px;margin:2px;font-size:13px;">'+esc(a)+'</span>';}).join('');
+var h='<div style="border:1px solid #ddd;border-radius:8px;padding:24px;max-width:700px;background:#fff;color:#111;">';
+h+='<h2 style="margin:0 0 2px;">'+esc(n)+'</h2>';
+if(t)h+='<div style="color:#4f46e5;font-weight:600;margin-bottom:6px;">'+esc(t)+'</div>';
+if(contact)h+='<div style="font-size:13px;color:#555;margin-bottom:12px;">'+contact+'</div>';
+if(s)h+='<h3 style="border-bottom:2px solid #4f46e5;padding-bottom:4px;">Summary</h3><p style="font-size:14px;">'+esc(s)+'</p>';
+if(xh)h+='<h3 style="border-bottom:2px solid #4f46e5;padding-bottom:4px;">Experience</h3><ul style="font-size:14px;">'+xh+'</ul>';
+if(dh)h+='<h3 style="border-bottom:2px solid #4f46e5;padding-bottom:4px;">Education</h3><ul style="font-size:14px;">'+dh+'</ul>';
+if(kh)h+='<h3 style="border-bottom:2px solid #4f46e5;padding-bottom:4px;">Skills</h3><div>'+kh+'</div>';
+h+='</div><br><button onclick="window.print()">Print / Save as PDF</button>';
+document.getElementById('result').innerHTML=h;}
+</script>
+</body>
+</html>

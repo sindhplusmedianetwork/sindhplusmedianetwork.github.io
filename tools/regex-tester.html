@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regex Tester — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Test a regular expression live against your own text. Every match is highlighted, with the match index, captured groups and total match count listed below. Invalid patterns or flags show a friendly error instead of breaking. Your HTML is escaped first, so highlighting is always safe.">
+<meta name="keywords" content="regex tester online, regular expression tester, test regex online, regex debugger, regex match tester, javascript regex tester, regex playground, regex checker online, regex101 alternative">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/regex-tester.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Regex Tester — Free Online Tool">
+<meta property="og:description" content="Test a regular expression live against your own text. Every match is highlighted, with the match index, captured groups and total match count listed below. Invalid patterns or flags show a friendly error instead of breaking. Your HTML is escaped first, so highlighting is always safe.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/regex-tester.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Regex Tester — Free Online Tool">
+<meta name="twitter:description" content="Test a regular expression live against your own text. Every match is highlighted, with the match index, captured groups and total match count listed below. Invalid patterns or flags show a friendly error instead of breaking. Your HTML is escaped first, so highlighting is always safe.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Regex Tester","url":"https://sindhplusmedianetwork.github.io/tools/regex-tester.html","description":"Test a regular expression live against your own text. Every match is highlighted, with the match index, captured groups and total match count listed below. Invalid patterns or flags show a friendly error instead of breaking. Your HTML is escaped first, so highlighting is always safe.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>Regex Tester</h1>
+<p class="desc">Test a regular expression live against your own text. Every match is highlighted, with the match index, captured groups and total match count listed below. Invalid patterns or flags show a friendly error instead of breaking. Your HTML is escaped first, so highlighting is always safe.</p>
+<div class="toolbox">
+<label>Pattern:<br><input id="p" style="width:100%" placeholder="\\d{3}-\\d{4}"></label><br><label>Flags: <input id="f" value="g" style="width:60px"></label><br><label>Test string:<br><textarea id="s" rows="8" style="width:100%" placeholder="Call 555-1234 or 555-9876"></textarea></label><br><button onclick="go()">Test Regex</button><div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Regex Tester — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fregex-tester.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Regex Tester — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fregex-tester.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#RegexTester #Regex #WebDev #CodeTools #SPMN #FreeTools #Coding #Debugging</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function go(){
+var p=document.getElementById('p').value;
+var f=document.getElementById('f').value||'g';
+var s=document.getElementById('s').value;
+var out=document.getElementById('result');
+function escH(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+if(!p){out.innerHTML='<p style="color:#b00">Please enter a regex pattern.</p>';return;}
+var re;
+try{re=new RegExp(p,f);}catch(e){out.innerHTML='<p style="color:#b00"><b>Invalid regex:</b> '+escH(e.message)+'</p>';return;}
+var html='',last=0,m,count=0,rows=[];
+re.lastIndex=0;
+while((m=re.exec(s))!==null){
+count++;
+html+=escH(s.slice(last,m.index))+'<mark>'+escH(m[0]||' ')+'</mark>';
+last=m.index+m[0].length;
+var gs=[];
+for(var i=1;i<m.length;i++)gs.push('Group '+i+': '+(m[i]===undefined?'(no match)':escH(m[i])));
+rows.push('<li>Match '+count+' at index '+m.index+': <code>'+escH(m[0])+'</code>'+(gs.length?'<br>'+gs.join('<br>'):'')+'</li>');
+if(m[0]==='')re.lastIndex++;
+if(!re.global)break;
+}
+html+=escH(s.slice(last));
+out.innerHTML='<p><b>'+count+' match'+(count===1?'':'es')+'</b></p><div style="white-space:pre-wrap;border:1px solid #ccc;padding:8px;border-radius:4px">'+(html||'(empty test string)')+'</div>'+(rows.length?'<ol>'+rows.join('')+'</ol>':'<p style="color:#666">No matches found.</p>');
+}
+</script>
+</body>
+</html>
