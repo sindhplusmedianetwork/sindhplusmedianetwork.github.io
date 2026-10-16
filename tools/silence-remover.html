@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silence Remover — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Remove silence from audio free. Automatically cut quiet gaps above a threshold you set and download the tightened WAV.">
+<meta name="keywords" content="remove silence, silence remover audio, trim silence mp3, audio gap remover, free silence cutter, cut dead air podcast, auto trim quiet parts, voice recording cleaner, podcast silence cutter, dead air remover">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/silence-remover.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Silence Remover — Free Online Tool">
+<meta property="og:description" content="Remove silence from audio free. Automatically cut quiet gaps above a threshold you set and download the tightened WAV.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/silence-remover.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Silence Remover — Free Online Tool">
+<meta name="twitter:description" content="Remove silence from audio free. Automatically cut quiet gaps above a threshold you set and download the tightened WAV.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Silence Remover","url":"https://sindhplusmedianetwork.github.io/tools/silence-remover.html","description":"Remove silence from audio free. Automatically cut quiet gaps above a threshold you set and download the tightened WAV.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Video &amp; Audio</div>
+<h1>Silence Remover</h1>
+<p class="desc">Remove silence from audio free. Automatically cut quiet gaps above a threshold you set and download the tightened WAV.</p>
+<div class="toolbox">
+<label>Select audio<input type='file' id='f' accept='audio/*'></label><label>Silence threshold: <span id='tv'>-40</span> dB<input type='range' id='th' min='-60' max='-20' value='-40' oninput="document.getElementById('tv').textContent=this.value"></label><label>Min silence to cut (ms)<input type='number' id='ms' value='300' min='50'></label><button onclick='go()'>Remove Silence</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Silence Remover — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fsilence-remover.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Silence Remover — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fsilence-remover.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#SilenceRemover #AudioEditor #AudioTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function dl(u,n){var a=document.createElement('a');a.href=u;a.download=n;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},500);}function ad(f){var C=window.AudioContext||window.webkitAudioContext;if(!C)return Promise.reject(new Error('Web Audio not supported'));return f.arrayBuffer().then(function(b){return new C().decodeAudioData(b);});}function wavBlob(ch,sr){var n=ch[0].length,nc=ch.length,b=new ArrayBuffer(44+n*nc*2),v=new DataView(b);function s(o,t){for(var i=0;i<t.length;i++)v.setUint8(o+i,t.charCodeAt(i));}s(0,'RIFF');v.setUint32(4,36+n*nc*2,true);s(8,'WAVE');s(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,nc,true);v.setUint32(24,sr,true);v.setUint32(28,sr*nc*2,true);v.setUint16(32,nc*2,true);v.setUint16(34,16,true);s(36,'data');v.setUint32(40,n*nc*2,true);var o=44;for(var i=0;i<n;i++)for(var c=0;c<nc;c++){var x=Math.max(-1,Math.min(1,ch[c][i]));v.setInt16(o,x<0?x*32768:x*32767,true);o+=2;}return new Blob([b],{type:'audio/wav'});}function go(){var f=document.getElementById('f').files[0];var R=document.getElementById('result');
+ if(!f){R.innerHTML='Please select an audio file.';return;}
+ var thdb=parseFloat(document.getElementById('th').value),th=Math.pow(10,thdb/20);
+  R.innerHTML='Analyzing...';
+ ad(f).then(function(b){
+  var sr=b.sampleRate,nc=b.numberOfChannels,d=b.getChannelData(0);
+  var minLen=Math.floor(parseFloat(document.getElementById('ms').value)/1000*sr);
+  var keep=[],i=0,removed=0;
+  while(i<d.length){
+   var a=Math.abs(d[i]);
+   if(a<th){
+    var j=i;while(j<d.length&&Math.abs(d[j])<th)j++;
+    if(j-i>=minLen){removed+=j-i;i=j;continue;}
+    for(var k=i;k<j;k++)keep.push(k);i=j;
+   }else{keep.push(i);i++;}
+  }
+  if(!keep.length){R.innerHTML='Everything was below the threshold.';return;}
+  var ch=[];
+  for(var c=0;c<nc;c++){var s=b.getChannelData(c),o=new Float32Array(keep.length);
+   for(var q=0;q<keep.length;q++)o[q]=s[keep[q]];ch.push(o);}
+  var u=URL.createObjectURL(wavBlob(ch,sr));
+  R.innerHTML='Removed '+(removed/sr).toFixed(1)+'s of silence. New duration: '+(keep.length/sr).toFixed(1)+'s (was '+b.duration.toFixed(1)+'s).<br><br><a href="'+u+'" download="no-silence.wav" style="display:inline-block;padding:10px 20px;background:#ff7a00;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Download WAV</a>';
+ }).catch(function(){R.innerHTML='Could not decode that audio file.';});}
+</script>
+</body>
+</html>

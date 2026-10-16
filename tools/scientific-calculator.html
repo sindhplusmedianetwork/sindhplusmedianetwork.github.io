@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="A free scientific calculator with trigonometry, logarithms, powers, roots, factorials and constants. Switch between degrees and radians for sin, cos and tan.">
+<meta name="keywords" content="scientific calculator, online scientific calculator, trig calculator, sin cos tan calculator, log calculator, free scientific calculator online, engineering calculator, calculator with sin cos tan, advanced calculator, math solver calculator, fx calculator online, ti calculator alternative">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/scientific-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Scientific Calculator — Free Online Tool">
+<meta property="og:description" content="A free scientific calculator with trigonometry, logarithms, powers, roots, factorials and constants. Switch between degrees and radians for sin, cos and tan.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/scientific-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Scientific Calculator — Free Online Tool">
+<meta name="twitter:description" content="A free scientific calculator with trigonometry, logarithms, powers, roots, factorials and constants. Switch between degrees and radians for sin, cos and tan.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Scientific Calculator","url":"https://sindhplusmedianetwork.github.io/tools/scientific-calculator.html","description":"A free scientific calculator with trigonometry, logarithms, powers, roots, factorials and constants. Switch between degrees and radians for sin, cos and tan.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Math &amp; Calculators</div>
+<h1>Scientific Calculator</h1>
+<p class="desc">A free scientific calculator with trigonometry, logarithms, powers, roots, factorials and constants. Switch between degrees and radians for sin, cos and tan.</p>
+<div class="toolbox">
+<div style='text-align:right'><span id='dm' style='font-size:12px;color:#666'>DEG</span></div><div id='dsp' style='background:#f4f4f4;border:1px solid #ddd;border-radius:8px;padding:14px;font-size:24px;text-align:right;min-height:32px;overflow-x:auto'>0</div><div style='display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:10px 0'><button type='button' onclick="sp('C')" style='padding:12px;font-size:16px'>C</button><button type='button' onclick="sp('(')" style='padding:12px;font-size:16px'>(</button><button type='button' onclick="sp(')')" style='padding:12px;font-size:16px'>)</button><button type='button' onclick="sp('B')" style='padding:12px;font-size:16px'>⌫</button><button type='button' onclick="sp('/')" style='padding:12px;font-size:16px'>÷</button><button type='button' onclick="sp('s')" style='padding:12px;font-size:16px'>sin</button><button type='button' onclick="sp('c')" style='padding:12px;font-size:16px'>cos</button><button type='button' onclick="sp('t')" style='padding:12px;font-size:16px'>tan</button><button type='button' onclick="sp('D')" style='padding:12px;font-size:16px'>DEG</button><button type='button' onclick="sp('*')" style='padding:12px;font-size:16px'>×</button><button type='button' onclick="sp('7')" style='padding:12px;font-size:16px'>7</button><button type='button' onclick="sp('8')" style='padding:12px;font-size:16px'>8</button><button type='button' onclick="sp('9')" style='padding:12px;font-size:16px'>9</button><button type='button' onclick="sp('n')" style='padding:12px;font-size:16px'>ln</button><button type='button' onclick="sp('-')" style='padding:12px;font-size:16px'>−</button><button type='button' onclick="sp('4')" style='padding:12px;font-size:16px'>4</button><button type='button' onclick="sp('5')" style='padding:12px;font-size:16px'>5</button><button type='button' onclick="sp('6')" style='padding:12px;font-size:16px'>6</button><button type='button' onclick="sp('g')" style='padding:12px;font-size:16px'>log</button><button type='button' onclick="sp('+')" style='padding:12px;font-size:16px'>+</button><button type='button' onclick="sp('1')" style='padding:12px;font-size:16px'>1</button><button type='button' onclick="sp('2')" style='padding:12px;font-size:16px'>2</button><button type='button' onclick="sp('3')" style='padding:12px;font-size:16px'>3</button><button type='button' onclick="sp('r')" style='padding:12px;font-size:16px'>√</button><button type='button' onclick="sp('=')" style='grid-column:span 5;padding:12px;font-size:20px;font-weight:700'>=</button><button type='button' onclick="sp('0')" style='padding:12px;font-size:16px'>0</button><button type='button' onclick="sp('.')" style='padding:12px;font-size:16px'>.</button><button type='button' onclick="sp('!')" style='padding:12px;font-size:16px'>n!</button><button type='button' onclick="sp('p')" style='padding:12px;font-size:16px'>π</button><button type='button' onclick="sp('e')" style='padding:12px;font-size:16px'>e</button><button type='button' onclick="sp('^')" style='padding:12px;font-size:16px'>xʸ</button><button type='button' onclick="sp('q')" style='padding:12px;font-size:16px'>x²</button><button type='button' onclick="sp('i')" style='padding:12px;font-size:16px'>1/x</button><button type='button' onclick="sp('a')" style='padding:12px;font-size:16px'>|x|</button><button type='button' onclick="sp('v')" style='padding:12px;font-size:16px'>∛x</button></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Scientific Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fscientific-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Scientific Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fscientific-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#ScientificCalculator #MathTools #TrigCalculator #FreeCalculator #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var ex='';var deg=true;var KM={'s':'sin(','c':'cos(','t':'tan(','n':'ln(','g':'log(','r':'Math.sqrt(','!':'fact(','p':'Math.PI','e':'Math.E','q':'**2','i':'**(-1)','a':'Math.abs(','v':'Math.cbrt('};function upd(){document.getElementById('dsp').textContent=ex||'0';}function sp(k){if(k==='C'){ex='';}else if(k==='B'){ex=ex.slice(0,-1);}else if(k==='='){eq();return;}else if(k==='D'){deg=!deg;document.getElementById('dm').textContent=deg?'DEG':'RAD';return;}else if(KM[k]){ex+=KM[k];}else{ex+=k;}upd();}function fact(n){if(n<0||Math.floor(n)!==n||n>170)return NaN;var r=1;for(var i=2;i<=n;i++)r*=i;return r;}function eq(){try{var s=ex;if(!s)throw 0;var pre='var __s=Math.sin,__c=Math.cos,__t=Math.tan,fact='+fact.toString()+';';if(deg){pre='var __s=function(x){return Math.sin(x*Math.PI/180)},__c=function(x){return Math.cos(x*Math.PI/180)},__t=function(x){return Math.tan(x*Math.PI/180)},fact='+fact.toString()+';';}s=s.replace(/sin\(/g,'__s(').replace(/cos\(/g,'__c(').replace(/tan\(/g,'__t(').replace(/ln\(/g,'Math.log(').replace(/log\(/g,'Math.log10(').replace(/\^/g,'**');if(!/^[0-9+\-*/.()%\s*,_a-zA-Z]+$/.test(s))throw 0;var r=Function(pre+'return ('+s+')')();if(typeof r!=='number'||!isFinite(r))throw 0;ex=String(parseFloat(r.toPrecision(12)));}catch(e){ex='';document.getElementById('dsp').textContent='Error';return;}upd();}
+</script>
+</body>
+</html>

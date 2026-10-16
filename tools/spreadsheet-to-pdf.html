@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spreadsheet to PDF Converter — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Turn any CSV spreadsheet into a print-ready PDF table. Paste your data, preview the formatted table, then print or save it as a PDF in one click — no software needed.">
+<meta name="keywords" content="spreadsheet to pdf, csv to pdf, excel to pdf online, convert csv to pdf, table to pdf, print spreadsheet as pdf, free csv to pdf converter, save csv as pdf, print csv table, csv to printable pdf, export spreadsheet pdf, table to pdf free">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/spreadsheet-to-pdf.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Spreadsheet to PDF Converter — Free Online Tool">
+<meta property="og:description" content="Turn any CSV spreadsheet into a print-ready PDF table. Paste your data, preview the formatted table, then print or save it as a PDF in one click — no software needed.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/spreadsheet-to-pdf.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spreadsheet to PDF Converter — Free Online Tool">
+<meta name="twitter:description" content="Turn any CSV spreadsheet into a print-ready PDF table. Paste your data, preview the formatted table, then print or save it as a PDF in one click — no software needed.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Spreadsheet to PDF Converter","url":"https://sindhplusmedianetwork.github.io/tools/spreadsheet-to-pdf.html","description":"Turn any CSV spreadsheet into a print-ready PDF table. Paste your data, preview the formatted table, then print or save it as a PDF in one click — no software needed.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Files &amp; Data</div>
+<h1>Spreadsheet to PDF Converter</h1>
+<p class="desc">Turn any CSV spreadsheet into a print-ready PDF table. Paste your data, preview the formatted table, then print or save it as a PDF in one click — no software needed.</p>
+<div class="toolbox">
+<label>Paste CSV data<textarea id='p_t' rows='6' placeholder='Paste CSV here...'></textarea></label><label>Or upload a CSV file<input type='file' id='p_f' accept='.csv,.txt'></label><label>Delimiter<select id='p_d'><option value=','>Comma (,)</option><option value=';'>Semicolon (;)</option><option value='TAB'>Tab</option><option value='|'>Pipe (|)</option></select></label><label>Document title (optional)<input type='text' id='p_title' placeholder='My Spreadsheet'></label><button onclick='pGo()'>Preview Table</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Spreadsheet to PDF Converter — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fspreadsheet-to-pdf.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Spreadsheet to PDF Converter — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fspreadsheet-to-pdf.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#CSVtoPDF #SpreadsheetToPDF #PDFTools #DataTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function csvParse(t,d){d=d||',';var rows=[],row=[],f='',q=false;for(var i=0;i<t.length;i++){var c=t[i],code=t.charCodeAt(i);if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++;}else q=false;}else f+=c;}else{if(c==='"')q=true;else if(c===d){row.push(f);f='';}else if(code===13){}else if(code===10){row.push(f);rows.push(row);row=[];f='';}else f+=c;}}if(f!==''||row.length>0){row.push(f);rows.push(row);}return rows;}
+function csvStr(rows,d){d=d||',';var CRLF=String.fromCharCode(13,10),LF=String.fromCharCode(10),CR=String.fromCharCode(13);return rows.map(function(r){return r.map(function(x){x=String(x==null?'':x);if(x.indexOf('"')>=0)x=x.split('"').join('""');if(x.indexOf(d)>=0||x.indexOf('"')>=0||x.indexOf(LF)>=0||x.indexOf(CR)>=0)x='"'+x+'"';return x;}).join(d);}).join(CRLF);}
+function escH(s){return String(s==null?'':s).split('&').join('&amp;').split('<').join('&lt;').split('>').join('&gt;').split('"').join('&quot;');}
+function dlFile(name,text,mime){var b=new Blob([text],{type:mime||'text/csv'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);},200);}
+function getCSVText(tid,fid,cb){var f=document.getElementById(fid).files[0];if(f){var r=new FileReader();r.onload=function(e){cb(e.target.result);};r.readAsText(f);}else{var t=document.getElementById(tid).value;if(!t.trim()){document.getElementById('result').innerHTML='<p style="color:#c00">Please paste CSV data or choose a file.</p>';return;}cb(t);}}
+function delimVal(id){var v=document.getElementById(id).value;return v==='TAB'?String.fromCharCode(9):v;}
+function colIdx(headers,spec){var ci=headers.indexOf(spec);if(ci<0){var n=parseInt(spec,10);if(!isNaN(n)&&n>=0&&n<headers.length)ci=n;}return ci;}
+var pTableHtml='';
+function pGo(){var d=delimVal('p_d');getCSVText('p_t','p_f',function(t){var rows=csvParse(t,d);if(!rows.length){document.getElementById('result').innerHTML='No data found.';return;}var h='<table style="border-collapse:collapse;width:100%"><thead><tr>';rows[0].forEach(function(c){h+='<th style="border:1px solid #333;padding:6px;background:#eee;text-align:left">'+escH(c)+'</th>';});h+='</tr></thead><tbody>';for(var i=1;i<rows.length;i++){h+='<tr>';rows[i].forEach(function(c){h+='<td style="border:1px solid #333;padding:6px">'+escH(c)+'</td>';});h+='</tr>';}h+='</tbody></table>';pTableHtml=h;var title=escH(document.getElementById('p_title').value.trim()||'Spreadsheet');document.getElementById('result').innerHTML='<p><b>'+title+'</b> — '+rows.length+' rows × '+rows[0].length+' columns. Preview below:</p><div style="overflow-x:auto;max-height:300px;overflow-y:auto;border:1px solid #ccc">'+h+'</div><br><button onclick="pPrint()">Print / Save as PDF</button>';});}
+function pPrint(){if(!pTableHtml){document.getElementById('result').innerHTML='Preview a table first.';return;}var title=escH(document.getElementById('p_title').value.trim()||'Spreadsheet');var w=window.open('','_blank');w.document.write('<html><head><title>'+title+'</title><style>body{font-family:Arial,sans-serif}table{border-collapse:collapse;width:100%}th,td{border:1px solid #333;padding:6px;font-size:12px;text-align:left}th{background:#eee}h2{margin-bottom:10px}</style></head><body><h2>'+title+'</h2>'+pTableHtml+'<br><button onclick="window.print()" style="padding:10px 20px;font-size:16px">Print / Save as PDF</button><p style="color:#666">In the print dialog, choose "Save as PDF" as the destination.</p></body></html>');w.document.close();}
+</script>
+</body>
+</html>

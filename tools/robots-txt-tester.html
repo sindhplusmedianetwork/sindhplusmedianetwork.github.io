@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robots.txt Tester — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Test whether a specific page path is allowed or blocked by a site&#x27;s robots.txt. The tool fetches the live robots.txt through a proxy, parses its Allow/Disallow rules, and evaluates your test path — the fetched file is shown too. Note: evaluation follows common longest-match rules but is an approximation; Google Search Console remains the authority.">
+<meta name="keywords" content="robots.txt tester, test robots.txt, check robots.txt rules, is url blocked by robots.txt, robots.txt validator, robots disallow checker, test allow disallow, crawl permission checker, seo robots tester, robots.txt parser online, check if page is crawlable, googlebot blocked checker, free robots tester, technical seo checker, robots.txt analyzer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/robots-txt-tester.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Robots.txt Tester — Free Online Tool">
+<meta property="og:description" content="Test whether a specific page path is allowed or blocked by a site&#x27;s robots.txt. The tool fetches the live robots.txt through a proxy, parses its Allow/Disallow rules, and evaluates your test path — the fetched file is shown too. Note: evaluation follows common longest-match rules but is an approximation; Google Search Console remains the authority.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/robots-txt-tester.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Robots.txt Tester — Free Online Tool">
+<meta name="twitter:description" content="Test whether a specific page path is allowed or blocked by a site&#x27;s robots.txt. The tool fetches the live robots.txt through a proxy, parses its Allow/Disallow rules, and evaluates your test path — the fetched file is shown too. Note: evaluation follows common longest-match rules but is an approximation; Google Search Console remains the authority.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Robots.txt Tester","url":"https://sindhplusmedianetwork.github.io/tools/robots-txt-tester.html","description":"Test whether a specific page path is allowed or blocked by a site&#x27;s robots.txt. The tool fetches the live robots.txt through a proxy, parses its Allow/Disallow rules, and evaluates your test path — the fetched file is shown too. Note: evaluation follows common longest-match rules but is an approximation; Google Search Console remains the authority.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Website &amp; SEO</div>
+<h1>Robots.txt Tester</h1>
+<p class="desc">Test whether a specific page path is allowed or blocked by a site&#x27;s robots.txt. The tool fetches the live robots.txt through a proxy, parses its Allow/Disallow rules, and evaluates your test path — the fetched file is shown too. Note: evaluation follows common longest-match rules but is an approximation; Google Search Console remains the authority.</p>
+<div class="toolbox">
+<label>Site URL<br><input id="a" placeholder="example.com" style="width:100%"></label><br><br>
+<label>Path to test<br><input id="b" value="/admin/" style="width:100%"></label><br><br>
+<button onclick="go()">Test Path</button>
+<div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Robots.txt Tester — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Frobots-txt-tester.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Robots.txt Tester — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Frobots-txt-tester.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#RobotsTxt #TechnicalSEO #SEOTools #SPMN #FreeTools #Crawlability</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function nu(u){u=String(u||'').trim();if(!u)return null;if(!/^[a-z][a-z0-9+.-]*:\/\//i.test(u))u='https://'+u;try{var p=new URL(u);if(p.protocol!=='http:'&&p.protocol!=='https:')return null;if(p.hostname.indexOf('.')<1)return null;return p.href;}catch(e){return null;}}
+function es(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function gj(u,ms){var c=new AbortController();var t=setTimeout(function(){c.abort();},ms||15000);return fetch('https://api.allorigins.win/get?url='+encodeURIComponent(u),{signal:c.signal}).then(function(r){clearTimeout(t);if(!r.ok)throw new Error('Proxy returned HTTP '+r.status);return r.json();},function(e){clearTimeout(t);throw e;});}
+function pmatch(pat,path){var anchored=false;if(pat.charAt(pat.length-1)==='$'){anchored=true;pat=pat.slice(0,-1);}var rx='^'+pat.split('*').map(function(s){return s.replace(/[.+?^${}()|[\]\\]/g,'\\$&');}).join('.*');if(anchored)rx+='$';try{return new RegExp(rx).test(path);}catch(e){return path.indexOf(pat)===0;}}
+function go(){var u=nu(document.getElementById('a').value);if(!u){document.getElementById('result').innerHTML='<p style="color:#b00">⚠️ Please enter a valid site URL.</p>';return;}var path=document.getElementById('b').value.trim()||'/';if(path.charAt(0)!=='/')path='/'+path;document.getElementById('result').innerHTML='<p>⏳ Fetching robots.txt...</p>';var root=new URL(u).origin;gj(root+'/robots.txt').then(function(d){var txt=String(d.contents||'');var code=((d.status||{}).http_code)||0;if(code===404||!txt.trim()){document.getElementById('result').innerHTML='<p>⚠️ No robots.txt found (HTTP '+code+').</p><p style="color:#0a7d2c"><b>✅ '+es(path)+' is ALLOWED</b> — with no robots.txt, everything may be crawled.</p>';return;}var groups=[],cur=null;txt.split(/\r?\n/).forEach(function(ln){ln=ln.trim();if(!ln||ln.charAt(0)==='#')return;var m=ln.match(/^([A-Za-z-]+)\s*:\s*(.*)$/);if(!m)return;var k=m[1].toLowerCase(),v=m[2].trim();if(k==='user-agent'){if(!cur||cur.hasRules){cur={agents:[],rules:[],hasRules:false};groups.push(cur);}cur.agents.push(v.toLowerCase());}else if(k==='allow'||k==='disallow'){if(!cur){cur={agents:['*'],rules:[],hasRules:false};groups.push(cur);}cur.hasRules=true;cur.rules.push({t:k,v:v});}});var rules=[];groups.forEach(function(g){if(g.agents.indexOf('*')>=0)rules=rules.concat(g.rules);});var best=null,bestLen=-1;rules.forEach(function(r){if(!r.v)return;if(!pmatch(r.v,path))return;var L=r.v.replace(/\$$/,'').length;if(L>bestLen||(L===bestLen&&r.t==='allow'&&best&&best.t==='disallow')){best=r;bestLen=L;}});var allowed=best?best.t==='allow':true;var h='<h3 style="color:'+(allowed?'#0a7d2c':'#b00')+'">'+(allowed?'✅ ALLOWED':'⛔ BLOCKED')+'</h3>';h+='<p><b>Path:</b> <code>'+es(path)+'</code><br><b>Matched rule:</b> '+(best?'<code>'+es(best.t+': '+best.v)+'</code>':'none — default allow')+'</p>';h+='<p style="font-size:13px;color:#555">Evaluated against <code>User-agent: *</code> rules using longest-match (Allow wins ties), with * and $ wildcard support. This is an approximation — Google Search Console is the authority.</p>';h+='<h4>Fetched robots.txt</h4><pre style="background:#f5f5f5;padding:10px;white-space:pre-wrap;font-size:13px">'+es(txt)+'</pre>';document.getElementById('result').innerHTML=h;}).catch(function(e){document.getElementById('result').innerHTML='<p style="color:#b00">Failed: '+es(e.message||e)+'</p>';});}
+</script>
+</body>
+</html>

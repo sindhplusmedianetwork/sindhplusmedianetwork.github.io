@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills Gap Analyzer — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Find out what skills you are missing for your dream role. Enter your current skills and pick a target job to get a match score and a learning priority list.">
+<meta name="keywords" content="skills gap analysis, skill gap analyzer, job skills requirements, what skills do i need, career skills assessment">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/skills-gap-analyzer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Skills Gap Analyzer — Free Online Tool">
+<meta property="og:description" content="Find out what skills you are missing for your dream role. Enter your current skills and pick a target job to get a match score and a learning priority list.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/skills-gap-analyzer.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Skills Gap Analyzer — Free Online Tool">
+<meta name="twitter:description" content="Find out what skills you are missing for your dream role. Enter your current skills and pick a target job to get a match score and a learning priority list.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Skills Gap Analyzer","url":"https://sindhplusmedianetwork.github.io/tools/skills-gap-analyzer.html","description":"Find out what skills you are missing for your dream role. Enter your current skills and pick a target job to get a match score and a learning priority list.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Jobs &amp; Career</div>
+<h1>Skills Gap Analyzer</h1>
+<p class="desc">Find out what skills you are missing for your dream role. Enter your current skills and pick a target job to get a match score and a learning priority list.</p>
+<div class="toolbox">
+<label>Target Role<select id='r'><option value=''>-- Select --</option></select></label><label>Your Current Skills (comma separated)<textarea id='s' rows='3' placeholder='e.g. Excel, Communication, Teaching'></textarea></label><button onclick='gap()'>Analyze Gap</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Skills Gap Analyzer — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fskills-gap-analyzer.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Skills Gap Analyzer — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fskills-gap-analyzer.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#SkillsGap #CareerGrowth #JobSkills #CareerTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var RG={
+"Kindergarten English Teacher":["Classroom Management","Phonics Teaching","Lesson Planning","Child Psychology","TEFL/TESOL","Patience","Communication","Creativity","Assessment","Parent Communication"],
+"Software Developer":["Programming","Data Structures","Git","Databases","APIs","Testing","Problem Solving","Agile","Code Review","Debugging"],
+"Data Analyst":["Excel","SQL","Statistics","Data Visualization","Python","Critical Thinking","Reporting","Business Acumen"],
+"Digital Marketer":["SEO","Content Marketing","Social Media","Google Analytics","Email Marketing","Copywriting","Paid Ads","Strategy"],
+"Accountant":["Bookkeeping","Excel","Financial Reporting","Taxation","Auditing","Attention to Detail","ERP Software"],
+"HR Officer":["Recruitment","Interviewing","Employee Relations","Labor Law","Onboarding","Communication","Conflict Resolution"],
+"Sales Executive":["Prospecting","Negotiation","CRM","Presentation","Objection Handling","Closing","Relationship Building"],
+"Graphic Designer":["Photoshop","Illustrator","Typography","Color Theory","Layout","Creativity","Client Communication"],
+"Customer Support Rep":["Communication","Patience","Product Knowledge","Problem Solving","Empathy","Multitasking","CRM Tools"],
+"Project Manager":["Planning","Risk Management","Leadership","Scheduling","Budgeting","Stakeholder Management","Agile"],
+"Nurse":["Patient Care","Medical Knowledge","Empathy","Attention to Detail","Emergency Response","Documentation","Teamwork"],
+"Journalist":["Writing","Research","Interviewing","Ethics","Fact-Checking","Deadlines","Storytelling"]};
+(function(){var s=document.getElementById('r');Object.keys(RG).forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=k;s.appendChild(o);});})();
+function gap(){
+var r=document.getElementById('r').value,s=document.getElementById('s').value.trim();
+if(!r){document.getElementById('result').innerHTML='Please select a target role.';return;}
+if(!s){document.getElementById('result').innerHTML='Please enter your current skills.';return;}
+var mine=s.toLowerCase().split(',').map(function(x){return x.trim();}).filter(Boolean);
+var req=RG[r],have=[],miss=[];
+req.forEach(function(skill){var sl=skill.toLowerCase();
+var found=mine.some(function(m){return sl.indexOf(m)>=0||m.indexOf(sl)>=0;});
+if(found)have.push(skill);else miss.push(skill);});
+var pct=Math.round(have.length/req.length*100);
+var h='<b>'+r+'</b><br><div style="font-size:26px;font-weight:800;color:'+(pct>=70?'green':pct>=40?'#d97706':'#b91c1c')+';">'+pct+'% match</div>';
+h+='<br><b style="color:green;">You have ('+have.length+'):</b><br>'+(have.length?have.map(function(x){return '<span style="display:inline-block;background:#dcfce7;border-radius:10px;padding:2px 10px;margin:2px;font-size:13px;">'+x+'</span>';}).join(''):'None matched');
+h+='<br><br><b style="color:#b91c1c;">Missing - learn these first ('+miss.length+'):</b><br>'+(miss.length?miss.map(function(x){return '<span style="display:inline-block;background:#fee2e2;border-radius:10px;padding:2px 10px;margin:2px;font-size:13px;">'+x+'</span>';}).join(''):'None!');
+document.getElementById('result').innerHTML=h;}
+</script>
+</body>
+</html>

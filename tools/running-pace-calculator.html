@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Running Pace Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Calculate your running pace, finish time, or distance. Enter any two values - distance and time, distance and pace, or time and pace - and get the third instantly.">
+<meta name="keywords" content="running pace calculator, pace calculator running, 5k pace calculator, marathon pace calculator, min per km calculator, running time predictor">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/running-pace-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Running Pace Calculator — Free Online Tool">
+<meta property="og:description" content="Calculate your running pace, finish time, or distance. Enter any two values - distance and time, distance and pace, or time and pace - and get the third instantly.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/running-pace-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Running Pace Calculator — Free Online Tool">
+<meta name="twitter:description" content="Calculate your running pace, finish time, or distance. Enter any two values - distance and time, distance and pace, or time and pace - and get the third instantly.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Running Pace Calculator","url":"https://sindhplusmedianetwork.github.io/tools/running-pace-calculator.html","description":"Calculate your running pace, finish time, or distance. Enter any two values - distance and time, distance and pace, or time and pace - and get the third instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Science &amp; Engineering</div>
+<h1>Running Pace Calculator</h1>
+<p class="desc">Calculate your running pace, finish time, or distance. Enter any two values - distance and time, distance and pace, or time and pace - and get the third instantly.</p>
+<div class="toolbox">
+<label>Calculation<select id='mode' onchange='paceMode()'><option value='pace'>Find pace (distance + time)</option><option value='time'>Find time (distance + pace)</option><option value='dist'>Find distance (time + pace)</option></select></label><div id='fD'><label>Distance (km)<input type='number' id='d' placeholder='5' min='0' step='any'></label></div><div id='fT'><label>Time (mm:ss)<input type='text' id='t' placeholder='25:00'></label></div><div id='fP' style='display:none'><label>Pace (min:sec per km)<input type='text' id='p' placeholder='5:00'></label></div><button onclick='calcPace()'>Calculate</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Running Pace Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Frunning-pace-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Running Pace Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Frunning-pace-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#PaceCalculator #RunningTools #MarathonTraining #FitnessTools #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function paceMode(){var m=document.getElementById('mode').value;document.getElementById('fD').style.display=(m==='dist')?'none':'';document.getElementById('fT').style.display=(m==='time')?'none':'';document.getElementById('fP').style.display=(m==='pace')?'none':'';}
+function pToSec(s){s=String(s).trim();if(!s)return NaN;var p=s.split(':');if(p.length===1)return parseFloat(p[0])*60;if(p.length===2)return parseFloat(p[0])*60+parseFloat(p[1]);if(p.length===3)return parseFloat(p[0])*3600+parseFloat(p[1])*60+parseFloat(p[2]);return NaN;}
+function pFmt(sec){var m=Math.floor(sec/60),s=Math.round(sec%60);return m+':'+(s<10?'0':'')+s;}
+function pFmtT(sec){var h=Math.floor(sec/3600),m=Math.floor(sec%3600/60),s=Math.round(sec%60);return (h>0?h+':':'')+m+':'+(s<10?'0':'')+s;}
+function calcPace(){var m=document.getElementById('mode').value;var R=document.getElementById('result');var d=parseFloat(document.getElementById('d').value);var t=pToSec(document.getElementById('t').value);var p=pToSec(document.getElementById('p').value);if(m==='pace'){if(!d||d<=0||!t||t<=0){R.innerHTML='Enter valid distance and time.';return;}var pk=t/d;R.innerHTML='<b>Pace: '+pFmt(pk)+' /km</b> ('+pFmt(pk*1.60934)+' /mile)<br>Speed: '+(d/(t/3600)).toFixed(2)+' km/h';}else if(m==='time'){if(!d||d<=0||!p||p<=0){R.innerHTML='Enter valid distance and pace.';return;}var tt=d*p;R.innerHTML='<b>Time: '+pFmtT(tt)+'</b><br>For '+d+' km at '+pFmt(tt)+' /km pace.';}else{if(!t||t<=0||!p||p<=0){R.innerHTML='Enter valid time and pace.';return;}var dd=t/p;R.innerHTML='<b>Distance: '+dd.toFixed(2)+' km</b> ('+(dd/1.60934).toFixed(2)+' miles)<br>At '+pFmt(p)+' /km for '+pFmtT(t)+'.';}}
+</script>
+</body>
+</html>

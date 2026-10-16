@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQL Formatter — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Format SQL with uppercased keywords, a newline before every major clause (SELECT, FROM, WHERE, JOIN, GROUP BY and more) and indented AND/OR/ON conditions. String-literal aware, so text inside quotes is never touched. Heuristic layout that handles everyday queries - very complex nested SQL may need a manual tidy.">
+<meta name="keywords" content="sql formatter online, format sql query, sql beautifier, pretty print sql, tidy sql online, sql indenter, format sql online free, beautify sql query, sql code formatter, format mysql query">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/sql-formatter.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SQL Formatter — Free Online Tool">
+<meta property="og:description" content="Format SQL with uppercased keywords, a newline before every major clause (SELECT, FROM, WHERE, JOIN, GROUP BY and more) and indented AND/OR/ON conditions. String-literal aware, so text inside quotes is never touched. Heuristic layout that handles everyday queries - very complex nested SQL may need a manual tidy.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/sql-formatter.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQL Formatter — Free Online Tool">
+<meta name="twitter:description" content="Format SQL with uppercased keywords, a newline before every major clause (SELECT, FROM, WHERE, JOIN, GROUP BY and more) and indented AND/OR/ON conditions. String-literal aware, so text inside quotes is never touched. Heuristic layout that handles everyday queries - very complex nested SQL may need a manual tidy.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"SQL Formatter","url":"https://sindhplusmedianetwork.github.io/tools/sql-formatter.html","description":"Format SQL with uppercased keywords, a newline before every major clause (SELECT, FROM, WHERE, JOIN, GROUP BY and more) and indented AND/OR/ON conditions. String-literal aware, so text inside quotes is never touched. Heuristic layout that handles everyday queries - very complex nested SQL may need a manual tidy.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>SQL Formatter</h1>
+<p class="desc">Format SQL with uppercased keywords, a newline before every major clause (SELECT, FROM, WHERE, JOIN, GROUP BY and more) and indented AND/OR/ON conditions. String-literal aware, so text inside quotes is never touched. Heuristic layout that handles everyday queries - very complex nested SQL may need a manual tidy.</p>
+<div class="toolbox">
+<label>Paste SQL:<br><textarea id="a" rows="10" style="width:100%" placeholder="select name, age from users where age > 18 order by name"></textarea></label><br><button onclick="fmt()">Format SQL</button><div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=SQL Formatter — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fsql-formatter.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=SQL Formatter — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fsql-formatter.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#SQLFormatter #SQL #WebDev #CodeTools #SPMN #FreeTools #Database</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function fmt(){
+var src=document.getElementById('a').value;
+var out=document.getElementById('result');
+if(!src.trim()){out.innerHTML='<p style="color:#b00">Please paste some SQL first.</p>';return;}
+function escH(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+var toks=[],i=0;
+while(i<src.length){
+var c=src[i];
+if(c==='\''||c==='"'||c==='\x60'){
+var q=c,j=i+1,s=c;
+while(j<src.length){
+if(src[j]==='\\'){s+=src[j]+(src[j+1]||'');j+=2;continue;}
+s+=src[j];
+if(src[j]===q){if(src[j+1]===q){s+=q;j+=2;continue;}j++;break;}
+j++;
+}
+toks.push({t:'str',v:s});i=j;
+}else if(/\s/.test(c)){toks.push({t:'sp'});i++;}
+else if(/[A-Za-z0-9_.]/.test(c)){var w='';while(i<src.length&&/[A-Za-z0-9_.]/.test(src[i])){w+=src[i];i++;}toks.push({t:'w',v:w});}
+else{toks.push({t:'s',v:c});i++;}
+}
+var KW={select:1,from:1,where:1,by:1,group:1,order:1,having:1,limit:1,offset:1,insert:1,into:1,values:1,update:1,set:1,delete:1,create:1,table:1,join:1,left:1,right:1,inner:1,outer:1,full:1,cross:1,on:1,and:1,or:1,union:1,asc:1,desc:1,distinct:1,not:1,null:1,like:1,'in':1,between:1,exists:1,case:1,when:1,then:1,'else':1,end:1,primary:1,key:1};
+var seq=[];
+for(var k=0;k<toks.length;k++){
+var tk=toks[k];
+if(tk.t==='w'){
+var low=tk.v.toLowerCase(),ni=-1;
+for(var m=k+1;m<toks.length;m++){if(toks[m].t==='w'){ni=m;break;}if(toks[m].t!=='sp')break;}
+var combined=null;
+if(ni>0){
+var low2=toks[ni].v.toLowerCase(),pair=low+' '+low2;
+if(pair==='group by'||pair==='order by'||pair==='insert into'||pair==='delete from'||pair==='create table')combined=pair;
+else if(/^(left|right|inner|outer|full|cross)$/.test(low)&&low2==='join')combined=pair;
+}
+if(combined){seq.push({t:'w',v:combined.toUpperCase()});k=ni;}
+else if(KW[low]){seq.push({t:'w',v:tk.v.toUpperCase()});}
+else seq.push(tk);
+}else seq.push(tk);
+}
+var MAJ={SELECT:1,FROM:1,WHERE:1,'GROUP BY':1,'ORDER BY':1,HAVING:1,LIMIT:1,OFFSET:1,'INSERT INTO':1,VALUES:1,UPDATE:1,SET:1,'DELETE FROM':1,'CREATE TABLE':1,UNION:1};
+var res='',ci=0,needNl=false;
+function pad(n){var s='';for(var x=0;x<n*2;x++)s+=' ';return s;}
+function nl(){res=res.replace(/[ \t]+$/,'');if(res&&res[res.length-1]!=='\n')res+='\n';}
+function addWord(w){
+if(needNl){nl();res+=pad(ci);needNl=false;}
+else if(res&&!/[\s(]$/.test(res))res+=' ';
+res+=w;
+}
+for(var q2=0;q2<seq.length;q2++){
+var t2=seq[q2];
+if(t2.t==='sp')continue;
+if(t2.t==='str'){addWord(t2.v);continue;}
+if(t2.t==='s'){
+var sv=t2.v;
+if(sv==='('){if(res&&!/[\s(]$/.test(res))res+=' ';res+='(';}
+else if(sv===')'){res=res.replace(/[ \t]+$/,'');res+=')';}
+else if(sv===','){res+=',';needNl=true;}
+else if(sv===';'){res+=';';needNl=true;}
+else{res+=sv;}
+continue;
+}
+var v=t2.v;
+if(MAJ[v]){nl();res+=v;ci=(v==='SELECT'||v==='SET'||v==='VALUES')?1:0;needNl=true;}
+else if(/JOIN$/.test(v)){nl();res+=pad(1)+v;ci=1;needNl=true;}
+else if(v==='ON'||v==='AND'||v==='OR'){nl();res+=pad(ci+1)+v;needNl=true;}
+else addWord(v);
+}
+res=res.replace(/[ \t]+\n/g,'\n').trim();
+out.innerHTML='<pre style="white-space:pre-wrap">'+escH(res)+'</pre>';
+}
+</script>
+</body>
+</html>

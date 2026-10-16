@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robots.txt Generator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Build a valid robots.txt file with a simple form — add user-agent rows with Allow and Disallow paths, set a crawl delay, and add your sitemap URL. The formatted file appears instantly, ready to copy to your site root. Works fully offline in your browser; no data is sent anywhere.">
+<meta name="keywords" content="robots.txt generator, create robots.txt, robots txt maker, generate robots file, robots.txt builder, disallow generator seo, crawl delay generator, user agent robots generator, free robots.txt tool, robots.txt creator online, seo robots file, allow disallow generator, technical seo tools, robots txt example">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/robots-txt-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Robots.txt Generator — Free Online Tool">
+<meta property="og:description" content="Build a valid robots.txt file with a simple form — add user-agent rows with Allow and Disallow paths, set a crawl delay, and add your sitemap URL. The formatted file appears instantly, ready to copy to your site root. Works fully offline in your browser; no data is sent anywhere.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/robots-txt-generator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Robots.txt Generator — Free Online Tool">
+<meta name="twitter:description" content="Build a valid robots.txt file with a simple form — add user-agent rows with Allow and Disallow paths, set a crawl delay, and add your sitemap URL. The formatted file appears instantly, ready to copy to your site root. Works fully offline in your browser; no data is sent anywhere.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Robots.txt Generator","url":"https://sindhplusmedianetwork.github.io/tools/robots-txt-generator.html","description":"Build a valid robots.txt file with a simple form — add user-agent rows with Allow and Disallow paths, set a crawl delay, and add your sitemap URL. The formatted file appears instantly, ready to copy to your site root. Works fully offline in your browser; no data is sent anywhere.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Website &amp; SEO</div>
+<h1>Robots.txt Generator</h1>
+<p class="desc">Build a valid robots.txt file with a simple form — add user-agent rows with Allow and Disallow paths, set a crawl delay, and add your sitemap URL. The formatted file appears instantly, ready to copy to your site root. Works fully offline in your browser; no data is sent anywhere.</p>
+<div class="toolbox">
+<div id="rows"></div>
+<button onclick="addRow()" type="button">+ Add user-agent row</button><br><br>
+<label>Crawl-delay in seconds (optional)<br><input id="cd" placeholder="10" style="width:120px"></label><br><br>
+<label>Sitemap URL (optional)<br><input id="sm" placeholder="https://example.com/sitemap.xml" style="width:100%"></label><br><br>
+<button onclick="go()">Generate robots.txt</button>
+<div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Robots.txt Generator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Frobots-txt-generator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Robots.txt Generator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Frobots-txt-generator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#RobotsTxt #TechnicalSEO #SEOTools #SPMN #FreeTools #WebDev</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function es(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function addRow(ua,al,dis){var box=document.getElementById('rows');if(!box)return;var d=document.createElement('div');d.className='rrow';d.style.cssText='border:1px solid #ccc;border-radius:8px;padding:10px;margin:8px 0';d.innerHTML='<label><b>User-agent</b><br><input class="ua" style="width:100%" value="'+es(ua||'*')+'"></label><br><br><label><b>Allow</b> (one path per line)<br><textarea class="al" rows="2" style="width:100%">'+es(al||'/')+'</textarea></label><br><label><b>Disallow</b> (one path per line)<br><textarea class="dl" rows="2" style="width:100%">'+es(dis||'')+'</textarea></label>';box.appendChild(d);}
+if(document.getElementById('rows')&&!document.querySelector('#rows .rrow')){addRow('*','/','/wp-admin/');}
+function go(){var out='';var rows=document.querySelectorAll('#rows .rrow');if(!rows.length){document.getElementById('result').innerHTML='<p style="color:#b00">Add at least one user-agent row.</p>';return;}for(var i=0;i<rows.length;i++){var r=rows[i];var ua=r.querySelector('.ua').value.trim()||'*';out+='User-agent: '+ua+'\n';var al=r.querySelector('.al').value.split('\n');for(var j=0;j<al.length;j++){var p=al[j].trim();if(p)out+='Allow: '+p+'\n';}var dl=r.querySelector('.dl').value.split('\n');for(var k=0;k<dl.length;k++){var q=dl[k].trim();if(q)out+='Disallow: '+q+'\n';}out+='\n';}var cd=document.getElementById('cd').value.trim();if(cd)out+='Crawl-delay: '+cd+'\n';var sm=document.getElementById('sm').value.trim();if(sm)out+='\nSitemap: '+sm+'\n';document.getElementById('result').innerHTML='<h3>Your robots.txt</h3><pre style="background:#f5f5f5;padding:10px;white-space:pre-wrap;font-size:14px">'+es(out)+'</pre><p style="font-size:13px;color:#555">Upload this file as <code>robots.txt</code> in your site root (e.g. example.com/robots.txt). Tip: test it afterwards with the Robots.txt Tester.</p>';}
+</script>
+</body>
+</html>

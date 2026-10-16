@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQL Query Validator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="A syntax sanity checker for SQL - not a full parser. It checks balanced parentheses and quotes (ignoring quoted strings), that the statement starts with a recognized keyword, flags stray double semicolons, warns on SELECT * and flags UPDATE/DELETE statements missing a WHERE clause. Results are reported as a clear pass/warn/fail list.">
+<meta name="keywords" content="sql validator online, validate sql query, sql syntax checker, check sql syntax, sql query validator, sql lint online, test sql query syntax free, sql checker">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/sql-validator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SQL Query Validator — Free Online Tool">
+<meta property="og:description" content="A syntax sanity checker for SQL - not a full parser. It checks balanced parentheses and quotes (ignoring quoted strings), that the statement starts with a recognized keyword, flags stray double semicolons, warns on SELECT * and flags UPDATE/DELETE statements missing a WHERE clause. Results are reported as a clear pass/warn/fail list.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/sql-validator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQL Query Validator — Free Online Tool">
+<meta name="twitter:description" content="A syntax sanity checker for SQL - not a full parser. It checks balanced parentheses and quotes (ignoring quoted strings), that the statement starts with a recognized keyword, flags stray double semicolons, warns on SELECT * and flags UPDATE/DELETE statements missing a WHERE clause. Results are reported as a clear pass/warn/fail list.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"SQL Query Validator","url":"https://sindhplusmedianetwork.github.io/tools/sql-validator.html","description":"A syntax sanity checker for SQL - not a full parser. It checks balanced parentheses and quotes (ignoring quoted strings), that the statement starts with a recognized keyword, flags stray double semicolons, warns on SELECT * and flags UPDATE/DELETE statements missing a WHERE clause. Results are reported as a clear pass/warn/fail list.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>SQL Query Validator</h1>
+<p class="desc">A syntax sanity checker for SQL - not a full parser. It checks balanced parentheses and quotes (ignoring quoted strings), that the statement starts with a recognized keyword, flags stray double semicolons, warns on SELECT * and flags UPDATE/DELETE statements missing a WHERE clause. Results are reported as a clear pass/warn/fail list.</p>
+<div class="toolbox">
+<label>Paste SQL to check:<br><textarea id="a" rows="10" style="width:100%" placeholder="SELECT name FROM users WHERE age > 18;"></textarea></label><br><button onclick="check()">Validate SQL</button><div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=SQL Query Validator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fsql-validator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=SQL Query Validator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fsql-validator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#SQLValidator #SQL #WebDev #CodeTools #SPMN #FreeTools #Database #Debugging</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function check(){
+var src=document.getElementById('a').value;
+var out=document.getElementById('result');
+if(!src.trim()){out.innerHTML='<p style="color:#b00">Please paste a SQL query first.</p>';return;}
+function escH(x){return String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+var rows=[];
+function row(kind,msg){rows.push({k:kind,m:msg});}
+var stripped='',i=0,q=null;
+while(i<src.length){
+var c=src[i];
+if(q){
+if(c==='\\'){stripped+='  ';i+=2;continue;}
+if(c===q){if(src[i+1]===q){stripped+='  ';i+=2;continue;}q=null;}
+stripped+=' ';i++;continue;
+}
+if(c==='\''||c==='"'||c==='\x60'){q=c;stripped+=' ';i++;continue;}
+stripped+=c;i++;
+}
+if(q)row('fail','Unbalanced quote: a '+q+' string was never closed.');
+else row('pass','Quotes are balanced.');
+var depth=0,bad=false;
+for(var j=0;j<stripped.length;j++){
+if(stripped[j]==='(')depth++;
+if(stripped[j]===')'){depth--;if(depth<0){bad=true;break;}}
+}
+if(bad||depth!==0)row('fail','Unbalanced parentheses.');
+else row('pass','Parentheses are balanced.');
+var first=(src.replace(/^[\s(]+/,'').match(/^[A-Za-z]+/)||[''])[0].toUpperCase();
+var known=['SELECT','INSERT','UPDATE','DELETE','CREATE','DROP','ALTER','WITH','TRUNCATE','REPLACE','SHOW','DESCRIBE','EXPLAIN'];
+if(known.indexOf(first)>=0)row('pass','Starts with recognized keyword '+first+'.');
+else row('fail','Does not start with a recognized SQL keyword (found "'+escH(first||'(none)')+'").');
+if(/;;/.test(stripped))row('warn','Double semicolon (;;) found - likely a typo.');
+else row('pass','No stray double semicolons.');
+if(/\bSELECT\s+\*/i.test(src))row('warn','SELECT * used - listing explicit columns is safer and faster.');
+var uw=/^\s*(UPDATE|DELETE)/i.test(src);
+if(uw&&!/\bWHERE\b/i.test(stripped))row('warn',first+' without WHERE will affect every row - add a WHERE clause or confirm this is intended.');
+else if(uw)row('pass',first+' has a WHERE clause.');
+row('warn','Sanity checker only - this is not a full SQL parser and cannot catch every syntax error.');
+var colors={pass:'#0a0',warn:'#b80',fail:'#b00'};
+var html='<ul>';
+rows.forEach(function(r){html+='<li style="color:'+colors[r.k]+'"><b>'+r.k.toUpperCase()+'</b>: '+r.m+'</li>';});
+out.innerHTML=html+'</ul>';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary Comparison Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Compare two job offers across countries fairly. Enter both salaries and countries to see cost-of-living adjusted values side by side. Uses rough living-cost estimates.">
+<meta name="keywords" content="salary comparison, cost of living calculator, salary by country, compare job offers salary, expat salary calculator, purchasing power salary">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/salary-comparison-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Salary Comparison Calculator — Free Online Tool">
+<meta property="og:description" content="Compare two job offers across countries fairly. Enter both salaries and countries to see cost-of-living adjusted values side by side. Uses rough living-cost estimates.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/salary-comparison-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Salary Comparison Calculator — Free Online Tool">
+<meta name="twitter:description" content="Compare two job offers across countries fairly. Enter both salaries and countries to see cost-of-living adjusted values side by side. Uses rough living-cost estimates.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Salary Comparison Calculator","url":"https://sindhplusmedianetwork.github.io/tools/salary-comparison-calculator.html","description":"Compare two job offers across countries fairly. Enter both salaries and countries to see cost-of-living adjusted values side by side. Uses rough living-cost estimates.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Jobs &amp; Career</div>
+<h1>Salary Comparison Calculator</h1>
+<p class="desc">Compare two job offers across countries fairly. Enter both salaries and countries to see cost-of-living adjusted values side by side. Uses rough living-cost estimates.</p>
+<div class="toolbox">
+<label>Offer A - Annual Salary<input type='number' id='a' placeholder='50000'></label><label>Offer A - Country<select id='ca'></select></label><label>Offer B - Annual Salary<input type='number' id='b' placeholder='30000'></label><label>Offer B - Country<select id='cb'></select></label><button onclick='cmp()'>Compare</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Salary Comparison Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fsalary-comparison-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Salary Comparison Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fsalary-comparison-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#SalaryComparison #CostOfLiving #JobOffer #CareerTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var COL={"USA":100,"Canada":90,"UK":92,"Ireland":95,"Australia":95,"New Zealand":88,"Germany":85,"France":83,"Netherlands":88,"Belgium":85,"Austria":88,"Spain":70,"Italy":75,"Sweden":90,"Norway":105,"Switzerland":125,"UAE":78,"Saudi Arabia":65,"Singapore":98,"Hong Kong":105,"Japan":90,"South Korea":80,"China":55,"India":28,"Pakistan":25,"Bangladesh":24,"Philippines":32,"Vietnam":35,"Thailand":45,"Malaysia":48,"Indonesia":38,"Turkey":45,"Poland":55};
+(function(){var a=document.getElementById('ca'),b=document.getElementById('cb');
+Object.keys(COL).forEach(function(k){[a,b].forEach(function(s){var o=document.createElement('option');o.value=k;o.textContent=k;s.appendChild(o);});});
+a.value='USA';b.value='Pakistan';})();
+function cmp(){
+var a=parseFloat(document.getElementById('a').value),b=parseFloat(document.getElementById('b').value);
+var ca=document.getElementById('ca').value,cb=document.getElementById('cb').value;
+if(!a||!b||a<=0||b<=0){document.getElementById('result').innerHTML='Please enter both salaries.';return;}
+var adjA=a/COL[ca]*100,adjB=b/COL[cb]*100;
+var win=adjA>adjB?'Offer A':adjB>adjA?'Offer B':'Tie';
+var h='<table style="border-collapse:collapse;width:100%;max-width:500px;"><tr style="background:#f1f5f9;"><th style="border:1px solid #ddd;padding:8px;"></th><th style="border:1px solid #ddd;padding:8px;">Offer A ('+ca+')</th><th style="border:1px solid #ddd;padding:8px;">Offer B ('+cb+')</th></tr>';
+h+='<tr><td style="border:1px solid #ddd;padding:8px;">Nominal salary</td><td style="border:1px solid #ddd;padding:8px;">'+a.toLocaleString()+'</td><td style="border:1px solid #ddd;padding:8px;">'+b.toLocaleString()+'</td></tr>';
+h+='<tr><td style="border:1px solid #ddd;padding:8px;">Living-cost index</td><td style="border:1px solid #ddd;padding:8px;">'+COL[ca]+'</td><td style="border:1px solid #ddd;padding:8px;">'+COL[cb]+'</td></tr>';
+h+='<tr style="background:#eef2ff;"><td style="border:1px solid #ddd;padding:8px;"><b>Adjusted value (US=100)</b></td><td style="border:1px solid #ddd;padding:8px;"><b>'+Math.round(adjA).toLocaleString()+'</b></td><td style="border:1px solid #ddd;padding:8px;"><b>'+Math.round(adjB).toLocaleString()+'</b></td></tr></table>';
+h+='<br><b>Better purchasing power: '+win+'</b><br><span style="font-size:12px;color:#666;">Estimate only - uses rough cost-of-living indexes, not exact figures.</span>';
+document.getElementById('result').innerHTML=h;}
+</script>
+</body>
+</html>

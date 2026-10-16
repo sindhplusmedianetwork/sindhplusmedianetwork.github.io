@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSL Expiry Checker — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Find the newest publicly logged certificate covering your domain and get a clear VALID, EXPIRING SOON or EXPIRED verdict with days remaining. Based on Certificate Transparency logs, not a live handshake, so very recent renewals may lag. Free with no signup.">
+<meta name="keywords" content="SSL expiry checker, when does my SSL expire, SSL certificate expiry date, check certificate expiration, TLS expiry monitor, SSL valid checker, certificate days remaining, free SSL expiry check, HTTPS certificate status, Let&#x27;s Encrypt expiry">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/ssl-expiry-checker.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SSL Expiry Checker — Free Online Tool">
+<meta property="og:description" content="Find the newest publicly logged certificate covering your domain and get a clear VALID, EXPIRING SOON or EXPIRED verdict with days remaining. Based on Certificate Transparency logs, not a live handshake, so very recent renewals may lag. Free with no signup.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/ssl-expiry-checker.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SSL Expiry Checker — Free Online Tool">
+<meta name="twitter:description" content="Find the newest publicly logged certificate covering your domain and get a clear VALID, EXPIRING SOON or EXPIRED verdict with days remaining. Based on Certificate Transparency logs, not a live handshake, so very recent renewals may lag. Free with no signup.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"SSL Expiry Checker","url":"https://sindhplusmedianetwork.github.io/tools/ssl-expiry-checker.html","description":"Find the newest publicly logged certificate covering your domain and get a clear VALID, EXPIRING SOON or EXPIRED verdict with days remaining. Based on Certificate Transparency logs, not a live handshake, so very recent renewals may lag. Free with no signup.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Website &amp; SEO</div>
+<h1>SSL Expiry Checker</h1>
+<p class="desc">Find the newest publicly logged certificate covering your domain and get a clear VALID, EXPIRING SOON or EXPIRED verdict with days remaining. Based on Certificate Transparency logs, not a live handshake, so very recent renewals may lag. Free with no signup.</p>
+<div class="toolbox">
+<label style="display:block;margin-bottom:8px;font-weight:600">Domain<input id="a" placeholder="example.com" style="width:100%;padding:10px;border:1px solid #d1d5db;border-radius:8px;margin-top:6px"></label><button onclick="go()" style="background:#2563eb;color:#fff;border:0;padding:10px 22px;border-radius:8px;font-weight:600;cursor:pointer">Check Expiry</button><div id="result" style="margin-top:16px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=SSL Expiry Checker — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fssl-expiry-checker.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=SSL Expiry Checker — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fssl-expiry-checker.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#SSLChecker #WebSecurity #SEOTools #SPMN #FreeTools #HTTPS</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function domOk(d){return /^(?!-)[a-z0-9-]{1,63}(?<!-)(\.[a-z0-9-]{1,63})*\.[a-z]{2,}$/i.test(d)}
+function cleanD(d){return d.trim().toLowerCase().replace(/^https?:\/\//,'').replace(/\/.*$/,'')}
+function dt(s){try{return new Date(s).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}catch(e){return s}}
+function parseIss(s){if(!s)return '—';var m=/O\s*=\s*([^,]+)/.exec(s);return esc(m?m[1].trim():'?')}
+function go(){
+ var d=cleanD(document.getElementById('a').value);
+ var box=document.getElementById('result');
+ if(!domOk(d)){box.innerHTML='<p style="color:#b91c1c">Please enter a valid domain (e.g. example.com).</p>';return;}
+ box.innerHTML='<p>Checking certificate expiry…</p>';
+ var ctrl=new AbortController();var to=setTimeout(function(){ctrl.abort()},20000);
+ fetch('https://crt.sh/?q='+encodeURIComponent(d)+'&output=json',{signal:ctrl.signal})
+ .then(function(r){if(!r.ok)throw new Error('crt.sh returned '+r.status);return r.json()})
+ .then(function(j){
+  clearTimeout(to);
+  if(!j||!j.length){box.innerHTML='<p>No certificates found in public CT logs for <b>'+esc(d)+'</b>.</p>';return;}
+  var match=j.filter(function(c){
+   var nv=String(c.name_value||'').toLowerCase().split('\n');
+   var cn=String(c.common_name||'').toLowerCase();
+   return cn===d||nv.indexOf(d)>-1||nv.indexOf('*.'+d)>-1;
+  });
+  if(!match.length){box.innerHTML='<p style="color:#b91c1c">No logged certificate found covering <b>'+esc(d)+'</b>. Try the www or root variant of the domain.</p>';return;}
+  match.sort(function(a,b){return new Date(b.not_after)-new Date(a.not_after)});
+  var c=match[0];
+  var days=Math.ceil((new Date(c.not_after)-new Date())/86400000);
+  var state,color,msg;
+  if(days<0){state='EXPIRED';color='#dc2626';msg='expired '+Math.abs(days)+' day(s) ago — renew immediately';}
+  else if(days<30){state='EXPIRING SOON';color='#d97706';msg='only '+days+' day(s) remaining — plan renewal now';}
+  else{state='VALID';color='#16a34a';msg=days+' days remaining';}
+  box.innerHTML='<div style="border:2px solid '+color+';border-radius:10px;padding:16px;text-align:center"><div style="font-size:22px;font-weight:800;color:'+color+'">'+state+'</div><div style="margin-top:6px"><b>'+esc(d)+'</b> — certificate '+msg+'</div><div style="font-size:13px;color:#6b7280;margin-top:6px">Expires: '+dt(c.not_after)+' · Issuer: '+parseIss(c.issuer_name)+'</div></div><p style="font-size:12px;color:#6b7280">Based on the newest publicly logged certificate covering this domain (Certificate Transparency). Not a live handshake — a freshly renewed certificate may take time to appear in the logs.</p>';
+ }).catch(function(e){clearTimeout(to);box.innerHTML='<p style="color:#b91c1c">Expiry check failed ('+esc(e.name==='AbortError'?'request timed out':e.message)+'). crt.sh can be slow — try again.</p>'});
+}
+</script>
+</body>
+</html>
