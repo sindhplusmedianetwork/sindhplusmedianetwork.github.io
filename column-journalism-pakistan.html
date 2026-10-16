@@ -32,6 +32,11 @@ article p:first-of-type::first-letter{font-size:52px;float:left;line-height:1;pa
 .abox .n{font-weight:700}.abox p{font-size:14px;color:#555;margin-top:6px}
 .back{display:inline-block;margin-top:28px;background:#ff7a00;color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-family:'Segoe UI',Arial,sans-serif}
 footer{text-align:center;color:#888;font-size:13px;padding:24px;font-family:'Segoe UI',Arial,sans-serif}
+.share{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0;font-family:'Segoe UI',Arial,sans-serif}
+.share button,.share a{border:1px solid #ddd;background:#fff;border-radius:8px;padding:8px 14px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;color:#1c1c1c;display:inline-flex;align-items:center;gap:6px}
+.share .wa{background:#25D366;border-color:#25D366;color:#fff}
+.share .fb{background:#1877F2;border-color:#1877F2;color:#fff}
+.share .x{background:#000;border-color:#000;color:#fff}
 </style>
 </head>
 <body>
@@ -52,8 +57,33 @@ footer{text-align:center;color:#888;font-size:13px;padding:24px;font-family:'Seg
 <p>The field notes continue. The work is hard, the pay is uncertain, and my family was half right. But the other half — the half about why it matters — belongs to us.</p>
 </article>
 <div class="abox"><img src="tahir-adnan.jpg" alt="Tahir Adnan"><div><div class="n">Tahir Adnan</div><p>MA Journalism. Founder of Sindh Plus Media Network. He writes about media, power, and accountability in Pakistan.</p></div></div>
+<div class="share">
+<button onclick="sharePage()">Share</button>
+<a class="wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" data-fb href="#" target="_blank" rel="noopener">Facebook</a>
+<a class="x" data-x href="#" target="_blank" rel="noopener">X</a>
+<button onclick="copyLink(this)">Copy Link</button>
+</div>
 <a class="back" href="/">← Back to Sindh Plus Media Network</a>
 </main>
 <footer>© 2026 Sindh Plus Media Network — Tahir Adnan</footer>
+<script>
+(function(){
+var u=encodeURIComponent(location.href), t=encodeURIComponent(document.title);
+document.querySelector('[data-wa]').href='https://wa.me/?text='+t+'%20'+u;
+document.querySelector('[data-fb]').href='https://www.facebook.com/sharer/sharer.php?u='+u;
+document.querySelector('[data-x]').href='https://twitter.com/intent/tweet?text='+t+'&url='+u;
+})();
+function sharePage(){
+  var d={title:document.title,text:document.title,url:location.href};
+  if(navigator.share){navigator.share(d).catch(function(){});}
+  else{copyLink();}
+}
+function copyLink(btn){
+  var done=function(){if(btn){var o=btn.textContent;btn.textContent='Copied!';setTimeout(function(){btn.textContent=o;},1500);}};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(location.href).then(done).catch(function(){prompt('Copy link:',location.href);});}
+  else{prompt('Copy link:',location.href);}
+}
+</script>
 </body>
 </html>
