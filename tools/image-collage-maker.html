@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Collage Maker — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Make a photo collage free online. Combine 2 to 4 pictures side-by-side, stacked, or in a 2x2 grid and download the collage as one image.">
+<meta name="keywords" content="collage maker, photo collage online, combine images, merge photos side by side, free collage app, photo grid maker, combine 4 photos, side by side pictures, picture joiner, photo mosaic grid, multi photo combiner">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/image-collage-maker.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Image Collage Maker — Free Online Tool">
+<meta property="og:description" content="Make a photo collage free online. Combine 2 to 4 pictures side-by-side, stacked, or in a 2x2 grid and download the collage as one image.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/image-collage-maker.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Image Collage Maker — Free Online Tool">
+<meta name="twitter:description" content="Make a photo collage free online. Combine 2 to 4 pictures side-by-side, stacked, or in a 2x2 grid and download the collage as one image.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Image Collage Maker","url":"https://sindhplusmedianetwork.github.io/tools/image-collage-maker.html","description":"Make a photo collage free online. Combine 2 to 4 pictures side-by-side, stacked, or in a 2x2 grid and download the collage as one image.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Image &amp; Graphics</div>
+<h1>Image Collage Maker</h1>
+<p class="desc">Make a photo collage free online. Combine 2 to 4 pictures side-by-side, stacked, or in a 2x2 grid and download the collage as one image.</p>
+<div class="toolbox">
+<label>Select 2-4 images<input type='file' id='f' accept='image/*' multiple></label><label>Layout<select id='l'><option value='h'>Side by side</option><option value='v'>Stacked vertically</option><option value='g'>2x2 Grid</option></select></label><button onclick='go()'>Make Collage</button><div><canvas id='cv' style='max-width:100%;margin-top:10px'></canvas></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Image Collage Maker — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fimage-collage-maker.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Image Collage Maker — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fimage-collage-maker.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#CollageMaker #PhotoCollage #SPMN #FreeTools #Collage</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function dl(u,n){var a=document.createElement('a');a.href=u;a.download=n;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},500);}function li(f){return new Promise(function(rs,rj){var i=new Image();i.onload=function(){rs(i)};i.onerror=function(){rj(new Error('Could not load image'))};i.src=URL.createObjectURL(f);});}function go(){var fs=document.getElementById('f').files;var R=document.getElementById('result');
+ if(!fs.length){R.innerHTML='Please select images first.';return;}
+ if(fs.length>4){R.innerHTML='Select at most 4 images.';return;}
+ if(fs.length<2){R.innerHTML='Select at least 2 images for a collage.';return;}
+ var lay=document.getElementById('l').value;
+ Promise.all(Array.prototype.map.call(fs,function(f){return li(f);})).then(function(imgs){
+  var S=800,rs=imgs.map(function(im){var s=S/Math.max(im.naturalWidth,im.naturalHeight);return{w:Math.round(im.naturalWidth*s),h:Math.round(im.naturalHeight*s),im:im};});
+  var cv=document.getElementById('cv'),x=cv.getContext('2d');
+  if(lay==='h'){var H=Math.max.apply(null,rs.map(function(r){return r.h;}));cv.width=rs.reduce(function(a,r){return a+r.w;},0);cv.height=H;var ox=0;
+   rs.forEach(function(r){x.drawImage(r.im,ox,(H-r.h)/2,r.w,r.h);ox+=r.w;});
+  }else if(lay==='v'){var Wd=Math.max.apply(null,rs.map(function(r){return r.w;}));cv.height=rs.reduce(function(a,r){return a+r.h;},0);cv.width=Wd;var oy=0;
+   rs.forEach(function(r){x.drawImage(r.im,(Wd-r.w)/2,oy,r.w,r.h);oy+=r.h;});
+  }else{var cw=Math.max.apply(null,rs.map(function(r){return r.w;})),ch=Math.max.apply(null,rs.map(function(r){return r.h;}));
+   cv.width=cw*2;cv.height=ch*2;
+   rs.forEach(function(r,i){var gx=(i%2)*cw,gy=Math.floor(i/2)*ch;x.fillStyle='#fff';x.fillRect(gx,gy,cw,ch);x.drawImage(r.im,gx+(cw-r.w)/2,gy+(ch-r.h)/2,r.w,r.h);});}
+  cv.toBlob(function(b){var u=URL.createObjectURL(b);R.innerHTML='Collage ready ('+cv.width+' x '+cv.height+' px).<br><br><a href="'+u+'" download="collage.png" style="display:inline-block;padding:10px 20px;background:#ff7a00;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Download Collage</a>';},'image/png');
+ }).catch(function(){R.innerHTML='Could not read one of the images.';});}
+</script>
+</body>
+</html>

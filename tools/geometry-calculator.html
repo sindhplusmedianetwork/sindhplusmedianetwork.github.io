@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geometry Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Calculate area, perimeter, and volume for 12 shapes and solids - squares, circles, triangles, spheres, cylinders, cones and more. One tool for all geometry homework.">
+<meta name="keywords" content="geometry calculator, area calculator, volume calculator, perimeter calculator, surface area calculator, shapes area formula calculator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/geometry-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Geometry Calculator — Free Online Tool">
+<meta property="og:description" content="Calculate area, perimeter, and volume for 12 shapes and solids - squares, circles, triangles, spheres, cylinders, cones and more. One tool for all geometry homework.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/geometry-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Geometry Calculator — Free Online Tool">
+<meta name="twitter:description" content="Calculate area, perimeter, and volume for 12 shapes and solids - squares, circles, triangles, spheres, cylinders, cones and more. One tool for all geometry homework.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Geometry Calculator","url":"https://sindhplusmedianetwork.github.io/tools/geometry-calculator.html","description":"Calculate area, perimeter, and volume for 12 shapes and solids - squares, circles, triangles, spheres, cylinders, cones and more. One tool for all geometry homework.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Science &amp; Engineering</div>
+<h1>Geometry Calculator</h1>
+<p class="desc">Calculate area, perimeter, and volume for 12 shapes and solids - squares, circles, triangles, spheres, cylinders, cones and more. One tool for all geometry homework.</p>
+<div class="toolbox">
+<label>Shape<select id='sh' onchange='geoFields()'><option value='sq'>Square</option><option value='rect'>Rectangle</option><option value='circ'>Circle</option><option value='tri'>Triangle (base x height)</option><option value='trap'>Trapezoid</option><option value='para'>Parallelogram</option><option value='ell'>Ellipse</option><option value='cube'>Cube</option><option value='sph'>Sphere</option><option value='cyl'>Cylinder</option><option value='cone'>Cone</option><option value='box'>Rectangular prism</option></select></label><div id='gf'></div><button onclick='calcGeo()'>Calculate</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Geometry Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fgeometry-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Geometry Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fgeometry-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#GeometryCalculator #AreaCalculator #VolumeCalculator #MathTools #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var GEO_D={sq:[['Side','s']],rect:[['Length','l'],['Width','w']],circ:[['Radius','r']],tri:[['Base','b'],['Height','h']],trap:[['Base 1','b1'],['Base 2','b2'],['Height','h']],para:[['Base','b'],['Height','h']],ell:[['Semi-axis a','a'],['Semi-axis b','b']],cube:[['Side','s']],sph:[['Radius','r']],cyl:[['Radius','r'],['Height','h']],cone:[['Radius','r'],['Height','h']],box:[['Length','l'],['Width','w'],['Height','h']]};
+function geoFields(){var sh=document.getElementById('sh').value;var h='';GEO_D[sh].forEach(function(f){h+="<label>"+f[0]+"<input type='number' id='g_"+f[1]+"' step='any' min='0'></label>";});document.getElementById('gf').innerHTML=h;}
+geoFields();
+function gv(id){var v=parseFloat(document.getElementById('g_'+id).value);return v;}
+function calcGeo(){var sh=document.getElementById('sh').value;var R=document.getElementById('result');var v={};var ok=true;GEO_D[sh].forEach(function(f){var x=gv(f[1]);if(!(x>0))ok=false;v[f[1]]=x;});if(!ok){R.innerHTML='Please enter positive values for all fields.';return;}var pi=Math.PI,out='';if(sh==='sq')out='Area: '+(v.s*v.s).toFixed(2)+'<br>Perimeter: '+(4*v.s).toFixed(2);else if(sh==='rect')out='Area: '+(v.l*v.w).toFixed(2)+'<br>Perimeter: '+(2*(v.l+v.w)).toFixed(2);else if(sh==='circ')out='Area: '+(pi*v.r*v.r).toFixed(2)+'<br>Circumference: '+(2*pi*v.r).toFixed(2)+'<br>Diameter: '+(2*v.r).toFixed(2);else if(sh==='tri')out='Area: '+(0.5*v.b*v.h).toFixed(2);else if(sh==='trap')out='Area: '+((v.b1+v.b2)/2*v.h).toFixed(2);else if(sh==='para')out='Area: '+(v.b*v.h).toFixed(2)+'<br>Perimeter: '+(2*(v.b+v.h)).toFixed(2);else if(sh==='ell')out='Area: '+(pi*v.a*v.b).toFixed(2);else if(sh==='cube')out='Volume: '+(v.s*v.s*v.s).toFixed(2)+'<br>Surface area: '+(6*v.s*v.s).toFixed(2);else if(sh==='sph')out='Volume: '+((4/3)*pi*Math.pow(v.r,3)).toFixed(2)+'<br>Surface area: '+(4*pi*v.r*v.r).toFixed(2);else if(sh==='cyl')out='Volume: '+(pi*v.r*v.r*v.h).toFixed(2)+'<br>Surface area: '+(2*pi*v.r*(v.r+v.h)).toFixed(2);else if(sh==='cone')out='Volume: '+((1/3)*pi*v.r*v.r*v.h).toFixed(2)+'<br>Slant height: '+Math.sqrt(v.r*v.r+v.h*v.h).toFixed(2);else if(sh==='box')out='Volume: '+(v.l*v.w*v.h).toFixed(2)+'<br>Surface area: '+(2*(v.l*v.w+v.l*v.h+v.w*v.h)).toFixed(2);R.innerHTML='<b>Results:</b><br>'+out;}
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTTP Security Header Analyzer — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Check a website&#x27;s HTTP security headers — HSTS, Content-Security-Policy, X-Frame-Options and more — and get an A–F security grade. The analyzer is honest about browser limitations: only CORS-exposed headers are visible, so treat it as a best-effort guide rather than a full audit.">
+<meta name="keywords" content="security header checker, http header analyzer, website security headers test, hsts checker, csp checker, x-frame-options test, security headers scan, check website security headers, http security grade, website header analyzer, securityheaders test, web security audit, check csp header, response header checker, site security scanner">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/http-security-header-analyzer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HTTP Security Header Analyzer — Free Online Tool">
+<meta property="og:description" content="Check a website&#x27;s HTTP security headers — HSTS, Content-Security-Policy, X-Frame-Options and more — and get an A–F security grade. The analyzer is honest about browser limitations: only CORS-exposed headers are visible, so treat it as a best-effort guide rather than a full audit.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/http-security-header-analyzer.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP Security Header Analyzer — Free Online Tool">
+<meta name="twitter:description" content="Check a website&#x27;s HTTP security headers — HSTS, Content-Security-Policy, X-Frame-Options and more — and get an A–F security grade. The analyzer is honest about browser limitations: only CORS-exposed headers are visible, so treat it as a best-effort guide rather than a full audit.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"HTTP Security Header Analyzer","url":"https://sindhplusmedianetwork.github.io/tools/http-security-header-analyzer.html","description":"Check a website&#x27;s HTTP security headers — HSTS, Content-Security-Policy, X-Frame-Options and more — and get an A–F security grade. The analyzer is honest about browser limitations: only CORS-exposed headers are visible, so treat it as a best-effort guide rather than a full audit.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Security &amp; Privacy</div>
+<h1>HTTP Security Header Analyzer</h1>
+<p class="desc">Check a website&#x27;s HTTP security headers — HSTS, Content-Security-Policy, X-Frame-Options and more — and get an A–F security grade. The analyzer is honest about browser limitations: only CORS-exposed headers are visible, so treat it as a best-effort guide rather than a full audit.</p>
+<div class="toolbox">
+<label>Website URL:<br><input type="text" id="hu" style="width:100%" placeholder="https://example.com"></label><br>
+<button onclick="hshCheck()">Analyze Headers</button>
+<div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=HTTP Security Header Analyzer — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fhttp-security-header-analyzer.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=HTTP Security Header Analyzer — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fhttp-security-header-analyzer.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#WebSecurity #SecurityHeaders #CyberSecurity #WebDev #OnlineSecurity #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function hshE(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+async function hshCheck(){
+var raw=document.getElementById('hu').value.trim();
+var r=document.getElementById('result');
+if(!raw){r.innerHTML='<p style="color:red">Please enter a website URL.</p>';return;}
+var u=/^https?:\/\//i.test(raw)?raw:'https://'+raw;
+r.innerHTML='<p>Fetching headers&hellip;</p>';
+var names=['strict-transport-security','content-security-policy','x-frame-options','x-content-type-options','referrer-policy'];
+var labels={'strict-transport-security':'Strict-Transport-Security (HSTS)','content-security-policy':'Content-Security-Policy','x-frame-options':'X-Frame-Options','x-content-type-options':'X-Content-Type-Options','referrer-policy':'Referrer-Policy'};
+try{
+var res=await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(u));
+if(!res.ok){throw new Error('HTTP '+res.status);}
+var found=0;var rows='';
+for(var i=0;i<names.length;i++){
+var v=res.headers.get(names[i]);
+if(v){found++;rows+='<tr><td>'+labels[names[i]]+'</td><td style="color:green"><strong>Present</strong></td></tr>';}
+else{rows+='<tr><td>'+labels[names[i]]+'</td><td style="color:red"><strong>Missing</strong></td></tr>';}
+}
+var grade=found===5?'A':found===4?'B':found===3?'C':found===2?'D':'F';
+r.innerHTML='<p><strong>'+hshE(u)+'</strong> - security header grade: <strong style="font-size:1.4em">'+grade+'</strong> ('+found+'/5 headers present)</p><table border="1" cellpadding="6" style="border-collapse:collapse">'+rows+'</table><p style="font-size:0.9em;color:#555"><em>Honest limitation: browsers only expose CORS-safe response headers to JavaScript, so a header marked &ldquo;Missing&rdquo; here may still exist on the server. For a full audit use curl or securityheaders.com.</em></p>';
+}catch(e){r.innerHTML='<p style="color:red">Could not fetch that URL: '+hshE(e.message||'network error')+'. Check the address and try again.</p>';}
+}
+</script>
+</body>
+</html>

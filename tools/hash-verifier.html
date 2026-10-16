@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hash Verifier — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Compute SHA-256, SHA-384 and SHA-512 hashes of any text right in your browser, and verify file or password hashes by comparing them with an expected value. Useful for checking download integrity and confirming hash matches. All hashing happens locally — your text is never uploaded.">
+<meta name="keywords" content="hash verifier, sha256 hash generator, online hash calculator, sha256 generator, hash checker, verify hash online, sha512 generator, sha384 calculator, text to hash converter, compare hashes, checksum verifier, hash match checker, sha256 checksum, online sha generator, hash value calculator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/hash-verifier.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hash Verifier — Free Online Tool">
+<meta property="og:description" content="Compute SHA-256, SHA-384 and SHA-512 hashes of any text right in your browser, and verify file or password hashes by comparing them with an expected value. Useful for checking download integrity and confirming hash matches. All hashing happens locally — your text is never uploaded.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/hash-verifier.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hash Verifier — Free Online Tool">
+<meta name="twitter:description" content="Compute SHA-256, SHA-384 and SHA-512 hashes of any text right in your browser, and verify file or password hashes by comparing them with an expected value. Useful for checking download integrity and confirming hash matches. All hashing happens locally — your text is never uploaded.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Hash Verifier","url":"https://sindhplusmedianetwork.github.io/tools/hash-verifier.html","description":"Compute SHA-256, SHA-384 and SHA-512 hashes of any text right in your browser, and verify file or password hashes by comparing them with an expected value. Useful for checking download integrity and confirming hash matches. All hashing happens locally — your text is never uploaded.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Security &amp; Privacy</div>
+<h1>Hash Verifier</h1>
+<p class="desc">Compute SHA-256, SHA-384 and SHA-512 hashes of any text right in your browser, and verify file or password hashes by comparing them with an expected value. Useful for checking download integrity and confirming hash matches. All hashing happens locally — your text is never uploaded.</p>
+<div class="toolbox">
+<label>Text to hash:<br><textarea id="ht" rows="4" style="width:100%" placeholder="Enter text here"></textarea></label><br>
+<label>Algorithm:<br><select id="ha" style="width:100%"><option>SHA-256</option><option>SHA-384</option><option>SHA-512</option></select></label><br>
+<label>Expected hash (optional, to compare):<br><input type="text" id="hx" style="width:100%" placeholder="Paste expected hex hash"></label><br>
+<button onclick="hvCalc()">Compute Hash</button>
+<div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Hash Verifier — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fhash-verifier.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Hash Verifier — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fhash-verifier.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#HashVerifier #SHA256 #CyberSecurity #DataIntegrity #OnlineSecurity #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+
+var hvLast='';
+async function hvCalc(){
+var t=document.getElementById('ht').value;
+var algo=document.getElementById('ha').value;
+var exp=document.getElementById('hx').value.trim().toLowerCase();
+var r=document.getElementById('result');
+if(!t){r.innerHTML='<p style="color:red">Please enter some text to hash.</p>';return;}
+try{
+var buf=await crypto.subtle.digest(algo,new TextEncoder().encode(t));
+var hex=Array.prototype.map.call(new Uint8Array(buf),function(x){return x.toString(16).padStart(2,'0');}).join('');
+hvLast=hex;
+var out='<p><strong>'+algo+' hash:</strong></p><p style="word-break:break-all;font-family:monospace;background:#f4f4f4;padding:10px;border-radius:6px">'+hex+'</p><button onclick="hvCopy()">Copy Hash</button>';
+if(exp){out+=exp===hex?'<p style="color:green"><strong>MATCH</strong> - the hashes are identical.</p>':'<p style="color:red"><strong>MISMATCH</strong> - the hashes differ.</p>';}
+r.innerHTML=out;
+}catch(e){r.innerHTML='<p style="color:red">Hashing failed: '+String(e.message||e)+'</p>';}
+}
+function hvCopy(){navigator.clipboard.writeText(hvLast).then(function(){alert('Copied!');}).catch(function(){alert('Copy failed - select and copy manually.');});}
+</script>
+</body>
+</html>

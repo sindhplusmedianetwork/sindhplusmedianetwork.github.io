@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habit Tracker — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Build good habits with daily checkmarks and streak counts. Add your habits, check them off each day, and watch your streaks grow. Saved in your browser.">
+<meta name="keywords" content="habit tracker, daily habit tracker, streak tracker, habit building app, free habit tracker online">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/habit-tracker.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Habit Tracker — Free Online Tool">
+<meta property="og:description" content="Build good habits with daily checkmarks and streak counts. Add your habits, check them off each day, and watch your streaks grow. Saved in your browser.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/habit-tracker.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Habit Tracker — Free Online Tool">
+<meta name="twitter:description" content="Build good habits with daily checkmarks and streak counts. Add your habits, check them off each day, and watch your streaks grow. Saved in your browser.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Habit Tracker","url":"https://sindhplusmedianetwork.github.io/tools/habit-tracker.html","description":"Build good habits with daily checkmarks and streak counts. Add your habits, check them off each day, and watch your streaks grow. Saved in your browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Everyday Life</div>
+<h1>Habit Tracker</h1>
+<p class="desc">Build good habits with daily checkmarks and streak counts. Add your habits, check them off each day, and watch your streaks grow. Saved in your browser.</p>
+<div class="toolbox">
+<label>New Habit<input id='h' placeholder='e.g. Drink 8 glasses of water'></label><button onclick='addH()'>Add Habit</button><div id='hl' style='margin-top:12px;'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Habit Tracker — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fhabit-tracker.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Habit Tracker — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fhabit-tracker.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#HabitTracker #SelfImprovement #Streaks #LifeTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function getH(){try{return JSON.parse(localStorage.getItem('spmn_habits')||'[]');}catch(e){return[];}}
+function setH(h){try{localStorage.setItem('spmn_habits',JSON.stringify(h));}catch(e){}}
+function today(){return new Date().toISOString().slice(0,10);}
+function streak(days){var s=0,d=new Date();if(days.indexOf(d.toISOString().slice(0,10))<0)d.setDate(d.getDate()-1);
+while(days.indexOf(d.toISOString().slice(0,10))>=0){s++;d.setDate(d.getDate()-1);}return s;}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function addH(){var v=document.getElementById('h').value.trim();if(!v){document.getElementById('result').innerHTML='Please type a habit name.';return;}
+var h=getH();h.push({n:v,days:[],id:Date.now()});setH(h);document.getElementById('h').value='';document.getElementById('result').innerHTML='Habit added!';renderH();}
+function tog(id){var h=getH(),t=today();h.forEach(function(x){if(x.id===id){var i=x.days.indexOf(t);if(i>=0)x.days.splice(i,1);else x.days.push(t);}});setH(h);renderH();}
+function delH(id){setH(getH().filter(function(x){return x.id!==id;}));renderH();}
+function renderH(){var h=getH(),t=today(),box=document.getElementById('hl');
+if(!h.length){box.innerHTML='<span style="color:#888;">No habits yet - add your first one above.</span>';return;}
+box.innerHTML=h.map(function(x){var done=x.days.indexOf(t)>=0,st=streak(x.days);
+return '<div style="border:1px solid #ddd;border-radius:8px;padding:10px;margin:6px 0;display:flex;align-items:center;gap:10px;"><input type="checkbox" style="width:22px;height:22px;" '+(done?'checked':'')+' onchange="tog('+x.id+')"><span style="flex:1;'+(done?'text-decoration:line-through;color:#888;':'')+'">'+esc(x.n)+'</span><span style="font-size:13px;">'+st+'-day streak</span><button onclick="delH('+x.id+')" style="padding:2px 8px;">x</button></div>';}).join('');}
+renderH();
+</script>
+</body>
+</html>

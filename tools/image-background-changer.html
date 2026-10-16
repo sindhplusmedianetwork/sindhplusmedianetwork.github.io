@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Background Changer — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Change the background of a photo online free. Remove a solid-color backdrop and replace it with any color or your own background image in seconds.">
+<meta name="keywords" content="change background online, photo background changer, replace image background, background editor, free background changer, photo backdrop editor, change picture background color, portrait background replacer, id photo background changer, passport photo background editor, studio backdrop changer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/image-background-changer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Image Background Changer — Free Online Tool">
+<meta property="og:description" content="Change the background of a photo online free. Remove a solid-color backdrop and replace it with any color or your own background image in seconds.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/image-background-changer.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Image Background Changer — Free Online Tool">
+<meta name="twitter:description" content="Change the background of a photo online free. Remove a solid-color backdrop and replace it with any color or your own background image in seconds.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Image Background Changer","url":"https://sindhplusmedianetwork.github.io/tools/image-background-changer.html","description":"Change the background of a photo online free. Remove a solid-color backdrop and replace it with any color or your own background image in seconds.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Image &amp; Graphics</div>
+<h1>Image Background Changer</h1>
+<p class="desc">Change the background of a photo online free. Remove a solid-color backdrop and replace it with any color or your own background image in seconds.</p>
+<div class="toolbox">
+<label>Photo (solid-color background)<input type='file' id='f' accept='image/*'></label><label>Color to remove<input type='color' id='kc' value='#ffffff'></label><label>Tolerance: <span id='tv'>60</span><input type='range' id='tol' min='10' max='200' value='60' oninput="document.getElementById('tv').textContent=this.value"></label><label>New background color<input type='color' id='bg' value='#1e88e5'></label><label>...or background image (optional)<input type='file' id='bf' accept='image/*'></label><button onclick='go()'>Change Background</button><div><canvas id='cv' style='max-width:100%;margin-top:10px'></canvas></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Image Background Changer — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fimage-background-changer.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Image Background Changer — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fimage-background-changer.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#BackgroundChanger #PhotoEditor #SPMN #FreeTools #PhotoBackground</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function dl(u,n){var a=document.createElement('a');a.href=u;a.download=n;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},500);}function li(f){return new Promise(function(rs,rj){var i=new Image();i.onload=function(){rs(i)};i.onerror=function(){rj(new Error('Could not load image'))};i.src=URL.createObjectURL(f);});}function go(){var f=document.getElementById('f').files[0];var R=document.getElementById('result');
+ if(!f){R.innerHTML='Please select a photo first.';return;}
+ var kc=document.getElementById('kc').value,tol=parseInt(document.getElementById('tol').value),bgc=document.getElementById('bg').value;
+ var kr=parseInt(kc.substr(1,2),16),kg=parseInt(kc.substr(3,2),16),kb=parseInt(kc.substr(5,2),16);
+ var bf=document.getElementById('bf').files[0];
+ li(f).then(function(img){
+  (bf?li(bf):Promise.resolve(null)).then(function(bimg){
+   var cv=document.getElementById('cv');cv.width=img.naturalWidth;cv.height=img.naturalHeight;
+   var x=cv.getContext('2d');
+   if(bimg){var s=Math.max(cv.width/bimg.naturalWidth,cv.height/bimg.naturalHeight),dw=bimg.naturalWidth*s,dh=bimg.naturalHeight*s;x.drawImage(bimg,(cv.width-dw)/2,(cv.height-dh)/2,dw,dh);}
+   else{x.fillStyle=bgc;x.fillRect(0,0,cv.width,cv.height);}
+   var fg=document.createElement('canvas');fg.width=cv.width;fg.height=cv.height;
+   var fx=fg.getContext('2d');fx.drawImage(img,0,0);
+   var d=fx.getImageData(0,0,fg.width,fg.height),p=d.data;
+   for(var i=0;i<p.length;i+=4){var dr=p[i]-kr,dg=p[i+1]-kg,db=p[i+2]-kb;if(Math.sqrt(dr*dr+dg*dg+db*db)<tol)p[i+3]=0;}
+   fx.putImageData(d,0,0);
+   x.drawImage(fg,0,0);
+   cv.toBlob(function(b){var u=URL.createObjectURL(b);R.innerHTML='Background replaced. Works best when the original backdrop is one solid color.<br><br><a href="'+u+'" download="new-background.png" style="display:inline-block;padding:10px 20px;background:#ff7a00;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Download Image</a>';},'image/png');
+  });
+ }).catch(function(){R.innerHTML='Could not read the photo.';});}
+</script>
+</body>
+</html>

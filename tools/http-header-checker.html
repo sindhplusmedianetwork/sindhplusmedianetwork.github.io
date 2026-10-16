@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTTP Header Checker — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Fetch and inspect the HTTP response headers of any URL, including the status line, content type and server details, shown in a clean table. Honest note: headers are retrieved through a free public service via a proxy, so some sites may return different headers to bots or block the check entirely.">
+<meta name="keywords" content="http header checker, check http headers, response header checker, view http headers online, website header analyzer, http response headers tool, check server headers, curl headers online, website headers lookup, http header viewer, security header check, content type checker, free header checker, seo header checker, web header inspector">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/http-header-checker.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HTTP Header Checker — Free Online Tool">
+<meta property="og:description" content="Fetch and inspect the HTTP response headers of any URL, including the status line, content type and server details, shown in a clean table. Honest note: headers are retrieved through a free public service via a proxy, so some sites may return different headers to bots or block the check entirely.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/http-header-checker.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP Header Checker — Free Online Tool">
+<meta name="twitter:description" content="Fetch and inspect the HTTP response headers of any URL, including the status line, content type and server details, shown in a clean table. Honest note: headers are retrieved through a free public service via a proxy, so some sites may return different headers to bots or block the check entirely.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"HTTP Header Checker","url":"https://sindhplusmedianetwork.github.io/tools/http-header-checker.html","description":"Fetch and inspect the HTTP response headers of any URL, including the status line, content type and server details, shown in a clean table. Honest note: headers are retrieved through a free public service via a proxy, so some sites may return different headers to bots or block the check entirely.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Website &amp; SEO</div>
+<h1>HTTP Header Checker</h1>
+<p class="desc">Fetch and inspect the HTTP response headers of any URL, including the status line, content type and server details, shown in a clean table. Honest note: headers are retrieved through a free public service via a proxy, so some sites may return different headers to bots or block the check entirely.</p>
+<div class="toolbox">
+<label>Website URL<br><input id="a" placeholder="example.com" style="width:100%"></label><br><br>
+<button onclick="go()">Fetch Headers</button>
+<div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=HTTP Header Checker — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fhttp-header-checker.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=HTTP Header Checker — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fhttp-header-checker.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#HTTPHeaders #WebDev #SEOTools #SPMN #FreeTools #WebTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function nu(u){u=String(u||'').trim();if(!u)return null;if(!/^[a-z][a-z0-9+.-]*:\/\//i.test(u))u='https://'+u;try{var p=new URL(u);if(p.protocol!=='http:'&&p.protocol!=='https:')return null;if(p.hostname.indexOf('.')<1)return null;return p.href;}catch(e){return null;}}
+function es(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function gj(u,ms){var c=new AbortController();var t=setTimeout(function(){c.abort();},ms||15000);return fetch('https://api.allorigins.win/get?url='+encodeURIComponent(u),{signal:c.signal}).then(function(r){clearTimeout(t);if(!r.ok)throw new Error('Proxy returned HTTP '+r.status);return r.json();},function(e){clearTimeout(t);throw e;});}
+function go(){var u=nu(document.getElementById('a').value);if(!u){document.getElementById('result').innerHTML='<p style="color:#b00">⚠️ Please enter a valid URL, e.g. example.com</p>';return;}var host='';try{host=new URL(u).hostname;}catch(e){}document.getElementById('result').innerHTML='<p>⏳ Fetching headers...</p>';gj('https://api.hackertarget.com/httpheaders/?q='+host).then(function(d){var t=String(d.contents||'');if(/^error/i.test(t.trim())){document.getElementById('result').innerHTML='<p style="color:#b00">Could not fetch headers: '+es(t.trim().slice(0,200))+'</p>';return;}var lines=t.split(/\r?\n/).filter(function(l){return l.trim();});if(!lines.length){document.getElementById('result').innerHTML='<p style="color:#b00">No header data returned for this site.</p>';return;}var h='<p><b>Status line:</b> <code>'+es(lines[0])+'</code></p><table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;max-width:100%;font-size:14px"><tr><th>Header</th><th>Value</th></tr>';for(var i=1;i<lines.length;i++){var idx=lines[i].indexOf(':');if(idx<0)continue;h+='<tr><td><b>'+es(lines[i].slice(0,idx).trim())+'</b></td><td style="word-break:break-all">'+es(lines[i].slice(idx+1).trim())+'</td></tr>';}h+='</table><p style="font-size:13px;color:#555">Headers are fetched through a free public service via a proxy — they reflect what that checker sees, which can differ from what a real browser receives. Some sites block this kind of check entirely.</p>';document.getElementById('result').innerHTML=h;}).catch(function(e){document.getElementById('result').innerHTML='<p style="color:#b00">Failed to fetch headers: '+es(e.message||e)+'</p><p style="font-size:13px;color:#555">The free header service may be rate-limited — please try again in a minute.</p>';});}
+</script>
+</body>
+</html>

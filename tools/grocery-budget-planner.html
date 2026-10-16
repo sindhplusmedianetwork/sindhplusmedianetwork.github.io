@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grocery Budget Planner — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Plan your grocery shopping within budget. Set your budget, add items with prices, and see your total, remaining balance and spending breakdown instantly.">
+<meta name="keywords" content="grocery budget planner, grocery list with prices, food budget calculator, monthly grocery budget, grocery shopping planner">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/grocery-budget-planner.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Grocery Budget Planner — Free Online Tool">
+<meta property="og:description" content="Plan your grocery shopping within budget. Set your budget, add items with prices, and see your total, remaining balance and spending breakdown instantly.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/grocery-budget-planner.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Grocery Budget Planner — Free Online Tool">
+<meta name="twitter:description" content="Plan your grocery shopping within budget. Set your budget, add items with prices, and see your total, remaining balance and spending breakdown instantly.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Grocery Budget Planner","url":"https://sindhplusmedianetwork.github.io/tools/grocery-budget-planner.html","description":"Plan your grocery shopping within budget. Set your budget, add items with prices, and see your total, remaining balance and spending breakdown instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Everyday Life</div>
+<h1>Grocery Budget Planner</h1>
+<p class="desc">Plan your grocery shopping within budget. Set your budget, add items with prices, and see your total, remaining balance and spending breakdown instantly.</p>
+<div class="toolbox">
+<label>Monthly Grocery Budget<input type='number' id='b' placeholder='20000' min='1'></label><div id='items'></div><button onclick='addI()'>+ Add Item</button> <button onclick='gb()'>Calculate</button> <button onclick='saveG()'>Save List</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Grocery Budget Planner — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fgrocery-budget-planner.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Grocery Budget Planner — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fgrocery-budget-planner.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#GroceryBudget #BudgetPlanner #ShoppingList #LifeTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var _gc=0;
+function addI(nm,pr,qy){_gc++;var d=document.createElement('div');d.id='gi'+_gc;
+d.style.cssText='border:1px solid #ddd;border-radius:6px;padding:8px;margin:6px 0;';
+d.innerHTML='<label>Item<input id="gn'+_gc+'" value="'+(nm||'')+'" placeholder="e.g. Rice"></label><label>Qty<input type="number" id="gq'+_gc+'" value="'+(qy||1)+'" min="0" step="0.5"></label><label>Price (each)<input type="number" id="gp'+_gc+'" value="'+(pr||'')+'" min="0" step="0.01" placeholder="0"></label>';
+document.getElementById('items').appendChild(d);}
+addI();addI();addI();
+function gb(){
+var b=parseFloat(document.getElementById('b').value);
+if(!b||b<=0){document.getElementById('result').innerHTML='Please enter your budget.';return;}
+var total=0,rows=[];
+for(var i=1;i<=_gc;i++){var nm=document.getElementById('gn'+i),pr=parseFloat(document.getElementById('gp'+i).value)||0,qy=parseFloat(document.getElementById('gq'+i).value)||0;
+if(nm&&nm.value.trim()&&pr>0&&qy>0){var st=pr*qy;total+=st;rows.push([nm.value.trim(),qy,pr,st]);}}
+if(!rows.length){document.getElementById('result').innerHTML='Please add at least one item with price.';return;}
+var rem=b-total,pct=Math.round(total/b*100);
+var h='<b>Budget: '+b.toLocaleString()+'</b><br><div style="font-size:24px;font-weight:800;color:'+(rem>=0?'#16a34a':'#b91c1c')+';">'+total.toLocaleString()+' spent ('+pct+'%)</div>';
+h+=rem>=0?'Remaining: <b>'+rem.toLocaleString()+'</b>':'<b style="color:#b91c1c;">Over budget by '+Math.abs(rem).toLocaleString()+'</b>';
+h+='<br><br><table style="border-collapse:collapse;width:100%;max-width:450px;font-size:13px;"><tr style="background:#f1f5f9;"><th style="border:1px solid #ddd;padding:6px;">Item</th><th style="border:1px solid #ddd;padding:6px;">Qty</th><th style="border:1px solid #ddd;padding:6px;">Subtotal</th></tr>';
+rows.forEach(function(r){h+='<tr><td style="border:1px solid #ddd;padding:6px;">'+r[0]+'</td><td style="border:1px solid #ddd;padding:6px;">'+r[1]+'</td><td style="border:1px solid #ddd;padding:6px;">'+r[3].toLocaleString()+'</td></tr>';});
+document.getElementById('result').innerHTML=h+'</table>';}
+function saveG(){var items=[];for(var i=1;i<=_gc;i++){var nm=document.getElementById('gn'+i);if(nm&&nm.value.trim())items.push({n:nm.value.trim(),q:document.getElementById('gq'+i).value,p:document.getElementById('gp'+i).value});}
+try{localStorage.setItem('spmn_grocery',JSON.stringify({b:document.getElementById('b').value,items:items}));document.getElementById('result').innerHTML='Grocery list saved!';}catch(e){}}
+(function(){try{var g=JSON.parse(localStorage.getItem('spmn_grocery')||'null');if(g){document.getElementById('b').value=g.b||'';document.getElementById('items').innerHTML='';_gc=0;g.items.forEach(function(x){addI(x.n,x.p,x.q);});}}catch(e){}})();
+</script>
+</body>
+</html>
