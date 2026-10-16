@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio to Text Transcriber — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Transcribe speech to text free using your microphone and the browser&#x27;s Web Speech API. Speak and watch your words appear, then copy the transcript. (File upload transcription needs a cloud API; this honest version uses live mic input.)">
+<meta name="keywords" content="speech to text, audio to text, transcribe audio, voice to text online, free transcription tool, dictation tool, voice typing, transcribe speech free, mic to text, live transcription tool">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/audio-to-text-transcriber.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Audio to Text Transcriber — Free Online Tool">
+<meta property="og:description" content="Transcribe speech to text free using your microphone and the browser&#x27;s Web Speech API. Speak and watch your words appear, then copy the transcript. (File upload transcription needs a cloud API; this honest version uses live mic input.)">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/audio-to-text-transcriber.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Audio to Text Transcriber — Free Online Tool">
+<meta name="twitter:description" content="Transcribe speech to text free using your microphone and the browser&#x27;s Web Speech API. Speak and watch your words appear, then copy the transcript. (File upload transcription needs a cloud API; this honest version uses live mic input.)">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Audio to Text Transcriber","url":"https://sindhplusmedianetwork.github.io/tools/audio-to-text-transcriber.html","description":"Transcribe speech to text free using your microphone and the browser&#x27;s Web Speech API. Speak and watch your words appear, then copy the transcript. (File upload transcription needs a cloud API; this honest version uses live mic input.)","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Video &amp; Audio</div>
+<h1>Audio to Text Transcriber</h1>
+<p class="desc">Transcribe speech to text free using your microphone and the browser&#x27;s Web Speech API. Speak and watch your words appear, then copy the transcript. (File upload transcription needs a cloud API; this honest version uses live mic input.)</p>
+<div class="toolbox">
+<button onclick='go()'>Start Listening</button> <button onclick='stop()'>Stop</button><label>Transcript<textarea id='o' rows='8' readonly placeholder='Your speech will appear here...'></textarea></label><button onclick="navigator.clipboard.writeText(document.getElementById('o').value);this.textContent='Copied!';">Copy Transcript</button><p><small>Uses live microphone input via Web Speech API (Chrome/Edge). Microphone permission is required.</small></p>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Audio to Text Transcriber — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Faudio-to-text-transcriber.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Audio to Text Transcriber — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Faudio-to-text-transcriber.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#SpeechToText #Transcription #AudioTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var _rec=null;
+ function go(){var R=document.getElementById('result');
+ var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+ if(!SR){R.innerHTML='Speech recognition is not supported in this browser. Try Chrome or Edge on desktop/Android.';return;}
+ if(_rec){R.innerHTML='Already listening.';return;}
+ _rec=new SR();_rec.lang='en-US';_rec.interimResults=true;_rec.continuous=true;
+ _rec.onresult=function(e){var t='';for(var i=0;i<e.results.length;i++)t+=e.results[i][0].transcript;document.getElementById('o').value=t;};
+ _rec.onerror=function(e){R.innerHTML='Recognition error: '+e.error+'. Stopped.';_rec=null;};
+ _rec.onend=function(){if(_rec){try{_rec.start();}catch(e){}}};
+ try{_rec.start();R.innerHTML='Listening... speak into your microphone.';}catch(e){R.innerHTML='Could not start: '+e.message;_rec=null;}}
+ function stop(){if(_rec){_rec.onend=null;_rec.stop();_rec=null;document.getElementById('result').innerHTML='Stopped.';}else document.getElementById('result').innerHTML='Not listening.';}
+</script>
+</body>
+</html>

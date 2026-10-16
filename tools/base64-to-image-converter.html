@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 to Image Converter — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Convert a Base64 string back to an image free. Paste a Base64 data URL, preview it, and download it as PNG or JPEG.">
+<meta name="keywords" content="base64 to image, decode base64 image, base64 to png, base64 to jpg, base64 decoder online, base64 decode to png, data url to image, base64 string to picture, base64 image preview, decode data uri, base64 viewer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/base64-to-image-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Base64 to Image Converter — Free Online Tool">
+<meta property="og:description" content="Convert a Base64 string back to an image free. Paste a Base64 data URL, preview it, and download it as PNG or JPEG.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/base64-to-image-converter.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Base64 to Image Converter — Free Online Tool">
+<meta name="twitter:description" content="Convert a Base64 string back to an image free. Paste a Base64 data URL, preview it, and download it as PNG or JPEG.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Base64 to Image Converter","url":"https://sindhplusmedianetwork.github.io/tools/base64-to-image-converter.html","description":"Convert a Base64 string back to an image free. Paste a Base64 data URL, preview it, and download it as PNG or JPEG.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Image &amp; Graphics</div>
+<h1>Base64 to Image Converter</h1>
+<p class="desc">Convert a Base64 string back to an image free. Paste a Base64 data URL, preview it, and download it as PNG or JPEG.</p>
+<div class="toolbox">
+<label>Paste Base64 (data URL or raw)<textarea id='i' rows='6' placeholder='data:image/png;base64,iVBOR...'></textarea></label><label>Download format<select id='fmt'><option value='image/png'>PNG</option><option value='image/jpeg'>JPEG</option></select></label><button onclick='go()'>Convert to Image</button><div><img id='pv' style='max-width:100%;margin-top:10px;display:none'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Base64 to Image Converter — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fbase64-to-image-converter.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Base64 to Image Converter — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fbase64-to-image-converter.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#Base64 #Base64ToImage #WebDevTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function dl(u,n){var a=document.createElement('a');a.href=u;a.download=n;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},500);}function go(){var R=document.getElementById('result');var t=document.getElementById('i').value.trim();
+ if(!t){R.innerHTML='Paste a Base64 string first.';return;}
+ var url=t.indexOf('data:')===0?t:('data:image/png;base64,'+t.replace(/\s+/g,''));
+ var img=new Image();
+ img.onload=function(){
+  var pv=document.getElementById('pv');pv.src=url;pv.style.display='block';
+  var fmt=document.getElementById('fmt').value,ext=fmt==='image/png'?'png':'jpg';
+  var c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;
+  var x=c.getContext('2d');if(fmt==='image/jpeg'){x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);}
+  x.drawImage(img,0,0);
+  c.toBlob(function(b){if(!b){R.innerHTML='Could not decode.';return;}var u=URL.createObjectURL(b);
+   R.innerHTML='Image decoded: '+img.naturalWidth+' x '+img.naturalHeight+' px<br><br><a href="'+u+'" download="from-base64.'+ext+'" style="display:inline-block;padding:10px 20px;background:#ff7a00;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Download '+ext.toUpperCase()+'</a>';},fmt,0.92);};
+ img.onerror=function(){R.innerHTML='Invalid Base64 image data. Check the pasted string.';};
+ img.src=url;}
+</script>
+</body>
+</html>

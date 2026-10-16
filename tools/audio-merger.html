@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Merger — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Merge audio files free online. Join two or more MP3, WAV or OGG clips into one WAV file in the order you select them.">
+<meta name="keywords" content="merge audio, combine mp3, join audio files, audio joiner online, merge wav free, audio merger, join mp3 files, combine wav clips, concatenate audio, podcast merger">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/audio-merger.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Audio Merger — Free Online Tool">
+<meta property="og:description" content="Merge audio files free online. Join two or more MP3, WAV or OGG clips into one WAV file in the order you select them.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/audio-merger.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Audio Merger — Free Online Tool">
+<meta name="twitter:description" content="Merge audio files free online. Join two or more MP3, WAV or OGG clips into one WAV file in the order you select them.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Audio Merger","url":"https://sindhplusmedianetwork.github.io/tools/audio-merger.html","description":"Merge audio files free online. Join two or more MP3, WAV or OGG clips into one WAV file in the order you select them.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Video &amp; Audio</div>
+<h1>Audio Merger</h1>
+<p class="desc">Merge audio files free online. Join two or more MP3, WAV or OGG clips into one WAV file in the order you select them.</p>
+<div class="toolbox">
+<label>Select 2+ audio files (in order)<input type='file' id='f' accept='audio/*' multiple></label><button onclick='go()'>Merge Audio</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Audio Merger — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Faudio-merger.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Audio Merger — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Faudio-merger.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#AudioMerger #MergeAudio #AudioTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function dl(u,n){var a=document.createElement('a');a.href=u;a.download=n;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},500);}function ad(f){var C=window.AudioContext||window.webkitAudioContext;if(!C)return Promise.reject(new Error('Web Audio not supported'));return f.arrayBuffer().then(function(b){return new C().decodeAudioData(b);});}function wavBlob(ch,sr){var n=ch[0].length,nc=ch.length,b=new ArrayBuffer(44+n*nc*2),v=new DataView(b);function s(o,t){for(var i=0;i<t.length;i++)v.setUint8(o+i,t.charCodeAt(i));}s(0,'RIFF');v.setUint32(4,36+n*nc*2,true);s(8,'WAVE');s(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,nc,true);v.setUint32(24,sr,true);v.setUint32(28,sr*nc*2,true);v.setUint16(32,nc*2,true);v.setUint16(34,16,true);s(36,'data');v.setUint32(40,n*nc*2,true);var o=44;for(var i=0;i<n;i++)for(var c=0;c<nc;c++){var x=Math.max(-1,Math.min(1,ch[c][i]));v.setInt16(o,x<0?x*32768:x*32767,true);o+=2;}return new Blob([b],{type:'audio/wav'});}function go(){var fs=document.getElementById('f').files;var R=document.getElementById('result');
+ if(fs.length<2){R.innerHTML='Select at least 2 audio files.';return;}
+ R.innerHTML='Decoding '+fs.length+' files...';
+ Promise.all(Array.prototype.map.call(fs,function(f){return ad(f).catch(function(){return null;});})).then(function(bufs){
+  if(bufs.some(function(b){return !b;})){R.innerHTML='Could not decode one of the files.';return;}
+  var sr=bufs[0].sampleRate,nc=1;
+  bufs.forEach(function(b){nc=Math.max(nc,b.numberOfChannels);});
+  var total=0;bufs.forEach(function(b){total+=b.length;});
+  var ch=[];for(var c=0;c<nc;c++)ch.push(new Float32Array(total));
+  var off=0;
+  bufs.forEach(function(b){
+   for(var c2=0;c2<nc;c2++){var src=b.numberOfChannels===1?b.getChannelData(0):b.getChannelData(Math.min(c2,b.numberOfChannels-1));ch[c2].set(src,off);}
+   off+=b.length;});
+  var u=URL.createObjectURL(wavBlob(ch,sr));
+  var dur=(total/sr).toFixed(1);
+  R.innerHTML='Merged '+bufs.length+' files into '+dur+'s of audio.<br><br><a href="'+u+'" download="merged.wav" style="display:inline-block;padding:10px 20px;background:#ff7a00;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Download Merged WAV</a>';});}
+</script>
+</body>
+</html>

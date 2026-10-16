@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Path Explorer — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Explore career progression in 14 fields. See the typical path from entry level to leadership, with expected timelines and the skills needed at each stage.">
+<meta name="keywords" content="career path, career progression, career ladder, job levels, career growth plan, promotion path">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/career-path-explorer.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Career Path Explorer — Free Online Tool">
+<meta property="og:description" content="Explore career progression in 14 fields. See the typical path from entry level to leadership, with expected timelines and the skills needed at each stage.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/career-path-explorer.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Career Path Explorer — Free Online Tool">
+<meta name="twitter:description" content="Explore career progression in 14 fields. See the typical path from entry level to leadership, with expected timelines and the skills needed at each stage.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Career Path Explorer","url":"https://sindhplusmedianetwork.github.io/tools/career-path-explorer.html","description":"Explore career progression in 14 fields. See the typical path from entry level to leadership, with expected timelines and the skills needed at each stage.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Jobs &amp; Career</div>
+<h1>Career Path Explorer</h1>
+<p class="desc">Explore career progression in 14 fields. See the typical path from entry level to leadership, with expected timelines and the skills needed at each stage.</p>
+<div class="toolbox">
+<label>Choose a Field<select id='f'><option value=''>-- Select --</option></select></label><button onclick='exp()'>Show Career Path</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Career Path Explorer — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcareer-path-explorer.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Career Path Explorer — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcareer-path-explorer.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#CareerPath #CareerGrowth #JobLevels #CareerTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var CP={
+"Software Development":[["Junior Developer","0-2 yrs","Coding basics, Git, one language"],["Mid Developer","2-4 yrs","System design basics, code reviews, testing"],["Senior Developer","4-7 yrs","Architecture, mentoring, tech decisions"],["Tech Lead / Architect","7+ yrs","Team leadership, strategy, cross-team impact"]],
+"Data & Analytics":[["Data Analyst","0-2 yrs","Excel, SQL, dashboards"],["Senior Analyst","2-4 yrs","Statistics, Python, stakeholder work"],["Data Scientist","4-6 yrs","ML models, experimentation"],["Head of Data","7+ yrs","Data strategy, team building"]],
+"Marketing":[["Marketing Assistant","0-2 yrs","Content, social media basics"],["Marketing Specialist","2-4 yrs","Campaigns, SEO, analytics"],["Marketing Manager","4-7 yrs","Strategy, budget, team"],["CMO / Director","8+ yrs","Brand vision, growth leadership"]],
+"Sales":[["Sales Rep","0-2 yrs","Prospecting, CRM"],["Senior AE","2-4 yrs","Negotiation, key accounts"],["Sales Manager","4-7 yrs","Team targets, coaching"],["VP Sales","8+ yrs","Revenue strategy, scaling"]],
+"Human Resources":[["HR Assistant","0-2 yrs","Admin, onboarding"],["HR Officer","2-4 yrs","Recruitment, employee relations"],["HR Manager","5-8 yrs","Policy, performance, compliance"],["HR Director","9+ yrs","People strategy, culture"]],
+"Finance & Accounting":[["Junior Accountant","0-2 yrs","Bookkeeping, Excel"],["Accountant","2-4 yrs","Reporting, audits"],["Finance Manager","5-8 yrs","Budgeting, forecasting"],["CFO","10+ yrs","Financial strategy, leadership"]],
+"Teaching & Education":[["Assistant Teacher","0-2 yrs","Classroom support"],["Teacher","2-5 yrs","Curriculum, assessment"],["Senior Teacher / HOD","5-10 yrs","Mentoring, department lead"],["Principal","10+ yrs","School leadership"]],
+"Healthcare / Nursing":[["Staff Nurse","0-2 yrs","Patient care basics"],["Senior Nurse","3-6 yrs","Specialization"],["Charge Nurse","6-10 yrs","Ward leadership"],["Nursing Director","10+ yrs","Policy, administration"]],
+"Design":[["Junior Designer","0-2 yrs","Tools, visual basics"],["Designer","2-4 yrs","UX thinking, systems"],["Senior Designer","4-7 yrs","Strategy, mentoring"],["Design Director","8+ yrs","Vision, team leadership"]],
+"Customer Support":[["Support Agent","0-1 yrs","Tickets, product knowledge"],["Senior Agent","1-3 yrs","Escalations, QA"],["Team Lead","3-5 yrs","Coaching, metrics"],["Support Manager","5+ yrs","Operations, strategy"]],
+"Engineering":[["Graduate Engineer","0-2 yrs","Fundamentals, supervision"],["Engineer","2-5 yrs","Independent projects"],["Senior Engineer","5-9 yrs","Complex design, mentoring"],["Engineering Manager","9+ yrs","Leadership, budgets"]],
+"Journalism & Media":[["Junior Reporter","0-2 yrs","Reporting basics, ethics"],["Reporter / Correspondent","2-5 yrs","Beats, investigations"],["Senior Editor","5-9 yrs","Editorial judgment, team"],["Editor-in-Chief","10+ yrs","Vision, brand"]],
+"Hospitality":[["Front Desk / Service Staff","0-2 yrs","Guest service"],["Supervisor","2-4 yrs","Shift leadership"],["Manager","4-8 yrs","Operations, P&L"],["General Manager","9+ yrs","Full property leadership"]],
+"Logistics":[["Coordinator","0-2 yrs","Scheduling, documentation"],["Analyst","2-4 yrs","Optimization, vendors"],["Manager","4-8 yrs","Network, contracts"],["Director","9+ yrs","Supply chain strategy"]]};
+(function(){var s=document.getElementById('f');Object.keys(CP).forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=k;s.appendChild(o);});})();
+function exp(){
+var f=document.getElementById('f').value;
+if(!f){document.getElementById('result').innerHTML='Please choose a field.';return;}
+var h='<b>Career path: '+f+'</b><br><br>';
+CP[f].forEach(function(st,i){h+='<div style="border-left:3px solid #4f46e5;padding:8px 12px;margin:8px 0;background:#f8fafc;border-radius:0 8px 8px 0;"><b>Level '+(i+1)+': '+st[0]+'</b> <span style="color:#666;font-size:13px;">('+st[1]+')</span><br><span style="font-size:13px;">Key skills: '+st[2]+'</span></div>';});
+document.getElementById('result').innerHTML=h;}
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGPA Calculator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Calculate your cumulative GPA across all semesters. Enter each semester&#x27;s GPA and credit hours to get your overall CGPA — essential for transcripts and job applications.">
+<meta name="keywords" content="cgpa calculator, cumulative gpa calculator, calculate cgpa, overall gpa calculator, semester cgpa, university cgpa calculator, total gpa, overall cgpa estimator, total cgpa finder, cumulative grade calculator, final cgpa predictor, all semester gpa">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/cgpa-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CGPA Calculator — Free Online Tool">
+<meta property="og:description" content="Calculate your cumulative GPA across all semesters. Enter each semester&#x27;s GPA and credit hours to get your overall CGPA — essential for transcripts and job applications.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/cgpa-calculator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CGPA Calculator — Free Online Tool">
+<meta name="twitter:description" content="Calculate your cumulative GPA across all semesters. Enter each semester&#x27;s GPA and credit hours to get your overall CGPA — essential for transcripts and job applications.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"CGPA Calculator","url":"https://sindhplusmedianetwork.github.io/tools/cgpa-calculator.html","description":"Calculate your cumulative GPA across all semesters. Enter each semester&#x27;s GPA and credit hours to get your overall CGPA — essential for transcripts and job applications.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Education &amp; Learning</div>
+<h1>CGPA Calculator</h1>
+<p class="desc">Calculate your cumulative GPA across all semesters. Enter each semester&#x27;s GPA and credit hours to get your overall CGPA — essential for transcripts and job applications.</p>
+<div class="toolbox">
+<div id='cg_rows'></div><button onclick='cgAdd()'>+ Add Semester</button> <button onclick='cgGo()'>Calculate CGPA</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=CGPA Calculator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcgpa-calculator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=CGPA Calculator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcgpa-calculator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#CGPACalculator #Education #StudentTools #Grades #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function cgAdd(){var d=document.createElement('div');d.style.margin='6px 0';d.innerHTML='<input type="text" placeholder="Semester (e.g. Fall 2024)" style="width:40%"> <input type="number" placeholder="Semester GPA" min="0" max="4" step="0.01" style="width:110px"> <input type="number" placeholder="Credits" min="0" step="0.5" style="width:70px"> <button onclick="this.parentNode.remove()">×</button>';document.getElementById('cg_rows').appendChild(d);}
+function cgGo(){var rows=document.getElementById('cg_rows').children;var r=document.getElementById('result');if(!rows.length){r.innerHTML='<p style="color:#c00">Add at least one semester first.</p>';return;}var pts=0,cr=0;for(var i=0;i<rows.length;i++){var ins=rows[i].querySelectorAll('input');var g=parseFloat(ins[1].value),c=parseFloat(ins[2].value);if(isNaN(g)||g<0||g>4){r.innerHTML='<p style="color:#c00">Enter a valid GPA (0–4) for every semester.</p>';return;}if(isNaN(c)||c<=0){r.innerHTML='<p style="color:#c00">Enter valid credit hours for every semester.</p>';return;}pts+=g*c;cr+=c;}var cg=pts/cr;r.innerHTML='<p style="font-size:20px"><b>CGPA: '+cg.toFixed(2)+'</b> / 4.00</p><p>Total credits completed: '+cr+'<br>'+(cg>=3.5?'First-class standing — excellent!':cg>=3.0?'Second-class upper standing.':cg>=2.5?'Second-class standing.':cg>=2.0?'Pass standing.':'Below pass threshold — see an advisor.')+'</p>';}
+cgAdd();cgAdd();
+</script>
+</body>
+</html>
