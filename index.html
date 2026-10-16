@@ -114,22 +114,6 @@
 
 
 
-<div class="wrap cb-view" id="view-community" style="display:none">
-  <h2 class="cb-sec-title" data-cblbl="communityTitle">Community</h2>
-  <p class="cb-muted" data-cblbl="communitySub">Share with everyone — posts appear after admin approval.</p>
-  <div class="gate-slot"></div>
-  <div class="cb-card" id="cbComposer" style="display:none">
-    <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><div class="cb-avatar" id="cbCompAvatar">?</div><button class="cb-fake-input" onclick="document.getElementById('cbPostText').focus()" data-cblbl="whatsMind">What's on your mind?</button></div>
-    <textarea class="cb-textarea" id="cbPostText" rows="3" maxlength="1000" data-cbph="postPh" placeholder="Write something..."></textarea>
-    <input type="file" id="cbPostImg" accept="image/*" style="margin:6px 0">
-    <img id="cbPostPrev" class="cb-post-img" style="display:none">
-    <button class="cb-btn" id="cbPostBtn" onclick="cbSubmitPost()" data-cblbl="publishPost">Post</button>
-    <div class="cb-err" id="cbPostErr"></div>
-    <div class="cb-ok" id="cbPostOk"></div>
-  </div>
-  <div id="cbMyPending"></div>
-  <div id="cbFeed"></div>
-</div>
 
 <div class="wrap cb-view" id="view-tools" style="display:none">
   <h2 class="cb-sec-title" data-cblbl="toolsTitle">Daily Tools</h2>
@@ -170,8 +154,7 @@
 <!-- ===== Sindh Plus Combined App: bottom nav + views + modals ===== -->
 <nav id="bottomNav" aria-label="Sections">
   <button data-tab="news" class="active" onclick="showTab('news')">📰<span data-cblbl="news">News</span></button>
-  <button data-tab="community" onclick="showTab('community')">👥<span data-cblbl="community">Community</span></button>
-      <button data-tab="tools" onclick="showTab('tools')">🧰<span data-cblbl="tools">Tools</span></button>
+        <button data-tab="tools" onclick="showTab('tools')">🧰<span data-cblbl="tools">Tools</span></button>
   <button data-tab="jobs" onclick="showTab('jobs')">💼<span data-cblbl="jobs">Jobs</span></button>
     <button data-tab="support" onclick="showTab('support')">🎧<span>Support</span></button>
 </nav>
