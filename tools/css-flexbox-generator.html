@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Flexbox Generator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Experiment with CSS Flexbox using dropdowns for direction, justify-content, align-items and wrapping, plus a gap slider, and watch four colored boxes respond live. Generates the container CSS to paste into your project. A client-side learning and prototyping tool.">
+<meta name="keywords" content="css flexbox generator, flexbox generator online, flex container generator, justify content generator, css flex playground, flexbox tester, flex layout tool, learn flexbox, flexbox css code, flex gap generator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/css-flexbox-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CSS Flexbox Generator — Free Online Tool">
+<meta property="og:description" content="Experiment with CSS Flexbox using dropdowns for direction, justify-content, align-items and wrapping, plus a gap slider, and watch four colored boxes respond live. Generates the container CSS to paste into your project. A client-side learning and prototyping tool.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/css-flexbox-generator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS Flexbox Generator — Free Online Tool">
+<meta name="twitter:description" content="Experiment with CSS Flexbox using dropdowns for direction, justify-content, align-items and wrapping, plus a gap slider, and watch four colored boxes respond live. Generates the container CSS to paste into your project. A client-side learning and prototyping tool.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"CSS Flexbox Generator","url":"https://sindhplusmedianetwork.github.io/tools/css-flexbox-generator.html","description":"Experiment with CSS Flexbox using dropdowns for direction, justify-content, align-items and wrapping, plus a gap slider, and watch four colored boxes respond live. Generates the container CSS to paste into your project. A client-side learning and prototyping tool.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>CSS Flexbox Generator</h1>
+<p class="desc">Experiment with CSS Flexbox using dropdowns for direction, justify-content, align-items and wrapping, plus a gap slider, and watch four colored boxes respond live. Generates the container CSS to paste into your project. A client-side learning and prototyping tool.</p>
+<div class="toolbox">
+<label>flex-direction <select id='d' onchange='upd()'><option>row</option><option>row-reverse</option><option>column</option><option>column-reverse</option></select></label><br><label>justify-content <select id='j' onchange='upd()'><option>flex-start</option><option>center</option><option>flex-end</option><option>space-between</option><option>space-around</option><option>space-evenly</option></select></label><br><label>align-items <select id='a' onchange='upd()'><option>stretch</option><option>center</option><option>flex-start</option><option>flex-end</option><option>baseline</option></select></label><br><label>flex-wrap <select id='w' onchange='upd()'><option>nowrap</option><option>wrap</option><option>wrap-reverse</option></select></label><br><label>gap <input type='range' id='g' min='0' max='40' value='10' oninput='upd()'> <span id='gv'></span></label><div id='result'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=CSS Flexbox Generator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcss-flexbox-generator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=CSS Flexbox Generator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcss-flexbox-generator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#CSS #Flexbox #WebDesign #Frontend #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function upd(){var d=document.getElementById('d').value,j=document.getElementById('j').value,a=document.getElementById('a').value,w=document.getElementById('w').value,g=+document.getElementById('g').value;document.getElementById('gv').textContent=g+'px';var cols=['#e74c3c','#3498db','#2ecc71','#f39c12'],boxes='';for(var i=0;i<4;i++){boxes+="<div style='background:"+cols[i]+";color:#fff;padding:20px;min-width:40px;text-align:center'>"+(i+1)+"</div>";}var cont="display:flex;flex-direction:"+d+";justify-content:"+j+";align-items:"+a+";flex-wrap:"+w+";gap:"+g+"px;";var css='.container {\n  display: flex;\n  flex-direction: '+d+';\n  justify-content: '+j+';\n  align-items: '+a+';\n  flex-wrap: '+w+';\n  gap: '+g+'px;\n}';document.getElementById('result').innerHTML="<div style='border:1px solid #ccc;min-height:130px;padding:10px;"+cont+"'>"+boxes+"</div><pre style='background:#f5f5f5;padding:10px'>"+css+"</pre>";}upd();
+</script>
+</body>
+</html>

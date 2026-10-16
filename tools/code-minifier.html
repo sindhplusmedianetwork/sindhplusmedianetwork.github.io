@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Minifier — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Shrink JavaScript, CSS or HTML by stripping comments and collapsing whitespace, with JavaScript handling done string-aware so quoted text is never broken. Shows original vs minified size and the percentage saved. Heuristic-based — not a replacement for production bundlers like Terser — and runs fully client-side.">
+<meta name="keywords" content="code minifier, javascript minifier, css minifier, html minifier, minify js online, minify css online, js compressor, css compressor, reduce code size, online minifier tool">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/code-minifier.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Code Minifier — Free Online Tool">
+<meta property="og:description" content="Shrink JavaScript, CSS or HTML by stripping comments and collapsing whitespace, with JavaScript handling done string-aware so quoted text is never broken. Shows original vs minified size and the percentage saved. Heuristic-based — not a replacement for production bundlers like Terser — and runs fully client-side.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/code-minifier.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Code Minifier — Free Online Tool">
+<meta name="twitter:description" content="Shrink JavaScript, CSS or HTML by stripping comments and collapsing whitespace, with JavaScript handling done string-aware so quoted text is never broken. Shows original vs minified size and the percentage saved. Heuristic-based — not a replacement for production bundlers like Terser — and runs fully client-side.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Code Minifier","url":"https://sindhplusmedianetwork.github.io/tools/code-minifier.html","description":"Shrink JavaScript, CSS or HTML by stripping comments and collapsing whitespace, with JavaScript handling done string-aware so quoted text is never broken. Shows original vs minified size and the percentage saved. Heuristic-based — not a replacement for production bundlers like Terser — and runs fully client-side.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>Code Minifier</h1>
+<p class="desc">Shrink JavaScript, CSS or HTML by stripping comments and collapsing whitespace, with JavaScript handling done string-aware so quoted text is never broken. Shows original vs minified size and the percentage saved. Heuristic-based — not a replacement for production bundlers like Terser — and runs fully client-side.</p>
+<div class="toolbox">
+<label>Language: <select id='l'><option value='js'>JavaScript</option><option value='css'>CSS</option><option value='html'>HTML</option></select></label><br><label>Code:<br><textarea id='a' rows='8' style='width:100%'></textarea></label><br><button onclick='go()'>Minify</button><div id='result'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Code Minifier — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcode-minifier.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Code Minifier — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcode-minifier.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#Minifier #JavaScript #CSS #WebDev #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function E(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}function bytes(s){return new TextEncoder().encode(s).length;}function stripJS(s){var o='',i=0,n=s.length,q=0;while(i<n){var c=s.charCodeAt(i);if(q){o+=s[i];if(c===92){o+=s[i+1]||'';i+=2;continue;}if(c===q)q=0;i++;continue;}if(c===34||c===39||c===96){q=c;o+=s[i];i++;continue;}if(c===47&&s.charCodeAt(i+1)===47){while(i<n&&s[i]!=='\n')i++;continue;}if(c===47&&s.charCodeAt(i+1)===42){i+=2;while(i<n&&!(s[i]==='*'&&s[i+1]==='/'))i++;i+=2;continue;}o+=s[i];i++;}return o;}function minJS(s){var o='',i=0,n=s.length,q=0,prev='',pend=false;function isW(c){return /[A-Za-z0-9_$]/.test(c);}while(i<n){var ch=s[i],cc=s.charCodeAt(i);if(q){o+=ch;prev=ch;if(cc===92){o+=s[i+1]||'';prev=s[i+1]||'';i+=2;continue;}if(cc===q)q=0;i++;continue;}if(cc===34||cc===39||cc===96){pend=false;q=cc;o+=ch;prev=ch;i++;continue;}if(cc===47&&s.charCodeAt(i+1)===47){while(i<n&&s[i]!=='\n')i++;continue;}if(cc===47&&s.charCodeAt(i+1)===42){i+=2;while(i<n&&!(s[i]==='*'&&s[i+1]==='/'))i++;i+=2;continue;}if(cc===32||cc===9||cc===10||cc===13||cc===12){pend=true;i++;continue;}if(pend){pend=false;if(prev&&isW(prev)&&isW(ch)){o+=' ';}else if((ch==='+'||ch==='-')&&isW(prev)){var j=i+1;while(j<n&&(s[j]===' '||s[j]==='\t'||s[j]==='\n'||s[j]==='\r'))j++;if(s[j]===ch)o+=' ';}}o+=ch;prev=ch;i++;}return o;}function minCSS(s){return s.replace(/\/\*[\s\S]*?\*\//g,'').replace(/\s+/g,' ').replace(/\s*([{}:;,])\s*/g,'$1').trim();}function minHTML(s){return s.replace(/<!--[\s\S]*?-->/g,'').replace(/>\s+</g,'><').replace(/\s+/g,' ').trim();}function go(){var L=document.getElementById('l').value;var s=document.getElementById('a').value;var r=document.getElementById('result');if(!s.trim()){r.innerHTML="<p style='color:#b00'>Paste some code first.</p>";return;}var t=L==='js'?minJS(s):(L==='css'?minCSS(s):minHTML(s));var o=bytes(s),m2=bytes(t),pc=o?Math.round((1-m2/o)*100):0;r.innerHTML="<p>Original: <b>"+o+" bytes</b> | Minified: <b>"+m2+" bytes</b> | Saved: <b>"+pc+"%</b></p><pre style='white-space:pre-wrap;word-break:break-all'>"+E(t)+"</pre>";}
+</script>
+</body>
+</html>

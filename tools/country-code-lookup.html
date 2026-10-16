@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Country Code Lookup — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Find ISO country codes: alpha-2, alpha-3 and numeric codes for 50+ countries. Search by name or by code in either direction.">
+<meta name="keywords" content="country code lookup, iso country codes, alpha-2 alpha-3 codes, country numeric code, ISO 3166 lookup">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/country-code-lookup.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Country Code Lookup — Free Online Tool">
+<meta property="og:description" content="Find ISO country codes: alpha-2, alpha-3 and numeric codes for 50+ countries. Search by name or by code in either direction.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/country-code-lookup.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Country Code Lookup — Free Online Tool">
+<meta name="twitter:description" content="Find ISO country codes: alpha-2, alpha-3 and numeric codes for 50+ countries. Search by name or by code in either direction.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Country Code Lookup","url":"https://sindhplusmedianetwork.github.io/tools/country-code-lookup.html","description":"Find ISO country codes: alpha-2, alpha-3 and numeric codes for 50+ countries. Search by name or by code in either direction.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Geography &amp; Travel</div>
+<h1>Country Code Lookup</h1>
+<p class="desc">Find ISO country codes: alpha-2, alpha-3 and numeric codes for 50+ countries. Search by name or by code in either direction.</p>
+<div class="toolbox">
+<label>Search (name or code)<input type='text' id='cc' placeholder='PK or Pakistan' oninput='findCC()'></label><div id='cclist'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Country Code Lookup — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcountry-code-lookup.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Country Code Lookup — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcountry-code-lookup.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#CountryCode #ISO #CountryCodes #Reference #TravelTools #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var CCD=[["Pakistan","PK","PAK","586"],["India","IN","IND","356"],["China","CN","CHN","156"],["United States","US","USA","840"],["United Kingdom","GB","GBR","826"],["Germany","DE","DEU","276"],["France","FR","FRA","250"],["Canada","CA","CAN","124"],["Australia","AU","AUS","36"],["Japan","JP","JPN","392"],["South Korea","KR","KOR","410"],["United Arab Emirates","AE","ARE","784"],["Saudi Arabia","SA","SAU","682"],["Turkey","TR","TUR","792"],["Italy","IT","ITA","380"],["Spain","ES","ESP","724"],["Netherlands","NL","NLD","528"],["Sweden","SE","SWE","752"],["Norway","NO","NOR","578"],["Switzerland","CH","CHE","756"],["Brazil","BR","BRA","76"],["Mexico","MX","MEX","484"],["Egypt","EG","EGY","818"],["Nigeria","NG","NGA","566"],["South Africa","ZA","ZAF","710"],["Indonesia","ID","IDN","360"],["Malaysia","MY","MYS","458"],["Singapore","SG","SGP","702"],["Thailand","TH","THA","764"],["Vietnam","VN","VNM","704"],["Philippines","PH","PHL","608"],["Bangladesh","BD","BGD","50"],["Sri Lanka","LK","LKA","144"],["Nepal","NP","NPL","524"],["Iran","IR","IRN","364"],["Iraq","IQ","IRQ","368"],["Qatar","QA","QAT","634"],["Kuwait","KW","KWT","414"],["Oman","OM","OMN","512"],["Bahrain","BH","BHR","48"],["Jordan","JO","JOR","400"],["New Zealand","NZ","NZL","554"],["Ireland","IE","IRL","372"],["Poland","PL","POL","616"],["Portugal","PT","PRT","620"],["Greece","GR","GRC","300"],["Austria","AT","AUT","40"],["Belgium","BE","BEL","56"],["Denmark","DK","DNK","208"],["Finland","FI","FIN","246"],["Russia","RU","RUS","643"],["Argentina","AR","ARG","32"]];
+function findCC(){var q=document.getElementById('cc').value.trim().toUpperCase();var box=document.getElementById('cclist');var R=document.getElementById('result');if(q.length<2){box.innerHTML='';R.innerHTML='';return;}var m=CCD.filter(function(c){return c[0].toUpperCase().indexOf(q)===0||c[1]===q||c[2]===q||c[3]===q;}).slice(0,8);if(!m.length){box.innerHTML='';R.innerHTML='No match found.';return;}box.innerHTML=m.map(function(c){return "<button style='margin:3px' onclick='showCC("+CCD.indexOf(c)+")'>"+c[0]+"</button>";}).join('');}
+function showCC(i){var c=CCD[i];document.getElementById('result').innerHTML='<b>'+c[0]+'</b><br>Alpha-2: <b>'+c[1]+'</b><br>Alpha-3: <b>'+c[2]+'</b><br>Numeric: <b>'+c[3]+'</b>';}
+</script>
+</body>
+</html>

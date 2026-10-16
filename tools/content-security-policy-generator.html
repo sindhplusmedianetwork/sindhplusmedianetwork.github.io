@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Security Policy Generator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Generate a ready-to-use Content Security Policy (CSP) header for your website with simple checkboxes — allow Google Fonts, Google Analytics, YouTube embeds, HTTPS images and inline scripts or styles. Get both the HTTP header and the meta-tag version with one click, plus copy buttons for easy deployment.">
+<meta name="keywords" content="content security policy generator, csp generator, generate csp header, csp policy maker, website csp builder, content-security-policy example, create csp online, csp header generator tool, web security policy generator, csp meta tag generator, strict csp generator, csp directive builder, website security header generator, csp policy creator, generate csp for wordpress">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/content-security-policy-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Content Security Policy Generator — Free Online Tool">
+<meta property="og:description" content="Generate a ready-to-use Content Security Policy (CSP) header for your website with simple checkboxes — allow Google Fonts, Google Analytics, YouTube embeds, HTTPS images and inline scripts or styles. Get both the HTTP header and the meta-tag version with one click, plus copy buttons for easy deployment.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/content-security-policy-generator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Content Security Policy Generator — Free Online Tool">
+<meta name="twitter:description" content="Generate a ready-to-use Content Security Policy (CSP) header for your website with simple checkboxes — allow Google Fonts, Google Analytics, YouTube embeds, HTTPS images and inline scripts or styles. Get both the HTTP header and the meta-tag version with one click, plus copy buttons for easy deployment.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Content Security Policy Generator","url":"https://sindhplusmedianetwork.github.io/tools/content-security-policy-generator.html","description":"Generate a ready-to-use Content Security Policy (CSP) header for your website with simple checkboxes — allow Google Fonts, Google Analytics, YouTube embeds, HTTPS images and inline scripts or styles. Get both the HTTP header and the meta-tag version with one click, plus copy buttons for easy deployment.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Security &amp; Privacy</div>
+<h1>Content Security Policy Generator</h1>
+<p class="desc">Generate a ready-to-use Content Security Policy (CSP) header for your website with simple checkboxes — allow Google Fonts, Google Analytics, YouTube embeds, HTTPS images and inline scripts or styles. Get both the HTTP header and the meta-tag version with one click, plus copy buttons for easy deployment.</p>
+<div class="toolbox">
+<label><input type="checkbox" id="cself" checked disabled> Allow resources from own domain (always on)</label><br>
+<label><input type="checkbox" id="cfonts"> Google Fonts</label><br>
+<label><input type="checkbox" id="cga"> Google Analytics / Tag Manager</label><br>
+<label><input type="checkbox" id="cyt"> YouTube embeds</label><br>
+<label><input type="checkbox" id="cimg" checked> Images from any HTTPS site</label><br>
+<label><input type="checkbox" id="cstyle"> Allow inline styles (unsafe-inline)</label><br>
+<label><input type="checkbox" id="cscript"> Allow inline scripts (unsafe-inline)</label><br>
+<button onclick="cspGen()">Generate CSP</button>
+<div id="result" style="margin-top:12px"></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Content Security Policy Generator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcontent-security-policy-generator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Content Security Policy Generator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcontent-security-policy-generator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#ContentSecurityPolicy #WebSecurity #WebDev #CyberSecurity #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function cspE(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+var cspLastH='',cspLastM='';
+function cspGen(){
+var dirs=[];
+dirs.push("default-src 'self'");
+var ss=["'self'"];
+if(document.getElementById('cscript').checked)ss.push("'unsafe-inline'");
+if(document.getElementById('cga').checked)ss.push('https://www.googletagmanager.com https://www.google-analytics.com');
+if(document.getElementById('cyt').checked)ss.push('https://www.youtube.com https://s.ytimg.com');
+dirs.push('script-src '+ss.join(' '));
+var st=["'self'"];
+if(document.getElementById('cstyle').checked)st.push("'unsafe-inline'");
+if(document.getElementById('cfonts').checked)st.push('https://fonts.googleapis.com');
+dirs.push('style-src '+st.join(' '));
+var img=["'self'"];
+if(document.getElementById('cimg').checked)img.push('https:');else img.push('data:');
+dirs.push('img-src '+img.join(' '));
+if(document.getElementById('cfonts').checked)dirs.push("font-src 'self' https://fonts.gstatic.com");
+if(document.getElementById('cyt').checked)dirs.push('frame-src https://www.youtube.com');
+if(document.getElementById('cga').checked)dirs.push('connect-src '+ss.join(' '));
+var header=dirs.join('; ')+';';
+cspLastH=header;
+cspLastM='<meta http-equiv="Content-Security-Policy" content="'+header+'">';
+document.getElementById('result').innerHTML='<p><strong>HTTP header</strong> (send from your server):</p><pre style="white-space:pre-wrap;background:#f4f4f4;padding:10px;border-radius:6px">'+cspE(header)+'</pre><button onclick="cspCopyH()">Copy Header</button><p><strong>Meta tag</strong> (paste inside &lt;head&gt;):</p><pre style="white-space:pre-wrap;background:#f4f4f4;padding:10px;border-radius:6px">'+cspE(cspLastM)+'</pre><button onclick="cspCopyM()">Copy Meta Tag</button><p style="font-size:0.9em;color:#555"><em>Tip: test in report-only mode first (Content-Security-Policy-Report-Only) so a mistake does not break your site.</em></p>';
+}
+function cspCopyH(){navigator.clipboard.writeText(cspLastH).then(function(){alert('Copied!');}).catch(function(){alert('Copy failed - select and copy manually.');});}
+function cspCopyM(){navigator.clipboard.writeText(cspLastM).then(function(){alert('Copied!');}).catch(function(){alert('Copy failed - select and copy manually.');});}
+</script>
+</body>
+</html>

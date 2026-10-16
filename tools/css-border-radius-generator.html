@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Border Radius Generator — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Create CSS border-radius visually with per-corner sliders and an elliptical mode for pill and blob shapes, with a live preview. Outputs ready-to-paste border-radius CSS. Runs entirely in your browser.">
+<meta name="keywords" content="css border radius generator, border radius css, border-radius generator online, rounded corners css, elliptical border radius, css rounded corners tool, border radius code, make circle css, pill shape css">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/css-border-radius-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CSS Border Radius Generator — Free Online Tool">
+<meta property="og:description" content="Create CSS border-radius visually with per-corner sliders and an elliptical mode for pill and blob shapes, with a live preview. Outputs ready-to-paste border-radius CSS. Runs entirely in your browser.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/css-border-radius-generator.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS Border Radius Generator — Free Online Tool">
+<meta name="twitter:description" content="Create CSS border-radius visually with per-corner sliders and an elliptical mode for pill and blob shapes, with a live preview. Outputs ready-to-paste border-radius CSS. Runs entirely in your browser.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"CSS Border Radius Generator","url":"https://sindhplusmedianetwork.github.io/tools/css-border-radius-generator.html","description":"Create CSS border-radius visually with per-corner sliders and an elliptical mode for pill and blob shapes, with a live preview. Outputs ready-to-paste border-radius CSS. Runs entirely in your browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Web Development</div>
+<h1>CSS Border Radius Generator</h1>
+<p class="desc">Create CSS border-radius visually with per-corner sliders and an elliptical mode for pill and blob shapes, with a live preview. Outputs ready-to-paste border-radius CSS. Runs entirely in your browser.</p>
+<div class="toolbox">
+<label>Top-left <input type='range' id='t' min='0' max='100' value='20' oninput='upd()'> <span id='tv'></span></label><br><label>Top-right <input type='range' id='r' min='0' max='100' value='20' oninput='upd()'> <span id='rv'></span></label><br><label>Bottom-right <input type='range' id='b' min='0' max='100' value='20' oninput='upd()'> <span id='bv'></span></label><br><label>Bottom-left <input type='range' id='l' min='0' max='100' value='20' oninput='upd()'> <span id='lv'></span></label><br><label><input type='checkbox' id='el' onchange='upd()'> Elliptical (separate vertical radii)</label><div id='el2' style='display:none'><label>Top-left V <input type='range' id='t2' min='0' max='100' value='40' oninput='upd()'> <span id='t2v'></span></label><br><label>Top-right V <input type='range' id='r2' min='0' max='100' value='40' oninput='upd()'> <span id='r2v'></span></label><br><label>Bottom-right V <input type='range' id='b2' min='0' max='100' value='40' oninput='upd()'> <span id='b2v'></span></label><br><label>Bottom-left V <input type='range' id='l2' min='0' max='100' value='40' oninput='upd()'> <span id='l2v'></span></label></div><div id='result'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=CSS Border Radius Generator — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcss-border-radius-generator.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=CSS Border Radius Generator — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcss-border-radius-generator.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#CSS #BorderRadius #WebDesign #Frontend #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function px4(a){return a.map(function(v){return v+'px';}).join(' ');}function upd(){var h=[+document.getElementById('t').value,+document.getElementById('r').value,+document.getElementById('b').value,+document.getElementById('l').value];var el=document.getElementById('el').checked;document.getElementById('el2').style.display=el?'block':'none';var code,preview;if(el){var v=[+document.getElementById('t2').value,+document.getElementById('r2').value,+document.getElementById('b2').value,+document.getElementById('l2').value];code='border-radius: '+px4(h)+' / '+px4(v)+';';preview=px4(h)+' / '+px4(v);}else{code='border-radius: '+px4(h)+';';preview=px4(h);}['t','r','b','l'].forEach(function(k){document.getElementById(k+'v').textContent=document.getElementById(k).value+'px';});if(el)['t2','r2','b2','l2'].forEach(function(k){document.getElementById(k+'v').textContent=document.getElementById(k).value+'px';});document.getElementById('result').innerHTML="<div style='width:200px;height:140px;background:#3498db;margin:20px auto;border-radius:"+preview+"'></div><pre style='background:#f5f5f5;padding:10px'>"+code+"</pre>";}upd();
+</script>
+</body>
+</html>

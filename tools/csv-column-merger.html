@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV Column Merger — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Merge several CSV columns into one — for example combine first-name and last-name columns into a full name. Pick the columns and the separator to join them with.">
+<meta name="keywords" content="csv column merger, merge columns csv, combine csv columns, csv join columns, concatenate csv fields, merge names csv online, free csv merger, join csv columns, csv concatenate columns, combine two columns csv, csv full name merger, append csv columns">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/csv-column-merger.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CSV Column Merger — Free Online Tool">
+<meta property="og:description" content="Merge several CSV columns into one — for example combine first-name and last-name columns into a full name. Pick the columns and the separator to join them with.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/csv-column-merger.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSV Column Merger — Free Online Tool">
+<meta name="twitter:description" content="Merge several CSV columns into one — for example combine first-name and last-name columns into a full name. Pick the columns and the separator to join them with.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"CSV Column Merger","url":"https://sindhplusmedianetwork.github.io/tools/csv-column-merger.html","description":"Merge several CSV columns into one — for example combine first-name and last-name columns into a full name. Pick the columns and the separator to join them with.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Files &amp; Data</div>
+<h1>CSV Column Merger</h1>
+<p class="desc">Merge several CSV columns into one — for example combine first-name and last-name columns into a full name. Pick the columns and the separator to join them with.</p>
+<div class="toolbox">
+<label>Paste CSV data<textarea id='m_t' rows='6' placeholder='Paste CSV here...'></textarea></label><label>Or upload a CSV file<input type='file' id='m_f' accept='.csv,.txt'></label><label>Delimiter<select id='m_d'><option value=','>Comma (,)</option><option value=';'>Semicolon (;)</option><option value='TAB'>Tab</option><option value='|'>Pipe (|)</option></select></label><label>Columns to merge (header names or 0-based indices, comma-separated)<input type='text' id='m_cols' placeholder='e.g. first_name,last_name or 0,1'></label><label>Separator between values<input type='text' id='m_sep' value=' '></label><label>New column name<input type='text' id='m_name' value='merged'></label><label><input type='checkbox' id='m_drop' checked> Remove original columns after merging</label><button onclick='mGo()'>Merge Columns</button>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=CSV Column Merger — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcsv-column-merger.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=CSV Column Merger — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcsv-column-merger.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#CSVMerger #CSVTools #DataTools #SpreadsheetTools #SPMN #FreeTools</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+function csvParse(t,d){d=d||',';var rows=[],row=[],f='',q=false;for(var i=0;i<t.length;i++){var c=t[i],code=t.charCodeAt(i);if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++;}else q=false;}else f+=c;}else{if(c==='"')q=true;else if(c===d){row.push(f);f='';}else if(code===13){}else if(code===10){row.push(f);rows.push(row);row=[];f='';}else f+=c;}}if(f!==''||row.length>0){row.push(f);rows.push(row);}return rows;}
+function csvStr(rows,d){d=d||',';var CRLF=String.fromCharCode(13,10),LF=String.fromCharCode(10),CR=String.fromCharCode(13);return rows.map(function(r){return r.map(function(x){x=String(x==null?'':x);if(x.indexOf('"')>=0)x=x.split('"').join('""');if(x.indexOf(d)>=0||x.indexOf('"')>=0||x.indexOf(LF)>=0||x.indexOf(CR)>=0)x='"'+x+'"';return x;}).join(d);}).join(CRLF);}
+function escH(s){return String(s==null?'':s).split('&').join('&amp;').split('<').join('&lt;').split('>').join('&gt;').split('"').join('&quot;');}
+function dlFile(name,text,mime){var b=new Blob([text],{type:mime||'text/csv'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);},200);}
+function getCSVText(tid,fid,cb){var f=document.getElementById(fid).files[0];if(f){var r=new FileReader();r.onload=function(e){cb(e.target.result);};r.readAsText(f);}else{var t=document.getElementById(tid).value;if(!t.trim()){document.getElementById('result').innerHTML='<p style="color:#c00">Please paste CSV data or choose a file.</p>';return;}cb(t);}}
+function delimVal(id){var v=document.getElementById(id).value;return v==='TAB'?String.fromCharCode(9):v;}
+function colIdx(headers,spec){var ci=headers.indexOf(spec);if(ci<0){var n=parseInt(spec,10);if(!isNaN(n)&&n>=0&&n<headers.length)ci=n;}return ci;}
+function mGo(){var d=delimVal('m_d');getCSVText('m_t','m_f',function(t){var rows=csvParse(t,d);if(rows.length<2){document.getElementById('result').innerHTML='Need at least a header row and one data row.';return;}var specs=document.getElementById('m_cols').value.split(',').map(function(x){return x.trim();}).filter(function(x){return x!=='';});if(specs.length<2){document.getElementById('result').innerHTML='<p style="color:#c00">Enter at least two columns to merge.</p>';return;}var idx=[];for(var s=0;s<specs.length;s++){var ci=colIdx(rows[0],specs[s]);if(ci<0){document.getElementById('result').innerHTML='<p style="color:#c00">Column not found: '+escH(specs[s])+'</p>';return;}idx.push(ci);}var sep=document.getElementById('m_sep').value;var nm=document.getElementById('m_name').value.trim()||'merged';var drop=document.getElementById('m_drop').checked;var desc=idx.slice().sort(function(a,b){return b-a;});var head=rows[0].slice();desc.forEach(function(c){if(drop)head.splice(c,1);});head.push(nm);var out=[head];for(var i=1;i<rows.length;i++){var vals=idx.map(function(c){return rows[i][c];});var nr=rows[i].slice();desc.forEach(function(c){if(drop)nr.splice(c,1);});nr.push(vals.join(sep));out.push(nr);}var csv=csvStr(out,d);document.getElementById('result').innerHTML='<p>Merged <b>'+idx.length+'</b> columns into <b>'+escH(nm)+'</b>.</p><textarea rows="8" style="width:100%" id="m_out">'+escH(csv)+'</textarea><br><button onclick="dlFile(\'merged.csv\',document.getElementById(\'m_out\').value)">Download CSV</button>';});}
+</script>
+</body>
+</html>

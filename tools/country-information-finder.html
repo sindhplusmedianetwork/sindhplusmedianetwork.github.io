@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Country Information Finder — Free Online Tool | Sindh Plus Media Network</title>
+<meta name="description" content="Look up any of 50+ countries: capital city, currency, languages, dialing code, continent and ISO codes - a quick world reference.">
+<meta name="keywords" content="country information finder, country capital currency lookup, world countries database, country facts lookup, dialing code by country">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sindhplusmedianetwork.github.io/tools/country-information-finder.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Country Information Finder — Free Online Tool">
+<meta property="og:description" content="Look up any of 50+ countries: capital city, currency, languages, dialing code, continent and ISO codes - a quick world reference.">
+<meta property="og:url" content="https://sindhplusmedianetwork.github.io/tools/country-information-finder.html">
+<meta property="og:site_name" content="Sindh Plus Media Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Country Information Finder — Free Online Tool">
+<meta name="twitter:description" content="Look up any of 50+ countries: capital city, currency, languages, dialing code, continent and ISO codes - a quick world reference.">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebApplication","name":"Country Information Finder","url":"https://sindhplusmedianetwork.github.io/tools/country-information-finder.html","description":"Look up any of 50+ countries: capital city, currency, languages, dialing code, continent and ISO codes - a quick world reference.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6}
+.topbar{background:#c0392b;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
+.topbar .back{font-size:22px}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.kicker{display:inline-block;background:#ff7a00;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+h1{font-size:26px;margin-bottom:8px;color:#111}
+.desc{color:#555;margin-bottom:20px;font-size:15px}
+.toolbox{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+.toolbox label{display:block;font-weight:600;margin:12px 0 6px;font-size:14px}
+.toolbox input,.toolbox select,.toolbox textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;font-family:inherit}
+.toolbox textarea{min-height:100px;resize:vertical}
+.toolbox button{background:#ff7a00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;width:100%}
+.toolbox button:hover{background:#e66e00}
+#result{margin-top:18px;padding:16px;background:#f0f7ff;border:1px solid #cfe3ff;border-radius:8px;font-size:16px;display:none}
+#result.show{display:block}
+.sharebar{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap}
+.sharebar a,.sharebar button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.wa{background:#25d366;color:#fff}.fb{background:#1877f2;color:#fff}.x{background:#000;color:#fff}.cp{background:#eee;color:#333}
+.tags{margin-top:16px;padding-top:16px;border-top:1px solid #eee;color:#1a73e8;font-size:14px;line-height:2}
+footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:30px}
+footer a{color:#ff7a00}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="back" href="../index.html">&#8592;</a><a href="../index.html">Sindh Plus Media Network</a></div>
+<main>
+<div class="kicker">Geography &amp; Travel</div>
+<h1>Country Information Finder</h1>
+<p class="desc">Look up any of 50+ countries: capital city, currency, languages, dialing code, continent and ISO codes - a quick world reference.</p>
+<div class="toolbox">
+<label>Search country<input type='text' id='cn' placeholder='Pakistan' oninput='findCountry()'></label><div id='clist'></div>
+<div id="result"></div>
+</div>
+<div class="sharebar">
+<a class="wa" href="https://wa.me/?text=Country Information Finder — Free Online Tool" target="_blank" rel="noopener">WhatsApp</a>
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcountry-information-finder.html" target="_blank" rel="noopener">Facebook</a>
+<a class="x" href="https://twitter.com/intent/tweet?text=Country Information Finder — Free Online Tool&url=https%3A%2F%2Fsindhplusmedianetwork.github.io%2Ftools%2Fcountry-information-finder.html" target="_blank" rel="noopener">X</a>
+<button class="cp" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';">Copy Link</button>
+</div>
+<div class="tags">#CountryInfo #WorldFacts #CapitalCity #Currency #TravelTools #FreeTools #SPMN</div>
+</main>
+<footer><p>&copy; 2026 Sindh Plus Media Network. Free online tools for everyone.</p><p><a href="../index.html">Home</a> &middot; <a href="../privacy.html">Privacy Policy</a></p></footer>
+<script>
+// Show result helper
+(function(){var r=document.getElementById('result');var obs=new MutationObserver(function(){if(r.innerHTML.trim())r.classList.add('show');});obs.observe(r,{childList:true,characterData:true,subtree:true});})();
+var CDATA=[["Pakistan","Islamabad","Pakistani Rupee","PKR","Urdu, English","+92","Asia","PK","PAK","586"],["India","New Delhi","Indian Rupee","INR","Hindi, English","+91","Asia","IN","IND","356"],["China","Beijing","Yuan Renminbi","CNY","Mandarin","+86","Asia","CN","CHN","156"],["United States","Washington D.C.","US Dollar","USD","English","+1","North America","US","USA","840"],["United Kingdom","London","Pound Sterling","GBP","English","+44","Europe","GB","GBR","826"],["Germany","Berlin","Euro","EUR","German","+49","Europe","DE","DEU","276"],["France","Paris","Euro","EUR","French","+33","Europe","FR","FRA","250"],["Canada","Ottawa","Canadian Dollar","CAD","English, French","+1","North America","CA","CAN","124"],["Australia","Canberra","Australian Dollar","AUD","English","+61","Oceania","AU","AUS","36"],["Japan","Tokyo","Yen","JPY","Japanese","+81","Asia","JP","JPN","392"],["South Korea","Seoul","Won","KRW","Korean","+82","Asia","KR","KOR","410"],["United Arab Emirates","Abu Dhabi","UAE Dirham","AED","Arabic","+971","Asia","AE","ARE","784"],["Saudi Arabia","Riyadh","Saudi Riyal","SAR","Arabic","+966","Asia","SA","SAU","682"],["Turkey","Ankara","Turkish Lira","TRY","Turkish","+90","Asia/Europe","TR","TUR","792"],["Italy","Rome","Euro","EUR","Italian","+39","Europe","IT","ITA","380"],["Spain","Madrid","Euro","EUR","Spanish","+34","Europe","ES","ESP","724"],["Netherlands","Amsterdam","Euro","EUR","Dutch","+31","Europe","NL","NLD","528"],["Sweden","Stockholm","Krona","SEK","Swedish","+46","Europe","SE","SWE","752"],["Norway","Oslo","Krone","NOK","Norwegian","+47","Europe","NO","NOR","578"],["Switzerland","Bern","Swiss Franc","CHF","German, French, Italian","+41","Europe","CH","CHE","756"],["Brazil","Brasilia","Real","BRL","Portuguese","+55","South America","BR","BRA","76"],["Mexico","Mexico City","Mexican Peso","MXN","Spanish","+52","North America","MX","MEX","484"],["Egypt","Cairo","Egyptian Pound","EGP","Arabic","+20","Africa","EG","EGY","818"],["Nigeria","Abuja","Naira","NGN","English","+234","Africa","NG","NGA","566"],["South Africa","Pretoria","Rand","ZAR","11 official","+27","Africa","ZA","ZAF","710"],["Indonesia","Jakarta","Rupiah","IDR","Indonesian","+62","Asia","ID","IDN","360"],["Malaysia","Kuala Lumpur","Ringgit","MYR","Malay","+60","Asia","MY","MYS","458"],["Singapore","Singapore","Singapore Dollar","SGD","English, Malay, Mandarin","+65","Asia","SG","SGP","702"],["Thailand","Bangkok","Baht","THB","Thai","+66","Asia","TH","THA","764"],["Vietnam","Hanoi","Dong","VND","Vietnamese","+84","Asia","VN","VNM","704"],["Philippines","Manila","Peso","PHP","Filipino, English","+63","Asia","PH","PHL","608"],["Bangladesh","Dhaka","Taka","BDT","Bengali","+880","Asia","BD","BGD","50"],["Sri Lanka","Colombo","Rupee","LKR","Sinhala, Tamil","+94","Asia","LK","LKA","144"],["Nepal","Kathmandu","Rupee","NPR","Nepali","+977","Asia","NP","NPL","524"],["Iran","Tehran","Rial","IRR","Persian","+98","Asia","IR","IRN","364"],["Iraq","Baghdad","Iraqi Dinar","IQD","Arabic, Kurdish","+964","Asia","IQ","IRQ","368"],["Qatar","Doha","Qatari Riyal","QAR","Arabic","+974","Asia","QA","QAT","634"],["Kuwait","Kuwait City","Kuwaiti Dinar","KWD","Arabic","+965","Asia","KW","KWT","414"],["Oman","Muscat","Omani Rial","OMR","Arabic","+968","Asia","OM","OMN","512"],["Bahrain","Manama","Bahraini Dinar","BHD","Arabic","+973","Asia","BH","BHR","48"],["Jordan","Amman","Jordanian Dinar","JOD","Arabic","+962","Asia","JO","JOR","400"],["New Zealand","Wellington","NZ Dollar","NZD","English, Maori","+64","Oceania","NZ","NZL","554"],["Ireland","Dublin","Euro","EUR","English, Irish","+353","Europe","IE","IRL","372"],["Poland","Warsaw","Zloty","PLN","Polish","+48","Europe","PL","POL","616"],["Portugal","Lisbon","Euro","EUR","Portuguese","+351","Europe","PT","PRT","620"],["Greece","Athens","Euro","EUR","Greek","+30","Europe","GR","GRC","300"],["Austria","Vienna","Euro","EUR","German","+43","Europe","AT","AUT","40"],["Belgium","Brussels","Euro","EUR","Dutch, French, German","+32","Europe","BE","BEL","56"],["Denmark","Copenhagen","Krone","DKK","Danish","+45","Europe","DK","DNK","208"],["Finland","Helsinki","Euro","EUR","Finnish, Swedish","+358","Europe","FI","FIN","246"],["Russia","Moscow","Ruble","RUB","Russian","+7","Europe/Asia","RU","RUS","643"],["Argentina","Buenos Aires","Peso","ARS","Spanish","+54","South America","AR","ARG","32"]];
+function findCountry(){var q=document.getElementById('cn').value.trim().toLowerCase();var box=document.getElementById('clist');var R=document.getElementById('result');if(q.length<2){box.innerHTML='';R.innerHTML='';return;}var m=CDATA.filter(function(c){return c[0].toLowerCase().indexOf(q)===0;}).slice(0,6);if(!m.length){box.innerHTML='';R.innerHTML='No country found.';return;}box.innerHTML=m.map(function(c,i){return "<button style='margin:3px' onclick='showC("+CDATA.indexOf(c)+")'>"+c[0]+"</button>";}).join('');}
+function showC(i){var c=CDATA[i];document.getElementById('result').innerHTML='<b>'+c[0]+'</b><br>Capital: '+c[1]+'<br>Currency: '+c[2]+' ('+c[3]+')<br>Languages: '+c[4]+'<br>Dialing code: '+c[5]+'<br>Continent: '+c[6]+'<br>ISO: '+c[7]+' / '+c[8]+' / '+c[9];}
+</script>
+</body>
+</html>
