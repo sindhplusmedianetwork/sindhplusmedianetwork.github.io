@@ -5,11 +5,11 @@
   <url><loc>https://sindhplusmedianetwork.github.io/?lang=sd</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://sindhplusmedianetwork.github.io/?lang=zh</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://sindhplusmedianetwork.github.io/about.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://sindhplusmedianetwork.github.io/column-ghotki-water.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sindhplusmedianetwork.github.io/column-journalism-pakistan.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sindhplusmedianetwork.github.io/column-rural-sindh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/column-ghotki-water.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/column-journalism-pakistan.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/column-rural-sindh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url>
-    <loc>https://sindhplusmedianetwork.github.io/ghotki-poisonous-water.html</loc>
+    <loc>https://sindhplusmedianetwork.github.io/news/ghotki-poisonous-water.html</loc>
     <lastmod>2026-10-24</lastmod>
   </url>
   <url><loc>https://sindhplusmedianetwork.github.io/news/joint-session-endorses-emergency-governor-s-rule-in-khyber-p.html</loc><lastmod>2026-10-24</lastmod></url>
@@ -701,10 +701,10 @@
   <url><loc>https://sindhplusmedianetwork.github.io/news/white-house-press-secretary-katie-zakaria-resigns-on-sixth-d.html</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://sindhplusmedianetwork.github.io/news/two-robbers-killed-in-karachi-police-encounter-near-qalandri.html</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://sindhplusmedianetwork.github.io/news/anf-seizes-60kg-charas-from-ambulance-near-quetta-suspect-he.html</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://sindhplusmedianetwork.github.io/feature-raast-digital-payments.html</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://sindhplusmedianetwork.github.io/feature-thar-coal-energy.html</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://sindhplusmedianetwork.github.io/feature-education-emergency-pakistan.html</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://sindhplusmedianetwork.github.io/feature-ai-freelancers-pakistan.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/feature-raast-digital-payments.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/feature-thar-coal-energy.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/feature-education-emergency-pakistan.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/feature-ai-freelancers-pakistan.html</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://sindhplusmedianetwork.github.io/news/any-miscalculation-will-draw-response-beyond-imagination-war.html</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://sindhplusmedianetwork.github.io/news/karachi-court-extends-journalist-iqrarul-hassan-s-physical-r.html</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://sindhplusmedianetwork.github.io/news/over-4-3-million-foreign-tourists-visited-pakistan-in-two-ye.html</loc><lastmod>2026-10-24</lastmod></url>
@@ -2532,4 +2532,8 @@
   <url><loc>https://sindhplusmedianetwork.github.io/news/phc-summons-ig-khyber-pakhtunkhwa-in-person-over-non-recover.html</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://sindhplusmedianetwork.github.io/news/gold-edges-higher-after-hitting-more-than-three-month-low.html</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://sindhplusmedianetwork.github.io/news/wall-street-closes-lower-as-dow-jones-drops-1-23.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/pcb-turns-down-proposal-to-cut-psl-player-salaries.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/rain-thunderstorms-likely-in-upper-punjab-islamabad-kp-and-k.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/protocol-for-nadeem-nani-wala-s-sister-costs-lahore-police-o.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://sindhplusmedianetwork.github.io/news/pakistan-honours-over-400-000-frontline-polio-workers-on-wor.html</loc><lastmod>2026-10-24</lastmod></url>
 </urlset>
