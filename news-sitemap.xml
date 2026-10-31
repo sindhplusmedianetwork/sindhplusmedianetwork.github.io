@@ -2,6 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/israeli-forces-intensify-strikes-across-southern-lebanon-blo.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T14:45:07+05:00</news:publication_date>
+      <news:title>Israeli Forces Intensify Strikes Across Southern Lebanon, Blow Up Homes</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/two-terrorists-killed-in-orakzai-police-encounter-sho-among.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T14:45:07+05:00</news:publication_date>
+      <news:title>Two Terrorists Killed in Orakzai Police Encounter, SHO Among Two Policemen Injured</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/world-bank-approves-150-million-dollars-for-sindh-s-municipa.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T14:45:07+05:00</news:publication_date>
+      <news:title>World Bank Approves 150 Million Dollars for Sindh's Municipal Services</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/lpg-costlier-by-rs-14-73-per-kg-for-november.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T14:45:07+05:00</news:publication_date>
+      <news:title>LPG Costlier by Rs 14.73 per Kg for November</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/misinformation-and-fake-news-are-the-era-s-biggest-challenge.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T14:45:07+05:00</news:publication_date>
+      <news:title>Misinformation and Fake News Are the Era's Biggest Challenge: Tarar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/vivo-launches-y32-in-pakistan-with-8-000mah-battery-priced-a.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T14:45:07+05:00</news:publication_date>
+      <news:title>Vivo Launches Y32 in Pakistan With 8,000mAh Battery, Priced at Rs82,999</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/pakistan-offers-saudi-companies-tax-free-oil-storage.html</loc>
     <news:news>
       <news:publication>
@@ -6005,28 +6071,6 @@
       </news:publication>
       <news:publication_date>2026-10-29T15:39:35+05:00</news:publication_date>
       <news:title>Viral photo of Saudi defence minister kissing Iranian president's hand turns out to be fake</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/punjab-bans-outdoor-drone-flights-for-30-days-over-security.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-29T14:44:47+05:00</news:publication_date>
-      <news:title>Punjab bans outdoor drone flights for 30 days over security concerns</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/twelve-pakistani-fishermen-freed-from-indian-jails-return-ho.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-29T14:44:47+05:00</news:publication_date>
-      <news:title>Twelve Pakistani fishermen freed from Indian jails return home</news:title>
     </news:news>
   </url>
 </urlset>
