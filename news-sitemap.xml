@@ -2,6 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/un-rights-office-israeli-actions-squeezing-palestinians-into.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T10:49:52+05:00</news:publication_date>
+      <news:title>UN Rights Office: Israeli Actions Squeezing Palestinians Into Ever-Smaller Gaza</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/un-refugee-agency-yemen-fighting-displaces-280-000-aid-acces.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T10:49:52+05:00</news:publication_date>
+      <news:title>UN Refugee Agency: Yemen Fighting Displaces 280,000, Aid Access Severely Hit</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/arshdeep-singh-becomes-first-indian-bowler-to-150-t20i-wicke.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T10:49:52+05:00</news:publication_date>
+      <news:title>Arshdeep Singh Becomes First Indian Bowler to 150 T20I Wickets</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/five-arrested-four-injured-in-karachi-police-encounters.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T10:49:52+05:00</news:publication_date>
+      <news:title>Five Arrested, Four Injured in Karachi Police Encounters</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/us-clears-sale-of-500-patriot-missiles-to-ukraine-zelensky-w.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T10:49:52+05:00</news:publication_date>
+      <news:title>US Clears Sale of 500 Patriot Missiles to Ukraine; Zelensky Warns Delivery Will Take Years</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/punjab-courts-austrian-investors-while-local-businessmen-dem.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T10:49:52+05:00</news:publication_date>
+      <news:title>Punjab Courts Austrian Investors While Local Businessmen Demand Equal Treatment</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/aima-baig-revisits-sajna-door-with-spontaneous-rendition-for.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T10:49:52+05:00</news:publication_date>
+      <news:title>Aima Baig Revisits 'Sajna Door' With Spontaneous Rendition for Fans</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/pti-social-media-team-still-confrontational-republishes-imra.html</loc>
     <news:news>
       <news:publication>
@@ -6016,28 +6093,6 @@
       </news:publication>
       <news:publication_date>2026-10-29T11:54:20+05:00</news:publication_date>
       <news:title>Antonelli one strong Mexico finish away from F1's youngest title</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/balochistan-train-service-suspended-for-a-day.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-29T10:44:03+05:00</news:publication_date>
-      <news:title>Balochistan train service suspended for a day</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/verdict-in-imaan-mazari-hadi-ali-chatha-case-to-be-announced.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-29T10:44:03+05:00</news:publication_date>
-      <news:title>Verdict in Imaan Mazari, Hadi Ali Chatha case to be announced today</news:title>
     </news:news>
   </url>
 </urlset>
