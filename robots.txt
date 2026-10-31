@@ -11,3 +11,4 @@ Allow: /
 User-agent: *
 Allow: /
 Sitemap: https://sindhplusmedianetwork.github.io/sitemap.xml
+Sitemap: https://sindhplusmedianetwork.github.io/news-sitemap.xml
