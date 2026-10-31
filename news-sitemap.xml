@@ -2,6 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/petroleum-minister-urges-nation-to-avoid-unnecessary-energy.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T23:50:00+05:00</news:publication_date>
+      <news:title>Petroleum minister urges nation to avoid unnecessary energy use in winter</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/karachi-court-grants-bail-to-journalist-iqrarul-hassan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T23:50:00+05:00</news:publication_date>
+      <news:title>Karachi court grants bail to journalist Iqrarul Hassan</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/gujranwala-bride-murder-accused-killed-in-ccd-encounter.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T23:50:00+05:00</news:publication_date>
+      <news:title>Gujranwala bride-murder accused killed in CCD encounter</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-rebukes-afghan-taliban-for-shifting-blame-on-terror.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T23:50:00+05:00</news:publication_date>
+      <news:title>Pakistan rebukes Afghan Taliban for 'shifting blame' on terrorism</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-army-destroys-afghan-taliban-posts-near-south-wazir.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-31T23:50:00+05:00</news:publication_date>
+      <news:title>Pakistan Army destroys Afghan Taliban posts near South Waziristan</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/government-mulls-expanding-fuel-relief-scheme-to-20-million.html</loc>
     <news:news>
       <news:publication>
