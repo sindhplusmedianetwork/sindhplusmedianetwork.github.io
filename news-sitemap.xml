@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/constable-killed-ppp-leader-critically-injured-in-lakki-marw.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T05:05:00+05:00</news:publication_date>
+      <news:title>Constable Killed, PPP Leader Critically Injured in Lakki Marwat Judicial Complex Firing</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/lpg-price-hiked-by-rs14-73-new-official-rate-rs294-07-per-kg.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T05:05:00+05:00</news:publication_date>
+      <news:title>LPG price hiked by Rs14.73; new official rate Rs294.07 per kg for November</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/international-boxing-championship-concludes-in-quetta-najibu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T05:05:00+05:00</news:publication_date>
+      <news:title>International boxing championship concludes in Quetta; Najibullah wins gold</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/nccia-abbottabad-nabs-prime-suspect-in-rs18m-bank-fraud.html</loc>
     <news:news>
       <news:publication>
@@ -5433,28 +5466,6 @@
       </news:publication>
       <news:publication_date>2026-10-30T06:03:03+05:00</news:publication_date>
       <news:title>World Culture Festival Karachi to Bring Together Artists from More Than 150 Countries</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/warrican-s-five-wicket-burst-sinks-bangladesh-for-272-in-mir.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T04:46:50+05:00</news:publication_date>
-      <news:title>Warrican's five-wicket burst sinks Bangladesh for 272 in Mirpur Test</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/italian-military-helicopter-crashes-in-bosnia-4-killed-11-in.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T04:46:50+05:00</news:publication_date>
-      <news:title>Italian military helicopter crashes in Bosnia, 4 killed, 11 injured</news:title>
     </news:news>
   </url>
 </urlset>
