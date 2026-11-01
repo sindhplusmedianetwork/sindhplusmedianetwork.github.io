@@ -2,6 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/petrol-may-cost-up-to-rs50-more-per-litre-as-government-appr.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T19:35:00+05:00</news:publication_date>
+      <news:title>Petrol May Cost Up to Rs50 More Per Litre as Government Approves New Pricing Formula</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/hardik-pandya-beats-mrbeast-in-baseball-challenge-wins-100-0.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T19:35:00+05:00</news:publication_date>
+      <news:title>Hardik Pandya Beats MrBeast in Baseball Challenge, Wins $100,000 for Charity</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/eight-killed-in-israeli-strikes-on-gaza-medics-say.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T19:35:00+05:00</news:publication_date>
+      <news:title>Eight Killed in Israeli Strikes on Gaza, Medics Say</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/houthi-strike-sparks-huge-fire-at-dammam-industrial-complex.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T19:35:00+05:00</news:publication_date>
+      <news:title>Houthi Strike Sparks Huge Fire at Dammam Industrial Complex, Iranian Media Claims</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/upper-dir-police-arrest-five-over-alleged-assault-of-minor-b.html</loc>
     <news:news>
       <news:publication>
@@ -5158,138 +5202,6 @@
       </news:publication>
       <news:publication_date>2026-10-30T20:08:56+05:00</news:publication_date>
       <news:title>San Francisco Firm Hiring People to Walk Robot Dogs at $20 an Hour</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/kasur-tragedy-five-members-of-one-family-die-within-72-hours.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Kasur Tragedy: Five Members of One Family Die Within 72 Hours After Eating Suspected Contaminated Kheer</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/exiled-saudi-opposition-says-vision-2030-billions-left-kingd.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Exiled Saudi Opposition Says Vision 2030 Billions Left Kingdom Exposed to Houthi Strikes</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-army-destroys-afghan-taliban-posts-in-angoor-adda-a.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Pakistan Army Destroys Afghan Taliban Posts in Angoor Adda After Cross-Border Firing</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/six-feared-dead-as-helicopter-crashes-in-india-s-uttarakhand.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Six Feared Dead as Helicopter Crashes in India's Uttarakhand</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/eleven-pakistani-fishermen-freed-from-indian-jails-reunite-w.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Eleven Pakistani Fishermen Freed From Indian Jails Reunite With Families in Karachi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/spain-s-transport-minister-refuses-to-resign-after-second-fa.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Spain's Transport Minister Refuses to Resign After Second Fatal Train Crash</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/pti-parliamentary-party-backs-talks-with-federal-government.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>PTI Parliamentary Party Backs Talks With Federal Government to End Governor's Rule</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/gold-price-falls-by-rs5-100-per-tola-in-pakistan-to-rs420-53.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Gold Price Falls by Rs5,100 Per Tola in Pakistan to Rs420,536</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/bilour-claims-multi-billion-rupee-corruption-evidence-found.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Bilour Claims Multi-Billion-Rupee Corruption Evidence Found Against Sohail Afridi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/lahore-high-court-orders-punjab-hospitals-to-end-paper-slip.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Lahore High Court Orders Punjab Hospitals to End Paper-Slip System in Four Weeks</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/rupee-depreciation-pushes-up-water-project-costs-by-billions.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Rupee Depreciation Pushes Up Water Project Costs by Billions, NA Told</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/visa-free-entry-deals-with-25-countries-to-be-finalised-in-s.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T19:31:00+05:00</news:publication_date>
-      <news:title>Visa-Free Entry Deals With 25 Countries to Be Finalised in Six Months: Mohsin Naqvi</news:title>
     </news:news>
   </url>
 </urlset>
