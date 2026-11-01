@@ -2,6 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/iran-designates-british-royal-navy-air-force-as-terrorist-or.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T15:35:00+05:00</news:publication_date>
+      <news:title>Iran designates British Royal Navy, Air Force as 'terrorist' organisations, MI6 as 'hostile group'</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/thousands-protest-in-india-s-capital-against-voter-roll-revi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T15:35:00+05:00</news:publication_date>
+      <news:title>Thousands protest in India's capital against voter roll revision</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/pia-s-first-modern-boeing-dreamliner-aircraft-arrives-in-pak.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T15:35:00+05:00</news:publication_date>
+      <news:title>PIA's first modern Boeing Dreamliner aircraft arrives in Pakistan</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/karachi-sewer-cover-flips-water-tanker-cctv-video-emerges.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T15:35:00+05:00</news:publication_date>
+      <news:title>Karachi: sewer cover flips water tanker, CCTV video emerges</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/fir-over-patlu-mehndi-stampede-mr-patlu-among-9-named-6-arre.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T15:35:00+05:00</news:publication_date>
+      <news:title>FIR over Patlu mehndi stampede: Mr Patlu among 9 named, 6 arrested</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/ai-chatbots-under-scrutiny-over-failure-to-report-criminal-c.html</loc>
     <news:news>
       <news:publication>
@@ -5136,17 +5191,6 @@
       </news:publication>
       <news:publication_date>2026-10-30T16:42:59+05:00</news:publication_date>
       <news:title>Saudi Coalition Destroys Missiles and Drone Fired Toward Makkah and Riyadh</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/faisalabad-driver-accused-of-assaulting-8-year-old-domestic.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T15:38:10+05:00</news:publication_date>
-      <news:title>Faisalabad: Driver Accused of Assaulting 8-Year-Old Domestic Worker, Flees</news:title>
     </news:news>
   </url>
 </urlset>
