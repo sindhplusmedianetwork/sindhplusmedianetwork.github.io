@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/lahore-ranked-world-s-most-polluted-city-as-aqi-hits-448.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T22:35:00+05:00</news:publication_date>
+      <news:title>Lahore ranked world's most polluted city as AQI hits 448</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/pakistan-much-ahead-in-operational-readiness-for-drone-warfa.html</loc>
     <news:news>
       <news:publication>
