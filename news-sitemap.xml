@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/k-p-s-people-will-have-first-right-to-province-s-resources-s.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T17:35:00+05:00</news:publication_date>
+      <news:title>K-P's people will have 'first right' to province's resources, says Governor Kundi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/rubio-says-us-open-to-productive-role-on-pakistan-s-afghan-t.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T17:35:00+05:00</news:publication_date>
+      <news:title>Rubio says US open to 'productive role' on Pakistan's Afghan terror concerns</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/four-die-in-separate-incidents-across-lahore-including-a-wom.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-01T17:35:00+05:00</news:publication_date>
+      <news:title>Four die in separate incidents across Lahore, including a woman</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/mob-torches-trailer-after-pregnant-woman-killed-in-karachi-a.html</loc>
     <news:news>
       <news:publication>
@@ -5180,61 +5213,6 @@
       </news:publication>
       <news:publication_date>2026-10-30T17:55:00+05:00</news:publication_date>
       <news:title>ECC Orders Swift Sale of Utility Stores' 21 Properties Worth Rs12 Billion</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/white-house-now-looks-like-a-restaurant-and-a-bathroom-ex-us.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T16:42:59+05:00</news:publication_date>
-      <news:title>White House Now Looks Like a Restaurant and a Bathroom, Ex-US Presidents Mock Trump</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/short-term-inflation-rises-to-11-32pc-in-last-week-of-octobe.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T16:42:59+05:00</news:publication_date>
-      <news:title>Short-Term Inflation Rises to 11.32pc in Last Week of October</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-saudi-arabia-agree-to-boost-cooperation-in-oil-refi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T16:42:59+05:00</news:publication_date>
-      <news:title>Pakistan, Saudi Arabia Agree to Boost Cooperation in Oil, Refineries and Minerals</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/some-words-in-maulana-s-speech-better-left-unsaid-says-barri.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T16:42:59+05:00</news:publication_date>
-      <news:title>Some Words in Maulana's Speech Better Left Unsaid, Says Barrister Gohar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/saudi-coalition-destroys-missiles-and-drone-fired-toward-mak.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-30T16:42:59+05:00</news:publication_date>
-      <news:title>Saudi Coalition Destroys Missiles and Drone Fired Toward Makkah and Riyadh</news:title>
     </news:news>
   </url>
 </urlset>
