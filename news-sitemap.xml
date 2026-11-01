@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/sethi-pml-n-faces-toughest-political-crisis-in-its-history.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-02T02:55:00+05:00</news:publication_date>
+      <news:title>Sethi: PML-N Faces Toughest Political Crisis in Its History</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/merkel-backs-electing-a-woman-as-germany-s-president-for-the.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-02T02:55:00+05:00</news:publication_date>
+      <news:title>Merkel Backs Electing a Woman as Germany's President for the First Time</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/us-judge-dismisses-trump-administration-s-lawsuit-over-alask.html</loc>
     <news:news>
       <news:publication>
@@ -5015,72 +5037,6 @@
       </news:publication>
       <news:publication_date>2026-10-31T03:04:06+05:00</news:publication_date>
       <news:title>Afghan Diplomat Manizha Bakhtari Defies Taliban, Runs Embassy From One Room</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/father-alleges-police-officer-took-bribe-in-son-s-kidnap-mur.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T02:30:23+05:00</news:publication_date>
-      <news:title>Father Alleges Police Officer Took Bribe in Son's Kidnap-Murder Case; Officer Suspended</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/prasidh-krishna-ruled-out-of-new-zealand-odi-series-with-ham.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T02:30:23+05:00</news:publication_date>
-      <news:title>Prasidh Krishna Ruled Out of New Zealand ODI Series With Hamstring Injury</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/32-4-million-pakistanis-suffer-mental-illnesses-12-9-million.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T02:30:23+05:00</news:publication_date>
-      <news:title>32.4 Million Pakistanis Suffer Mental Illnesses, 12.9 Million Have Hepatitis: Health Ministry</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/national-grid-company-plans-rs100-billion-sukuk-issue.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T02:20:45+05:00</news:publication_date>
-      <news:title>National Grid Company Plans Rs100 Billion Sukuk Issue</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-face-sri-lanka-in-odi-tri-series-final-at-gaddafi-s.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T02:20:45+05:00</news:publication_date>
-      <news:title>Pakistan Face Sri Lanka in ODI Tri-Series Final at Gaddafi Stadium</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/mossad-joins-probe-into-alleged-foreign-interference-in-isra.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T02:20:45+05:00</news:publication_date>
-      <news:title>Mossad Joins Probe Into Alleged Foreign Interference in Israeli Elections</news:title>
     </news:news>
   </url>
 </urlset>
