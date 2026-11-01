@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/qatari-lng-ship-attacked-near-strait-of-hormuz-while-bound-f.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-02T03:35:00+05:00</news:publication_date>
+      <news:title>Qatari LNG Ship Attacked Near Strait of Hormuz While Bound for Pakistan</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/sethi-pml-n-faces-toughest-political-crisis-in-its-history.html</loc>
     <news:news>
       <news:publication>
@@ -4927,116 +4938,6 @@
       </news:publication>
       <news:publication_date>2026-10-31T05:00:32+05:00</news:publication_date>
       <news:title>Asim Azhar Celebrates 30th Birthday With New Song 'Ajnabi'</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/polio-virus-resurfaces-in-rawalpindi-sewage-new-drive-from-n.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T03:47:48+05:00</news:publication_date>
-      <news:title>Polio Virus Resurfaces in Rawalpindi Sewage, New Drive from November 2</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/up-to-1-5-million-join-student-and-worker-protests-across-it.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T03:04:06+05:00</news:publication_date>
-      <news:title>Up to 1.5 Million Join Student and Worker Protests Across Italy</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/fbr-misses-target-by-rs124-billion-in-first-four-months-of-f.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T03:04:06+05:00</news:publication_date>
-      <news:title>FBR Misses Target by Rs124 Billion in First Four Months of FY27</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/sme-financing-doubles-to-rs1-1-trillion-says-sbp-governor.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T03:04:06+05:00</news:publication_date>
-      <news:title>SME Financing Doubles to Rs1.1 Trillion, Says SBP Governor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/ml-i-first-phase-to-cost-2-1-billion-senate-told.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T03:04:06+05:00</news:publication_date>
-      <news:title>ML-I First Phase to Cost $2.1 Billion, Senate Told</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/kp-governor-orders-restoration-of-dilip-kumar-raj-kapoor-anc.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T03:04:06+05:00</news:publication_date>
-      <news:title>KP Governor Orders Restoration of Dilip Kumar, Raj Kapoor Ancestral Homes</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/three-held-for-harassing-schoolgirls-in-kasur-traced-via-saf.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T03:04:06+05:00</news:publication_date>
-      <news:title>Three Held for Harassing Schoolgirls in Kasur, Traced via Safe City Cameras</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/g20-foreign-ministers-meet-in-atlanta-under-shadow-of-iran-a.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T03:04:06+05:00</news:publication_date>
-      <news:title>G20 Foreign Ministers Meet in Atlanta Under Shadow of Iran and Ukraine Wars</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-u-15-end-fifa-world-cup-campaign-with-4-2-win-over.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T03:04:06+05:00</news:publication_date>
-      <news:title>Pakistan U-15 End FIFA World Cup Campaign With 4-2 Win Over Djibouti</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/afghan-diplomat-manizha-bakhtari-defies-taliban-runs-embassy.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-31T03:04:06+05:00</news:publication_date>
-      <news:title>Afghan Diplomat Manizha Bakhtari Defies Taliban, Runs Embassy From One Room</news:title>
     </news:news>
   </url>
 </urlset>
