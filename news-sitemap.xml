@@ -2,6 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/nokia-brings-back-the-flip-phone-with-the-new-2360-flip.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-03T02:35:00+05:00</news:publication_date>
+      <news:title>Nokia brings back the flip phone with the new 2360 Flip</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/fia-seizes-rs30-million-in-peshawar-hawala-hundi-crackdown.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-03T02:35:00+05:00</news:publication_date>
+      <news:title>FIA seizes Rs30 million in Peshawar hawala-hundi crackdown</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/lahore-s-air-quality-turns-hazardous-as-aqi-crosses-530.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-03T02:35:00+05:00</news:publication_date>
+      <news:title>Lahore's air quality turns hazardous as AQI crosses 530</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-beats-vietnam-in-september-rice-exports.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-03T02:35:00+05:00</news:publication_date>
+      <news:title>Pakistan beats Vietnam in September rice exports</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/unified-crypto-industry-body-proposed-for-pakistan.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-03T02:35:00+05:00</news:publication_date>
+      <news:title>Unified crypto industry body proposed for Pakistan</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/aramco-stops-fuel-sales-across-pakistan-as-petroleum-stocks.html</loc>
     <news:news>
       <news:publication>
