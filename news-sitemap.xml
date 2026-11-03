@@ -2,6 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/aurangzeb-urges-banks-to-adopt-digital-assets-responsibly-ke.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-03T05:35:00+05:00</news:publication_date>
+      <news:title>Aurangzeb urges banks to adopt digital assets responsibly, keeps ban on own crypto holdings</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-plans-30-year-tax-holiday-1-export-levy-to-unlock-8.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-03T05:35:00+05:00</news:publication_date>
+      <news:title>Pakistan plans 30-year tax holiday, 1% export levy to unlock $8tr mineral reserves</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-south-korea-chief-justices-sign-judicial-cooperatio.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-03T05:35:00+05:00</news:publication_date>
+      <news:title>Pakistan, South Korea chief justices sign judicial cooperation MoU in Seoul</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/senate-panel-flags-rs1-12tr-fata-pata-tax-exemption-misuse-o.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-03T05:35:00+05:00</news:publication_date>
+      <news:title>Senate panel flags Rs1.12tr FATA/PATA tax exemption misuse, orders recovery drive</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/analyst-pakistan-s-biggest-regional-challenges-come-from-ind.html</loc>
     <news:news>
       <news:publication>
@@ -4773,50 +4817,6 @@
       </news:publication>
       <news:publication_date>2026-11-01T07:00:00+05:00</news:publication_date>
       <news:title>Iran's Supreme Leader warns US, Israel against restarting war</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/hyderabad-road-with-poles-in-the-middle-was-deliberate-press.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-01T06:00:00+05:00</news:publication_date>
-      <news:title>Hyderabad road with poles in the middle was deliberate pressure on HESCO, says Murad Ali Shah</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/us-embassy-delegation-meets-pti-leaders-in-islamabad.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-01T06:00:00+05:00</news:publication_date>
-      <news:title>US embassy delegation meets PTI leaders in Islamabad</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/country-faces-over-200-000-tons-of-fertiliser-shortfall.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-01T06:00:00+05:00</news:publication_date>
-      <news:title>Country faces over 200,000 tons of fertiliser shortfall</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-chase-326-to-beat-sri-lanka-and-win-odi-tri-series.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-01T06:00:00+05:00</news:publication_date>
-      <news:title>Pakistan chase 326 to beat Sri Lanka and win ODI tri-series final</news:title>
     </news:news>
   </url>
 </urlset>
