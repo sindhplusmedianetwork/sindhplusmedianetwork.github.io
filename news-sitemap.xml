@@ -2,6 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-seeks-climate-finance-for-household-solar-power.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-15T11:00:18+05:00</news:publication_date>
+      <news:title>Pakistan seeks climate finance for household solar power</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/lahore-tops-list-of-world-s-most-polluted-cities.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-15T11:00:18+05:00</news:publication_date>
+      <news:title>Lahore tops list of world's most polluted cities</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/mohammad-yousuf-and-sana-mir-inducted-into-pcb-hall-of-fame.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-15T11:00:18+05:00</news:publication_date>
+      <news:title>Mohammad Yousuf and Sana Mir inducted into PCB Hall of Fame</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/shehbaz-sharif-and-field-marshal-munir-top-list-of-500-most.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-15T11:00:18+05:00</news:publication_date>
+      <news:title>Shehbaz Sharif and Field Marshal Munir top list of 500 most influential Muslims</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/rising-global-interest-in-minerals-forum-shows-confidence-in.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-15T11:00:18+05:00</news:publication_date>
+      <news:title>Rising global interest in minerals forum shows confidence in Pakistan, says Dar</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/three-tankers-catch-fire-after-hitting-mines-in-strait-of-ho.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-15T11:00:18+05:00</news:publication_date>
+      <news:title>Three tankers catch fire after hitting mines in Strait of Hormuz</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/hamas-confirms-rafah-brigade-commander-killed-in-israeli-dro.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-15T11:00:18+05:00</news:publication_date>
+      <news:title>Hamas confirms Rafah Brigade commander killed in Israeli drone strike</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/world-bank-approves-300m-for-sindh-s-water-sanitation-servic.html</loc>
     <news:news>
       <news:publication>
