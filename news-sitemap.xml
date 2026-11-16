@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/kohistani-vows-to-raise-drought-relief-in-cabinet.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-16T08:35:00+05:00</news:publication_date>
+      <news:title>Kohistani vows to raise drought relief in cabinet</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/food-dept-failure-to-release-wheat-fuels-price-hike-in-hyder.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-16T08:35:00+05:00</news:publication_date>
+      <news:title>Food Dept failure to release wheat fuels price hike in Hyderabad</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/eco-meeting-foreign-delegations-including-iranian-fm-abbas-a.html</loc>
     <news:news>
       <news:publication>
