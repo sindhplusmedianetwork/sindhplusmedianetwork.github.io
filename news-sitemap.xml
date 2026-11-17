@@ -2,6 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/winter-knocks-on-karachi-s-door.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-17T08:35:00+05:00</news:publication_date>
+      <news:title>Winter knocks on Karachi's door</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/tensions-ease-after-ppp-man-prevails-in-diamer-re-polling.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-17T08:35:00+05:00</news:publication_date>
+      <news:title>Tensions ease after PPP man prevails in Diamer re-polling</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/any-indian-move-to-deprive-pakistan-of-water-rights-will-be.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-17T08:35:00+05:00</news:publication_date>
+      <news:title>Any Indian move to deprive Pakistan of water rights will be an act of war: Gilani</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/796-afghans-arrested-in-first-week-of-november.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-17T08:35:00+05:00</news:publication_date>
+      <news:title>796 Afghans arrested in first week of November</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/iran-could-reopen-strait-of-hormuz-within-two-days-if-us-acc.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-17T08:35:00+05:00</news:publication_date>
+      <news:title>Iran could reopen Strait of Hormuz within two days if US accepts conditions, says Abbas Araghchi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/karachi-barber-shot-dead-personal-enmity-suspected.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-17T08:35:00+05:00</news:publication_date>
+      <news:title>Karachi barber shot dead, personal enmity suspected</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/tortured-body-recovered-in-karachi-one-injured-in-firing.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-17T08:35:00+05:00</news:publication_date>
+      <news:title>Tortured body recovered in Karachi, one injured in firing</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/online-systems-of-major-us-banks-disrupted-thousands-locked.html</loc>
     <news:news>
       <news:publication>
@@ -4872,28 +4949,6 @@
       </news:publication>
       <news:publication_date>2026-11-15T09:55:42+05:00</news:publication_date>
       <news:title>Approval of ML-3 railway track restoration deferred once again</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/handcuffing-of-female-prisoners-banned-in-rawalpindi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-15T08:48:21+05:00</news:publication_date>
-      <news:title>Handcuffing of female prisoners banned in Rawalpindi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/cancer-medicine-shortage-prompts-speedy-procurement-in-punja.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-15T08:48:21+05:00</news:publication_date>
-      <news:title>Cancer medicine shortage prompts speedy procurement in Punjab</news:title>
     </news:news>
   </url>
 </urlset>
