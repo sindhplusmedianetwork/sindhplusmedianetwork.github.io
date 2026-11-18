@@ -2,6 +2,116 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/maid-s-post-mortem-reveals-abuse.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T07:35:00+05:00</news:publication_date>
+      <news:title>Maid's post-mortem reveals abuse</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/rain-fails-to-clear-toxic-smog-in-twin-cities.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T07:35:00+05:00</news:publication_date>
+      <news:title>Rain fails to clear toxic smog in twin cities</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/monks-visit-ancient-buddhist-sites.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T07:35:00+05:00</news:publication_date>
+      <news:title>Monks visit ancient Buddhist sites</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/iran-s-fm-hails-pakistan-s-peace-diplomacy.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T07:35:00+05:00</news:publication_date>
+      <news:title>Iran's FM hails Pakistan's peace diplomacy</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/senate-opposition-leader-extends-hand-for-constitutional-res.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T07:35:00+05:00</news:publication_date>
+      <news:title>Senate opposition leader extends hand for constitutional reset</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/child-can-t-be-disowned-based-on-private-dna-tests-rules-lhc.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T07:35:00+05:00</news:publication_date>
+      <news:title>Child can't be disowned based on private DNA tests, rules LHC</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/shehbaz-orders-port-upgrade-pnsc-reform.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T07:35:00+05:00</news:publication_date>
+      <news:title>Shehbaz orders port upgrade, PNSC reform</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/pakistani-national-asif-merchant-sentenced-to-27-5-years-in.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T07:35:00+05:00</news:publication_date>
+      <news:title>Pakistani national Asif Merchant sentenced to 27.5 years in US over alleged plot to kill Trump</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/one-killed-another-critically-injured-in-drug-fuelled-disput.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T07:35:00+05:00</news:publication_date>
+      <news:title>One killed, another critically injured in drug-fuelled dispute among friends in Karachi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/bilawal-rejects-mohsin-naqvi-s-referendum-proposal-for-new-p.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T07:35:00+05:00</news:publication_date>
+      <news:title>Bilawal rejects Mohsin Naqvi's referendum proposal for new provinces</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/15-000-detained-in-france-during-protests-over-inflation-and.html</loc>
     <news:news>
       <news:publication>
@@ -5576,39 +5686,6 @@
       </news:publication>
       <news:publication_date>2026-11-16T08:35:00+05:00</news:publication_date>
       <news:title>Food Dept failure to release wheat fuels price hike in Hyderabad</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/eco-meeting-foreign-delegations-including-iranian-fm-abbas-a.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-16T07:35:00+05:00</news:publication_date>
-      <news:title>ECO Meeting: Foreign Delegations Including Iranian FM Abbas Araghchi Arrive in Islamabad</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/fm-ishaq-dar-meets-oic-chief-reaffirms-pakistan-s-commitment.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-16T07:35:00+05:00</news:publication_date>
-      <news:title>FM Ishaq Dar Meets OIC Chief, Reaffirms Pakistan's Commitment to Muslim Ummah's Unified Voice</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/fia-nabs-key-suspect-in-fake-apostille-racket.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-16T07:35:00+05:00</news:publication_date>
-      <news:title>FIA Nabs Key Suspect in Fake Apostille Racket</news:title>
     </news:news>
   </url>
 </urlset>
