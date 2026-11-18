@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/15-000-detained-in-france-during-protests-over-inflation-and.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T06:35:00+05:00</news:publication_date>
+      <news:title>15,000 detained in France during protests over inflation and education, minister tells parliament</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/thailand-removes-all-tariffs-on-american-exports-trump-annou.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T06:35:00+05:00</news:publication_date>
+      <news:title>Thailand removes all tariffs on American exports, Trump announces</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/railway-track-blown-up-with-explosives-in-bolan-no-casualtie.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T06:35:00+05:00</news:publication_date>
+      <news:title>Railway track blown up with explosives in Bolan, no casualties reported</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/two-killed-one-injured-in-separate-violent-incidents-in-kara.html</loc>
     <news:news>
       <news:publication>
@@ -5576,61 +5609,6 @@
       </news:publication>
       <news:publication_date>2026-11-16T07:35:00+05:00</news:publication_date>
       <news:title>FIA Nabs Key Suspect in Fake Apostille Racket</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/taliban-ban-cricket-coverage-on-kandahar-radio.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-16T06:35:00+05:00</news:publication_date>
-      <news:title>Taliban Ban Cricket Coverage on Kandahar Radio</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/man-accused-of-cutting-off-wife-s-nose-arrested-after-police.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-16T06:35:00+05:00</news:publication_date>
-      <news:title>Man Accused of Cutting Off Wife's Nose Arrested After Police Encounter</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/heavy-fog-closes-sections-of-m3-and-m4-motorways-in-punjab.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-16T06:35:00+05:00</news:publication_date>
-      <news:title>Heavy Fog Closes Sections of M3 and M4 Motorways in Punjab</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/third-us-aircraft-carrier-arrives-in-middle-east-amid-rising.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-16T06:35:00+05:00</news:publication_date>
-      <news:title>Third US Aircraft Carrier Arrives in Middle East Amid Rising Tensions</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/four-killed-in-separate-traffic-accidents-across-karachi.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-16T06:35:00+05:00</news:publication_date>
-      <news:title>Four Killed in Separate Traffic Accidents Across Karachi</news:title>
     </news:news>
   </url>
 </urlset>
