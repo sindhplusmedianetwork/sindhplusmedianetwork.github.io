@@ -2,6 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/us-prosecutors-seek-over-24-years-in-jail-for-nikhil-gupta-i.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T08:35:00+05:00</news:publication_date>
+      <news:title>US prosecutors seek over 24 years in jail for Nikhil Gupta in alleged plot to kill Sikh leader</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-and-uk-prepare-cooperation-deal-to-explore-mineral.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T08:35:00+05:00</news:publication_date>
+      <news:title>Pakistan and UK prepare cooperation deal to explore mineral resources</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/fia-arrests-another-suspect-in-illegal-kidney-transplant-net.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T08:35:00+05:00</news:publication_date>
+      <news:title>FIA arrests another suspect in illegal kidney transplant network</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/tech-outage-wave-reaches-us-government-as-nsa-reports-networ.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T08:35:00+05:00</news:publication_date>
+      <news:title>Tech outage wave reaches US government as NSA reports network disruption</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/tensions-rise-over-proposed-deal-at-cop31-as-draft-draws-cri.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-18T08:35:00+05:00</news:publication_date>
+      <news:title>Tensions rise over proposed deal at COP31 as draft draws criticism</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/maid-s-post-mortem-reveals-abuse.html</loc>
     <news:news>
       <news:publication>
@@ -5664,28 +5719,6 @@
       </news:publication>
       <news:publication_date>2026-11-16T09:35:00+05:00</news:publication_date>
       <news:title>Consensus on new provinces is in sight, says Khawaja Asif</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/kohistani-vows-to-raise-drought-relief-in-cabinet.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-16T08:35:00+05:00</news:publication_date>
-      <news:title>Kohistani vows to raise drought relief in cabinet</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/food-dept-failure-to-release-wheat-fuels-price-hike-in-hyder.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-16T08:35:00+05:00</news:publication_date>
-      <news:title>Food Dept failure to release wheat fuels price hike in Hyderabad</news:title>
     </news:news>
   </url>
 </urlset>
