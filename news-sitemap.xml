@@ -2,6 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-successfully-tests-fatah-3-supersonic-cruise-missil.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-19T02:35:00+05:00</news:publication_date>
+      <news:title>Pakistan successfully tests Fatah-3 supersonic cruise missile</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/investors-prefer-pakistan-to-stay-under-imf-programme.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-19T02:35:00+05:00</news:publication_date>
+      <news:title>Investors prefer Pakistan to stay under IMF programme</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/cotton-arrivals-rise-6-to-5-13-million-bales-but-quality-bad.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-19T02:35:00+05:00</news:publication_date>
+      <news:title>Cotton arrivals rise 6% to 5.13 million bales, but quality badly hit</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/world-s-muslim-population-close-to-overtaking-christians-pew.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-19T02:35:00+05:00</news:publication_date>
+      <news:title>World's Muslim population close to overtaking Christians, Pew finds</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/wwe-legend-cowboy-bill-watts-dies-at-87.html</loc>
     <news:news>
       <news:publication>
@@ -5972,61 +6016,6 @@
       </news:publication>
       <news:publication_date>2026-11-17T03:35:00+05:00</news:publication_date>
       <news:title>'We know how to hurt India,' says Pakistan coach Solano ahead of SAFF Championship final</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/cop31-draft-deal-calls-for-faster-exit-from-fossil-fuels.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-17T02:35:00+05:00</news:publication_date>
-      <news:title>COP31 Draft Deal Calls for Faster Exit From Fossil Fuels</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/pakistan-look-to-seal-test-series-against-sri-lanka-in-rawal.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-17T02:35:00+05:00</news:publication_date>
-      <news:title>Pakistan Look to Seal Test Series Against Sri Lanka in Rawalpindi Decider</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/petrol-pump-owners-ask-pm-for-monthly-fuel-price-revisions-i.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-17T02:35:00+05:00</news:publication_date>
-      <news:title>Petrol Pump Owners Ask PM for Monthly Fuel Price Revisions Instead of Daily Changes</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/sbp-says-inflation-to-ease-to-5-7-percent-target-range-durin.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-17T02:35:00+05:00</news:publication_date>
-      <news:title>SBP Says Inflation to Ease to 5-7 Percent Target Range During FY2027</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/trump-says-he-might-meet-north-korea-s-kim-jong-un-in-china.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-17T02:35:00+05:00</news:publication_date>
-      <news:title>Trump Says He Might Meet North Korea's Kim Jong Un in China This Week</news:title>
     </news:news>
   </url>
 </urlset>
