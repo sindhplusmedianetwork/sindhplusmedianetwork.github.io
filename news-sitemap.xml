@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/finance-minister-aurangzeb-meets-world-bank-ifc-officials-in.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-20T05:35:00+05:00</news:publication_date>
+      <news:title>Finance Minister Aurangzeb meets World Bank, IFC officials in Singapore</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/us-resolution-to-stop-trump-from-attacking-iran-rejected.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-20T05:35:00+05:00</news:publication_date>
+      <news:title>US resolution to stop Trump from attacking Iran rejected</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/fazlur-rehman-reaches-peshawar-after-security-withdrawn-in-i.html</loc>
     <news:news>
       <news:publication>
@@ -5312,28 +5334,6 @@
       </news:publication>
       <news:publication_date>2026-11-18T06:35:00+05:00</news:publication_date>
       <news:title>Railway track blown up with explosives in Bolan, no casualties reported</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/two-killed-one-injured-in-separate-violent-incidents-in-kara.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-18T05:35:00+05:00</news:publication_date>
-      <news:title>Two killed, one injured in separate violent incidents in Karachi</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/smuggled-betel-nut-indian-gutka-worth-over-rs14-crore-seized.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-18T05:35:00+05:00</news:publication_date>
-      <news:title>Smuggled betel nut, Indian gutka worth over Rs14 crore seized in Karachi</news:title>
     </news:news>
   </url>
 </urlset>
