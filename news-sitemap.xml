@@ -2,6 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/major-wheat-crisis-emerging-due-to-government-incompetence-w.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T02:35:00+05:00</news:publication_date>
+      <news:title>Major Wheat Crisis Emerging Due to Government Incompetence, Warns Miftah Ismail</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/at-sco-moot-in-india-musadik-malik-declares-climate-change-e.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T02:35:00+05:00</news:publication_date>
+      <news:title>At SCO Moot in India, Musadik Malik Declares Climate Change Enemy of Civilisations</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/ccd-school-bag-inspections-in-punjab-spark-criticism-on-soci.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T02:35:00+05:00</news:publication_date>
+      <news:title>CCD School Bag Inspections in Punjab Spark Criticism on Social Media</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/capt-safdar-seeks-rs10bn-in-damages-from-advocate-mian-dawoo.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T02:35:00+05:00</news:publication_date>
+      <news:title>Capt Safdar Seeks Rs10bn in Damages from Advocate Mian Dawood over Defamatory Remarks</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/proclaimed-offender-injured-by-own-accomplices-firing-on-pol.html</loc>
     <news:news>
       <news:publication>
@@ -4355,83 +4399,6 @@
       </news:publication>
       <news:publication_date>2026-11-20T03:35:00+05:00</news:publication_date>
       <news:title>Turkiye hands over first unmanned combat aircraft to armed forces</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/lpg-price-falls-by-rs100-per-kg-to-rs450-after-record-shipme.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T02:35:00+05:00</news:publication_date>
-      <news:title>LPG price falls by Rs100 per kg to Rs450 after record shipment reaches Port Qasim</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/punjab-reports-43-percent-drop-in-smog-related-patients-in-f.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T02:35:00+05:00</news:publication_date>
-      <news:title>Punjab reports 43 percent drop in smog-related patients in first 10 months of 2026</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/govt-moves-to-break-the-deadlock-over-new-provinces-through.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T02:35:00+05:00</news:publication_date>
-      <news:title>Govt moves to break the deadlock over new provinces through political dialogue</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/brave-rathnayaka-stands-firm-but-pakistan-hold-the-upper-han.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T02:35:00+05:00</news:publication_date>
-      <news:title>Brave Rathnayaka stands firm, but Pakistan hold the upper hand in Pindi Test</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/joint-operation-by-pakistan-navy-msa-and-anf-liquor-worth-cr.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T02:35:00+05:00</news:publication_date>
-      <news:title>Joint operation by Pakistan Navy, MSA and ANF, liquor worth crores recovered from suspicious ship</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/flights-suspended-in-south-korea-for-children-s-exam.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T02:35:00+05:00</news:publication_date>
-      <news:title>Flights suspended in South Korea for children's exam</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/bird-flu-risk-rises-in-france-alert-level-raised-to-highest.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T02:35:00+05:00</news:publication_date>
-      <news:title>Bird flu risk rises in France, alert level raised to highest</news:title>
     </news:news>
   </url>
 </urlset>
