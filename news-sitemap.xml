@@ -2,6 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/ninth-sindh-literature-festival-opens-in-karachi.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T04:35:00+05:00</news:publication_date>
+      <news:title>Ninth Sindh Literature Festival Opens in Karachi</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/nih-issues-nationwide-winter-health-alert.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T04:35:00+05:00</news:publication_date>
+      <news:title>NIH Issues Nationwide Winter Health Alert</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/consumers-to-face-higher-power-tariffs-in-december.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T04:35:00+05:00</news:publication_date>
+      <news:title>Consumers to Face Higher Power Tariffs in December</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/190m-case-hearing-set-for-november-25.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T04:35:00+05:00</news:publication_date>
+      <news:title>£190m Case Hearing Set for November 25</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/manchester-city-stumble-again-in-fulham-draw-arsenal-held-by.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T04:35:00+05:00</news:publication_date>
+      <news:title>Manchester City Stumble Again in Fulham Draw, Arsenal Held by Newcastle in Premier League</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/cold-weather-knocks-on-karachi-drop-in-temperature-recorded.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T04:35:00+05:00</news:publication_date>
+      <news:title>Cold Weather Knocks on Karachi, Drop in Temperature Recorded</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/iran-claims-it-targeted-us-f-16-fighter-jet-with-missile.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T04:35:00+05:00</news:publication_date>
+      <news:title>Iran Claims It Targeted US F-16 Fighter Jet with Missile</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/bahrain-reports-fire-material-damage-due-to-iranian-attack-o.html</loc>
     <news:news>
       <news:publication>
@@ -4322,50 +4399,6 @@
       </news:publication>
       <news:publication_date>2026-11-20T05:35:00+05:00</news:publication_date>
       <news:title>US resolution to stop Trump from attacking Iran rejected</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/fazlur-rehman-reaches-peshawar-after-security-withdrawn-in-i.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T04:35:00+05:00</news:publication_date>
-      <news:title>Fazlur Rehman reaches Peshawar after security withdrawn in Islamabad</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/kp-information-adviser-says-terrorism-incidents-down-80-in-f.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T04:35:00+05:00</news:publication_date>
-      <news:title>KP information adviser says terrorism incidents down 80% in five weeks</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/five-jailed-pti-leaders-write-to-top-judges-over-imran-khan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T04:35:00+05:00</news:publication_date>
-      <news:title>Five jailed PTI leaders write to top judges over Imran Khan's health</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/anthropic-set-for-1-8-trillion-valuation-in-nasdaq-debut.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T04:35:00+05:00</news:publication_date>
-      <news:title>Anthropic set for $1.8 trillion valuation in Nasdaq debut</news:title>
     </news:news>
   </url>
 </urlset>
