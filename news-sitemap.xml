@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/bahrain-reports-fire-material-damage-due-to-iranian-attack-o.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T03:35:00+05:00</news:publication_date>
+      <news:title>Bahrain Reports Fire, Material Damage Due to Iranian Attack on Civilian Industrial Facility</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/solution-to-new-provinces-issue-lies-in-referendum-says-rana.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T03:35:00+05:00</news:publication_date>
+      <news:title>Solution to New Provinces Issue Lies in Referendum, Says Rana Sanaullah</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://sindhplusmedianetwork.github.io/news/president-zardari-meets-deputy-pm-ishaq-dar-speaker-ayaz-sad.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Sindh Plus Media Network</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T03:35:00+05:00</news:publication_date>
+      <news:title>President Zardari Meets Deputy PM Ishaq Dar, Speaker Ayaz Sadiq</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://sindhplusmedianetwork.github.io/news/major-wheat-crisis-emerging-due-to-government-incompetence-w.html</loc>
     <news:news>
       <news:publication>
@@ -4333,72 +4366,6 @@
       </news:publication>
       <news:publication_date>2026-11-20T04:35:00+05:00</news:publication_date>
       <news:title>Anthropic set for $1.8 trillion valuation in Nasdaq debut</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/rabia-ahsan-murder-case-family-pardons-accused-ahsan-tahir.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T03:35:00+05:00</news:publication_date>
-      <news:title>Rabia Ahsan murder case: family pardons accused Ahsan Tahir</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/pm-shehbaz-reaffirms-commitment-to-children-s-rights-on-worl.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T03:35:00+05:00</news:publication_date>
-      <news:title>PM Shehbaz reaffirms commitment to children's rights on World Children's Day</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/pentagon-official-says-iran-war-has-cost-us-more-than-48bn-e.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T03:35:00+05:00</news:publication_date>
-      <news:title>Pentagon official says Iran war has cost US more than $48bn, excluding damage to bases</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/german-importers-look-to-pakistan-amid-china-shift.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T03:35:00+05:00</news:publication_date>
-      <news:title>German importers look to Pakistan amid China shift</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/flights-briefly-suspended-at-paris-charles-de-gaulle-airport.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T03:35:00+05:00</news:publication_date>
-      <news:title>Flights briefly suspended at Paris Charles de Gaulle Airport over suspected drone</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://sindhplusmedianetwork.github.io/news/turkiye-hands-over-first-unmanned-combat-aircraft-to-armed-f.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Sindh Plus Media Network</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-20T03:35:00+05:00</news:publication_date>
-      <news:title>Turkiye hands over first unmanned combat aircraft to armed forces</news:title>
     </news:news>
   </url>
 </urlset>
